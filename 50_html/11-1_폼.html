@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <h1>폼</h1>
+    <!-- 텍스트 입력 상자 -->
+    <label for="user_id">아이디:</label>
+    <input type="text" name="user_id" id="user_id" required>
+
+    <!-- 비밀번호 입력 상자 -->
+    <label for="user_pw">패스워드:</label>
+    <input type="password" name="user_pw" id="user_pw" required>
+
+    <!-- 검색 상자 -->
+    <input type="search" name="query" value="토끼 캐릭터">
+
+    <!-- 전화 번호 입력 상자 -->
+    <label for="user_tel">연락처:</label>
+    <input type="tel" name="user_tel" id="user_tel" placeholder="전화번호를 쓰세요." required>
+
+    <!-- 이메일 입력 상자 -->
+    <label for="user_email">이메일:</label> 
+    <input type="email" name="user_email" id="user_email">
+
+    <!-- URL 입력 상자 -->
+    <label for="user_url">웹주소:</label> 
+    <input type="url" name="user_url" id="user_url">
+
+    <!-- 서버로 넘겨질 값을 지정하는 입력 상자 -->
+    <input type="hidden" name="hidden">
+
+    <h2>버튼</h2>
+    <!-- value는 버튼의 이름 -->
+    <input type="submit" value="전송">
+    <input type="reset" value="초기화">
+    <input type="button" value="버튼">
+    <input type="image" src="assets/img_submit.gif" alt="Submit">
+    <label for="myfile">파일 선택:</label>
+    <input type="file" id="myfile" name="myfile">
+
+    <button type="submit">전송</button>
+    <button type="reset">초기화</button>
+    <button type="button">버튼</button>
+
+    <h2>체크박스와 라디오 버튼</h2>
+    <!-- value는 버튼명, 초기값, 전송값 -->
+    <!-- 체크박스(확인란): 다중 선택 가능 -->
+    <input type="checkbox" name="fav_lang" id="html" value="html" checked>
+    <label for="html">HTML</label>
+    <input type="checkbox" name="fav_lang" id="css" value="css">
+    <label for="css">CSS</label>
+    <input type="checkbox" name="fav_lang" id="javascript" value="js">
+    <label for="javascript">JavaScript</label>
+
+    <!-- 라디오 버튼: 하나만 선택 가능 -->
+    <input type="radio" name="agree" id="agree" value="yes" checked>
+    <label for="agree">동의함</label>
+    <input type="radio" name="agree" id="disagree" value="no">
+    <label for="disagree">동의하지 않음</label>
+
+    <h2>스핀 박스와 슬라이드 막대</h2>
+    <!-- 스핀 박스 -->
+    <label for="quantity">수량 (2에서 10사이):</label>
+    <input type="number" id="quantity" name="quantity" min="2" max="10" step="2">
+    <!-- 슬라이드 막대 -->
+    <label for="vote">투표률 (0에서 100사이):</label>
+    <input type="range" id="vote" name="vote" min="0" max="100">
+
+    <h2>컬러</h2>
+    <label for="favcolor">좋아하는 색상 선택:</label>
+    <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+
+    <h2>날짜와 시간</h2>
+    <label for="birthday">생일 (날짜):</label>
+    <input type="date" id="birthday" name="birthday">
+    <label for="birthdaytime">생일 (날짜와 시간):</label>
+    <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+    <label for="bdaymonth">생일 (년과 월):</label>
+    <input type="month" id="bdaymonth" name="bdaymonth">
+    <label for="week">주 선택 (년, 번째 주):</label>
+    <input type="week" id="week" name="week">
+    <label for="appt">시간 선택 (오전/오후 시:분)</label>
+    <input type="time" id="appt" name="appt">
+</body>
+</html>

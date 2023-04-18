@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+
+<body>
+    <h1>폼</h1>
+    <p>폼(양식)? 검색 창, 로그인 창, 회원가입, 게시판</p>
+    <!-- 서버 프로그래밍언어: php, jsp, asp -->
+    <form action="action_page.php" method="get" autocomplete="on">
+
+        <!-- alt+위/아래 방향키: 위치 이동 -->
+        <fieldset>
+            <legend>검색 창</legend>
+            <label for="gsearch">구글 검색:</label>
+            <input type="search" id="gsearch" name="gsearch">
+            <button type="submit">검색</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>로그인</legend>
+            <label for="user_id">아이디:</label>
+            <input type="text" name="user_id" id="user_id">
+            <label for="user_pw">패스워드:</label>
+            <input type="password" name="user_pw" id="user_pw">
+            <input type="submit" value="로그인">
+        </fieldset>
+
+        <fieldset>
+            <legend>회원 가입</legend>
+            
+            <div>
+                <input type="checkbox" name="termsService" id="termsService" value="y" checked>
+                <label for="termsService">ooo 이용약관 동의(필수)</label>
+            </div>
+
+            <div>
+                <textarea name="message" rows="3" cols="50">여러분을 환영합니다. ooo 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 -중략- </textarea>
+            </div>
+
+            <div>
+                <label for="yy">생년월일</label>
+                <input type="text" id="yy" placeholder="년(4자)" maxlength="4">
+                <select id="mm" name="mm">
+                    <option value>월</option>
+                    <option value="01">1</option>
+                    <option value="02">2</option>
+                    <option value="03">3</option>
+                </select>
+                <input type="text" id="dd" placeholder="일" maxlength="2">
+                <label for="dd"></label>
+            </div>
+
+            <div>
+                <label for="email">본인 확인 이메일<span>(선택)</span></label>
+                <input type="email" id="email" placeholder="선택입력" maxlength="10">
+            </div>
+
+            <div>
+                <label for="phoneNo">휴대전화</label>
+                <input type="tel" name="phoneNo" id="phoneNo" placeholder="전화번호 입력" maxlength="16">
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

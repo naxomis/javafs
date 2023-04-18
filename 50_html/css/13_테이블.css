@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+table, th, td {
+    border:1px solid;
+    border-collapse: collapse;
+    text-align: center;
+}
+td {
+    width:100px;
+    height:100px;
+}
+
+caption {
+    margin-bottom: 10px;
+}
+
+#table1 th, #table1 td {
+    height:30px;
+}
+col:nth-of-type(1) {
+    background: yellow;
+}
+thead tr:nth-of-type(1) {
+    background: lightgreen;
+}

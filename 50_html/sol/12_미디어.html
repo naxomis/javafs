@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+
+<body>
+    <h1>미디어</h1>
+    <h2>비디오</h2>
+    <video width="400" autoplay muted loop>
+        <source src="assets/video/mov_bbb.mp4" type="video/mp4">
+        <source src="assets/video/mov_bbb.webm" type="video/webm">
+        <source src="assets/video/mov_bbb.ogv" type="video/ogg">
+        Your browser does not support HTML video.
+    </video>
+    <p>비디오 컨버트: https://convertio.co/kr/video-converter/</p>
+
+    <h2>유튜브 비디오</h2>
+    <!-- width="1097" height="617"  -->
+    <iframe src="https://www.youtube.com/embed/YE7VzlLtp-4"></iframe>
+
+    <h2>오디오</h2>
+    <audio controls>
+        <source src="assets/audio/horse.ogv" type="audio/ogg">
+        <source src="assets/audio/horse.mp3" type="audio/mpeg">
+        <source src="assets/audio/horse.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    <!-- 파일 이름에 공백 사용하지 말 것!! -->
+    <audio autoplay>
+        <source src="assets/audio/Good_Morning!_Reed_Mathis.mp3" type="audio/mp3">
+        <source src="assets/audio/Good_Morning!_Reed_Mathis.ogv" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+
+</html>

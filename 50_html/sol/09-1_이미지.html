@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+
+<body>
+    <h1>이미지</h1>
+    <h2>캡션 달기</h2>
+    <figure>
+        <img src="assets/pic_trulli.jpg" alt="이탈리아 풀리아주의 건축물인 트룰리">
+        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+    </figure>
+
+    <hr>
+    <h2>이미지 맵</h2>
+    <p>하나의 이미지에 여러 개의 링크를 적용할 수 있다.</p>
+    <p>좌표 찾기: https://www.image-map.net/</p>
+    <p>컴퓨터, 커피 잔을 클릭하여 새 페이지로 이동하고 주제에 대해 자세히 읽어보십시오.</p>
+    <img src="/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+    <map name="workmap">
+        <area shape="poly" coords="34,44,272,43,264,190,273,344,33,343,45,187" alt="Computer" href="https://naver.com" target="_blank">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://google.com" target="_blank">
+        <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="http://stdw.rf.gd">
+    </map>
+
+</body>
+
+</html>
