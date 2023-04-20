@@ -13,29 +13,58 @@
         프로토콜://도메인(IP):포트/경로/파일명
         https://www.naver.com
         http://127.0.0.1:5500/50_html/10_링크.html
+
+        mailto:메일주소
+        tel:전화번호
     -->
     
+    <!--
+        <a href="URL">            
+     -->
 
     <!-- 현재 페이지(임시 페이지): # -->
+    <a href="#">임시링크</a>
 
     <!-- 현재 창: _self -->
+    <!-- WWW: World Wide Web -->
+    <a href="https://www.google.com" target="_self">구글</a>
     
     <!-- 새 창: _blank -->
-    
+    <a href="https://www.naver.com" target="_blank">네이버</a>
+
     <!-- 전화번호: tel -->
+    <a href="tel:010-6393-7103">010-6393-7103</a>
 
     <!-- 이메일: mailto -->
+
+    <!-- 
+        1.  윈도우 설정> 앱> 기본앱> "메일"을 크롬으로 변경
+        2. 크롬 브라우저 설정:
+            chrome://settings/handlers
+            "사이트에서 프로토콜 처리를 요청할 수 있음"을 선택
+        3.  크롬브라우저로 Gmail 로그인 
+            주소 표시줄 끝에 프로토콜 처리 요청 아이콘을 눌러 '허용'을 선택
+
+     -->
+    <a href="mailto:whyeil29@gmail.com">G메일</a>
     
     <!-- N메일: https://mail.naver.com/write/popup?srvid=note&to=id@naver.com -->
+    <a href="https://mail.naver.com/write/popup?srvid=note&to=skdus2015@naver.com">N메일</a>
 
 
     <hr>
+    <!-- 
+        드라이브폴더 연결
+     -->
 
     <!-- 같은 폴더: 파일명만 기록한다. -->
     <a href="09_이미지.html">09_이미지.html</a>
+    <a href="/50_html/09_이미지.html">09_이미지.html</a>
     <!-- 하위 폴더: 폴더/파일명 -->
-    <a href="assets/pic_trulli.jpg">트룰리</a>
+    <a href="assets/pic_trulli.jpg" target="_blank">트룰리</a>
+    <a href="/50_html/assets/pic_trulli.jpg">트룰리</a>
     <!-- 상위 폴더: ../파일명 -->
     <a href="../workplace.jpg">작업</a>
+    <a href="/workplace.jpg">작업</a>
 </body>
 </html>
