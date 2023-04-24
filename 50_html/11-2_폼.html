@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <h1>폼</h1>
+    <!-- 목록 선택만 가능 -->
+    <select name="" id="">
+        <optgroup label="프론트엔드">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="JQuery">JQuery</option>
+            <option value="Vue">Vue</option>
+        </optgroup>
+        <optgroup label="백엔드">
+            <option value="">Java</option>
+            <option value="">MySQL</option>
+        </optgroup>
+    </select>
+
+    <!-- 선택 및 입력 가능 목록 -->
+    <!-- datalist의 id 속성과 input의 list 속성의 값이 같아야 한다. -->
+    <!-- 목록에 없는 단어를 쓸수 있다 -->
+    <input type="text" list="lang" name="lang">
+    <datalist id="lang"> 
+        <option value="HTML">
+        <option value="CSS">
+        <option value="JavaScript">
+        <option value="JQuery">
+        <option value="Vue">
+    </datalist>
+</body>
+</html>

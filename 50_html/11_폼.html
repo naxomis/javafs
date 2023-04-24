@@ -10,17 +10,46 @@
 
 <body>
     <h1>폼</h1>
+
+        <!--
+        <form action="login.php" method="post">
+            method: get(즐겨찾기) post(비밀번호)
+            <fieldset>
+                <legand>: 필드 셋의 캡션
+
+            <input type="값" name="DB이름" id="" required value="" placesholder="">: 입력 상자, 한 줄 입력
+                value
+                placeholder
+                checked
+                required: 필수(비워둘 수 없다.)
+                min
+                mix
+                step
+                size: 보이는 문자 수
+                maxlength:  입력 가능한 최대 문자 수
+            <label>
+            <button>
+            <textarea>: 회칙, Q&A (여러 줄 입력)
+            <select>: 목록 선택
+                <optgroup>
+                <option selected>
+            <datalist>: input + select (입력 + 목록 선택)
+        -->
+
     <p>폼(양식)? 검색 창, 로그인 창, 회원가입, 게시판</p>
     <!-- 서버 프로그래밍언어: php, jsp, asp -->
     <!-- 자동 완성 기능:  autocomplete="on" -->
-    <form action="action_page.php" method="get">
+    <form action="action_page.php" method="get" autocomplete="off">
 
         <fieldset>
             <legend>검색 창</legend>
             <!-- 검색 입력 상자 -->
-            구글 검색:
+            <!--  input의 id가 label의 for와 같은 값이여야 한다. -->
+            <label for="user_search">구글 검색:</label> 
+            <input type="search" id="user_search">
             
             <!-- 검색 버튼 -->
+            <input type="submit" value="검색">
 
         </fieldset>
 
@@ -28,11 +57,18 @@
             <legend>로그인</legend>
 
             <!-- 아이디 -->
-            아이디:
+            <!-- for와 id의 속성 값은 임의로 지정한다. -->
+            <!-- 입력 상자를 비울 수 없이 반드시 입력해야 하는 경우 -->
+            <label for="uesr_id">아이디:</label> 
+            <input type="text" id="uesr_id" required size="10" maxlength="8">
             <!-- 패스워드 -->
-            패스워드:
+            <label for="user_pw">패스워드:</label>
+            <input type="password" id="uesr_pw" required>
+            <!-- disabled: 비활성화, DB로 전송되지 않는다. -->
+            <input type="text" value="비밀번호는 4자리 숫자로만 입력하세요." size="40" disabled>
 
             <!-- 로그인 버튼 -->
+            <input type="submit" value="로그인">
 
         </fieldset>
 
@@ -42,30 +78,54 @@
             <!-- 이용 약관 -->
             <div>
                 <!-- 체크박스 -->
-                ooo 이용약관 동의(필수)
+                <input type="checkbox" id="chk" checked required>
+                <label for="chk">ooo 이용약관 동의(필수)</label>
             </div>
 
             <div>
                 <!-- 글상자 -->
-                여러분을 환영합니다. ooo 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 -중략-
+                <!-- readonly: 읽기 전용 -->
+                <!-- cols: 열(칸) 수 -->
+                <!-- rows: 행 수 -->
+                <textarea name="" id="" cols="50" rows="4" readonly>1234567890여러분을 환영합니다. ooo 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 -중략-</textarea>
             </div>
 
             <div>
                 <!-- text 입력 상자 -->
-                생년월일
+                <label for="birth">생년월일</label>
+                <input type="text" id="birth" placeholder="년(4자)" maxlength="4">
                 <!-- 목록 상자 -->
-                월
+                <!-- option의 vallue는 전송값 -->
+                <select name="" id="">
+                    <option value="">월</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
                 <!-- text 입력 상자 -->
+                <input type="text" placeholder="일" maxlength="2">
             </div>
 
             <div>
                 <!-- 이메일 -->
-                본인 확인 이메일<span>(선택)</span>
+                <!-- 같은 텍스트 선택: 특정 텍스트를 선택 후 ctrl+D -->
+                <label for="uesr_email">본인 확인 이메일</label>
+                <input type="email" id="uesr_email" name="uesr_email">
             </div>
 
             <div>
                 <!-- 전화번호 -->
-                휴대전화
+                <label for="uesr_tel">휴대전화</label>
+                <input type="tel" id="uesr_tel" name="uesr_tel">
             </div>
         </fieldset>
     </form>
