@@ -9,6 +9,20 @@
 </head>
 <body>
     <h1>표</h1>
+
+    <!-- 
+        <table>: 표
+        <tr>: 행
+        <td rowspan="">: 셀
+        <th>: 셀 제목
+
+        <caption>: 표의 제목
+        <colgroup>: 열 그룹
+        <col span="">: 열
+        <thead>: 머리말
+        <tbody>: 본문
+        <tfoood>: 꼬리말
+     -->
     <h2>표의 모든 태그 사용</h2>
 
     <!-- 아래 내용을 숙지한 후 지우고 다시 만들어 보세요. -->
@@ -17,6 +31,7 @@
         <colgroup>
             <col>
             <col span="2">
+            <!-- span은 <col>속성을 병합한다 -->
         </colgroup>
         <thead>
             <tr>
@@ -44,6 +59,50 @@
                 <td>95점</td>
             </tr>
         </tfoot>
+    </table>
+
+    <table>
+        <colgroup>
+            <col>
+            <col span="3">
+            <col>
+            <!-- span은 <col>속성을 병합한다 -->
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">번호</th>
+                <th scope="col">제목</th>
+                <th scope="col">글쓴이</th>
+                <th scope="col">날짜</th>
+                <th scope="col">조회</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>공지</td>
+                <td>메가MGC커피 원두 관련 공지</td>
+                <td>메가MGC커피</td>
+                <td>2023-02-21</td>
+                <td>3001</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>탄소중립실천포인트제 도입 안내</td>
+                <td>메가MGC커피</td>
+                <td>2023-03-16</td>
+                <td>1214</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>메가MGC커피 영양성분표</td>
+                <td>메가MGC커피</td>
+                <td>2023-03-14</td>
+                <td>1349</td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>
