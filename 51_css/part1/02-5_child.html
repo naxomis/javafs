@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,13 @@
     <title>HTML+CSS</title>
     <style>
         /* 
-            의사(Pseudo, 가상, 유사) 클래스
+            의사(Pseudo, 가상, 유사) 클래스 -> (:)
             타입을 구분하지 않는다.
 
             선택자:first-child
             선택자:last-child
-            선택자:nth-child(n)
-            선택자:nth-last-child(n)
+            선택자:nth-child(n) ~ 위에서 아래로
+            선택자:nth-last-child(n) ~ 아래에서 위로
             
             n: 1,2,3,..., odd, even, 2n-1, 2n, 3n ...
             
@@ -24,24 +25,67 @@
             홀수: 2n-1 또는 odd
         */
 
+        /* div의 첫번째자식 */
+        p:first-child {
+            color: red;
+        }
+
+        p:nth-child(1) {
+            color: blue;
+        }
+
+        p:nth-child(2) {
+            color: blue;
+        }
+
+        p:nth-child(3n-1) {
+            color: blue;
+        }
+
+        /* 적용되지 않는다 */
+        p:last-child {
+            color: orange;
+        }
+
+        p:nth-child(12) {
+            color: brown;
+        }
+
+        p:nth-last-child(1) {
+            color: aqua;
+        }
+
+        div p:nth-child(2){
+            background-color: yellow;
+        }
     </style>
 </head>
+
 <body>
     <h1>의사 클래스 선택자</h1>
-    <h2>~child</h2>
     <div>
-        <p>1 번째 요소입니다.</p>
-        <p>2 번째 요소입니다.</p>
-        <p>3 번째 요소입니다.</p>
-        <p>4 번째 요소입니다.</p>
-        <p>5 번째 요소입니다.</p>
-        <p>6 번째 요소입니다.</p>
+        <h2>~child - 1번째요소</h2>
+        <p>2번째 요소입니다.</p>
+        <p>3번째 요소입니다.</p>
+        <p>4번째 요소입니다.</p>
+        <p>5번째 요소입니다.</p>
+    </div>
+
+    <div>
+        <h2>~child - 2번째요소</h2>
         <p>7 번째 요소입니다.</p>
         <p>8 번째 요소입니다.</p>
         <p>9 번째 요소입니다.</p>
         <p>10 번째 요소입니다.</p>
+    </div>
+
+    <div>
+        <h2>~child - 2번째요소</h2>
         <p>11 번째 요소입니다.</p>
         <p>12 번째 요소입니다.</p>
+        <p>13 번째 요소입니다.</p>
+        <p>14 번째 요소입니다.</p>
     </div>
 </body>
+
 </html>

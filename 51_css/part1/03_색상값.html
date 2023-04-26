@@ -8,16 +8,62 @@
     <style>
         /* 140개 영문 키워드: https://www.w3schools.com/colors/colors_names.asp */
 
+        /*
+            2진수: 0~1
+            8진수: 0~7
+            16진수: 0~f
+            10진수: 0~9
+         */
         /* HEX: 16진수 -> 0~9, A~F */
         /* #RRGGBB 또는 #RGB */
+        /*
+            #ff0000 ->red
+            #0000ff ->blue
+            #00ff00 ->green
+            #ffff00 ->yellow
+            #ff00ff
+            #00ffff ->cyan
+            #000000, #000 -> 검정
+            #ffffff, #fff -> 흰색
+            #123456
+            #223344, #234
+            #223345
+        */
 
         /* rgb(0~255, 0~255, 0~255) */  
+        /* 
+            rgb(r,g,b)
+            rgb(0,0,0)
+            rgb(255,255,255)
+            rgb(255, 0, 0)
+            rgb(255,255,0)
+         */
 
         /* rgba(0~255, 0~255, 0~255, 0~1) */
+        /*
+            rgda(R, G, B, alpha)
+            rgba(255,0,0,1)
+            rgba(255,0,0,0.5)
+
+         */
 
         /* hsl(0~359, 0~100%, 0~100%) */
-        
-        /* hsla(0~359, 0~100%, 0~100%, 0~1) */
+        /*
+            hsl(hue(0도~359도), saturation, lightness)
+            hsl(0, 100%, 50%) 
+            */
+            
+            /* hsla(0~359, 0~100%, 0~100%, 0~1) */
+            
+            /* 스네이크(뱀)케이스 
+            .color_name {color: red;} */
+            /* 카멜(낙타)케이스 */
+            .colorName {color: red;}
+            .colorHex {color: #ff0000;}
+            .colorRgb {color: rgb(255, 0, 0);}
+            .colorRgba {color: rgba(255, 0, 0, 1);}
+            .colorHsl {color: hsl(0, 100%, 50%);}
+            .colorHsla {color: hsla(0, 100%, 50%, 1);}
 
     </style>
 </head>

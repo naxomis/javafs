@@ -7,7 +7,7 @@
     <title>HTML+CSS</title>
     <style>
         /* 
-            의사(Pseudo, 가상, 유사) 클래스
+            링크 관련 의사(Pseudo, 가상, 유사) 클래스 -> (:)
 
             a:link - 방문전: 파란색
             a:visited - 방문후: 보라색
@@ -17,11 +17,31 @@
             :link -> :visited -> :hover -> :active 순으로 기록해야한다.
         */
 
+        /* a:link {color: red;}
+        a:visited {color: orange;}
+        a:hover {color: yellow;}
+        a:active {color: green;}  */
+
+        a{color: #999; text-decoration: none;}
+        a:hover {color: #111; text-decoration: underline;}
+
+        /* 아래 p요소에 마우스 오버시 글자색이 바뀌도록 지정하시오. */
+        .red:hover{color: red; cursor: pointer;}
+        .org:hover{color: orange; cursor: pointer;}
+        .blu:hover{color: blue; cursor: pointer;}
     </style>
 </head>
 <body>
     <h1>의사 클래스 선택자</h1>
     <a href="#">링크1</a>
     <a href="#">링크2</a>
+    <a href="https://naver.com"><img src="../assets/naver.png" alt="naver"></a>
+    <a href="#"><img src="../assets/google.png" alt="google"></a>
+
+    <!-- ctrl+atl+shift+위/아래방향키: 다중 커서 -->
+    <!-- ctrl+atl+위/아래방향키: 다중 커서 -->
+    <p class="red">마우스 올려봐~! 나는 빨강색이다.</p>
+    <p class="org">마우스 올려봐~! 나는 주황색이다.</p>
+    <p class="blu">마우스 올려봐~! 나는 파란색이다.</p>
 </body>
 </html>
