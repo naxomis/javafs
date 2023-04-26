@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .wrap {
+            display: flex;
+        }
+        .outer {
+            margin: 20px;
+            border:1px solid black;
+            /* perspective: 1000px; */
+        }
+        .trf {
+            display:inline-block;
+            width:100px;
+            height:100px;
+            background: red;
+            transition: .5s;
+        }
+        /* .outer에 마우스를 올리면 자식 .trftx를 오른쪽으로 100px 이동 */
+        .outer:hover .trftx {
+            /* transform: translateX(x); */
+            transform: translateX(100px);
+        }
+        .outer:hover .trfty {
+            /* transform: translateY(y); */
+            transform: translateY(100px);
+        }
+        .trftz {
+            transform: perspective(1000px) translateZ(0px);
+        }
+        .outer:hover .trftz {
+            /* 원근감(perspective)과 함께 사용해야 한다. */
+            /* transform: translateZ(z); */
+            transform: perspective(1000px) translateZ(100px);
+        }
+        .trftd {
+            transform: perspective(1000px) translate3d(0px,0px,0px);
+        }
+        .outer:hover .trftd {
+            /* transform: translate3d(x,y,z); */
+            transform: perspective(1000px) translate3d(100px,100px,100px);
+        }
+        .outer:hover .trft {
+            /* transform: translate(x[, y]); */
+            transform: translate(100px, 100px);
+            /* transform: translate(100px); */
+        }
+    </style>
+</head>
+<body>
+    <h1>변환</h1>
+    <h2>이동</h2>
+    <div class="wrap">
+        <div class="outer">
+            <span class="trf trftx">translateX</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trfty">translateY</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trftz">translateZ</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trftd">translate3d</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trft">translate</span>transform
+        </div>
+    </div>
+</body>
+</html>

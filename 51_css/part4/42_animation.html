@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {
+            position: relative;
+            width:100px;
+            height:100px;
+            background: yellow;
+            margin:20px;
+            left:0px; top:0px;
+        }
+
+        /* 
+            animation-name: 애니메이션 이름;
+            animation-duration: 애니메이션 시간(단위: s(초));
+            animation-iteration-count: 애니메이션 반복 여부;
+            animation-direction: 애니메이션 방향;
+            animation-timing-function: 애니메이션 시간 함수;
+            animation-delay: 애니메이션 지연 시간(단위: s(초));
+        */
+
+
+        /* .anim에 애니메이션의 이름은 move, 시간은 1초, 무한 반복(infinite), 좌우 왕복(alternate), 등속도(linear), 지연 시간은 2초로 지정하시오. */
+
+
+        
+        /* 
+            애니메이션 코드 형식
+            @keyframe 이름 {
+                from {속성: 값;}
+                to {속성: 값;}
+            }
+            
+            또는 
+            
+            @keyframe 이름 {
+                0% {속성: 값;}
+                100% {속성: 값;}
+            }
+        */
+
+        @keyframes move {
+            0% {left:0;}
+            100% {left:200px;}
+        }
+
+    </style>
+</head>
+<body>
+    <h1>애니메이션</h1>
+    <div class="anim">박스</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {
+            width: 600px;
+            height: 400px;
+            border: 1px solid red;
+            margin: 20px;
+        }
+
+        /* 
+            background-repeat: 배경이미지 반복 여부;
+        */
+        div {
+            background-image: url(/51_css/assets/20220511_1124.jpg);
+            background-size: 50%;
+        }
+        .bgrr {background-repeat: repeat;}
+        .bgnr {background-repeat: no-repeat;}
+        .bgrx {background-repeat: repeat-x;}
+        .bgry {background-repeat: repeat-y;}
+    </style>
+</head>
+
+<body>
+    <h1>배경 이미지 반복 여부</h1>
+    <div class="bgrr">repeat</div>
+    <div class="bgnr">no-repeat</div>
+    <div class="bgrx">repeat-x</div>
+    <div class="bgry">repeat-y</div>
+</body>
+
+</html>

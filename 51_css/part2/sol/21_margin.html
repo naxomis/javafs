@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        body {margin:0;}
+        div {
+            width: 200px;
+            height: 150px;
+            background:yellow;
+        }
+        .m1 {
+            margin-top:10px;
+            margin-right:20px;
+            margin-bottom:30px;
+            margin-left:40px;
+        }
+        .m2 {
+            /* 상 우 하 좌 */
+            margin: 10px 20px 30px 40px;
+        }
+        .m3 {
+            /* 상 좌우 하 */
+            margin: 10px 20px 30px;
+        }
+        .m4 {
+            /* 상하 좌우 */
+            margin: 10px 20px;
+        }
+        .m5 {
+            /* 상하좌우 모두 10px */
+            margin: 10px;
+        }
+        .m6 {
+            /* 음수도 가능 */
+            margin-left: 230px;
+            margin-top: -160px;
+        }
+    </style>
+</head>
+<body>
+    <h1>여백</h1>
+    <div class="m1">박스1</div>
+    <div class="m2">박스2</div>
+    <div class="m3">박스3</div>
+    <div class="m4">박스4</div>
+    <div class="m5">박스5</div>
+    <div class="m6">박스6</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+        }
+
+        .bg1 {
+            background-color: yellow;
+            background-image: url(/51_css/assets/20220511_1124.jpg);
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: contain;
+        }
+        .bg2 {
+            /* background:색 이미지 반복여부 위치/크기; */
+            background:yellow url(/51_css/assets/20220511_1124.jpg) no-repeat left/contain;
+        }
+        img {width:100%;}
+    </style>
+</head>
+<body>
+    <h1>배경 속기 속성</h1>
+    <div class="bg1"></div>
+    <hr>
+    <div class="bg2"></div>
+</body>
+</html>

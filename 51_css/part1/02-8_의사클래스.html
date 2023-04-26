@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* p가 타깃되었을 때 */
+        /* input의 라디오 버튼이 체크되었을 때 */
+        /* h2의 3번째 자손 중 h2와 p를 제외하고 */
+
+        /* 아래 내용을 확인한 후 지우고 지정해 보세요. */
+
+        p:target {
+            background: yellow;
+        }
+
+        :checked + p {
+            background: yellow;
+        }
+        #tab3, #tab4 {
+            display: none;
+        }
+        label {
+            cursor: pointer;
+        }
+
+        h2:nth-of-type(3) ~ :not(h2, p) {
+            background: lightblue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>의사 클래스</h1>
+    <h2>:target</h2>
+    <a href="#tab1">클릭1</a>
+    <a href="#tab2">클릭2</a>
+    <p id="tab1">Lorem ipsum dolor sit amet.</p>
+    <p id="tab2">Lorem ipsum dolor sit amet.</p>
+
+    <h2>:checked</h2>
+    <label for="tab3">클릭1</label>
+    <label for="tab4">클릭2</label>
+
+    <input type="radio" name="clkGroup" id="tab3" checked>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <input type="radio" name="clkGroup" id="tab4">
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>:not(선택기)</h2>
+    <h3>Lorem ipsum</h3>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+
+</html>

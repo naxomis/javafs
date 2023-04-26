@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .wrap {
+            display: flex;
+        }
+        .outer {
+            margin: 20px;
+            border:1px solid black;
+            perspective: 1000px;
+        }
+        .trf {
+            display: inline-block;
+            width:100px;
+            height:100px;
+            background: red;
+            transition: .5s;
+        }
+        .outer:hover .trfscx {
+            /* transform: scaleX(w); */
+            transform: scaleX(1.2);
+        }
+        .outer:hover .trfscy {
+            /* transform: scaleY(h); */
+            transform: scaleY(1.2);
+        }
+        .trfscz {
+            /* transform: 값1 값2 ...; */
+            transform: scaleZ(1) translateZ(0px);
+        }
+        .outer:hover .trfscz {
+            /* 원근감(perspective), translate()과 함께 사용해야 한다. */
+            /* transform: scaleZ(숫자); */
+            transform: scaleZ(1.2) translateZ(100px);
+        }
+        .trfscd {
+            transform: scale3d(1,1,1) translateZ(0px);
+        }
+        .outer:hover .trfscd {
+            /* transform: scale3d(숫자,숫자,숫자); */
+            transform: scale3d(1.2,1.2,1.2) translateZ(100px);
+        }
+        .outer:hover .trfsc {
+            /* transform: scale(w[, h]); */
+            /* translate는 하나의 인수만 쓸 경우 좌우 방향 이동 */
+            /* scale은 하나의 인수만 쓸 경우 가로/세로 비율 유지 크기 변경 */
+            /* transform: scale(1.2, 1.2); */
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>변환</h1>
+    <h2>크기 조절</h2>
+    <div class="wrap">
+        <div class="outer">
+            <span class="trf trfscx">scaleX</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trfscy">scaleY</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trfscz">scaleZ</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trfscd">scale3d</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trfsc">scale</span>transform
+        </div>
+    </div>
+</body>
+</html>

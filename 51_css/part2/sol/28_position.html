@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        /* 
+            position: static; (기본값)
+
+            relative, absolute, fixed, sticky를 지정하면 left, right, top, bottom, z-index 속성을 사용할 수 있다.
+
+            position: relative; (자기자신)
+            position: absolute; (position이 static이 아닌 조상)
+            position: fixed; (창)
+            position: sticky;
+            
+            left: 숫자px;
+            top: 숫자px;
+            right: 숫자px;
+            bottom: 숫자px;
+            z-index: 숫자; -> 깊이(depth)
+        */
+
+        div {
+            width: 200px;
+            height: 100px;
+            background: red;
+            /* left, top, right, bottom, z-index은 static에는 적용되지 않는다. */
+            left: 200px;
+            top: 100px;
+        }
+
+        /* (1) .pos1의 위치 속성을 static로 지정하시오. */
+        .pos1 {
+            position: static;
+        }
+
+        /* (2) .pos2의 위치 속성을 relative로 지정하시오. */
+        /* 자기자신 기준(즉, left를 적용하기 전 위치) */
+        .pos2 {
+            position: relative;
+        }
+
+        /* static이 아닌 조상 기준 */
+        /* (3) .pos3의 위치 속성을 absolute로 지정하시오. */
+        .pos3 {
+            /* z-index의 값은 정수로 숫자가 클수록 위로 올라감. */
+            position: absolute;
+            z-index: 3;
+        }
+
+        /* 창 기준 */
+        /* (4) .pos4의 위치 속성을 fixed로 지정하시오. */
+        .pos4 {
+            position: fixed;
+            z-index: 2;
+        }
+
+        .container {
+            position: relative;
+            width: 600px;
+            height: 500px;
+            top: 300px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>위치</h1>
+    <div class="container">
+        <div class="pos1">static</div>
+        <div class="pos2">relative</div>
+        <div class="pos3">absolute</div>
+        <div class="pos4">fixed</div>
+    </div>
+</body>
+
+</html>

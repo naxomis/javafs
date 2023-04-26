@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+
+    <!-- 
+        HTML
+        <태그 속성="값" 속성="값" ...>
+        
+        CSS
+        선택자 {
+            속성:값; 
+            속성:값;
+            ...
+        }
+
+        1. 인라인: HTML의 style속성의 값으로 지정
+        2. 내부: <style> 태그 사이에 기록
+        3. 외부: <link>태그를 사용하여 *.css 파일 연결
+     -->
+    <!-- 2. 외부 CSS: <link> 태그로 *.css 파일을 연결 -->
+    <!--  경로 설정 -->
+    <!-- <link rel="stylesheet" herf="경로/파일"> -->
+    <link rel="stylesheet" href="/51_css/part1/style.css">
+
+    <!-- 들여쓰기: shift+alt+f -->
+    <!-- <link>, <style> 태그는 <head> 사이에 사용한다. -->
+
+    <style>
+        /* 
+            형식: 
+            선택자 {속성:값;} 
+        */
+        /* CSS의 주석 */
+        /* body(본문)의 h1 태그를 선택하여 속성을 적용시킨다. */
+        h1 {
+            color: red;
+            background-color: yellow;
+        }
+    </style>
+    <!-- HTML의 주석 -->
+</head>
+
+<body>
+    <h1>CSS 선언 방식</h1>
+    <h2>인라인, 내부, 외부</h2>
+    <!-- https://developer.mozilla.org/ko/ -->
+    <!-- 3. 인라인 CSS: HTML의 스타일 속성의 값으로 기록(가급적 사용X)  -->
+    <p style="color: red; background-color:yellow;">인라인 CSS이란 HTML의 스타일 속성의 값으로 CSS의 속성과 값을 기록한다.</p>
+</body>
+
+</html>

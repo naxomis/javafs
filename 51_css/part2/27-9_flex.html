@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .container {
+            display: flex;
+            border: 1px solid orange;
+        }
+
+        .container div {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }
+        
+        /* 
+            flex-grow: 숫자;
+            flex-shrink: 숫자;
+            flex-basis: 숫자%|숫자px|auto;
+
+            flex: [성장] [수축] [초기값];
+
+            0이면 성장/수축하지 않음.
+            1이면 성장/수축함.
+
+            생략하면 flex: 0 1 auto;
+            flex: auto; -> flex: 1 1 auto;
+            flex: 1; -> flex: 1 1 auto;
+        */
+
+        /* .fl1의 플렛스 아이템의 flex를 0 0 150px로 지정해 보세요. */
+        
+
+
+        /* (1) .fli1에 flex 속성을 1로 지정하시오. */
+
+        
+        /* (2) .fli2에 flex 속성을 2로 지정하시오. */
+
+
+        /* (3) .fli3에 flex 속성을 3로 지정하시오. */
+
+        
+    </style>
+</head>
+
+<body>
+    <h1>flexible(플렉서블)</h1>
+    <h2>플렉스 아이템의 성장/수축/초기값</h2>
+    <div class="wrap1">
+        <div class="container fl1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+        <div class="container fl2">
+            <div class="fli1">1</div>
+            <div class="fli2">2</div>
+            <div class="fli3">3</div>
+        </div>
+    </div> <!-- //.wrap1 -->
+
+</body>
+
+</html>

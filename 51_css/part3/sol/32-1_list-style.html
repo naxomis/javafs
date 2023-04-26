@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .lsi {list-style-image: url('/51_css/assets/dot.png');}
+        ul, li {border:1px solid red;}
+        .lsp {
+            list-style-position: inside;
+        }
+        .lisn {
+            list-style: none;
+        }
+        .lis {
+            /* list-style-type: circle;
+            list-style-image: url(../assets/dot.png);
+            list-style-position: inside; */
+
+            /* list-style: 타입 이미지 위치 */
+            list-style: circle url(../assets/dot.png) inside;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS 목록 관련 속성</h1>
+    <h2>목록 마커를 이미지로</h2>
+    <ul class="lsi">
+        <li>아메리카노</li>
+        <li class="lsp">카페모카</li>
+        <li>카페라떼</li>
+    </ul>
+    <ul class="lsp">
+        <li>아메리카노</li>
+        <li class="lisn">카페모카</li>
+        <li>카페라떼</li>
+    </ul>
+    <ul class="lisn">
+        <li>아메리카노</li>
+        <li>카페모카</li>
+        <li>카페라떼</li>
+    </ul>
+    <ul class="lis">
+        <li>아메리카노</li>
+        <li>카페모카</li>
+        <li>카페라떼</li>
+    </ul>
+</body>
+
+</html>

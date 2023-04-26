@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .container div {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }
+
+        /* 
+
+        */
+        .container {
+            display: flex;
+        }
+
+        .fldr {flex-direction: row;}
+        .fldc {flex-direction: column;}
+        .fldrr {flex-direction: row-reverse;}
+        .fldcr {flex-direction: column-reverse;}
+    </style>
+</head>
+
+<body>
+    <h1>flexible(플렉서블)</h1>
+    <div class="container fldr">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class="container fldc">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class="container fldrr">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class="container fldcr">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+
+</html>

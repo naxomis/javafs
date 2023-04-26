@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .wrap {
+            overflow:hidden;
+        }
+        .outer {
+            float:left;
+            margin: 20px;
+            border:1px solid black;
+            perspective: 1000px;
+        }
+        .trf {
+            display: inline-block;
+            width:100px;
+            height:100px;
+            background: red;
+            transition: .5s;
+        }
+
+        .outer:hover .trfskx {
+            /* transform: skewX(숫자deg); */
+            transform: skewX(-15deg);
+        }
+        .outer:hover .trfsky {
+            /* transform: skewY(각도); */
+            transform: skewY(30deg);
+        }
+        .outer:hover .trfsk {
+            /* transform: skew(각도, 각도); */
+            transform: skew(30deg, 30deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>변환</h1>
+    <h2>기울기</h2>
+    <div class="wrap">
+        <div class="outer">
+            <span class="trf trfskx">skewX</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trfsky">skewY</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trfsk">skew</span>transform
+        </div>
+    </div>
+</body>
+</html>

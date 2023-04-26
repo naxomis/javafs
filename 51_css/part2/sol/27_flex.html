@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* 
+            플렉스 박스(유연한 박스)
+            주축과 교차축
+                flex-direction:row; 이면 주축 row, 교차축 column
+                flew-direction:column; 이면 주축 column, 교차축 row
+
+            부모: 플렉스 컨테이너
+                1. display:flex;
+                2. flex-direction: 방향;
+                3. flex-wrap: 줄바꿈;
+                4. flex-flow: direction wrap
+                5. justify-content: 주축 정렬
+                6. align-items: 교차축 정렬
+                7. align-content: 교차축 블록 방향 정렬 (2개의 라인)
+
+            자식: 플렉스 아이템
+                8. align-self: 교차축 정렬, align-items 보다 우선 적용된다.
+                9. flex-grow: 커진다.
+                10. flex-shrink: 작아진다.
+                11. flex-basis: 처음 크기
+                12. flex: grow shrink basis
+                13. order: 순서, 숫자가 작을수록 앞에 배치
+        */
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 448px;
+            outline: 1px solid red;
+        }
+
+        .container div {
+            /* float:left; */
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }
+
+        .container div:not(:nth-of-type(1), :nth-of-type(5)) {
+            margin-left: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>flexible(플렉서블)</h1>
+    <!-- 
+        div.container는 부모 요소로
+        부모 요소에 display:flex;를 지정하면 
+        이 부모 요소를 플렉스 컨테이너라고 부른다.
+        그리고, 자식 요소는 플렉스 아이템이라고 부른다.
+    -->
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <p>나는 단락이다.</p>
+</body>
+
+</html>

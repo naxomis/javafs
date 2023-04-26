@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML+CSS</title>
+        <style>
+            /* 
+                후손선택자
+                선택자1 선택자2
+                선택자 사이는 공백으로 구분한다.
+                선택자1은 조상(부모포함)
+                선택자2는 자손(자식포함)
+            */
+            .s1 ul {color:red;}
+
+            /* 
+                자식선택자
+                선택자1 > 선택자2
+                선택자 사이는 >으로 구분한다.
+                선택자1은 부모
+                선택자2는 자식
+            */
+            .s1 > ul {background-color:lightblue;}
+        </style>
+    </head>
+
+    <body>
+        <h1>후손/자식선택자</h1>
+        <div class="s1">
+            <div>
+                <p>나는 div의 자식이다.</p>
+                <ul>
+                    <li>나는 div의 손자이다.</li>
+                </ul>
+            </div>
+            <ul>
+                <li>나는 div의 손자가 아니다.</li>
+            </ul>
+            <p>나는 div의 자식이 아니다.</p>
+        </div>
+    </body>
+
+</html>

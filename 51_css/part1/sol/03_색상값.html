@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 140개 영문 키워드: https://www.w3schools.com/colors/colors_names.asp */
+        .colorName {color: red;}
+
+        /* HEX: 16진수 -> 0~9, A~F */
+        /* #RRGGBB 또는 #RGB */
+        .colorHex {color: #ff0000;}
+        /* .colorHex {color: #f00;} */
+
+        /* rgb(0~255, 0~255, 0~255) */  
+        .colorRgb {color: rgb(255, 0, 0);}
+
+        /* rgba(0~255, 0~255, 0~255, 0~1) */
+        .colorRgba {color: rgba(255, 0, 0, 0.5);}
+
+        /* hsl(0~359, 0~100%, 0~100%) */
+        .colorHsl {color: hsl(0, 100%, 50%);}
+        
+        /* hsla(0~359, 0~100%, 0~100%, 0~1) */
+        .colorHsla {color: hsla(0, 100%, 50%, 1);}
+    </style>
+</head>
+<body>
+    <h1>CSS 색상 값</h1>
+    <p class="colorName">red</p>
+    <p class="colorHex">#ff0000</p>
+    <p class="colorRgb">rgb(255, 0, 0)</p>
+    <p class="colorRgba">rgba(255, 0, 0, 0.5)</p>
+    <p class="colorHsl">hsl(0, 100%, 50%)</p>
+    <p class="colorHsla">hsla(0, 100%, 50%, 0.5)</p>
+</body>
+</html>

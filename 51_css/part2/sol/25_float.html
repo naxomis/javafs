@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {
+            width:200px;
+            height:150px;
+        }
+        .div1 {
+            background:rgba(255, 0, 0, 0.503);
+            /* width의 기본값이 콘텐츠크기로 바뀐다. */
+            float:left;
+        }
+        .div2 {
+            background: blue;
+            float: right;
+        }
+        .div3 {
+            background: yellow;
+            /* 상위 요소의 float 효과를 제거 */
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <h1>플로트</h1>
+    <div class="div1">박스1</div>
+    <div class="div2">박스2</div>
+    <div class="div3">박스3</div>
+</body>
+</html>

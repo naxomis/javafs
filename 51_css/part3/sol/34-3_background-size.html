@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {
+            width: 350px;
+            height: 350px;
+            border: 1px solid red;
+            margin: 20px;
+        }
+
+        /* 
+            배경 이미지의 크기
+            background-size: 너비 [높이];
+            단위: px(em, rem), %
+            너비/높이: auto, cover, contain
+            cover: 이미지가 일부 잘릴 수 있으나 가득 채움
+            contain: 이미지는 잘리지 않으나, 빈공간이 생길 수 있음
+            숫자(단위)를 하나만 사용하면 너비를 나타내고, 높이는
+            비례적으로 조정된다.
+        */
+        div {
+            background-image: url(assets/House.jpg);
+            background-repeat: no-repeat;
+        }
+        /* 숫자 0은 단위 생략 가능 */
+        /* 숫자(단위)의 경우 하나만 쓰면 x위치를 말하고, y위치는 가운데로 설정된다. */
+        .bgs1 {background-size: auto;}
+        .bgs2 {background-size: cover;}
+        .bgs3 {background-size: contain;}
+        .bgs4 {background-size: 500px 333px;}
+        .bgs5 {background-size: 333px;}
+        /* %는 이미지 배경이 들어가는 박스 크기가 기준 */
+        .bgs6 {background-size: 100% 100%;}
+        .bgs7 {background-size: 100%;}
+    </style>
+</head>
+
+<body>
+    <h1>배경</h1>
+    <h2>배경 이미지 크기</h2>
+    <div class="bgs1">auto</div>
+    <div class="bgs2">cover</div>
+    <div class="bgs3">contain</div>
+    <div class="bgs4">500px 333px</div>
+    <div class="bgs5">333px</div>
+    <div class="bgs6">100% 100%</div>
+    <div class="bgs7">100%</div>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .container {
+            display: flex;
+            border:1px solid orange;
+        }
+
+        .container div {
+            background-color: gray;
+        }
+
+        /* 교차축 세로 */
+        .wrap1 .container {
+            height:200px;
+        }
+        .wrap1 .container div {
+            width:100px;
+        }
+        /* 플렉스 컨테이너 크기 만큼 늘어남. */
+        /* 플렉스 아이템의 height를 지정하면 늘어나지 않고, flex-start로 지정된다. */
+        .ais {align-items: stretch;}
+        /* 교차축의 시작에 정렬 */
+        .aifs {align-items: flex-start;}
+        /* 교차축의 끝에 정렬 */
+        .aife {align-items: flex-end;}
+        /* 교차축의 가운데 정렬 */
+        .aic {align-items: center;}
+        /* 텍스트 아래 기준선에 맞춰 정렬 */
+        .aib {align-items: baseline;}
+        .aib div:nth-child(1) {font-size:3rem;}
+        .aib div:nth-child(2) {font-size:1rem;}
+        .aib div:nth-child(3) {font-size:2rem;}
+        .aib div:nth-child(4) {font-size:4rem;}
+
+        /* 교차축을 가로 */
+        .wrap2 {
+            display: flex;
+        }
+        .wrap2 .container {
+            flex-direction: column;
+            width:200px;
+        }
+        .wrap2 .container div {
+            height:100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>flexible(플렉서블)</h1>
+    <h2>교차축이 세로</h2>
+    <div class="wrap1">
+        <div class="container ais">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="container aifs">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="container aife">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="container aic">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="container aib">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div> <!-- //.container -->
+    </div> <!-- //.wrap1 -->
+
+    <h2>교차축이 가로</h2>
+    <div class="wrap2">
+        <div class="container ais">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="container aifs">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="container aife">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="container aic">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="container aib">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div> <!-- //.container -->
+    </div> <!-- //.wrap1 -->
+</body>
+
+</html>

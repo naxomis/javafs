@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .parent {
+            position: relative;
+            height:500px;
+            background: yellow;
+        }
+
+        /* .parent의 자식 div를 부모를 기준으로 정중앙 배치하시오. */
+        .parent div {
+            width:200px;
+            /* height:50px; */
+            background: red;
+            /* width의 절반의 음수 값으로 지정한다. */
+            /* height의 절반의 음수 값으로 지정한다. */
+
+            /* 텍스트 중앙 배치 */
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>부모 요소에 자식 요소의 정중앙 배치</h1>
+    <div class="parent">
+        <div>정중앙 배치</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            텍스트 그림자: 
+            text-shadow: 가로위치 세로위치 [흐림] [색], 가로위치 세로위치 [흐림] [색], ...;
+            색의 기본값: 글자색 
+        */
+
+        /* 
+            박스 그림자:
+            box-shadow: 가로위치 세로위치 [흐림] [퍼짐] [색] [inset], 가로위치 세로위치 [흐림] [퍼짐] [색] [inset], ... 
+        */
+
+        div {
+            width: 300px;
+            height: 50px;
+            margin: 20px;
+            border: 1px solid;
+        }
+
+        /* 그림자의 색은 글자색이다. */
+        .bs1 {box-shadow: 5px 10px;}
+        .bs2 {box-shadow: 5px 10px #888;}
+        .bs3 {box-shadow: 5px 10px 8px #888;}
+        .bs4 {box-shadow: 5px 10px 8px 10px #888;}
+        .bs5 {box-shadow: 5px 5px  blue, 10px 10px red, 15px 15px green;}
+        .bs6 {box-shadow: 5px 5px 5px #aaa inset;}
+    </style>
+</head>
+<body>
+    <h1>박스 그림자</h1>
+    <div class="bs1">box-shadow</div>
+    <div class="bs2">box-shadow</div>
+    <div class="bs3">box-shadow</div>
+    <div class="bs4">box-shadow</div>
+    <div class="bs5">box-shadow</div>
+    <div class="bs6">box-shadow</div>
+</body>
+</html>

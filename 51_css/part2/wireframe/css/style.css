@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* common */
+.wrap {
+    width:1200px;
+    margin: 0 auto;
+}
+
+/* header */
+.logo {
+    width:200px;
+    height: 100px;
+    background-color: lightpink;
+}
+.gnb {
+    width: 1000px;
+    height:100px;
+    background-color:lightsalmon;
+}
+
+/* slide */
+.slide {
+    height: 300px;
+    background-color:lightcoral;
+}
+
+/* container */
+/* tabs */
+.tabs {
+    width: 400px;
+    height: 200px;
+    background-color: lightcyan;
+}
+
+/* banner */
+.banner {
+    width: 400px;
+    height: 200px;
+    background-color: lightgoldenrodyellow;
+}
+
+/* shortcut */
+.shortcut {
+    width: 400px;
+    height: 200px;
+    background-color: lightgreen;
+}
+
+/* footer */
+.b_logo {
+    width:200px;
+    height:100px;
+    background-color: #555;
+}
+.copy {
+    width:800px;
+    height:100px;
+    background-color: #777;
+}
+.sns {
+    width:200px;
+    height:100px;
+    background-color: #999;
+}

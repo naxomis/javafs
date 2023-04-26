@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+
+        /* 
+            transition-property: 전환 속성;
+            transition-duration: 전환 시간(단위: s(초));
+            transition-timing-function: 전환 시간 함수;
+            transition-delay: 전환 지연 시간(단위: s(초));
+
+            transition: [property] duration [timing-function] [delay];
+        */
+
+
+        /* div에 전환 속성을 all, 전환 시간은 0.3초, 가속도는 ease, 지연 시간은 0초로 지정하시오. */
+        
+        div {
+            width:100px;
+            height:100px;
+            background: red;
+        }
+        
+        div:hover {
+            width: 200px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>전환</h1>
+    <div></div>
+</body>
+</html>

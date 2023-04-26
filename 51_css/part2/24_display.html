@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        ul.db {
+            height: 300px;
+        }
+
+        img.di {
+            width: 200px;
+            height: auto;
+        }
+
+
+        /* (1) .db에 가로 크기는 50%, 높이는 50px, 상하 여백은 10px, 패딩은 10px, 테두리는 1px solid red로 지정하시오. */
+
+
+        /* (2) .di에 가로와 세로 크기는 1500px, 여백은 20px, 패딩은 10px, 테두리는 1px solid red로 지정하시오. */
+
+
+        /* (3) .dib에 가로는 150px, 세로 크기는 40px, 여백은 20px, 패딩은 10px, 테두리는 1px solid red로 지정하시오. */
+
+
+        /* (4) .dn을 display 속성을 사용하여 숨기시오. */
+
+
+        /* (5) .vh을 visibility 속성을 사용하여 숨기시오. */
+
+
+    </style>
+</head>
+
+<body>
+    <h1>표시 방식</h1>
+    <h2>diplay:block;</h2>
+    <ul>
+        <li>위에서 아래로 배치(세로 배치)</li>
+        <li>width, height, margin, padding, border가 모두 적용된다.</li>
+        <li>기본값이 width:100%; height:콘텐츠크기;</li>
+        <li>div, h1~h6, p, ul, li, ...</li>
+    </ul>
+    <div>
+        <h1 class="db">큰 제목</h1>
+        <h2 class="db">작은 제목</h2>
+        <p class="db">나는야 단락이다.</p>
+        <ul class="db">
+            <li class="db">목록1</li>
+            <li class="db">목록2</li>
+            <li class="db">목록3</li>
+        </ul>
+    </div>
+    <hr>
+    <h2>display:inline;</h2>
+    <ul>
+        <li>왼쪽에서 오른쪽으로 배치(가로 배치)</li>
+        <li>width와 height는 적용할 수 없다. (단, 이미지는 예외)</li>
+        <li>margin은 좌우만 적용된다.</li>
+        <li>padding, border는 모두 적용된다.</li>
+        <li>기본값이 width:콘텐츠크기; height:콘텐츠크기;</li>
+        <li>span, img, a, em, b, i, label, ...</li>
+    </ul>
+    <div>
+        <span class="di">스팬</span>
+        <img src="../assets/20220511_1124.jpg" alt="집" class="di">
+        <a href="#" class="di">임시링크</a>
+        <em class="di">강조</em>
+        <b class="di">굵게</b>
+        <i class="di">이텔릭</i>
+        <label class="di" for="name">라벨</label>
+    </div>
+    <hr>
+    <h2>display:inline-block;</h2>
+    <ul>
+        <li>왼쪽에서 오른쪽으로 배치(가로 배치)</li>
+        <li>width, height, margin, padding, border 모두 적용된다.</li>
+        <li>button은 box-sizing:border-box; 이다.</li>
+        <li>button, input, ...</li>
+    </ul>
+    <div>
+        <button class="dib">버튼</button>
+        <input type="text" class="dib">
+    </div>
+    <hr>
+    <h2>diplay:none;</h2>
+    <div>
+        <div>보인다.</div>
+        <div class="dn">숨긴다.</div>
+        <div>보인다.</div>
+    </div>
+    <hr>
+    <h2>visibility:hidden;</h2>
+    <div>
+        <div>보인다.</div>
+        <div class="vh">숨긴다.</div>
+        <div>보인다.</div>
+    </div>
+</body>
+
+</html>

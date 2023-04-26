@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .container {
+            background:red;
+            width:50%;
+            height:1000px;
+        }
+        .container div {
+            background:yellow;
+            padding: 20px;
+            margin: 100px;
+            border: 10px solid black;
+        }
+        /* 
+            요소의 가로 크기 auto는 100%
+            요소의 세로 크기 auto는 콘텐츠 크기, 만약 콘텐츠가 없으면 0
+            콘텐츠란? 텍스트, 이미지, 비디오, 요소
+        */
+        .div1 {
+            /* width:auto; */
+            width:100%;
+            height: auto;
+        }
+        /* %는 부모 크기 기준 */
+        /* 위/아래 margin은 큰 쪽으로 지정된다. 주의!! */
+        .div2 {
+            width: 50%;
+            margin: 30px;
+        }
+        .div3 {
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h1>박스 모델</h1>
+    <div class="container">
+        <div class="div1">박스1: 가로/세로 크기 모두 auto, 가로는 100%, 세로는 콘텐츠 크기</div>
+        <div class="div2">박스2: 가로는 50%, 세로는 지정하지 않음, 여백 30px</div>
+        <div class="div3">박스3: 가로/세로 250px</div>
+    </div>
+</body>
+</html>

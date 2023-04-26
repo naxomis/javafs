@@ -1,0 +1,56 @@
+08_gradient.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+            margin: 20px;
+        }
+
+        /* 
+            선형(linear) 그라디언트
+            1) linear-gradient([to 방향1], 색1, 색2, [색3, ...]) 
+                - 방향: left, right, top, bottom
+            
+            2) linear-gradient([각도], 색1, 색2, [색3, ...])
+                - 각도: 0~360deg 
+        */
+
+        /* .lg1에 위 blue, 아래 white의 선형 그라디언트를 지정해 보세요. */
+        
+        
+        /* .lg2에 왼쪽 아래 #ff0000, 오른쪽 위 #ffffff의 선형 그라디언트를 지정해 보세요. */
+
+
+        /* .lg3에 왼쪽 위 blue, 가운데 white, 오른쪽 아래는 yellow의 선형 그라디언트를 지정해 보세요. */
+
+
+        /* 
+            원형(radial) 그라디언트
+            1) radial-gradient([모양], 색1, 색2, [색3, ...]);
+                - 모양: circle
+        */
+        /* .rg에 중심은 white, 바깥쪽은 blue인 원형 모양의 그라디언트를 지정해 보세요. */
+
+        
+    </style>
+</head>
+<body>
+    <h1>그라디언트</h1>
+    <h2>선형</h2>
+    <div class="lg1">1</div>
+    <div class="lg2">2</div>
+    <div class="lg3">3</div>
+
+    <h2>원형</h2>
+    <div class="rg">4</div>
+
+</body>
+</html>

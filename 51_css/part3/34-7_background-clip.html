@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {
+            width: 500px;
+            height: 350px;
+            border: 10px dashed rgba(255, 0, 0, 0.5);
+            margin: 20px;
+            padding: 20px;
+
+            background:yellow;
+        }
+        .bgcb {background-clip: border-box;}
+        .bgcp {background-clip: padding-box;}
+        .bgcc {background-clip: content-box;}
+    </style>
+</head>
+
+<body>
+    <h1>배경 적용 범위 조절</h1>
+    <div>값을 지정하지 않음.</div>
+    <div class="bgcb">border-box</div>
+    <div class="bgcp">padding-box</div>
+    <div class="bgcc">content-box</div>
+    </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+
+        /* 
+            border-collapse: 단일 테두리 축소 여부;
+            border-spacing: 테두리 사이 여백;
+            caption-side: 캡션 위치(위 또는 아래);
+            empty-cells: 빈 셀 테두리 숨김 여부;
+            table-layout: 셀 너비 고정 여부;
+        */
+
+        table,
+        th,
+        td {
+            border: 1px solid red;
+        }
+
+        table {
+            width: 200px;
+            margin: 20px;
+            border-collapse: separate;
+            border-spacing: 2px;
+            caption-side: top;
+            empty-cells: show;
+            table-layout: auto;
+        }
+
+        /* .t2 테이블의 테두리를 단일 테두리로 축소하고 캡션의 위치를 아래로, 셀의 너비는 고정으로 지정하시오. */
+
+
+        /* .t3 테이블의 인접한 셀의 테두리 사이 공간은 0으로 지정하시오. */
+        /* border-spacing 속성은 border-collapse:separate; 일때 적용된다. */
+
+
+        /* .t4 테이블의 border-spacing 속성을 가로 4px, 세로 8px로 지정하고, 빈 셀의 테두리는 숨기시오. */
+        /* border-spacing: 가로 세로 */
+
+
+        
+    </style>
+</head>
+
+<body>
+    <h1>표</h1>
+    <table class="t1">
+        <caption>제목</caption>
+        <tr>
+            <td>100</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3000</td>
+            <td></td>
+        </tr>
+    </table>
+    <table class="t2">
+        <caption>제목</caption>
+        <tr>
+            <td>100</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3000</td>
+            <td></td>
+        </tr>
+    </table>
+    <table class="t3">
+        <tr>
+            <td>100</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3000</td>
+            <td></td>
+        </tr>
+    </table>
+    <table class="t4">
+        <tr>
+            <td>100</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3000</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>

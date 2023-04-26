@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            border:1px solid orange;
+        }
+
+        .container div {
+            background-color: gray;
+        }
+
+        /* 교차축 세로 */
+        .wrap1 .container {
+            height:200px;
+        }
+        .wrap1 .container div {
+            width:100px;
+        }
+
+        /* align-items보다 align-self가 우선적용된다. */
+
+        .ass {align-self: stretch;}
+
+        /* (1) .asfs에 플렉스 아이템을 교차축의 시작에 정렬하기 위해 속성을 지정하시오. */
+
+
+        /* (2) .asfe에 플렉스 아이템을 교차축의 끝에 정렬하기 위해 속성을 지정하시오. */
+
+
+        /* (3) .asc에 플렉스 아이템을 교차축의 가운데 정렬하기 위해 속성을 지정하시오. */
+
+
+        /* (4) .asb에 플렉스 아이템을 텍스트 아래 기준선에 맞춰 정렬하기 위해 속성을 지정하시오. */
+
+
+        .asb1 {font-size: 3rem;}
+        .asb2 {font-size: 1rem;}
+        .asb3 {font-size: 2rem;}
+        .asb4 {font-size: 4rem;}
+
+    </style>
+</head>
+
+<body>
+    <h1>flexible(플렉서블)</h1>
+    <h2>플렉스 아이템의 교차축 세로 정렬</h2>
+    <div class="wrap1">
+        <div class="container">
+            <div class="ass">1</div>
+            <div class="asfs">2</div>
+            <div class="asfe">3</div>
+            <div class="asc">4</div>
+            <div class="asb asb1">5</div>
+            <div class="asb asb2">6</div>
+            <div class="asb asb3">7</div>
+            <div class="asb asb4">8</div>
+        </div>
+    </div> <!-- //.wrap1 -->
+
+</body>
+
+</html>

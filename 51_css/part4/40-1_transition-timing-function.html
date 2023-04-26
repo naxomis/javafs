@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {
+            width:100px;
+            height:50px;
+            margin:10px;
+            background: red;
+            transition: 1s;
+        }
+        div:hover {
+            width: 200px;
+        }
+        /* 느린 시작과 끝, 시작 속도가 마지막 속도보다 약간 빠름 */
+        .trs1 {transition-timing-function: ease;}
+        /* 느린 시작 */
+        .trs2 {transition-timing-function: ease-in;}
+        /* 느린 끝 */
+        .trs3 {transition-timing-function: ease-out;}
+        /* 느린 시작과 끝, 시작 속도가 마지막 속도보다 약간 느림 */
+        .trs4 {transition-timing-function: ease-in-out;}
+        /* 등속 */
+        .trs5 {transition-timing-function: linear;}
+
+        /* cubic-bezier(n,n,n,n) */
+        /* https://cubic-bezier.com/#.17,.67,.83,.67  */
+        .trs6 {transition-timing-function:cubic-bezier(1,-0.01,1,.07);}
+    </style>
+</head>
+<body>
+    <h1>전환</h1>
+    <div class="trs1">ease</div>
+    <div class="trs2">ease-in</div>
+    <div class="trs3">ease-out</div>
+    <div class="trs4">ease-in-out</div>
+    <div class="trs5">linear</div>
+    <div class="trs6">cubic-bezier</div>
+</body>
+</html>

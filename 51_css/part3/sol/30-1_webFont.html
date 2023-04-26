@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <link href="@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');"
+        rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+        @font-face {
+            font-family: 'SeoulNamsanL';
+            src: url('/51_css/assets/font/SeoulNamsanL.ttf');
+            
+            /* 아래 주소로 표현시 html문서를 서버에 올려서 확인 */
+            /* src: url('http://id.dothome.co.kr/font/SeoulNamsanL.ttf'); */
+            /* src: url('/font/SeoulNamsanL.ttf'); */
+        }
+
+        .ff1 {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .ff2 {
+            font-family: 'SeoulNamsanL', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>웹 폰트</h1>
+    <p>구글 웹 폰트(Google Web Font) 지정 안함.</p>
+    <p class="ff1">구글 웹 폰트(Google Web Font) 지정 했음.</p>
+    <p>서울 서체(Seoul Font) 지정 안함.</p>
+    <p class="ff2">서울 서체(Seoul Font) 지정 했음.</p>
+</body>
+
+</html>

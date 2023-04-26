@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .container {
+            background: red;
+            overflow:hidden;
+        }
+        .container div {
+            float:left;
+            width:200px;
+            height:100px;
+            margin:20px;
+            background:yellow;
+        }
+
+        /* (1) .ovf1에 overflow 속성을 visible로 지정하시오. */
+
+
+        /* (2) .ovf2에 overflow-y 속성을 scroll로 지정하시오. */
+
+
+        /* (3) .ovf3에 overflow 속성을 hidden으로 지정하시오. */
+
+
+        /* (4) .ovf4에 overflow 속성을 auto로 지정하시오. */
+
+
+    </style>
+</head>
+<body>
+    <h1>오버플로우</h1>
+    <p>콘텐츠가 요소의 범위를 넘칠 경우 넘친 부분을 그대로 표시(visible)하거나, 숨기거나(hidden), 스크롤바(scroll, auto)를 나타낸다.</p>
+    <div class="container">
+        <div class="ovf1">visible: Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo porro voluptate, rem itaque. Perferendis, ullam?</div>
+        <div class="ovf2">scroll: Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo porro voluptate, rem itaque. Perferendis, ullam?</div>
+        <div class="ovf3">hidden: Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo porro voluptate, rem itaque. Perferendis, ullam?</div>
+        <div class="ovf4">auto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo porro voluptate, rem itaque. Perferendis, ullam?</div>
+    </div>
+</body>
+</html>

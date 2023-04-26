@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+
+        /* .div와 .span을 각각 display는 inline-block로, 가로 크기는 150px, 세로 크기는 100px, 테두리는 1px solid red, 여백은 10px로 지정하시오. */
+
+    </style>
+</head>
+
+<body>
+    <h1>표시 방식</h1>
+    <div class="container">
+        <!-- div는 블록레벨요소(인라인요소도 포함)의 컨테이너로 그룹핑하여 CSS를 적용시킨다. -->
+        <!-- 블록레벨요소 안에는 블록레벨요소 또는 인라인요소를 사용할 수 있다. -->
+        <!-- 모든 요소는 모두 그룹핑해야한다. -->
+        <div class="div">
+            <span>나는야 span</span>
+        </div>
+        <div class="div">div</div>
+        <!-- a는 예외로 블록레벨요소와 인라인요소를 모두 그룹핑할 수 있다. -->
+        <div class="span">
+            <a href="#">
+                <div>나는냐 div</div>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <!-- span은 인라인요소의 컨테이너 그룹핑하여 CSS를 적용시킨다. -->
+        <!-- 인라인요소 안에는 인라인 요소만 사용할 수 있다. -->
+        <span class="span">
+            <span>나는냐 span</span>
+        </span>
+        <em class="span">
+            <em>나는냐 em</em>
+        </em>
+        <span class="span">span</span>
+    </div>
+</body>
+
+</html>
