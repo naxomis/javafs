@@ -13,31 +13,81 @@
             margin: 20px;
         }
 
+        /*
+            border-top-left-radius: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 40px;
+            
+            (속기형)
+            border-radius: 10px; (모든모서리)
+            border-radius: 10px 20px; TLBR TRBL
+            border-radius: 10px 20px 30px; TL TRBR BL
+            border-radius: 10px 20px 30px 40px; TL TR BR BL
+         */
+
 
         /* (1) .br1에 상하좌우 모서리 둥근 정도를 10px로 지정하시오. */
-
+        .br1 {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
 
         /* (2) .br2에 상하좌우 모서리 둥근 정도를 10px로 지정하시오.(속기) */
-
+        .br2 {
+            border-radius: 10px;
+        }
 
         /* (3) .br3의 모서리 둥근 정도를 왼쪽 상단은 10px, 오른쪽 상단 20px, 오른쪽 아래는 30px, 왼쪽 아래는 40px로 지정하시오. */
-
+        .br3 {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 40px;
+        }
 
         /* (4) .br4의 모서리 둥근 정도를 왼쪽 상단은 10px, 오른쪽 상단과 왼쪽 아래를 20px, 오른쪽 아래는 30px으로 지정하시오. */
+        .br4 {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 30px;
+
+            border-radius: 10px 20px 30px;
+        }
 
 
         /* (5) .br5의 모서리 둥근 정도를 왼쪽 상단과 오른쪽 하단은 10px, 오른쪽 상단과 왼쪽 아래는 20px로 지정하시오. */
+        .br5 {
+            /* border-top-left-radius: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 20px; */
 
+            border-radius: 10px 20px;
+        }
 
         /* (6) .br6의 모서리 둥근 정도를 75px로 지정하시오. */
-        
+        /* width 또는 height 크기의 50% 이상 지정하면  원(circle)이 된다 */
+        /* %는 자신의 width 또는 height의 크기가 기준이다 */
+
+        .br6 {
+            border-radius: 75px;
+        }
+
         /* %는 자신의 가로 또는 세로 크기가 기준 */
         /* (7) .br7의 모서리 둥근 정도를 50%로 지정하시오. */
+        .br7 {
+            border-radius: 50%;
+        }
 
-
+        /* 숫자 0은 단위 생략 가능 */
         /* (8) .br8의 모서리 둥근 정도를 왼쪽 상단과 왼쪽 하단을 75px로 지정하시오. */
         .br8 {
             width: 75px;
+            border-radius: 75px 0 0 75px;
         }
 
         
