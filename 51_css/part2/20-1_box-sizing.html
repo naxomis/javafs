@@ -7,12 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+
+        /* * {box-sizing: border-box; margin: 0; padding: 0%;} */
+
         div {
             background: yellow;
             width: 500px;
             height: 150px;
             padding: 20px;
-            border: 10px solid black;
+            margin: 40px;
+            border: 10px solid yellow;
         }
 
         /* 
@@ -24,12 +28,18 @@
             = 150 + 20*2 + 10*2 
         */
         /* (1) .div1의 box-sizing은 content-box로 지정하시오. */
+            .div1 {
+                box-sizing: content-box;
+            }
 
 
 
         /* width:500px; height:150px; */
         /* width와 height에 border와 padding 크기가 포함된다. */
         /* (2) .div2의 box-sizing은 border-box로 지정하시오. */
+            .div2 {
+                box-sizing: border-box;
+            }
 
 
 
