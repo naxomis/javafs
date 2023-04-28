@@ -7,13 +7,33 @@
     <title>HTML+CSS</title>
     <style>
 
-        /* (1) 본문의 두 번째 p 요소와 세 번째 p 요소에 ::after 선택자를 사용하여 clear:both; 처리하시오. */
+        /*
 
+            <태그>내용123</태그>
+
+            선택자
+            1. 기본선택자
+            2. 결합자
+            3. 가상 클래스
+            4. 가상 요소
+                ::after (내용 이후)
+                ::before (내용 이전)
+                content 속성과 함께 사용한다.
+            5. 속성 
+         */
+
+        /* (1) 본문의 두 번째 p 요소와 세 번째 p 요소에 ::after 선택자를 사용하여 clear:both; 처리하시오. */
+        p::after {
+            content: '';
+            clear: both;
+            display: block;
+        }
 
 
         /* (2) 모든 p 요소에 overflow를 hidden 처리하시오. */
         p {
             border: 1px solid red;
+            /* overflow: hidden; */
         }
 
 
@@ -27,8 +47,8 @@
     <h1>이미지와 단락</h1>
     <hr>
     <p><img class="img1" src="../assets/20220511_1124.jpg" alt="집">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus eius aspernatur laboriosam velit. Temporibus architecto doloribus quidem? Similique consequuntur voluptatibus mollitia veritatis aliquam minima alias asperiores eaque, labore sapiente qui sint accusantium quam ipsam quasi voluptatem, eum architecto? Voluptatibus facere error rerum odio exercitationem minima ab animi labore sunt?</p>
-    <p><img class="img2" src="../assets/20225282447948.png" alt="집">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus eius aspernatur laboriosam velit. Temporibus architecto doloribus quidem? Similique consequuntur voluptatibus mollitia veritatis aliquam minima alias asperiores eaque, labore sapiente qui sint accusantium quam ipsam quasi voluptatem, eum architecto? Voluptatibus facere error rerum odio exercitationem minima ab animi labore sunt?</p>
+    <p><img class="img2" src="../assets/20220511_1124.jpg" alt="집">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus eius aspernatur laboriosam velit. Temporibus architecto doloribus quidem? Similique consequuntur voluptatibus mollitia veritatis aliquam minima alias asperiores eaque, labore sapiente qui sint accusantium quam ipsam quasi voluptatem, eum architecto? Voluptatibus facere error rerum odio exercitationem minima ab animi labore sunt?</p>
     
-    <p><img class="img3" src="../assets/20230121135497.jpg" alt="집">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus eius aspernatur laboriosam velit. Temporibus architecto doloribus quidem? Similique consequuntur voluptatibus mollitia veritatis aliquam minima alias asperiores eaque, labore sapiente qui sint accusantium quam ipsam quasi voluptatem, eum architecto? Voluptatibus facere error rerum odio exercitationem minima ab animi labore sunt?</p>
+    <p><img class="img3" src="../assets/20220511_1124.jpg" alt="집">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus eius aspernatur laboriosam velit. Temporibus architecto doloribus quidem? Similique consequuntur voluptatibus mollitia veritatis aliquam minima alias asperiores eaque, labore sapiente qui sint accusantium quam ipsam quasi voluptatem, eum architecto? Voluptatibus facere error rerum odio exercitationem minima ab animi labore sunt?</p>
 </body>
 </html>

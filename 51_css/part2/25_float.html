@@ -6,33 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        div {
-            width:200px;
-            height:150px;
+        .wrap {
+            height: 300px;
+            background: #999;
+            /* 가로 가운데 */
+            width: 1500px;
+            margin: 0 auto;
         }
+        div {
+            width:360px;
+            height:240px;
+        }
+
+        /* 
+            float: left right none;
+            clear: left right none; -> float의 영향을 받지 않게 한다.
+         */
 
         /* (1) .div1의 float를 left로 지정하시오. */
         .div1 {
+            float: left;
             background:lightblue;
             /* width의 기본값이 콘텐츠크기로 바뀐다. */
         }
 
         /* (2) .div2의 float를 right로 지정하시오. */
         .div2 {
+            float: right;
             background: lightcoral;
         }
 
         /* (3) .div3의 clear 속성을 both로 지정하시오. */
         .div3 {
+            /* float: left; */
+            clear: both; 
             background: lightgoldenrodyellow;
-            /* 상위 요소의 float 효과를 제거 */
+            /* 상위 요소의 float 효과를 받지 않게 한다. */
         }
     </style>
 </head>
 <body>
     <h1>플로트</h1>
-    <div class="div1">박스1</div>
-    <div class="div2">박스2</div>
-    <div class="div3">박스3</div>
+    <div class="wrap">
+        <div class="div1">박스1</div>
+        <div class="div2">박스2</div>
+        <div class="div3">박스3</div>
+    </div>
 </body>
 </html>
