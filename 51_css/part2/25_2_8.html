@@ -17,7 +17,7 @@
             background: #333;
             /* 가로 가운데 */
             width: 1500px;
-            /* height: 800px; */
+            /* height: auto; */
             margin: 0 auto;
             overflow: hidden;
         }
@@ -26,11 +26,27 @@
             width: 360px;
             height: 240px;
             background: #ccc;
-            margin-right: 20px;
+            /* margin-right: 20px; */
+            margin-bottom: 20px;
         }
         /* 숫자 0은 단위 생략 가능 */
-        .mr0 {
+        /* li {
+            margin-right: 20px;
+        } */
+
+        /* li:nth-of-type(4n) {
             margin-right: 0;
+        } */
+
+        li:not(:nth-of-type(4n)) {
+            margin-right: 20px;
+        }
+
+        li:nth-of-type(4)~li {
+            margin-bottom: 0;
+        }
+        li:not(:nth-of-type(4)~li) {
+            margin-bottom: 20px;
         }
 
 
@@ -43,7 +59,11 @@
             <li>박스1</li>
             <li>박스2</li>
             <li>박스3</li>
-            <li class="mr0">박스4</li>
+            <li>박스4</li>
+            <li>박스5</li>
+            <li>박스6</li>
+            <li>박스7</li>
+            <li>박스8</li>
         </ul>
         
     </div>

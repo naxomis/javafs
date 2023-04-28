@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+header {
+    margin: 0;
+    padding: 0%;
+    box-sizing:border-box;
+}
+/* 헤더 */
+
+header {
+    background: lightcoral;
+}
+
+/* section1 */
+#section1 {
+    background: palegoldenrod;
+}
+/* section2 */
+.section2 {
+    background: lavender;
+}
+/* section3 */
+.section3 {
+    background: lightblue;
+}
+/* section4 */
+.section4 {
+    background: lightgoldenrodyellow;
+}
+footer {
+    background: lightgreen;
+}

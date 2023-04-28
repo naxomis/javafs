@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-CSS</title>
+    <style>
+        /* 
+            선택자1:net(선택자2)
+            선택자1 중에서 선택자2를 제외한 요소
+         */
+         p:not(.my) {
+            color: red;
+         }
+    </style>
+</head>
+<body>
+    <h1>가상 클래스</h1>
+    <p>:not</p>
+    <p class="my">:not, 나만 빼고 빨강</p>
+    <p>:not</p>
+    <p>:not</p>
+</body>
+</html>
