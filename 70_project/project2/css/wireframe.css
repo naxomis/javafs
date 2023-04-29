@@ -5,27 +5,75 @@ header {
     padding: 0%;
     box-sizing:border-box;
 }
+header::after, section:after, footer::after {
+    content: '';
+    clear: both;
+    display: block;
+} 
 /* 헤더 */
 
 header {
     background: lightcoral;
+    height: 55px;
 }
 
+section {
+    margin: auto;
+}
 /* section1 */
 #section1 {
     background: palegoldenrod;
+    width: 1500px;
+    height: 745px;
 }
 /* section2 */
 .section2 {
     background: lavender;
+    width: 1500px;
 }
+.wrap {
+    background: #333;
+    /* 가로 가운데 */
+    width: 1500px;
+    /* height: auto; */
+    margin: 0 auto;
+    overflow: hidden;
+}
+ul {
+    margin: 0;
+    padding-left: 0;
+    /* 마커 */
+    list-style: none;
+}
+li {
+    float: left;
+    width: 360px;
+    height: 240px;
+    background: #ccc;
+    /* margin-right: 20px; */
+    margin-bottom: 20px;
+}
+li:not(:nth-of-type(4n)) {
+    margin-right: 20px;
+}
+
+li:nth-of-type(4)~li {
+    margin-bottom: 0;
+}
+li:not(:nth-of-type(4)~li) {
+    margin-bottom: 20px;
+}
+
+
 /* section3 */
 .section3 {
     background: lightblue;
+    width: 1500px;
 }
 /* section4 */
 .section4 {
     background: lightgoldenrodyellow;
+    width: 1500px;
 }
 footer {
     background: lightgreen;
