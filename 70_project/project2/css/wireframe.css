@@ -1,8 +1,10 @@
 @charset "utf-8";
 
+* {
+    margin: 0%;
+}
 header {
     margin: 0;
-    padding: 0%;
     box-sizing:border-box;
 }
 header::after, section:after, footer::after {
@@ -70,23 +72,14 @@ li:not(:nth-of-type(4)~li) {
     background: lightblue;
     width: 1500px;
 }
-/* .li {
+.li1 > li {
     float: left;
     width: 360px;
     height: 462px;
     background: #ccc;
+    /* margin-right: 20px; */
     margin-bottom: 20px;
 }
-.li:not(:nth-of-type(4n)) {
-    margin-right: 20px;
-}
-.li:nth-of-type(4)~li {
-    margin-bottom: 0;
-}
-.li:not(:nth-of-type(4)~li) {
-    margin-bottom: 20px;
-} */
-
 /* section4 */
 .section4 {
     /* background: lightgoldenrodyellow; */
