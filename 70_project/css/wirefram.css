@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/* reset */
+* {
+    margin: 0;
+}
+/* 공통(connon) */
+h2 {
+    background: chartreuse;
+    height: 120px;
+}
+section > p {
+    height: 54px;
+    background: darkcyan;
+}
+/* 블로레벨요소의 가로 가운데 배치는 margin: 0 auto; */
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* header */
+nav {
+    height: 54px;
+    background: antiquewhite;
+}
+/* section1 */
+#home {
+    height: 1053px;
+    background: brown;
+}
+
+/* section2 */
+.num {
+    height: 135px;
+    background: darkgoldenrod;
+}
+/* section3 */
+
+/* section4 */
+
+/* footer */

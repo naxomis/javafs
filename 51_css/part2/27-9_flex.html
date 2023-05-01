@@ -7,44 +7,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* display:flex; 하면 플렉스 아이템의 가로/세로의 크기는 콘텐츠 크기로 지정된다. */
         .container {
             display: flex;
             border: 1px solid orange;
         }
 
         .container div {
-            width: 100px;
-            height: 100px;
+            /* width: 100px; */
+            height: 100px; 
             background-color: gray;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
         }
         
         /* 
             flex-grow: 숫자;
             flex-shrink: 숫자;
             flex-basis: 숫자%|숫자px|auto;
-
+            
+            (속기형)
             flex: [성장] [수축] [초기값];
 
+            flex-grow: 0; -> 성장하지 않음
+            flex-grow: 0 이외으 값; -> 성장함
+            flex-shrink: 0; -> 수축하지 않음
+            flex-shrink: 0 이외의 값; -> 수축함
             0이면 성장/수축하지 않음.
             1이면 성장/수축함.
+
+            (기본값)
+            flex-grow: 0;
+            flex-shink: 1;
+            flex-basis: auto;
+            
+            flex: 0 1 auto; (속기형)
 
             생략하면 flex: 0 1 auto;
             flex: auto; -> flex: 1 1 auto;
             flex: 1; -> flex: 1 1 auto;
         */
 
-        /* .fl1의 플렛스 아이템의 flex를 0 0 150px로 지정해 보세요. */
-        
+        /* .fl1의 플렉스 아이템의 flex속성을 0 0 150px로 지정해 보세요. */
+        .fl1 div{
+            flex-grow: 0;
+            flex-wrap: 0;
+            flex-basis: 150px;
 
+            flex: 0 0 150px;
+        }
 
         /* (1) .fli1에 flex 속성을 1로 지정하시오. */
-
+        .fl2 .fli1 {flex: 1;}
         
         /* (2) .fli2에 flex 속성을 2로 지정하시오. */
-
+        .fl2 .fli2 {flex: 2;}
 
         /* (3) .fli3에 flex 속성을 3로 지정하시오. */
-
+        .fl2 .fli3 {flex: 3;}
         
     </style>
 </head>

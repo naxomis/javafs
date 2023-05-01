@@ -18,26 +18,34 @@
                 flew-direction:column; 이면 주축 column, 교차축 row
 
             부모: 플렉스 컨테이너
-                1. display:flex;
-                2. flex-direction: 방향;
-                3. flex-wrap: 줄바꿈;
-                4. flex-flow: direction wrap
-                5. justify-content: 주축 정렬
-                6. align-items: 교차축 정렬
-                7. align-content: 교차축 블록 방향 정렬 (2개의 라인)
+            display:flex;
+                    1. flex-direction: 방향;
+                    2. flex-wrap: 줄바꿈;
+                    3. flex-flow: direction wrap (속기형)
+                    4. justify-content: 주축 정렬
+                    5. align-items: 교차축 정렬
+                    6. align-content: 교차축 블록 방향 정렬 (2개의 라인)
+
+
+                    align-self > align-content > align-items
 
             자식: 플렉스 아이템
-                8. align-self: 교차축 정렬, align-items 보다 우선 적용된다.
-                9. flex-grow: 커진다.
-                10. flex-shrink: 작아진다.
-                11. flex-basis: 처음 크기
-                12. flex: grow shrink basis
-                13. order: 순서, 숫자가 작을수록 앞에 배치
+                    7. align-self: 교차축 정렬, align-items 보다 우선 적용된다.
+                    8 flex-grow: 숫자;
+                        flex-grow: 0; (기본값) -> 성장하지 않는다.
+                        flex-grow: 1; -> 성장한다(커진다).
+                    9. flex-shrink: 숫자;
+                        flex-shrink: 1; (기본값) -> 수축된다(작아진다).
+                        flex-shrink: 0; -> 수축되지 않는다.
+                    10. flex-basis:숫자px; 처음 크기
+                    11. flex: [grow] [shrink] [basis] (속기형)
+                    12. order: 숫자;-> 순서, 숫자가 작을수록 앞에 배치
         */
 
 
         /* 부모 요소인 .container의 display를 flex로 적용해 보세요. */
         .container {
+            display:flex;
             outline: 1px solid red;
         }
 
@@ -63,6 +71,12 @@
         <div>2</div>
         <div>3</div>
     </div>
+    <div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
 </body>
 
 </html>

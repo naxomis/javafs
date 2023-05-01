@@ -27,24 +27,41 @@
 
         /* align-items보다 align-self가 우선적용된다. */
 
+        /* 
+            align-self: stretch; (기본값) -> 플렉스 컨테이너 크기 만큼 늘어남       
+            align-self: flex-start; -> 교차축의 시작에 정렬      
+            align-self: flex-end; -> 교차축의 끝에 정렬
+            align-self: center; -> 교차축의 가운데 정렬    
+            align-self: baseline; -> 텍스트 아래 기준선에 맞춰 정렬
+        */
         .ass {align-self: stretch;}
 
         /* (1) .asfs에 플렉스 아이템을 교차축의 시작에 정렬하기 위해 속성을 지정하시오. */
-
+        .asfs {align-self: flex-start;}
 
         /* (2) .asfe에 플렉스 아이템을 교차축의 끝에 정렬하기 위해 속성을 지정하시오. */
-
+        .asfe {align-self: flex-end;}
 
         /* (3) .asc에 플렉스 아이템을 교차축의 가운데 정렬하기 위해 속성을 지정하시오. */
-
+        .asc {align-self: center;}
 
         /* (4) .asb에 플렉스 아이템을 텍스트 아래 기준선에 맞춰 정렬하기 위해 속성을 지정하시오. */
-
+        .asb {align-self: baseline;}
 
         .asb1 {font-size: 3rem;}
         .asb2 {font-size: 1rem;}
         .asb3 {font-size: 2rem;}
         .asb4 {font-size: 4rem;}
+
+
+        /* 교차축 가로 */
+        .wrap2 .container {
+            flex-direction: column; /* 주축이 세로 */
+            width: 400px;
+        }
+        .wrap2 .container div {
+            height: 100px;
+        }
 
     </style>
 </head>
@@ -64,7 +81,19 @@
             <div class="asb asb4">8</div>
         </div>
     </div> <!-- //.wrap1 -->
-
+    <h2>플렉스 아이템의 교차축 가로 정렬</h2>
+    <div class="wrap2">
+        <div class="container">
+            <div class="ass">1</div>
+            <div class="asfs">2</div>
+            <div class="asfe">3</div>
+            <div class="asc">4</div>
+            <div class="asb asb1">5</div>
+            <div class="asb asb2">6</div>
+            <div class="asb asb3">7</div>
+            <div class="asb asb4">8</div>
+        </div>
+    </div> <!-- //.wrap2 -->
 </body>
 
 </html>

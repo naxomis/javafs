@@ -16,16 +16,18 @@
         .container {
             display: flex;
             outline:1px solid red;
+            /* 자식 수 보다 부모 영역이 작을 때 */
+            flex-wrap: nowrap;
         }
 
-        /* (1) .flwnw에 줄바꿈 속성을 nowrap으로 지정하시오. */
-
+        /* (1) .flwnw에 줄바꿈 속성을 nowrap(줄바꿈 안함)으로 지정하시오. */
+        .flwnw {flex-wrap: nowrap;}
         
-        /* (2) .flwnw에 줄바꿈 속성을 wrap으로 지정하시오. */
+        /* (2) .flww에 줄바꿈 속성을 wrap(줄바꿈)으로 지정하시오. */
+        .flww {flex-wrap: wrap;}
 
-
-        /* (3) .flwnw에 줄바꿈 속성을 wrap-reverse으로 지정하시오. */
-
+        /* (3) .flwwr에 줄바꿈 속성을 wrap-reverse으로 지정하시오. */
+        .flwwr {flex-wrap: wrap-reverse;}
 
     </style>
 </head>

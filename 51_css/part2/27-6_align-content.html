@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* flex-wrap: wrap|wrap-reverse 로 지정해야 align-content의 space~가 적용된다. */
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -23,27 +24,51 @@
         }
         .wrap1 .container div {
             width:100px;
+            /* height: 30px; */
         }
-        /* 플렉스 컨테이너 크기 만큼 늘어남. */
+
+        /* 
+            align-content: stretch; -> 플렉스 컨테이너 크기 만큼 늘어남
+            align-content: flex-start; -> 교차축의 시작에 정렬
+            align-content: flex-end; -> 교차축의 끝에 정렬
+            align-content: center; -> 교차축의 가운데 정렬
+            align-content: space-between; -> 교차축의 시작과 끝에 붙이고 사이 간격을 동일하게
+            align-content: space-around; -> 좌우 또는 상하 여백 크기를 동일하게
+            align-content: space-evenly; -> 플렉스 아이템의 크기를 제외한 여백의 크기를 동일하게
+        */
+
+        /* 플렉스 아이템의 높이를 지정하면 align-items를 동시적용하면 align-contant로 적용된다. */
+        
         /* 플렉스 아이템의 height를 지정하면 늘어나지 않고, flex-start로 지정된다. */
+        /* 플렉스 아이템의 높이를 지정하지 않으면 플렉스 컨테이너를 가득 채운다(늘어난다). */
+        .acs {align-content: stretch;}
+        
         /* align-content와 align-items를 동시 적용하면 align-content로 적용된다. */
-
         /* (1) .acfs에 플렉스 아이템을 교차축의 시작에 정렬하기 위해 속성을 지정하시오. */
-
+        .acfs {
+            align-content: flex-start;
+            align-items: flex-start;
+        }
 
         /* (2) .acfe에 플렉스 아이템을 교차축의 끝에 정렬하기 위해 속성을 지정하시오. */
+        .acfe {
+            align-content: flex-end;}
 
 
         /* (3) .acc에 플렉스 아이템을 교차축의 가운데에 정렬하기 위해 속성을 지정하시오. */
-
+        .acc {
+            align-content: center;
+            align-items: center;
+        }
 
         /* (4) .acsb에 플렉스 아이템을 교차축의 시작과 끝에 붙이고 사이 간격을 동일하게 하기 위해 속성을 지정하시오. */
-
+        .acsb {align-content: space-between;}
 
         /* (5) .acsa에 플렉스 아이템 좌우 또는 상하 여백 크기를 동일하게 하기 위해 속성을 지정하시오. */
-
+        .acsa {align-content: space-around;}
 
         /* (6) .acse에 플렉스 아이템의 크기를 제외한 여백의 크기를 동일하게 하기 위해 속성을 지정하시오. */
+        .acse {align-content: space-evenly;}
 
 
 

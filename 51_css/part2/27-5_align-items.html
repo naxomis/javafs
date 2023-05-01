@@ -21,42 +21,58 @@
             height:200px;
         }
         .wrap1 .container div {
-            width:100px;
+            width: 100px;
+            /* height: 100px; */
         }
-        /* 플렉스 컨테이너 크기 만큼 늘어남. */
-        /* 플렉스 아이템의 height를 지정하면 늘어나지 않고, flex-start로 지정된다. */
+        /* 플렉스 아이템의 높이를 지정하지 않으면 플렉스 컨테이너 크기 만큼 늘어남. */
+        /* 플렉스 아이템의 높이를 지정하면 늘어나지 않고, flex-start로 지정된다. */
 
+        /* 
+            align-items: stretch; (기본값) -> 플렉스 컨테이너 크기 만큼 늘어남       
+            align-items: flex-start; -> 교차축의 시작에 정렬      
+            align-items: flex-end; -> 교차축의 끝에 정렬
+            align-items: center; -> 교차축의 가운데 정렬    
+            align-items: baseline; -> 텍스트 아래 기준선에 맞춰 정렬       
+        */
 
         
-        /* (1) .ais에 플렉스 아이템을 교차축의 시작에 정렬하기 위해 속성을 지정하시오. */
+        /* (1) .ais에 플렉스 아이템을 플렉스 컨테이너 크기 만큼 하기 위해 속성을 지정하시오. */
+        .ais {align-items: stretch;}
 
+        /* (2) .aifs에 플렉스 아이템을 교차축의 시작에 정렬하기 위해 속성을 지정하시오. */
+        .aifs {align-items: flex-start;}
 
-        /* (2) .aifs에 플렉스 아이템을 교차축의 끝에 정렬하기 위해 속성을 지정하시오. */
+        /* (3) .aife에 플렉스 아이템을 교차축의 끝에 정렬하기 위해 속성을 지정하시오. */
+        .aife {align-items: flex-end;}
 
+        /* (4) .aic에 플렉스 아이템을 교차축의 가운데 정렬하기 위해 속성을 지정하시오. */
+        .aic {align-items: center;}
 
-        /* (3) .aife에 플렉스 아이템을 교차축의 가운데 정렬하기 위해 속성을 지정하시오. */
+        /* (5) .aib에 플렉스 아이템을 텍스트 아래 기준선에 맞춰 정렬하기 위해 속성을 지정하시오. */
+        .aib {align-items: baseline;}
 
-
-        /* (4) .aic에 플렉스 아이템을 텍스트 아래 기준선에 맞춰 정렬하기 위해 속성을 지정하시오. */
-
-
-
-
-        .aib div:nth-child(1) {font-size:3rem;}
-        .aib div:nth-child(2) {font-size:1rem;}
-        .aib div:nth-child(3) {font-size:2rem;}
-        .aib div:nth-child(4) {font-size:4rem;}
+        /* font-size: 글자 크기; */
+        /* 단위: px, %, em(엠), rem(램) */
+        /* rem: <html> 태그에 지정한 글자 크기의 배수 */
+        /* 글자 크기를 지정하지 않으면 기본값은 16px */
+        .aib div:nth-child(1) {font-size:3rem;} /* 48px */
+        .aib div:nth-child(2) {font-size:1rem;} /* 16px */
+        .aib div:nth-child(3) {font-size:2rem;} /* 32px */
+        .aib div:nth-child(4) {font-size:4rem;} /* 64px */
 
         /* 교차축을 가로 */
+        /* .container를 가로 배치하기 위해 .wrap2를 flex 처리 */
         .wrap2 {
             display: flex;
         }
+        /* flex-direction: column; 이면 주축이 column, 교차축이 row */
         .wrap2 .container {
             flex-direction: column;
             width:200px;
         }
         .wrap2 .container div {
             height:100px;
+            /* width: 100px; */
         }
     </style>
 </head>
