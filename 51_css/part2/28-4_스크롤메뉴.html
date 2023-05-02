@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+        }
+        /* position:fixed; 로 지정하면 width: 콘텐츠 크기; */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 54px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+        }
+        section {
+            height: 1000px;
+        }
+        .backToThe {
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            color: #fff;
+            width: 100px;
+            height: 100px;
+            background: #000;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>부드러운 스크롤 움직임</h1>
+    <header>
+        <nav>
+            <a href="#section1">섹션1</a>
+            <a href="#section2">섹션2</a>
+        </nav>
+    </header>
+    <section id="section1"><h2>섹션1</h2></section>
+    <section id="section2"><h2>섹션2</h2></section>
+    <footer>
+        <div class="backToTop"><a href="#top">to the top</a></div>
+    </footer>
+</body>
+</html>
