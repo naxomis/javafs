@@ -27,15 +27,27 @@ header {
     background: #fff;
     border: 1px solid #000;
 }
+/* .logo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav1 {
+    display: flex;
+    justify-content: flex-end;
+} */
 .logo {
     float: left;
 }
 nav {
     float: right;
-} 
-nav li {
-    display: inline-block;
 }
+nav li {
+    display: inline-flex;
+    margin: 16px;
+}
+
+
 /* section common */
 section {
     width: 1496px;
@@ -92,7 +104,7 @@ section {
 }
 #menu li:not(:nth-of-type(4n)), #event li:not(:nth-of-type(4n)) {
     margin-right: 16px;
-}
+} 
 /* section3 */
 #event li h3 {
     margin: 16px 0 8px;
