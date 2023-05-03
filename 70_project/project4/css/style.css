@@ -1,11 +1,13 @@
 @charset "utf-8";
+
 /* 초기화 */
 * {
     margin: 0;
     padding: 0%;
     box-sizing:
-     border-box;
+        border-box;
 }
+
 /* float 때문에 사용 */
 /* header::after, .contents::after, footer::after {
     content: '';
@@ -20,56 +22,70 @@
     width: 1200px;
     margin: 0 auto;
 }
-header, #contents, footer {
-   /*  float: left; */
-   display: flex;
+
+header,
+#contents,
+footer {
+    /*  float: left; */
+    display: flex;
 }
+
 /* 헤더 */
 header {
     background-color: lightblue;
 }
+
 /* 로고 */
 .logo {
     width: 200px;
     height: 100px;
     background: lightpink;
 }
+
 /* 네비게이션 */
 nav {
     width: 1000px;
     height: 100px;
     background: lightsalmon;
 }
+
 /* 슬라이드 */
 #slide {
     height: 300px;
     background: lightcoral;
 }
+
 /* 메인컨텐츠 */
 #contents div {
     width: 400px;
     height: 200px;
 }
+
 .tabs {
     background: lavender;
 }
+
 .banner {
     background: darkcyan;
 }
+
 .shortcut {
     background: greenyellow;
 }
+
 /* 푸터 */
 .b_logo {
     width: 200px;
     height: 100px;
     background: floralwhite;
 }
+
 .addr {
     width: 800px;
     height: 100px;
     background: bisque;
 }
+
 .sns {
     width: 200px;
     height: 100px;
