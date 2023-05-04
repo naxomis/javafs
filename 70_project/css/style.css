@@ -29,7 +29,6 @@ header {
 header ul {
     height: 54px;
     padding: 0 32px;
-
     display: flex;
     align-items: center;
 }
@@ -42,6 +41,7 @@ header a {
 header a:hover {
     background: #ccc;
 }
+
 /* section1 */
 #home {
     position: relative;
