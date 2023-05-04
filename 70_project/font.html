@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+   
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+        
+        /* (1) .ff1에 구글 Noto Sans KR 폰트를 CDN 방식으로 지정해 보세요. */
+        .ff1 {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* (2) .ff2에 알라딘 폰트를 @font-face 규칙을 사용하여 지정해 보세요. */
+        /* 한글은 한글폰트로 영문은 영문폰트로 사용한다. */
+        @font-face {
+            font-family: aladdin;
+            src: url(font/aladdin.ttf);
+        }
+        .ff2 {
+            font-family: aladdin, 'Noto Sans KR', sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>웹 폰트</h1>
+    <p>구글 웹 폰트(Google Web Font) 지정 안함.</p>
+    <p class="ff1">구글 웹 폰트(Google Web Font) 지정 했음.</p>
+    <p>알라딘(aladdin) 서체 지정 안함.</p>
+    <p class="ff2">알라딘(aladdin) 서체 지정 했음.</p>
+</body>
+
+</html>

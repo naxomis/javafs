@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        /* 글꼴 이름에 공백이 있을 경우 ''으로 묶는다. */
+        /*
+        5가지 글꼴 모음
+            1. serif: 가장자리 작은 획 있음. 형식과 우아함 표현
+                예) Times New Roman, Georgia, Garamond
+            2. sans-serif: 획 없이 깨끗함. 현대적, 최소한의 모양
+                예) Arial, Verdana, Helvetica
+            3. monospace: 고정 너비, 기계적 모습
+                예) Courier New, Lucida Console, Monaco
+            4. cursive: 필기체
+                예) Brush Script MT, Lucida Handwriting
+            5. fantasy: 장식용
+                예) Copperplate, Papyrus 
+        글꼴 이름에 공백이 있을 경우 '' 또는  "" 으로 묶는다.
+        글꼴 지정 시 2~3개 정도 그룹으로 지정한다.
+        선택자 {
+            속성: 값1, 값2, ...;
+        }
+        본문의 서체는 sans-serif를 사용한다.
+        */
         /* .ff의 글꼴을  'Courier New', Courier, monospace로 지정해 보세요.*/
-        
+        .ff {
+            font-family: 'Courier New', Courier, monospace;
+        }
     </style>
 </head>
+
 <body>
     <h1>글꼴 종류</h1>
     <p>serif, sans-serif, monospace, cursive, fantasy의 다섯 가지 일반 글꼴 모음이 있다.</p>
     <p class="ff">serif, sans-serif, monospace, cursive, fantasy의 다섯 가지 일반 글꼴 모음이 있다.</p>
 </body>
+
 </html>

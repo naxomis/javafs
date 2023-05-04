@@ -7,6 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        
+        /* 
+            font-style: 기울임;
+            font-weight: 굵기;
+            font-size: 크기;
+            line-height: 줄간격;
+            font-family: 글꼴;
+
+            글꼴의 크기와 종류는 반드시 지정해야 한다.
+            font: [스타일] [굵기] 크기[/줄간격] 글꼴; 
+            font: [굵기] [스타일] 크기[/줄간격] 글꼴; 
+
+        */
+        /* 개별속성 */
         .font1 {
             font-style: italic;
             font-weight: bold;
@@ -14,9 +28,11 @@
             line-height: 1.6;
             font-family: 'Courier New', Courier, monospace;
         }
-
-        /* font: [스타일] [굵기] 크기[/줄간격] 글꼴; */
-
+        /* 속기형 속성 */
+        .font2 {
+            font: italic bold 16px/1.6 'Courier New', Courier, monospace;
+            /* font: 16px 'Courier New'; */
+        }
         
     </style>
 </head>
