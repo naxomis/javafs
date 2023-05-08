@@ -1,4 +1,3 @@
-08_gradient.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,23 +13,40 @@
             margin: 20px;
         }
 
+        /*
+            사파리, 크롬: -webkit-
+            오페라: -o-
+            IE: 
+         */
         /* 
+            background: 값;
+                값: linear-gradient, radial-gradient, conic-fradient
+
             선형(linear) 그라디언트
             1) linear-gradient([to 방향1], 색1, 색2, [색3, ...]) 
                 - 방향: left, right, top, bottom
             
             2) linear-gradient([각도], 색1, 색2, [색3, ...])
-                - 각도: 0~360deg 
+                - 각도: 0~360deg(단위: deg)
         */
 
         /* .lg1에 위 blue, 아래 white의 선형 그라디언트를 지정해 보세요. */
-        
+        .lg1 {
+            background: linear-gradient(blue, white);
+            background: linear-gradient(to bootm, blue, white);
+            background: linear-gradient(90deg, blue, white);
+        }
         
         /* .lg2에 왼쪽 아래 #ff0000, 오른쪽 위 #ffffff의 선형 그라디언트를 지정해 보세요. */
-
+        .lg2 {
+            background: linear-gradient(to top right, #ff0000, #ffffff);
+        }
 
         /* .lg3에 왼쪽 위 blue, 가운데 white, 오른쪽 아래는 yellow의 선형 그라디언트를 지정해 보세요. */
-
+        .lg3 {
+            background: linear-gradient(to right bottom, blue, white, yellow);
+            background: linear-gradient(153deg, blue, white, yellow);
+        }
 
         /* 
             원형(radial) 그라디언트
@@ -38,8 +54,18 @@
                 - 모양: circle
         */
         /* .rg에 중심은 white, 바깥쪽은 blue인 원형 모양의 그라디언트를 지정해 보세요. */
-
+        .rg {
+            background: radial-gradient(circle, white, blue);
+        }
         
+        /*
+            원뿔형(conic) 그라이언트
+            conic-gradient(from 각도, 색1, 색2, 색3, ...)
+         */
+         /* .cg에 시작은 orange,중간을 yellow, 끝은 green인 원뿔형 모양이 그라디언트를 지정해 보세요. */
+         .cg {
+             background: conic-gradient(from 270deg, orange, yellow, green) ;
+         }
     </style>
 </head>
 <body>
@@ -51,6 +77,8 @@
 
     <h2>원형</h2>
     <div class="rg">4</div>
-
+    
+    <h2>원뿔형</h2>
+    <div class="cg">5</div>
 </body>
 </html>

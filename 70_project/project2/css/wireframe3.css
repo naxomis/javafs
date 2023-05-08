@@ -7,17 +7,11 @@
     box-sizing: border-box;
 }
 html {
-    font-size: 16px;
+    font-size: 10px;
 }
 body {
-    font: 1.5rem 'Noto Sans KR', sans-serif;
+    font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
     color: #333;
-}
-a {
-    color: #333;
-}
-img {
-    width: 100%;
 }
 /* header */
 body{
@@ -70,37 +64,8 @@ a {
     .nav li {
         margin: 32px 0 0;
     }
-    /* ttp in the header */
-    .ttp {
-        position: relative;
-        align-items: center;
-        width: 100px;
-    }
-    .ttp a{
-        position: absolute;
-        top: 16%;
-    }
 /* section1 */
-#home {
-    position: relative;
-}
-/* 요소를 부모 안에 정가운데 배치 */
-.logo2 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: #000;
-    color: #fff;
-    padding: 8px 32px;
-}
-.logo a {
-    color: #fff;
-}
+
 /* section2 */
-
 /* section3 */
-
 /* section4 */
-
-/* footer */

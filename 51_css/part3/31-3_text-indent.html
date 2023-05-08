@@ -6,24 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        /* 들여쓰기 40px */
-
+        /* 
+        text-indet:들여쓰기;
+            값: pe(em,rem)
+        text-heigh: 줄간격;
+            값 : px(em, rem), %, 숫자
+        txet-transtorm: 대소문자 변환;
+            값: uppercase(대문자), lowercase(소문자), capitalize(첫 글자만 대문자)
+         */
+        /* 단락의 첫 줄 들여쓰기 40px */
+        .tipx {
+            text-indent: -50px;
+            margin-left: 59px;
+        }
         /* %는 가로 크기가 기준: 50% */
-        
+        .tip {
+            text-indent: 50%;
+        }
         /* 줄간격 32px */
-
+        .lhpx {
+            line-height: 32px;
+        }
         /* 줄간격 숫자는 글자 크기의 배수: 2 */
-
+        /* 본문 텍스트의 줄 간격은 글자 크기의 1.5~2 배로 지정한다. */
+        .lhn {
+            font-size: 16px;
+            line-height: 2;
+        }
         /* 줄간격 %는 글자 크기가 기준: 200% */
-
+        .lhp {
+            line-height: 200%;
+        }
         /* 대소문자 변환 */
-
+        .ttn {
+            text-transform: none;
+        }
         /* 모두 대문자 */
-
+        .ttu {
+            text-transform: uppercase;
+        }
         /* 모두 소문자 */
-
+        .ttl {
+            text-transform: lowercase;
+        }
         /* 단어별 첫 글자 대문자 */
-
+        .ttc {
+            text-transform: capitalize;
+        }
     </style>
 </head>
 <body>

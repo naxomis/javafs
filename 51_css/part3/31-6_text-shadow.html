@@ -10,7 +10,7 @@
 
         /* 
             텍스트 그림자: 
-            text-shadow: 가로위치 세로위치 [흐림] [색], 가로위치 세로위치 [흐림] [색], ...;
+            text-shadow: 가로위치 세로위치 [흐림] [흐힘] [색], 가로위치 세로위치 [흐림] [색], ...;
             색의 기본값: 글자색 
         */
 
@@ -21,6 +21,7 @@
             color: black
         */
         .ts1 {
+            text-shadow: 2px 2px 4px #000;
             color: white;
         }
 
@@ -31,6 +32,7 @@
             color: black, blue, darkblue
         */
         .ts2 {
+            text-shadow: 1px 1px 2px #000,  0 0 25px rebeccapurple, 0 0 5px darkcyan, 0 0 5px yellowgreen;
             color: white;
         }
 
@@ -43,6 +45,7 @@
             color: 모두 black
         */
         .ts3 {
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
             color: coral;
         }
     </style>
