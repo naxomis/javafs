@@ -19,6 +19,8 @@ body{
 }
 h1{
     margin: 0;
+    width: 300px;
+    margin-top: 16px;
 }
 a {
     text-decoration: none;
@@ -64,8 +66,64 @@ a {
     .nav li {
         margin: 32px 0 0;
     }
-/* section1 */
+/* section common */
+section {
+    width: 1496px;
+    margin: 0 auto;
+}
 
-/* section2 */
-/* section3 */
+.section {
+    padding-top: 81px;
+}
+
+
+.section h2 {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.section h2+p {
+    margin-bottom: 48px;
+}
+/* section1 */
+#main_img img {
+    position: relative;
+    width: 1496px;
+    background-size: 1496px;
+}
+
+#main_img h2 {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    padding: 8px 16px;
+}
+
+#main_img div {
+    width: 1496px;
+    height: 810px;
+}
+#menu h2 {
+    margin-bottom: 48px;
+}
+
+#menu h3 {
+    position: absolute;
+    border: 1px solid #000;
+    padding: 8px 16px;
+}
+
+#menu img {
+    border: 1px solid #000;
+}
+
+#img {
+    border-left: 1px solid #000;
+}
+
+/* section2, 3 common */
+.section .flf1 {flex-flow: row nowrap;}
+
 /* section4 */
