@@ -1,30 +1,39 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
 /* reset */
 * {
     margin: 0;
     padding: 0%;
     box-sizing: border-box;
+    list-style: none;
 }
+
 html {
     font-size: 10px;
 }
+
 body {
     font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
     color: #333;
 }
+/* 공통 */
+
 /* header */
-body{
+body {
     margin: 0;
 }
-h1{
+
+h1 {
     margin: 0;
     width: 300px;
     margin-top: 16px;
 }
+
 a {
     text-decoration: none;
 }
+
 .header {
     position: fixed;
     display: flex;
@@ -34,38 +43,47 @@ a {
     background: lightblue;
     height: 81px;
 }
+
 /* logo in the header */
-    .logo1{
-        position: relative;
-    }
-    .logo1 h1{
-        position: absolute;
-        top: 0%;
-    }
-    .logo1 i{
-        color: #fff;
-    }
-    /* ul in the header */
-    .header ul {
-        height: 54px;
-        padding: 0 32px;
-        display: flex;
-        align-items: center;
-        top: -10;
-    }
-    .header li {
-        margin: 0 8px;
-        list-style: none;
-    }
-    .header a {
-        padding: 4px 16px;
-    }
-    .header a:hover {
-        background: #ccc;
-    }
-    .nav li {
-        margin: 32px 0 0;
-    }
+.logo1 {
+    position: relative;
+}
+
+.logo1 h1 {
+    position: absolute;
+    top: 0%;
+}
+
+.logo1 i {
+    color: #fff;
+}
+
+/* ul in the header */
+.header ul {
+    height: 54px;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    top: -10;
+}
+
+.header li {
+    margin: 0 8px;
+    list-style: none;
+}
+
+.header a {
+    padding: 4px 16px;
+}
+
+.header a:hover {
+    background: #ccc;
+}
+
+.nav li {
+    margin: 32px 0 0;
+}
+
 /* section common */
 section {
     width: 1496px;
@@ -86,6 +104,7 @@ section {
 .section h2+p {
     margin-bottom: 48px;
 }
+
 /* section1 */
 #main_img img {
     position: relative;
@@ -105,6 +124,7 @@ section {
     width: 1496px;
     height: 810px;
 }
+
 #menu h2 {
     margin-bottom: 48px;
 }
@@ -124,6 +144,23 @@ section {
 }
 
 /* section2, 3 common */
-.section .flf1 {flex-flow: row nowrap;}
+#menu ul::after,
+#event ul::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+#menu li,
+#event li {
+    float: left;
+    width: 362px;
+    margin-bottom: 16px;
+}
+#menu li:not(:nth-of-type(4n)),
+#event li:not(:nth-of-type(4n)) {
+    margin-right: 16px;
+}
+
 
 /* section4 */

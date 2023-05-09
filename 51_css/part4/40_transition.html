@@ -10,9 +10,10 @@
         /* 
             transition-property: 전환 속성;
             transition-duration: 전환 시간(단위: s(초));
-            transition-timing-function: 전환 시간 함수;
+            transition-timing-function: 전환 시간 함수; -> 가속도
             transition-delay: 전환 지연 시간(단위: s(초));
-
+            
+            (속기형)
             transition: [property] duration [timing-function] [delay];
         */
 
@@ -23,11 +24,19 @@
             width:100px;
             height:100px;
             background: red;
+
+            /* transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+            transition-delay: 0; */
+
+            transition: with .1s ease-in 0s;
         }
         
         div:hover {
             width: 200px;
             background: blue;
+            transition: all .3s ease-out 0s;
         }
     </style>
 </head>

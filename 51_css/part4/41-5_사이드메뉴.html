@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* html,body {
+            height: 100%;
+        } */
+        .wrapper {
+            position: fixed;
+            left: 0; top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: lightcoral;
+        }
+        .news {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 820px;
+            height: 210px;;
+        }
+        .news div {
+            position: absolute;
+            left: 755px;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: lightblue;
+            transition: .5s ease-in;
+        }
+        .news a {
+            position: absolute;
+            width: 65px;
+            height: 100%;
+            left: 755px;
+            top: 0;
+            z-index: 10;
+            background: yellow;
+        }
+        /* .news a:hover {
+            left: 0;
+        } */
+        .news a:hover + div {
+            left:0;
+        }
+    </style>
+</head>
+<body>
+    <h1>사이드메뉴</h1>
+    <p>https://www.daewooenc.com/</p>
+    <div class="wrapper">
+        <div class="news">
+            <a href="#">뉴스룸</a>
+            <div>뉴스룸 내용</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        img {
+            width: 100%;
+        }
+        .container {
+            width: 342px;
+            height: 268px;
+            overflow: hidden;
+        }
+        .inner {
+            transform: scale(1);
+            transition: .3s;
+        }
+
+        .container:hover .inner {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>이미지 호버시 확대하기</h1>
+    <p>https://www.honorsville.co.kr/</p>
+
+    <div class="container">
+        <div class="inner">
+            <img src="../assets/20220511_1124.jpg" alt="경남아너스빌">
+        </div>
+    </div>
+</body>
+</html>
