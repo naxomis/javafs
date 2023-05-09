@@ -131,35 +131,27 @@ section {
 
 #menu h3 {
     position: absolute;
-    border: 1px solid #000;
     padding: 8px 16px;
 }
 
 #menu img {
-    border: 1px solid #000;
+    width: 364px;
+    height: 242px;
 }
 
-#img {
-    border-left: 1px solid #000;
+/* section2,3 */
+.container {
+    display: flex;
+    position: relative;
 }
 
-/* section2, 3 common */
-#menu ul::after,
-#event ul::after {
-    content: '';
-    clear: both;
-    display: block;
-}
+/* section2 */
 
-#menu li,
-#event li {
-    float: left;
-    width: 362px;
-    margin-bottom: 16px;
-}
-#menu li:not(:nth-of-type(4n)),
-#event li:not(:nth-of-type(4n)) {
-    margin-right: 16px;
+
+ /* section3 */
+.dive {
+    flex-direction: row;
+    position: absolute;
 }
 
 
