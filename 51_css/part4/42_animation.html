@@ -16,19 +16,50 @@
         }
 
         /* 
+
+            transition-prorperty
+            transition-duration
+            transition-timing-function
+            transition-delay
+
+            transition: property duration tf delay;
+            transition: CSS속성 진행시간 가속도 지연시간;
+
             animation-name: 애니메이션 이름;
             animation-duration: 애니메이션 시간(단위: s(초));
             animation-iteration-count: 애니메이션 반복 여부;
             animation-direction: 애니메이션 방향;
             animation-timing-function: 애니메이션 시간 함수;
             animation-delay: 애니메이션 지연 시간(단위: s(초));
+            animation-fill-mode
+            animation-play-state
+
+            (속기형)
+            animation: 이름 진행시간 반복 방향 가속도 지연시간 필모드 상태;
         */
 
 
         /* .anim에 애니메이션의 이름은 move, 시간은 1초, 무한 반복(infinite), 좌우 왕복(alternate), 등속도(linear), 지연 시간은 2초로 지정하시오. */
+        .anim {
+            /* animation: move;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+            animation-delay: 2s; */
 
+            animation: move 1s infinite alternate linear 2s;
+        }
 
-        
+        /*
+            애니메이션읮 작업 단위는? frame(프레임) 
+         */
+
+         @keyframes move {
+            0% {left:0;}
+            50% {left:200px;}
+            1000% {left:0px;}
+         }
         /* 
             애니메이션 코드 형식
             @keyframe 이름 {
@@ -40,6 +71,7 @@
             
             @keyframe 이름 {
                 0% {속성: 값;}
+                50% {속성: 값;}
                 100% {속성: 값;}
             }
         */

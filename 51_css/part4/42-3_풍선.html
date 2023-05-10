@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {
+            position: relative;
+            width:116px;
+            height:160px;
+            background: url(../assets/bg-main0-5.png) no-repeat;
+            margin:20px;
+            left:0px; top:0px;
+            text-indent: -99999em;
+        }
+
+        .anim {
+            animation: move 1s infinite;
+        }
+
+         @keyframes move {
+            0% {top:0; animation-timing-function: ease-out;}
+            50% {top:20px; animation-timing-function: ease-in;}
+            1000% {top:0px; animation-timing-function: ease-out;}
+         }
+
+    </style>
+</head>
+<body>
+    <h1>애니메이션</h1>
+    <div class="anim">풍선</div>
+</body>
+</html>

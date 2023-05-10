@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* forwards와 infinite를 같이 사용하지 않는다. */
+        .anim {
+            animation: move 2s forwards;
+        }
+
+        div {
+            position: relative;
+            width: 178px;
+            height: 100px;
+            background: url(../assets/bg-main0-0.png) no-repeat;
+            left: 0px;
+            top: 0px;
+            text-indent: -9999em;
+            opacity: 0;
+        }
+
+        @keyframes move {
+            0% {
+                opacity: 0;
+                left: 0;
+                animation-timing-function: ease-out;
+            }
+
+            100% {
+                opacity: 1;
+                left: 400px;
+                animation-timing-function: ease-out;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>애니메이션</h1>
+    <div class="anim">구름</div>
+</body>
+
+</html>

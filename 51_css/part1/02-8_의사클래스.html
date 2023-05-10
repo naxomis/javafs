@@ -7,8 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /*
+            가상(유사, 슈도, 의사) 클래스 선택자
+            :link, :visited, :hover, :active
+            :nth-child(), nth-of-type(), ...
+            :not()
+
+            :target
+            :checked 
+         */
         /* p가 타깃되었을 때 */
+            :target {
+                background: red;
+            }
         /* input의 라디오 버튼이 체크되었을 때 */
+            input {
+                display: none;
+            }
+            :checked {
+                background: red;
+            }
         /* h2의 3번째 자손 중 h2와 p를 제외하고 */
 
         /* 아래 내용을 확인한 후 지우고 지정해 보세요. */
@@ -16,7 +34,7 @@
         p:target {
             background: yellow;
         }
-
+        /* 체크된 요소의 인접한 형제(동생)요소 P의 배경색이 노란색으로 변경된다.  */
         :checked + p {
             background: yellow;
         }

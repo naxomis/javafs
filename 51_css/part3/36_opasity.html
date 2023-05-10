@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+
+    <style>
+        p {
+            width: 300px;
+            border-style: solid;
+        }
+        p:nth-of-type(1) {
+            background: rgba(255, 0, 0, .2);
+        }
+        p:nth-of-type(2) {
+            background: red;
+            opacity: .5;
+        }
+        /*
+            rgba()의 a는 alpha(투명도)
+            rgba()의 경우 글자색, 배경색, 테두리색을 선택적을 지정할 수 있다.
+            opaxity(불투명도)가 0(투명) ~ 1(불투명, 기본값)의 값으로 지정하며, 요소의 글자색, 배경색, 테두리색에 모두 적용된다.
+         */
+    </style>
+</head>
+<body>
+    <h1>투명도</h1>
+    <p>background: rgba(255, 0, 0, .5);</p>
+    <p>opacity: .5;</p>
+</body>
+</html>
