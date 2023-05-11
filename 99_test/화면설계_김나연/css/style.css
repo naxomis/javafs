@@ -59,35 +59,33 @@ a {
     text-decoration: none;
 }
 
-/* @font-face {
+@font-face {
     font-family: 'omyu_pretty';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-} */
+}
 
-#event h3,
 p {
     font-family: 'omyu_pretty', sans-serif;
 }
-/* @font-face {
-    font-family: 'KCC-Ganpan';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-} */
-.section h2, h1, a {
+
+.section h2,
+h1,
+a {
     font-family: 'KCC-Ganpan', sans-serif;
 
 }
-/* @font-face {
+
+@font-face {
     font-family: 'KIMM_Bold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
-} */
+}
+
 .section h3 {
-    font-family: 'KIMM_L', sans-serif;
+    font-family: 'KIMM_Bold', sans-serif;
 }
 
 /* header */
@@ -284,10 +282,6 @@ form+img {
 
 .map {
     height: 830px;
-}
-
-#news p {
-    margin-bottom: 0;
 }
 
 /* footer */
