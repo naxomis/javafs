@@ -2,6 +2,16 @@
 @import url(reset.css);
 @import url(typo.css);
 
+/* font */
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+p {
+    font-family: 'omyu_pretty', sans-serif;
+}
 /* header */
 header {
     position: fixed;
@@ -33,7 +43,6 @@ nav a::after {
     background: rgb(36, 60, 132);
     transition: .3s;
     transform: scaleX(0);
-    /* transform-origin: 0 0; */
 }
 nav a:hover::after{
     transform: scaleX(1);
@@ -61,29 +70,6 @@ section {
 /* section1 */
 .div1 {
     animation: move 4s forwards;
-}
-#main_img div {
-    position: relative;
-    width: 1496px;
-    height: 800px;
-    background: url(../images/Architecture2.jpg) no-repeat;
-    left: 0px;
-    top: 0px;
-    text-indent: -9999em;
-    opacity: 0;
-}
-@keyframes move {
-    0% {
-        opacity: 0;
-        left: -600px;
-        animation-timing-function: ease-out;
-    }
-
-    100% {
-        opacity: 1;
-        left: 0px;
-        animation-timing-function: ease-out;
-    }
 }
 
 #main_img {
