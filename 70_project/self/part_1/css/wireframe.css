@@ -1,0 +1,118 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+/* reset */
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font: 1.5rem 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+a {
+    color: #333;
+    font-size: 2rem;
+}
+img {
+    width: 100%;
+}
+/* font */
+@font-face {
+    font-family: 'NeoDunggeunmoPro-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+a {
+    font-family: 'NeoDunggeunmoPro-Regular';
+}
+/* header */
+body{
+    margin: 0;
+}
+h1{
+    margin: 16px 0 0;
+}
+a {
+    text-decoration: none;
+}
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 9999;
+    background: lightblue;
+    height: 81px;
+}
+/* logo in the header */
+    .logo1{
+        position: relative;
+    }
+    .logo1 h1{
+        position: absolute;
+        top: 0%;
+    }
+    .logo1 i{
+        color: #fff;
+    }
+    /* ul in the header */
+    .header ul {
+        height: 54px;
+        padding: 0 32px;
+        display: flex;
+        align-items: center;
+        top: -10;
+    }
+    .header li {
+        margin: 0 8px;
+        list-style: none;
+    }
+    .header a {
+        padding: 4px 16px;
+    }
+    .header a:hover {
+        background: #ccc;
+    }
+    .nav li {
+        margin: 32px 0 0;
+    }
+    /* ttp in the header */
+    .ttp {
+        position: relative;
+        align-items: center;
+        width: 100px;
+    }
+    .ttp a{
+        position: absolute;
+        top: 32%;
+    }
+/* section1 */
+#home {
+    position: relative;
+}
+/* 요소를 부모 안에 정가운데 배치 */
+.logo2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    color: #fff;
+    padding: 8px 32px;
+}
+.logo a {
+    width: 1496px;
+    color: #fff;
+}
+/* section2 */
+
+/* section3 */
+
+/* section4 */
+
+/* footer */

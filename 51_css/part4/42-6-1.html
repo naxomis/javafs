@@ -47,36 +47,54 @@
 
         .cube_face_front {
             background: rgba(255, 0, 0, 0.7);
-            transform: rotateY(0deg) translateZ(100px);
         }
 
         .cube_face_back {
             background: rgba(255, 255, 0, 0.7);
-            transform: rotateY(180deg) translateZ(100px);
         }
 
         .cube_face_left {
             background: rgba(0, 255, 0, 0.7);
-            transform: rotateY(90deg) translateZ(100px);
         }
 
         .cube_face_right {
             background: rgba(0, 255, 255, 0.7);
-            transform: rotateY(-90deg) translateZ(100px);
         }
 
         .cube_face_top {
             background: rgba(0, 0, 255, 0.7);
-            transform: rotateX(90deg) translateZ(100px);
         }
 
         .cube_face_bottom {
             background: rgba(255, 0, 255, 0.7);
+        }
+
+        .cube_face_front {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+
+        .cube_face_back {
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        .cube_face_left {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .cube_face_right {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .cube_face_top {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .cube_face_bottom {
             transform: rotateX(-90deg) translateZ(100px);
         }
 
         .cube {
-            animation: rotateY 30s infinite linear paused;
+            animation: rotateY 30s infinite linear;
         }
 
         @keyframes rotateY {
@@ -88,11 +106,27 @@
                 transform: rotateY(360deg);
             }
         }
-
-        #auto:checked~.cube {
+        #auto:checked ~ .cube {
             animation-play-state: running;
         }
-
+        #front:checked ~ .cube {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+        #back:checked ~ .cube {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        #left:checked ~ .cube {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+        #rihgt:checked ~ .cube {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+        #top:checked ~ .cube {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+        #bottom:checked ~ .cube {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
         label {
             background: #000;
             color: #fff;
@@ -100,7 +134,6 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
         input {
             display: none;
         }
@@ -108,8 +141,8 @@
 </head>
 
 <body>
-    <h1>3DCube</h1>
-    <div backclass="scene">
+    <h1>3D Cube</h1>
+    <div class="scene">
         <label for="auto">auto</label>
         <label for="front">front</label>
         <label for="back">back</label>
@@ -125,7 +158,6 @@
         <input type="radio" name="cube" id="right">
         <input type="radio" name="cube" id="top">
         <input type="radio" name="cube" id="bottom">
-
         <div class="cube">
             <div class="cube_face cube_face_front">front</div>
             <div class="cube_face cube_face_back">back</div>

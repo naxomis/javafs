@@ -30,6 +30,7 @@
             position: relative;
             top: 150px;
             transform-style: preserve-3d;
+            transition: 1s;
         }
 
         .cube_face {
@@ -47,37 +48,53 @@
 
         .cube_face_front {
             background: rgba(255, 0, 0, 0.7);
-            transform: rotateY(0deg) translateZ(100px);
         }
 
         .cube_face_back {
             background: rgba(255, 255, 0, 0.7);
-            transform: rotateY(180deg) translateZ(100px);
         }
 
         .cube_face_left {
             background: rgba(0, 255, 0, 0.7);
-            transform: rotateY(90deg) translateZ(100px);
         }
 
         .cube_face_right {
             background: rgba(0, 255, 255, 0.7);
-            transform: rotateY(-90deg) translateZ(100px);
         }
 
         .cube_face_top {
             background: rgba(0, 0, 255, 0.7);
-            transform: rotateX(90deg) translateZ(100px);
         }
 
         .cube_face_bottom {
             background: rgba(255, 0, 255, 0.7);
+        }
+
+        .cube_face_front {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+
+        .cube_face_back {
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        .cube_face_left {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .cube_face_right {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .cube_face_top {
             transform: rotateX(-90deg) translateZ(100px);
         }
 
-        .cube {
-            animation: rotateY 30s infinite linear paused;
+        .cube_face_bottom {
+            transform: rotateX(90deg) translateZ(100px);
         }
+
+
 
         @keyframes rotateY {
             0% {
@@ -89,8 +106,26 @@
             }
         }
 
-        #auto:checked~.cube {
-            animation-play-state: running;
+        #auto:checked ~ .cube {
+            animation: rotateY 30s infinite linear;
+        }
+        #front:checked ~ .cube {
+            transform: translateZ(-100px) rotateY(0deg);
+        }
+        #back:checked ~ .cube {
+            transform: translateZ(-100px) rotateY(180deg);
+        }
+        #left:checked ~ .cube {
+            transform: translateZ(-100px) rotateY(-90deg);
+        }
+        #right:checked ~ .cube {
+            transform: translateZ(-100px) rotateY(90deg);
+        }
+        #top:checked ~ .cube {
+            transform: translateZ(-100px) rotateX(90deg);
+        }
+        #bottom:checked ~ .cube {
+            transform: translateZ(-100px) rotateX(-90deg);
         }
 
         label {
@@ -108,8 +143,8 @@
 </head>
 
 <body>
-    <h1>3DCube</h1>
-    <div backclass="scene">
+    <h1>3D Cube</h1>
+    <div class="scene">
         <label for="auto">auto</label>
         <label for="front">front</label>
         <label for="back">back</label>
@@ -125,7 +160,6 @@
         <input type="radio" name="cube" id="right">
         <input type="radio" name="cube" id="top">
         <input type="radio" name="cube" id="bottom">
-
         <div class="cube">
             <div class="cube_face cube_face_front">front</div>
             <div class="cube_face cube_face_back">back</div>

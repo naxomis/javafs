@@ -45,7 +45,56 @@ header {
 /* section common */
 
 /* section1 */
+.section1 {
+    width: 1920px;
+    margin: 0 auto;
+}
+#slide {
+    height: 640px;
+    overflow: hidden;
+}
+#slide ul {
+    position: relative;
+    left: 0;
+    width: 100%;
+    display: flex;
+    animation: slide 15s infinite;
+}
 
+
+/* @keyframes slide {
+    0% {left:0;}
+    5% {left:-100%;}
+    33% {left:-100%;}
+    38% {left:-200%;}
+    66% {left:-200%;}
+    71% {left:-300%;}
+    99.99% {left:-300%;}
+    100% {left:0;}
+} */
+@keyframes slide {
+    0% {left: 0;}
+    3% {left: -100%;}
+    10% {left: -100%;}
+    13% {left: -200%;}
+    20% {left: -200%;}
+    23% {left: -300%;}
+    30% {left: -300%;}
+    33% {left: -400%;}
+    40% {left: -400%;}
+    43% {left: -500%;}
+    50% {left: -500%;}
+    53% {left: -600%;}
+    60% {left: -600%;}
+    63% {left: -700%;}
+    70% {left: -700%;}
+    73% {left: -800%;}
+    80% {left: -800%;}
+    83% {left: -900%;}
+    90% {left: -900%;}
+    99.99% {left: -900%;}
+    100% {left: 0%;}
+}
 /* section2 */
 
 /* section3 */

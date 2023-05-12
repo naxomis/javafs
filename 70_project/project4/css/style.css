@@ -1,19 +1,17 @@
 @charset "utf-8";
 
+/* ctrl+f: 찾기 */
+
 /* 초기화 */
 * {
     margin: 0;
     padding: 0%;
-    box-sizing:
-        border-box;
+    box-sizing: border-box;
+    list-style: none;
 }
-
-/* float 때문에 사용 */
-/* header::after, .contents::after, footer::after {
-    content: '';
-    clear: both;
-    display: block;
-}  */
+img {
+    width: 100%;
+}
 
 /* 공통 */
 
@@ -53,7 +51,26 @@ nav {
 #slide {
     height: 300px;
     background: lightcoral;
+    overflow: hidden;
 }
+#slide ul {
+    position: relative;
+    left: 0;
+    display: flex;
+    width: 400%;
+    animation: slide 9s infinite;
+}
+@keyframes slide {
+    0% {left:0;}
+    5% {left:-100%;}
+    33% {left:-100%;}
+    38% {left:-200%;}
+    66% {left:-200%;}
+    71% {left:-300%;}
+    99.99% {left:-300%;}
+    100% {left:0;}
+}
+
 
 /* 메인컨텐츠 */
 #contents div {

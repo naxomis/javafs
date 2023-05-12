@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        #btn1:checked ~ #tabs1 {
+            display: block;
+        }
+        #btn2:checked ~ #tabs2 {
+            display: block;
+        }
+        .tabs > div {
+            display: none;
+            position: absolute;
+            width: 400px;
+            height: 200px;
+            background: yellow;
+        }
+        input {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>탭 메뉴</h1>
+    <div class="tabs">
+        <!-- <ul>
+            <li><a href="#tabs1">공지사항</a></li>
+            <li><a href="#tabs2">갤러리</a></li>
+        </ul> -->
+        <label for="btn1">공지사항</label>
+        <label for="btn2">갤러리</label>
+        <input type="radio" name="tabs" id="btn1" checked>
+        <input type="radio" name="tabs" id="btn2">
+        <div id="tabs1">
+            <h2>공지사항</h2>
+            <p>첫 번째 탭입니다.</p>
+        </div>
+        <div id="tabs2">
+            <h2>갤러리</h2>
+            <p>두 번째 탭입니다.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD</title>
+    <style>
+
+        /* 공통 */
+        /* 초기화 */
+        body {
+            margin: 0;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        section {
+            padding: 0 30px;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1496px;
+            margin: 0 auto;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        /* 상자크기 */
+        li {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+        
+
+        /* phone 최소너비가 576px ->576이상 */
+
+
+        /* tablet  600이상 */
+        @media (min-width: 600px) {
+            li {
+                width: calc(50% - 8px);
+            }
+            }
+
+        /* desktop 992이상 */
+        @media (min-width: 992px) {
+            li {
+                width: calc(25% - 8px);
+                max-width: 362px;
+            }
+            }
+
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>반응형 웹</h1>
+        <div>
+            <ul>
+                <li><img src="../assets/20220511_1124.jpg" alt="테스트"></li>
+                <li><img src="../assets/20220511_1124.jpg" alt="테스트"></li>
+                <li><img src="../assets/20220511_1124.jpg" alt="테스트"></li>
+                <li><img src="../assets/20220511_1124.jpg" alt="테스트"></li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>
