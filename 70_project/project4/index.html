@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,9 @@
     <title>JUST 쇼핑몰</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+
     <div id="wrap">
         <!-- header -->
         <header>
@@ -44,7 +46,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">메뉴4</a>
+                        <a href="#">악세서리</a>
                         <ul class="sub">
                             <li><a href="#">귀고리</a></li>
                             <li><a href="#">목걸이</a></li>
@@ -59,36 +61,44 @@
         <!-- slide -->
         <div id="slide">
             <ul>
-                <li><a href="#"><img src="images/m1.jpg" alt="DAILY ITEM 기획전"></a></li>
-                <li><a href="#"><img src="images/m2.jpg" alt="160cm 인생바지"></a></li>
-                <li><a href="#"><img src="images/m3.jpg" alt="온라인/오프라인 봄 신상품 입고"></a></li>
-                <li><a href="#"><img src="images/m1.jpg" alt="DAILY ITEM 기획전"></a></li>
+                <li><a href="#"><img src="images/m1_v0515.jpg" alt="DAILY ITEM 기획전"></a></li>
+                <li><a href="#"><img src="images/m2_v0515.jpg" alt="160cm 인생바지"></a></li>
+                <li><a href="#"><img src="images/m3_v0515.jpg" alt="온라인/오프라인 봄 신상품 입고"></a></li>
+                <li><a href="#"><img src="images/m1_v0515.jpg" alt="DAILY ITEM 기획전"></a></li>
             </ul>
         </div>
         <!-- //slide -->
         <!-- main contents -->
         <div id="contents">
             <div class="tabs">
-                <div>
+                <!-- 제목/버튼 -->
+                <input type="radio" name="tabs" id="btn1" checked>
+                <label for="btn1">공지사항</label>
+                <input type="radio" name="tabs" id="btn2">
+                <label for="btn2">갤러리</label>
+                <!-- 공지사항 -->
+                <div id="tab1">
                     <ul>
-                        <li><a href="">맞춤 플랜을 제안하는 크리에이티브..</a></li>
-                        <li><a href="">JUST 쇼핑몰과 함께 하실 가슴 따뜻한..</a></li>
-                        <li><a href="">코리아웨딩페어 결혼박람회가 열립니다.</a></li>
-                        <li><a href="">마진없이 아낌없이 드리는 마지막 찬스!</a></li>
+                        <li><a href="#">맞춤 플랜을 제안하는 크리에이티브..</a><span>2023-05-15</span></li>
+                        <li><a href="#">JUST 쇼핑몰과 함께 하실 가슴 따뜻한..</a><span>2023-04-06</span></li>
+                        <li><a href="#">코리아웨딩페어 결혼박람회가 열립니다.</a><span>2022-12-07</span></li>
+                        <li><a href="#">JUST 쇼핑몰에서 마진없이 아낌없이 드리는 마지막 찬스!</a><span>2022-10-05</span></li>
                     </ul>
                 </div>
-                <div>
-                    <a href=""><img src="images/i1.jpg" alt="모자"></a>
-                    <a href=""><img src="images/i2.jpg" alt="클러치백"></a>
-                    <a href=""><img src="images/i3.jpg" alt="장갑"></a>
+                <!-- 갤러리 -->
+                <div id="tab2">
+                    <a href="#"><img src="images/i1.jpg" alt="모자"></a>
+                    <a href="#"><img src="images/i2.jpg" alt="클러치백"></a>
+                    <a href="#"><img src="images/i3.jpg" alt="장갑"></a>
                 </div>
             </div>
+            <!-- banner -->
             <div class="banner"><img src="images/banner.jpg" alt="Dress 1+1 보러가기"></div>
             <div class="shortcut"><img src="images/quick.jpg" alt="무료 앱 설치"></div>
         </div>
         <!-- //main contents -->
         <!-- footer -->
-        <footer >
+        <footer>
             <div class="b_logo">
                 <img src="images/logo2.png" alt="JUST 쇼핑몰">
             </div>
@@ -101,4 +111,5 @@
         <!-- //footer -->
     </div>
 </body>
+
 </html>

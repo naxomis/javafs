@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>연산자</h1>
+    <script>
+        /* 
+            산술 연산자: ++(1씩 증가), --(1씩 감소)
+
+            var A = ++B -> B값을 1 증가 후 A에 대입
+            var A = B++ -> B를 A에 대입 후 B값을 1증가
+        */
+
+        var num1 = 10;
+        var num2 = 20;
+        var result;
+
+        num1--;
+        document.write(num1, '<br>');
+
+        num1++;
+        document.write(num1, '<br>');
+
+        result = num2++;
+        document.write(result, '<br>');
+
+        result = ++num2;
+        document.write(result, '<br>');
+        
+    </script>
+</body>
+
+</html>

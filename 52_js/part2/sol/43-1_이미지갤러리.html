@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>이미지 갤러리</h1>
+    <div id="galleryZone">
+        <p>
+            <button onclick="gallery(0)">이전</button>
+            <button onclick="gallery(1)">다음</button>
+        </p>
+        <p><img src="../assets/pic_1.jpg" alt="" id="photo"></p>
+    </div>
+    <script>
+        /* 
+            return: 함수 호출문에 결괏값 반환하고 함수 종료
+
+            함수 정의
+                function 함수명() {
+                    코드;
+                    return 데이터(값);
+                }
+
+            함수 호출
+                var 변수 = 함수명();
+        */
+
+        var num = 1;
+        function gallery(direct) {
+            if (direct) {
+                if (num == 8) return;
+                num++;
+            } else {
+                if (num == 1) return;
+                num--;
+            }
+
+            var imgTag = document.getElementById('photo');
+            imgTag.setAttribute('src', '../assets/pic_' + num + '.jpg');
+        }
+    </script>
+</body>
+
+</html>

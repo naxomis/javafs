@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    <!--         자바스크립트 히스토리
+        https://www.w3schools.com/js/js_history.asp
+
+        자바스크립트?
+        1. 웹 요소 제어
+            - HTML 콘텐츠 또는 속성 동적 변경
+            - CSS 속성 변경
+        2. 웹 애플리케이션 제작
+            - 리액트(React)또는 앵귤러(Angular)또는 뷰(View.js)
+        3. 다양한 라이브러리 활용
+            - 제이쿼리(jQuery) 
+        4. 웹 서버 개발
+            - php, asp, jsp, -> Node.js, JAVA, ...
+
+        -->
+    <!-- 
+        객체지향(객체기반) 프로그래밍언어
+        
+        현실세계                       자바스크립트 용어
+        -물체(TV)                      -객체(Object)
+        -동작(열리다)                  -메서드(Methed)
+        -특징(색상, 모양, 가격)        -속성(Property)
+        -사건(사람이 발생 - 누른다.)   -이벤트(Event)
+
+        코드 입력시 주의 사항
+            1. 자바스크립트는 대소문자를 구분한다.
+            2. 문장 끝에 세미콜론(;)을 쓴다.
+            3. 문자열 데이터는 큰따옴표("") 또는 작은 따옴표('')로 묶는다.
+     -->
+     
+    <!-- 외부 스크립트 -->
+    <script src="script.js"></script>
+    <!-- 내부 스크립트 -->
+    <script>
+        document.write('문자열');
+        document.addEventListener('DOMContentLoaded', function(){
+        var h1Tag = document.querySelector('h1');
+        h1Tag.style.color = 'blue';});
+    </script>
+</head>
+
+<body>
+    <h1>어디에?</h1>
+    <!-- 외부 스크립트 -->
+    <script src="script.js"></script>
+    <!-- 내부 스크립트 -->
+    <script>
+        document.write('hello');
+        var h1Tag = document.querySelector('h1');
+        h1Tag.style.color = 'yellow';
+    </script>
+</body>
+
+</html>

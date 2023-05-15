@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>구구단</h1>
+    <script>
+        /* 
+            for (초기식; 조건식; 증감식) {
+                for (초기식; 조건식; 증감식) {
+                    코드;
+                }
+            }
+        */
+
+        /* 
+            2 x 1 = 2
+            2 x 2 = 4
+            2 x 3 = 6
+            ...
+            2 x 9 = 18
+        */
+
+        for (let i = 1; i<=3; i++) {
+            document.write('<h3>' + i + '단</h3>');
+            for (let j = 1; j <= 9; j++) {
+                document.write( i + ' x ' + j + ' = ' + i * j + '<br>')
+            }
+        }
+
+    </script>
+</body>
+
+</html>

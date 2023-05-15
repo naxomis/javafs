@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500&display=swap');
 /* ctrl+f: 찾기 */
 
 /* 초기화 */
@@ -9,12 +9,20 @@
     box-sizing: border-box;
     list-style: none;
 }
+
+html {
+    font-size: 10px;
+}
+
+li {
+    list-style: none;
+}
+
 img {
     width: 100%;
 }
 
 /* 공통 */
-
 #wrap {
     /* 가운데 맞춤 */
     width: 1200px;
@@ -27,24 +35,43 @@ footer {
     /*  float: left; */
     display: flex;
 }
-
+body {
+    font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: #777;
+}
 /* 헤더 */
 header {
-    background-color: lightblue;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-
 /* 로고 */
 .logo {
     width: 200px;
-    height: 100px;
     background: lightpink;
 }
 
 /* 네비게이션 */
-nav {
-    width: 1000px;
-    height: 100px;
-    background: lightsalmon;
+nav .main {
+    display: flex;
+}
+nav .main > li > a {
+    color: #fff;
+    font-size: 1.8rem;
+}
+nav li {
+    text-align: center;
+    margin-left: 8px;
+    width: 150px;
+    background: #EF7C07;
+}
+nav .sub {
+    display: none;
 }
 
 /* 슬라이드 */
@@ -73,19 +100,78 @@ nav {
 
 
 /* 메인컨텐츠 */
-#contents div {
+#contents > div {
     width: 400px;
     height: 200px;
 }
 
+/* 탭 메뉴 */
 .tabs {
-    background: lavender;
+    padding: 24px 24px 24px 0;
+    background-clip: content-box;
+}
+.tabs input {
+    display: none;
+}
+.tabs input, .tabs #tab1, .tabs #tab2 {
+    display: none;
+}
+#btn1:checked ~ #tab1, #btn2:checked ~#tab2 {
+    display: block;
+}
+/*  탭 메뉴 - 제목/버튼 */
+.tabs label {
+    display: inline-block;
+    background: #EBDACA;
+    color: #000;
+    padding: 4px 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+#btn1:checked + label, #btn2:checked + label {
+    background: #004E27;
+    color: #fff;
 }
 
+
+/*  탭 메뉴 - 공지사항 */
+#tab1 li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+/* 4개 다 사용해야 적용가능 */
+#tab1 a {
+    width: 250px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* 말줄임 ...효과 */
+    overflow: hidden;
+}
+
+#tab1 a:hover {
+    color: #333;
+}
+/*  탭 메뉴 - 갤러리 */
+/* #tab2 ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 8px 0px;
+} */
+
+#tab2 a {
+    display: inline-block;
+    width: 110px;
+    margin-right: 8px;
+}
+
+/* 베너 */
 .banner {
     background: darkcyan;
 }
-
+/* 바로가기 */
 .shortcut {
     background: greenyellow;
 }

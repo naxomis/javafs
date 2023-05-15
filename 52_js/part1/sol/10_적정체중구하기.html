@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>적정 체중 구하기</h1>
+    <script>
+        /* 
+            적정 체중 = (신장 - 100) * 0.9
+
+            예)
+            신장: 180cm
+            체중: 74kg
+            적정 체중: (180 - 100) * 0.9 = 72
+            결과: 적정 체중은 72kg이며, 현재 적정 체중에서 2kg 초과하였습니다.
+        */
+
+        var userName = prompt('당신은 이름은?', "");
+        var userHeight = prompt('당신은 신장은?', "0");
+        var userWeight = prompt('당신은 몸무게는', "0");
+
+        // 적정 체중 = (신장 - 100) * 0.9
+        var normal_w = (userHeight - 100) * 0.9;
+        // 오차 범위 ±5
+        var result = userWeight >= normal_w - 5 && userWeight <= normal_w + 5
+        result = result ? '적정 체중입니다.' : '적정 체중이 아닙니다.';
+
+        // 출력
+        document.write(userName + '님은 ' + result);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>연산자</h1>
+    <script>
+        /* 
+            논리 연산자: ||(또는), &&(그리고), !(아니다)
+            
+            연산자의 우선순위
+            18. ()
+            15. 산술(증감): ++, --
+            14. 논리: !
+            14. typeof
+            13. 산술: **
+            12. 산술: *, /, %
+            11. 산술: +, -
+            09. 비교: >, < , >=, <=
+            08. 비교: ==, !=, ===, !==
+            04. 논리: &&
+            03. 논리: ||
+            02. 대입(할당): =, +=, -=, *=, /=, %=, **=
+            02. 삼항(조건): ? :
+            * 왼쪽에서 오른쪽 방향으로 계산
+
+            우선순위 참고: https://www.w3schools.com/js/js_precedence.asp 
+        */
+
+        var a = 10;
+        var b = 20;
+        var m = 30;
+        var n = 40;
+        var result;
+
+        result = a > b || b >= m || m > n;
+        document.write(result, '<br>');
+
+        result = a > b || b >= m || m <= n;
+        document.write(result, '<br>');
+
+        result = a <= b && b >= m && m <= n;
+        document.write(result, '<br>');
+
+        result = a <= b && b <= m && m <= n;
+        document.write(result, '<br>');
+
+        result = !(a > b);
+        document.write(result, '<br>');
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+document.write("외부스크립트 입니다.");

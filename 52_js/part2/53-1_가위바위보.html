@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>수학 객체</h1>
+    <script>
+       /* 
+            Math.random(): 0(포함) ~ 1(제외) 사이의 난수 반환
+            Math.floor(숫자): 소수점 첫째 자리에서 내림한 정수 반환
+            Math.ceil(숫자): 소수점 첫째 자리에서 올림한 정수 반환
+       */
+
+        // 0 ~ 10 사이 난수
+        Math.random() * 10;
+
+        // 0 ~ 30 사이 임의 정수
+        Math.floor(Math.random() * 31)
+
+        // 120 ~ 150 사이 임의 정수
+        // Math.floor(Math.random() * (최댓값 - 최솟값 + 1)) + 최솟값;
+        Math.floor(Math.random() * 31) + 120
+
+        document.write('<h2>컴퓨터 가위, 바위, 보 맞추기</h2>');
+
+        var game = prompt('가위, 바위, 보 중 쓰세요', '가위');
+        var gameNum;
+
+        switch (game) {
+            case '가위':
+                gameNum = 1; break;
+            case '바위':
+                gameNum = 2; break;
+            case '보':
+                gameNum = 3; break;
+            default: alert('잘못 작성했습니다.');
+            // 브라우저 새로고침
+            location.reload();
+        }
+
+        var com = Math.ceil(Math.random() * 3);
+        document.write('<img src=\'../assets/math_img_' + com + '.jpg\'>');
+
+        if (gameNum == com) {
+            document.write('<img src=\'../assets/game_1.jpg\'>');
+        } else {
+            document.write('<img src=\'../assets/game_2.jpg\'>');
+        }
+
+    </script>
+</body>
+
+</html>

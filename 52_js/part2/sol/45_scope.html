@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>스코프(Scope)</h1>
+    <script>
+        /* 
+            스코프(Scope): 변수 또는 함수의 유효 범위
+
+            지역 변수(Local Variables)
+                - 스코프 영역에서 선언한 변수로 스코프 영역에서만 사용할 수 있다.
+            전역 변수(Global Variables)
+                - 자바스크립트 모든 영역에서 사용할 수 있는 변수
+        */
+
+        // 전역변수
+        var score = 10;
+
+        function myFnc() {
+            // 지역변수
+            var score = 50;
+
+            alert(score);
+        }
+
+        myFnc();
+
+        alert(score);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>날짜 객체</h1>
+    <script>
+       // 현재 날짜부터 연말까지 남은 일 수
+
+       var today = new Date();
+       var nowYear = today.getFullYear();
+
+       var theDate = new Date(nowYear, 11, 31);
+       // 남은 일 수(밀리초) = 특정 날짜 밀리초 - 현재 날짜 밀리초
+       var diffDate = theDate.getTime() - today.getTime();
+
+       // 1초 = 1000밀리초
+       // 1분(60초) = 1000 * 60 = 60000밀리초
+       // 1시간(60분) = 1000 * 60 * 60 = 3600000밀리초
+       // 1일(60분*24) = 1000 * 60 * 60 * 24 = 86400000밀리초
+       // Math.ceil(숫자): 소수점 첫째 자리에서 올림하여 정수 반환
+       var result = Math.ceil(diffDate / (1000 * 60 * 60 * 24));
+       document.write('연말 D-day: ' + result + '일 남았습니다.');
+    </script>
+</body>
+
+</html>

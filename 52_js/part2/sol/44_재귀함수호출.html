@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>재귀 함수 호출</h1>
+    <script>
+        /* 
+            재귀 함수 호출: 함수 정의문 내에서 작성한 코드로 함수를 다시 호출하는 것
+
+            함수 정의
+                function 함수명() {
+                    코드;
+                    함수명();
+                }
+
+            함수 호출
+                함수명();
+        */
+
+        // 1부터 10까지 출력
+
+        var num = 0;
+        function testFnc() {
+            num++;
+            document.write(num, '<br>');
+            if (num == 10) return;
+            
+            testFnc();
+        }
+
+        testFnc();
+
+    </script>
+</body>
+
+</html>

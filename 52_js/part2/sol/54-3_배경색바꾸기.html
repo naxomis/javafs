@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>버튼 클릭 시 배경색 바꾸기</h1>
+    <button onclick="changeColor();">배경색 바꾸기</button>
+    <script>
+        /* 
+            함수 정의
+                function 함수명() {
+                    코드;
+                }
+
+            함수 호출
+                함수명();
+
+            document.querySelector('선택자'); 문서 객체(태그)를 선택
+            문서객체.style.스타일속성 = 값; 문서 객체에 CSS 스타일 적용
+        */
+
+        var color = ['white', 'yellow', 'aqua', 'purple'];
+        var i = 0;
+
+        function changeColor() {
+            i++;
+            if (i >= color.length) {
+                i = 0;
+            }
+
+            var bodyTag = document.querySelector('body');
+            bodyTag.style.backgroundColor = color[i];
+        }
+    </script>
+</body>
+
+</html>

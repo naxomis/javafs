@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>switch</h1>
+    <script>
+        /* 
+            var 변수 = 초깃값;
+
+            switch (변수) {
+                case 값1: 코드1;
+                break;
+                case 값2: 코드2;
+                break;
+                case 값3: 코드3;
+                break;
+                default: 코드4;
+            }
+        */
+
+        var site = prompt('네이버, 다음, 네이트, 구글 중 즐겨 사용하는 포털 검색 사이트는?', '');
+        var url;
+
+        switch (site) {
+            case '구글': url = 'www.google.com';
+            break;
+            case '다음': url = 'www.daum.net';
+            break;
+            case '네이버': url = 'www.naver.com';
+            break;
+            case '네이트': url = 'www.nate.com';
+            break;
+            default: alert('보기 중에 없는 사이트입니다.');
+        }
+
+        // window.location.href = 'url'
+        // 현재 위치에서 url에 저장된 주소로 이동된다.
+        if (url) location.href = 'https://' + url;
+    </script>
+</body>
+
+</html>

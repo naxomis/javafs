@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>디지털 시계</h1>
+    <div class="clock">
+        <span class="yy">년</span>
+        <span class="mm">월</span>
+        <span class="dd">일</span>
+        <span class="we">요일</span>
+        <span class="hh">시</span>
+        <span class="mi">분</span>
+        <span class="ss">초</span>
+    </div>
+    <script>
+
+        // 변수 선언
+        // document.querySelector('CSS선택기');
+        // const yy = document.getElementsByClassName('yy');
+        const yy = document.querySelector('.yy'),
+            mm = document.querySelector('.mm'),
+            dd = document.querySelector('.dd'),
+            we = document.querySelector('.we'),
+            hh = document.querySelector('.hh'),
+            mi = document.querySelector('.mi'),
+            ss = document.querySelector('.ss');
+
+        // setInterval(함수, 시간);
+        // 시간은 밀리초
+        setInterval(timer, 1000);
+
+        function timer() {
+            let date = new Date();
+
+            yy.innerHTML = date.getFullYear() + '년';
+
+            mm.innerHTML = date.getMonth() + 1 + '월';
+            dd.innerHTML = date.getDate() + '일';
+
+            let week = date.getDay();
+
+            if (week === 0) {
+                wk = '일';
+            } else if (week === 1) {
+                wk = '월';
+            } else if (week === 2) {
+                wk = '화';
+            } else if (week === 3) {
+                wk = '수';
+            } else if (week === 4) {
+                wk = '목';
+            } else if (week === 5) {
+                wk = '금';
+            } else {
+                wk = '토';
+            }
+
+            we.innerHTML = wk + '요일';
+
+            // 시
+            let hour = date.getHours();
+
+            if (hour > 12) {
+                hour = '오후 ' + (hour - 12);
+            } else if (hour > 9) {
+                hour = '오전 ' + hour;
+            } else {
+                hour = '오전 0' + hour;
+            }
+
+            hh.innerHTML = hour;
+
+            // 분
+            let minute = date.getMinutes();
+
+            if (minute < 10) {
+                minute = '0' + minute;
+            }
+
+            mi.innerHTML = ': ' + minute;
+
+            // 초
+            let second = date.getSeconds();
+
+            if (second < 10) {
+                second = '0' + second;
+            }
+
+            ss.innerHTML = ': ' + second;
+        }
+
+    </script>
+</body>
+
+</html>

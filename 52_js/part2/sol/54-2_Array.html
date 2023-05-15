@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>배열 객체</h1>
+    <script>
+       /* 
+            splice(index, count, value1, value2, ...): index번호부터 count개수만큼 삭제 후 value 추가
+            pop(): 마지막 인덱스에 저장된 데이터 삭제
+            shift(): 첫 번째 인덱스에 저장된 데이터 삭제
+            push(new data): 마지막 인덱스에 새 데이터 삽입
+            unshift(new data): 첫 번째 인덱스에 새 데이터 삽입
+       */
+
+        var greenArr = ['교대', '방배', '강남'];
+        var yellowArr = ['미금', '정자', '수서'];
+
+        greenArr.splice(2, 1, '서초', '역삼');
+        document.write(greenArr, '<br>');
+
+        var data1 = yellowArr.pop();
+        var data2 = yellowArr.shift();
+
+        yellowArr.push(data2);
+        document.write(yellowArr, '<br>');
+
+        yellowArr.unshift(data1);
+        document.write(yellowArr, '<br>');
+
+    </script>
+</body>
+
+</html>

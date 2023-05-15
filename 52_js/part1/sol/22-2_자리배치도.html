@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>자리 배치도</h1>
+    <script>
+        /* 
+            if (조건식) {
+                코드1;
+            } else {
+                코드2;
+            }
+        */
+
+        // 입력
+        let stuNum = prompt("학생은 몇 명인가요?");
+        let colNum = prompt("한 줄에 몇 명씩 앉습니가?");
+
+        // 처리
+        if (stuNum % colNum === 0) {
+            rowNum = parseInt(stuNum / colNum);
+        } else {
+            rowNum = parseInt(stuNum / colNum) + 1;
+        }
+
+        // 출력
+        document.write("모두 " + rowNum + "개의 줄이 필요합니다.");
+    </script>
+</body>
+
+</html>

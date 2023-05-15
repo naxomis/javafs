@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        img {width:600px;}
+    </style>
+</head>
+<body>
+    <h1>랜덤 이미지</h1>
+    <span></span><button>버튼</button><br>
+    <div>
+        <img src="../assets/pic_1.jpg" alt="랜덤 이미지">
+    </div>
+
+    <script>
+        const btn = document.querySelector('button');
+        const num = document.querySelector('span');
+        const img = document.querySelector('img');
+        
+        btn.addEventListener('click', function(){
+            let num = Math.floor(Math.random() * 6 + 1);
+            // HTML 요소 속성을 변경
+            // setAttribute('HTML속성명', '값')
+            img.setAttribute('src', '../assets/pic_' + num + '.jpg');
+        });
+    </script>
+</body>
+</html>

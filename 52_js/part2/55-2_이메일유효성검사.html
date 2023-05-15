@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>문자열 객체</h1>
+    <script>
+        /* 
+             var 참조변수 = new String('문자열');
+             var 참조변수 = '문자열';
+        */
+
+        var s = new String('hello javascript');
+        var s2 = 'hello javascript';
+
+        /* 
+            indexOf('찾을문자'): 객체의 왼쪽부터 문자열을 찾아 최초 일치하는 index 번호 반환 (없으면 -1)            
+            length: 문자열의 문자 총 개수 반환
+        */
+
+        var userEmail = prompt('당신의 이메일 주소는?', '');
+        var arrUrl = ['.co.kr', '.com', '.net', '.or.kr', '.go.kr'];
+
+        var check1 = false;
+        var check2 = false;
+
+        if (userEmail.indexOf('@') > 0) {check1 = true;}
+
+        for (var i = 0; i < arrUrl.length; i++) {
+            if (userEmail.indexOf(arrUrl[i]) > 0) {
+                check2 = true;
+            }
+        }
+        if (check1 && check2) {
+            document.write(userEmail);
+        } else {
+            alert('이메일 형식이 잘못되었습니다.');
+        }
+
+    </script>
+</body>
+
+</html>

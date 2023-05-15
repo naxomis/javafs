@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        * {margin:0;}
+        body {overflow:hidden;}
+    </style>
+</head>
+<body>
+    <p>
+        <img src="../assets/window_object_1.jpg" alt="신간 책 소개" usemap="#intro">
+        <map name="intro" id="intro">
+            <area shape="rect" coords="230,368,280,390" href="#" alt="창 닫기">
+            <!-- <area shape="rect" coords="230,368,280,390" href="#" alt="창 닫기" onclick="window.close();"> -->
+        </map>
+    </p>
+
+    <script>
+        document.querySelector('area').onclick = closed;
+
+        function closed() {
+            window.close();
+        }
+    </script>
+</body>
+</html>

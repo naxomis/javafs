@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        table, td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 5px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>자리 배치도</h1>
+    <script>
+        // 입력
+        let stuNum = prompt("학생은 몇 명인가요?");
+        let colNum = prompt("한 줄에 몇 명씩 앉습니까?");
+
+        // 처리
+        if (stuNum % colNum === 0) {
+            rowNum = parseInt(stuNum / colNum);
+        } else {
+            rowNum = parseInt(stuNum / colNum) + 1;
+        }
+
+        document.write("<table>");
+        for (let i = 0; i < rowNum; i++) {
+            document.write("<tr>");
+            for (let j = 0; j <= colNum; j++) {
+                seatNo = i * colNum + j;
+                if (seatNo > stuNum) break;
+                document.write("<td> 좌석 " + seatNo + " </td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>")
+    </script>
+</body>
+
+</html>

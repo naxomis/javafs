@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>문자열 객체</h1>
+    <script>
+        /* 
+            substring(index1, index2): 인덱스1부터 인덱스2 이전 구간의 문자열 반환, (단, 음수인 경우 인덱스 0을 가리킴)
+            toUpperCase(): 대문자로 반환
+            length: 문자열의 문자 총 개수 반환
+        */
+
+        // 전화번호 뒤 4자리 '*'표시 하기
+        var userName = prompt('당신의 영문 이름은?', '');
+
+        var upperName = userName.toUpperCase();
+        document.write(upperName, '<br>');
+
+        var userNum = prompt('당신의 연락처는?', '');
+        var result = userNum.substring(0, userNum.length - 4) + '****';
+        document.write(result, '<br>');
+
+    </script>
+</body>
+
+</html>

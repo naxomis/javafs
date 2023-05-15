@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>출력</h1>
+    <script>
+        /* 
+            사람 객체
+            공부하다()  메서드()
+            자동차 객체
+            달린다()    메서드()
+
+            형식:
+            객체.메서드()
+            사람.공부하다()
+            자동차.달린다()
+    
+            객체: window(생략 가능), console, document, Date, Math, Array, String, ...
+            메서드(매개변수1, 매개변수2, ...): 
+            alert('메시지'), 
+            confirm('메시지') 
+            prompt('텍스트', '기본텍스트'), 
+            write(표현식1, 표현식1, ...), 
+            log('메시지')
+
+            // 아래 window 객체는 생략 가능
+            window.alert('메시지'): 알림 창 출력
+            window.confirm('메시지'): 확인/취소 창 출력
+            window.prompt('텍스트', ['기본텍스트']): 프롬프트 창 입력
+            document.write(exp1, exp2, ..., expN): 웹 브라우저 화면 출력
+            console.log('메시지'): 콘솔 출력
+
+            코드 입력시 주의 사항
+            1. 자바스크립트는 대소문자를 구분한다.
+            2. 문장 끝에 세미콜론(;)을 쓴다.
+            3. 문자열 데이터는 큰따옴표("") 또는 작은 따옴표('')로 묶는다.
+        */
+
+        // 경고창
+        alert("'경고 창'");
+        
+        // 확인/취소창 -> 확인/취소버튼
+        confirm("'확인/취소 창'");
+        
+        // 문서에 쓰기
+        document.write('문서에 쓰기');
+        
+        // 콘솔
+        console.log('콘솔 출력');
+
+        // 입력
+        prompt('이름을 입력하세요.', '김나연');
+    </script>
+</body>
+
+</html>
