@@ -27,6 +27,9 @@
             list-style: none;
         }
 
+        img {
+            vertical-align: top;
+        }
         /* header */
         header {
             position: fixed;
@@ -120,24 +123,21 @@
         }
 
         /* section2, 3 common */
-        #menu ul::after,
-        #event ul::after {
-            content: '';
-            clear: both;
-            display: block;
+        #menu ul,
+        #event ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
-
         #menu li,
         #event li {
-            float: left;
             width: 362px;
             margin-bottom: 16px;
         }
-
-        #menu li:not(:nth-of-type(4n)),
-        #event li:not(:nth-of-type(4n)) {
-            margin-right: 16px;
+        #menu h2 {
+            margin-bottom: 48px;
         }
+
 
         /* section3 */
         #event li h3 {
