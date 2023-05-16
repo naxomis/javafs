@@ -16,6 +16,9 @@ body {
 li {
     list-style: none;
 }
+img {
+    vertical-align: top;
+}
 /* font */
 html {
     font-size: 10px;
@@ -27,78 +30,72 @@ body {
 header {
     width: 100%;
     height: 170px;
-    background: rgba(2, 30, 33, 0.12);
+    background: #fff;
 }
-.global_menu {
-    width: auto;
-    height: 50px;
-    background: yellow;
-}
-.top_align {
+.top_warp {
     display: flex;
-    position: relative;
+    justify-content: space-between;
+}
+
+.global_menu {
+    background: #ffd;
+    display: flex;
+    padding: 16px;
+}
+.top_util {
+    padding: 16px;
+    background: #fff;
+    display: flex;
+
+}
+.top_members, .top_sns {
+    display: flex;
+}
+.global_menu a, .top_members li, .top_members li {
+    padding: 0 8px;
+}
+.top_sns a {
+    padding: 0 8px;
 }
 .top_logo {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+/* nav */
+#nav ul{
+    background: lightblue;
+    display: flex;
     justify-content: center;
 }
+#nav  li {
+    padding: 24px 32px;
+}
 
-/* section common */
+
 
 /* section1 */
-.section1 {
-    width: 1920px;
+
+/* section common */
+.container {
+    width: 1520px;
     margin: 0 auto;
 }
-#slide {
-    height: 640px;
-    overflow: hidden;
-}
-#slide ul {
-    position: relative;
-    left: 0;
-    width: 100%;
-    display: flex;
-    animation: slide 15s infinite;
-}
 
-
-/* @keyframes slide {
-    0% {left:0;}
-    5% {left:-100%;}
-    33% {left:-100%;}
-    38% {left:-200%;}
-    66% {left:-200%;}
-    71% {left:-300%;}
-    99.99% {left:-300%;}
-    100% {left:0;}
-} */
-@keyframes slide {
-    0% {left: 0;}
-    3% {left: -100%;}
-    10% {left: -100%;}
-    13% {left: -200%;}
-    20% {left: -200%;}
-    23% {left: -300%;}
-    30% {left: -300%;}
-    33% {left: -400%;}
-    40% {left: -400%;}
-    43% {left: -500%;}
-    50% {left: -500%;}
-    53% {left: -600%;}
-    60% {left: -600%;}
-    63% {left: -700%;}
-    70% {left: -700%;}
-    73% {left: -800%;}
-    80% {left: -800%;}
-    83% {left: -900%;}
-    90% {left: -900%;}
-    99.99% {left: -900%;}
-    100% {left: 0%;}
-}
 /* section2 */
 
-/* section3 */
 
+/* section3 */
+.cos ul {
+    display: flex;
+}
+.cos li {
+    width: 272px;
+    margin-right: 40px;
+}
+.cos span {
+    position: absolute;
+}
 /* section4 */
 
 /* footer */

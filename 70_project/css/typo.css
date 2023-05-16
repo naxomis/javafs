@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* typo */
+html {
+    font-size: 10px;
+}
+body {
+    font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+/* a태그와 bottom태그 글자 색은 body태그의 글자 색을 상속 받지 않는다. */
+a {
+    color: #333;
+    text-decoration: none;
+}
+/* logo */
+.logo a {
+    color: #fff;
+}

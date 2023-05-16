@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>변수(let, const)</h1>
+    <script>
+        /* 
+            // 변수 선언 키워드: var -> let, const
+            // var과 let, const은 같이 쓰지 않는다.
+            // 변수 선언
+            var 변수명;
+
+            // 값을 할당
+            var 변수명 = 값;
+
+            // 선언과 할당을 따라 할 수 있는 것은? var, let
+            // 재선언: var
+            // 재할당: var, let
+
+            // let은 재선언을 할 수 없다.
+            // const는 재선언과 재할당을 할 수 없다.
+        */
+
+        // const는 선언 동시에 할당도 해야한다.
+        const box = 100;
+        // const box = 100;(x)
+        // box = 100;(X)
+        // const는 재선언과 재할당을 할 수 없다. -> 값이 바뀌지 않는 변수는 const를 쓴다.
+
+        var box2 = 200;
+        //재선언
+        var box2 = 200;
+        // var재할당
+        box2 = 300;
+
+        let box3 = 400;
+        // let은 재선언 할 수 없다.
+        // let box3 = 500;(x)
+        // let재할당 -> 값이 바뀌는 변수는 let을 쓴다.
+        box3 = 500;
+        box3 = 550;
+
+        document.write(box, '<br>');
+        document.write(box2, '<br>');
+        document.write(box3, '<br>');
+        document.write('box', '<br>');
+    </script>
+</body>
+
+</html>

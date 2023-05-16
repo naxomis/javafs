@@ -11,44 +11,104 @@
 <body>
     <h1>데이터 유형</h1>
     <script>
+
+        /*
+            내장 객체: window, document, console, ...
+            사용자 정의 객체
+                +메서드
+                +속성
+
+            window의 메서드
+            window.alert()
+            window.confirm()
+            window.prompt()
+
+            함수란 객체가 필요없는 메서드
+                -alert()
+                -confirm()
+                -prompt()
+                내장함수
+                    -Number(매개변수 숫자)
+                    -Boolean(매개변수)
+                    -String(매개변수 숫자)
+
+            이벤트
+            
+            내장 함수: Number(매개변수)
+            사용자 정의 함수
+         */
         /* 
             데이터 유형
-            1. string: '문자열' 또는 "문자열"
+            1. string: '문자열' 또는 "문자열" ('abc', '십', '10')
             2. number: 숫자
             3. boolean(부울): true 또는 false
             4. undefined
-            5. object(객체): Array(배열), Date(날짜), Math(수학), String(문자열), null, ... 
+            5. object(객체)
+                Array(배열), Date(날짜), Math(수학), String(문자열), 
+                null, console, ...
+                BOM(Browser Object Model): window, document, ...
+                DOM(Document Object Model): document, ...
 
             undefined는 변수에 값이 등록되기 전의 기본값이고,
             null은 변수에 저장된 데이터를 비우고자할 때 사용된다.
-            Boolean() 함수는 숫자 0과 null, undefined, 빈 문자('')를 제외한 모든 데이터에 대해 true를 반환한다.
+            Boolean() 함수는 숫자 0과 null, undefined, 빈 문자('')를 제외한 모든 데이터에 대해 true를 반환(return)한다.
         */
 
-        // string
+        // string (문자열은 ''또는 ""로 묶는다.)
+        let s1 = '자바스크립트';
+        let s2 = '100';
+        let s3 = '<h3>문자열</h3>';
+        let s4 = String(1000);
 
+        // number (숫자)
+        let n1 = 100;
+        let n2 = Number('500');
 
-        // number
+        //NaN(Not a Number) ~ 숫자가 아니다.
+        let n3 = Number('오백');
+        let n4 = Number(500); //의미없다.
 
+        // boolean (부울) -> 저장된 값은 true또는 false -> 논리값
+        // 비교 연산자: >, <, >=, <=, ==, !=
+        // 논리 연산자: &&(and), ||(or), !(not)
+        // 논리/비교 연산자의 연산 결과는 trun또는 false
+        let b1 = true;
+        let b2 = 10 >= 100; // 비교연산자
+        let b3 = 10 >= 100 || 10 <= 100;
+        let b4 = Boolean('hello');
 
-        // boolean
+        //Boolean(값) ~ 값을 false, 0, null, undefined, ''가 아니면 true
+        let b5 = Boolean(0);
+        let b6 = Boolean(null); // 값을 삭제(초기화)할 때 사용하는 값
+        let b7 = Boolean(undefined); // 변수의 값이 저장되기 전의 기본값
+        let b8 = Boolean(''); // 빈 문자
 
-
-        // undefined
-
+        // undefined ~ 선언 후 값을 할당하지 않았을 때의 값
+        let u;
 
         // null
-
+        let n = null;
 
         // 출력
         document.write(s1, '<br>');
         document.write(s2, '<br>');
         document.write(s3, '<br>');
+        document.write(s4, '<br><br>');
+
         document.write(n1, '<br>');
         document.write(n2, '<br>');
+        document.write(n3, '<br>');
+        document.write(n4, '<br><br>');
+
         document.write(b1, '<br>');
         document.write(b2, '<br>');
-        document.write(b3, '<br>');
+        document.write(b3, '<br>');;
         document.write(b4, '<br>');
+        document.write(b5, '<br>');
+        document.write(b6, '<br>');
+        document.write(b7, '<br>');
+        document.write(b8, '<br><br>');
+
         document.write(u, '<br>');
         document.write(n, '<br>');
     </script>

@@ -66,7 +66,7 @@ nav li {
     text-align: center;
     margin-left: 8px;
     width: 150px;
-    background: #EF7C07;
+    background: #F9CF00;
 }
 nav .sub {
     display: none;
@@ -103,16 +103,19 @@ nav .sub {
     /*  float: left; */
     display: flex;
     padding: 8px 0;
+    justify-content: space-between;
 }
-#contents > div {
-    width: 400px;
+#contents div {
+    width: 380px;
     height: 200px;
 }
+
 
 /* 탭 메뉴 */
 .tabs {
     padding: 24px 24px 24px 0;
     background-clip: content-box;
+    margin-right: 20px;
 }
 .tabs input {
     display: none;
@@ -158,6 +161,7 @@ nav .sub {
 #tab1 a:hover {
     color: #333;
 }
+
 span {
     color: #777;
 }
@@ -172,15 +176,6 @@ span {
     display: inline-block;
     width: 110px;
     margin-right: 8px;
-}
-
-/* 베너 */
-.banner {
-    background: darkcyan;
-}
-/* 바로가기 */
-.shortcut {
-    background: greenyellow;
 }
 
 /* 푸터 */
