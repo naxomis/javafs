@@ -71,7 +71,9 @@ header {
 #nav > li {
     padding: 24px 32px;
 }
-
+.nav_cont_col5_wide {
+    display: none;
+}
 
 /* section common */
 

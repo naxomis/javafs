@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css");
 /* ctrl+f: 찾기 */
 
 /* 초기화 */
@@ -29,9 +30,7 @@ img {
     margin: 0 auto;
 }
 
-header,
-#contents,
-footer {
+header {
     /*  float: left; */
     display: flex;
 }
@@ -53,7 +52,6 @@ header {
 /* 로고 */
 .logo {
     width: 200px;
-    background: lightpink;
 }
 
 /* 네비게이션 */
@@ -100,6 +98,12 @@ nav .sub {
 
 
 /* 메인컨텐츠 */
+
+#contents {
+    /*  float: left; */
+    display: flex;
+    padding: 8px 0;
+}
 #contents > div {
     width: 400px;
     height: 200px;
@@ -154,6 +158,9 @@ nav .sub {
 #tab1 a:hover {
     color: #333;
 }
+span {
+    color: #777;
+}
 /*  탭 메뉴 - 갤러리 */
 /* #tab2 ul {
     display: flex;
@@ -177,20 +184,50 @@ nav .sub {
 }
 
 /* 푸터 */
-.b_logo {
-    width: 200px;
-    height: 100px;
-    background: floralwhite;
+footer {
+    background: #333;
+    color: #777;
+    display: flex;
+    align-content: center;
 }
-
+.fot {
+    width: 300px;
+    background: url(../images/logo2-2.png) no-repeat;
+    margin-left: 40px; 
+    margin-top: 30px;
+}
 .addr {
-    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 700px;
     height: 100px;
-    background: bisque;
+    text-align: center;
 }
 
 .sns {
-    width: 200px;
+    /* flex: glow shrink basis 
+    flex: 0 1 auto; */
     height: 100px;
-    background: lightslategray;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    margin-left: 100px;
+    padding: 32px;
+}
+.sns a {
+    margin-right: 16px;
+    transition: .3s;
+}
+.sns a:hover {
+    transform: scale(1.2);
+}
+.sns a:nth-of-type(1):hover {
+    color: #1c9ce4;
+}
+.sns a:nth-of-type(2):hover {
+    color: #395498;
+}
+.sns a:nth-of-type(3):hover {
+    color: #f60065;
 }
