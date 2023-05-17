@@ -12,31 +12,74 @@
     <h1>연산자</h1>
     <script>
         /* 
+            자바스크립트
+            1. 어디에?
+            2. 출력 - 객체, 메서드
+            3. 변수 - var -> let, const
+            4. 데이터 유형
+            5. 연산자
+            6. 제어문
+
+            7. 함수
+            8. 객체
+
+            9. 이벤트, 라이브러리
+            10. 응용
+
             연산자의 우선순위
             1. ()
             2. 산술
             3. 비교
             4. 논리
             5. 할당
+
             산술 연산자: +(더하기), -(빼기), *(곱하기), /(나누기), %(나머지), **(거듭제곱)
             % 5 % 3 = 2 (나머지가 나온다)
         */
 
-        var num1 = 15;
-        var num2 = 2;
-        var result;
+        //변수 선언
+        let num1 = 15;
+        num1 = 15;
+        let num2 = 2;
+        let result;
 
-        // 변수란? 저장 공간
-        // 변수 = 값;
-        // 변수 = 변수;
-        // 변수 =변수1 + 변수2; (다항연산)
-        // 값 = 변수; (x)
-        // 왼쪽은 항상 변수, 오른쪽은 변수 또는 값
-        num1 = num1 + num2
+        result = 10;
+        result = num1;
+
+         /* 변수란? 저장 공간
+
+            변수의 선언
+            var 변수;
+            let 변수;
+
+            값 할당
+            변수 = 값
+
+            =대입(할당)연산자의 연산 방식은 오른쪽의 내용을 왼쪽에 넣는다.
+            왼쪽은 항상 변수, 오른쪽은 변수 또는 값 
+            변수의 선언 및 할당
+            canst 변수 = 값;
+            변수 = 값;
+            변수 = 변수;
+            변수 =변수1 + 변수2; (다항연산)
+            값 = 변수; (x)
+        */
+
+        //변수 할당
+        result = num1 + num2;
+
+        result = num1 + num2;
         document.write(result, '<br>');
-        document.write(num1, '<br>');
-        document.write(num2, '<br>');
-        
+        result = num1 - num2;
+        document.write(result, '<br>');
+        result = num1 * num2;
+        document.write(result, '<br>');
+        result = num1 / num2;
+        document.write(result, '<br>');
+        result = num1 % num2;
+        document.write(result, '<br>');
+        result = num1 ** num2;
+        document.write(result, '<br>');
     </script>
 </body>
 

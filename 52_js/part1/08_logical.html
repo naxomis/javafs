@@ -12,8 +12,32 @@
     <h1>연산자</h1>
     <script>
         /* 
-            논리 연산자: ||(또는), &&(그리고), !(아니다)
+            논리 연산자: ||(or, 또는), &&(and, 그리고), !(not, 아니다)
+            //논리 연산의 결과는 true 또는 false 이다.
+            피연산자1 || 피연산자2
+            true || true -> true
+            true || false -> true
+            false || true -> true
+            false || false -> false
+
+            false || false || false || false || true
+            true || false || false || false || false -> 더 빠르다
             
+            true && true -> true
+            true && false -> false
+            false && true -> false
+            false && false -> false
+
+            false && false && false && false && true -> 더 빠르다
+            true && false && false && false && false 
+
+            연산자의 우선순위(간단하게)
+            1. ()
+            2. 산술
+            3. 비교
+            4. 논리
+            5. 대입(할당)
+
             연산자의 우선순위
             18. ()
             15. 산술(증감): ++, --
@@ -35,11 +59,25 @@
 
         var a = 10;
         var b = 20;
-        var m = 30;
-        var n = 40;
+        var c = 30;
+        var d = 40;
         var result;
 
+        result = a > b || b >= c || c > d;
         document.write(result, '<br>');
+
+        result = a > b || b >= c || c <= d;
+        document.write(result, '<br>');
+
+        result = a <= b && b >= c && c <= d;
+        document.write(result, '<br>');
+
+        result = a <= b && b <= c && c <= d;
+        document.write(result, '<br>');
+        
+        result = !(a > b);
+        document.write(result, '<br>');
+        
         
     </script>
 </body>

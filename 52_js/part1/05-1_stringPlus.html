@@ -21,7 +21,33 @@
         var t4 = ' 어서 모이자';
         var result;
 
+        /* 
+            숫자 + 숫자 -> 숫자
+            문자열 + 숫자 -> 문자열
+            숫자 + 문자열 -> 문자열
+            문자열 + 문자열 -> 문자열
+            숫자 + 숫자 + 문자열 -> 문자열
+
+            연산자의 우선순위가 같으면 
+            왼쪽에서 오른쪽 방향으로 순차적으로 연산된다.
+
+            문자열이 있으면 나열된다.
+         */
+
+        result = t1 + t3 +t3 + t4;
         document.write(result);
+        result = t3 + t3 +t4;
+        document.write(result);
+        result = t1 + t3;
+        document.write(result);
+        result = t2 + t3;
+        document.write(result + '<br>');
+        result = t1 + t2;
+        document.write(result);
+        result = t4 + t2;
+        document.write(result);
+
+
         
     </script>
 </body>

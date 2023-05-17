@@ -12,29 +12,44 @@
     <h1>연산자</h1>
     <script>
         /* 
-            대입 연산자: =, +=, *=, -=, /=, %=, **=
+            대입(할당) 연산자: =
+            복합 대입 연산자: =, +=, *=, -=, /=, %=, **=
+
+            let a = 1;
+
+            a = a + 1;
+            // a에  1을 더해서 a에 대입한다.
+            a += 1;
+            a++;
+
         */
 
-        var num1 = 10;
-        var num2 = 3;
+        let num1 = 10;
+        const num2 = 3;
 
         // num1 = num1 + num2
-
+        num1 += num2;
+        document.write(num1, '<br>');
         
         // num1 = num1 - num2
-
+        num1 -= num2;
+        document.write(num1, '<br>');
         
         // num1 = num1 * num2
-
+        num1 *= num2;
+        document.write(num1, '<br>');
         
         // num1 = num1 / num2
-
+        num1 /= num2;
+        document.write(num1, '<br>');
         
         // num1 = num1 % num2
-
+        num1 %= num2;
+        document.write(num1, '<br>');
 
         // num1 = num1 ** num2
-
+        num1 **= num2;
+        document.write(num1, '<br>');
         
     </script>
 </body>

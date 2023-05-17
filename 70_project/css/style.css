@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 @import url('reset.css');
 @import url('typo.css');
@@ -46,20 +45,105 @@ header i {
 .container {
     width: 960px;
     margin: 0 auto;
+    padding-bottom: 81px;
+}
+section h2 {
+    text-align: center;
+    margin-top: 81px;
+}
+section h2 + p {
+    text-align: center;
+    margin: 27px 0;
 }
 .parallax {
+    position: relative;
     height: 410px;
     background: no-repeat 50% 50%/ cover fixed;
 }
+.parallax b {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* section2 */
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+}
+.profile p {
+    text-align: justify;
+    word-break: break-all;
+}
+
+.profile p:nth-of-type(1) {
+    flex: 100%;
+    margin-bottom: 54px;
+}
+.profile p:nth-of-type(2) {
+    flex: 50%;
+}
+.profile div {
+    flex: 50%;
+    text-align: center;
+}
 .photo {
     width: 425px;
-    height: 290px;
 }
+.photo img {
+    margin-top: 54px;
+}
+.photo b {
+    margin-left: 8px;
+}
+/* skill */
+#about h3 {
+    display: block;
+    text-align: center;
+    margin: 54px 0;
+}
+.progress .lst > span {
+    display: inline-block;
+    margin: 16px;
+}
+.progress .lst div {
+    background: #eee;
+}
+.progress .lst div span {
+    display: block;
+    height: 34px;
+    text-align: center;
+    background: #555;
+}
+.progress .lst:nth-of-type(1) div span {
+    width: 90%;
+}
+.progress .lst:nth-of-type(2) div span {
+    width: 85%;
+}
+.progress .lst:nth-of-type(3) div span {
+    width: 75%;
+}
+.counter {
+    background: #616161;
+    display: flex;
+    justify-content: space-around;
+    height: 132px;
+    align-items: center;
+}
+.counter span {
+    display: block;
+    text-align: center;
+}
+
+
 /* section3 */
+
 #portfolio .parallax {
     background-image: url(../images/section4\(3\)_1.jpg)
 }
+
 #portfolio ul {
     display: flex;  
 }
@@ -79,4 +163,35 @@ header i {
     background-image: url(../images/parallax3.jpg);
 }
 
+
 /* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    background: #555;
+}
+
+footer:hover {
+    background: #000;
+}
+
+footer .topBtn a {
+    background: #ccc;
+    padding: 8px 16px;
+}
+footer .topBtn {
+    margin-bottom: 16px;
+}
+footer .topBtn a:hover {
+    background: #555;
+}
+footer .topBtn i {
+    margin-right: 16px;
+}
+footer .sns {
+    margin: 12px 0 16px;
+}
+

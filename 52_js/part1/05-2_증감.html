@@ -12,15 +12,41 @@
     <h1>연산자</h1>
     <script>
         /* 
+            항의 개수
+            1. 단항: ++A, A++
+            2. 이항: A + B
+            3. 다항:
+
+            연산자와 피연산자(항)
+
+            피연삱의 개수
+            1. 단항 연산자: ++, --, -(음수)
+            2. 이항 연산자: +, -, *, %, ...
+            3. 삼항 연산자: ? : (피연산자1 ? 피연산자2 : 피연산자3)
+
             산술 연산자: ++(1씩 증가), --(1씩 감소)
 
+            //전위 연산
             var A = ++B -> B값을 1 증가 후 A에 대입
+            //후위 연산
             var A = B++ -> B를 A에 대입 후 B값을 1증가
         */
 
         var num1 = 10;
         var num2 = 20;
         var result;
+
+        num1++;
+        document.write('num1 = ', num1, '<br>');
+        ++num1;
+        document.write('num1 = ',num1, '<br>');
+
+        result = ++num2;
+        document.write('result = ',result, '<br>');
+        document.write('num2 = ',num2, '<br>');
+        result = num2++;
+        document.write('result = ',result, '<br>');
+        document.write('num2 = ',num2, '<br>');
         
     </script>
 </body>
