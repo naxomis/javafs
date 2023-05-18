@@ -1,293 +1,216 @@
 @charset "utf-8";
+@import url('reset.css');
+@import url('typo.css');
 
-/* reset */
-* {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #fff;
-}
-
-/* 목록의 마커 제거 */
-li {
-    list-style: none;
-}
-
-img {
-    width: 100%;
-    vertical-align: 4;
-}
-
-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* font */
-html {
-    font-size: 10px;
-}
-
-body {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: #333;
-}
-
-h1 {
-    font-size: 3.2rem;
-}
-
-h2 {
-    font-size: 2.4rem;
-}
-
-h3 {
-    font-size: 1.8rem;
-}
-
-a {
-    color: #333;
-    text-decoration: none;
-}
-
-@font-face {
-    font-family: 'omyu_pretty';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-p {
-    font-family: 'omyu_pretty', sans-serif;
-}
-
-.section h2,
-h1,
-a {
-    font-family: 'KCC-Ganpan', sans-serif;
-
-}
-
-@font-face {
-    font-family: 'KIMM_Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-
-.section h3 {
-    font-family: 'KIMM_Bold', sans-serif;
-}
-
-/* header */
+/* 헤더 */
 header {
-    position: fixed;
-    top: 0;
     z-index: 9999;
+    position: fixed;
     width: 100%;
-    padding: 0 32px;
-    height: 54px;
+    padding: 12px 30px;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
 }
-
-.logo {
-    float: left;
-}
-
 nav {
-    float: right;
+    display: none;
 }
 
-nav li {
-    display: inline-flex;
-    margin: 16px;
-}
-
-nav a::after {
-    content: '';
-    display: block;
-    height: 2px;
-    background: rgb(36, 60, 132);
-    transition: .3s;
-    transform: scaleX(0);
-}
-
-nav a:hover::after {
-    transform: scaleX(1);
-}
-
-/* section common */
-section {
-    width: 1496px;
-    margin: 0 auto;
-}
-
-.section {
-    padding-top: 81px;
-}
-
-.section h2 {
-    margin-bottom: 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid #ccc;
-}
-
-.section h2+p {
-    margin-bottom: 48px;
-}
-
-/* section1 */
-.div1 {
-    animation: move 4s forwards;
-}
-
-#main_img div {
-    position: relative;
-    width: 1496px;
-    height: 800px;
-    background: url(../images/Architecture2.jpg) no-repeat;
-    left: 0px;
-    top: 0px;
-    text-indent: -9999em;
-    opacity: 0;
-}
-
-@keyframes move {
-    0% {
-        opacity: 0;
-        left: -600px;
-        animation-timing-function: ease-out;
-    }
-
-    100% {
-        opacity: 1;
-        left: 0px;
-        animation-timing-function: ease-out;
-    }
-}
-
+/* 섹션1 */
 #main_img {
     position: relative;
-    width: 1496px;
-    top: 58px;
 }
-
 #main_img h2 {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 8px 16px;
+    transform: translate(-50%,-50%);
+}
+#main_img b {
+    padding: 6px 12px 10px;
+    background: rgba(0, 0, 0, 0.34);
+}
+#main_img span {
+    display: none;
 }
 
-.div {
-    animation: move 4s forwards;
+/* 섹션공통 */
+.section {
+    padding: 81px 30px 0;
 }
-
-#main_img h2 {
-    padding: 8px 16px;
-    color: #fff;
-    font-size: 3rem;
+.section h2 {
+    line-height: 1;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 20px 0;
+    margin-bottom: 20px;
 }
-
-#main_img div {
-    width: 1496px;
-    height: 810px;
-}
-
-/* section2 */
-#menu h2 {
-    margin-bottom: 48px;
-}
-
-#menu h3 {
-    position: absolute;
-    background: rgb(36, 60, 132);
-    color: #fff;
-    padding: 8px 16px;
-}
-
-/* section2, 3 common */
-#menu ul::after,
-#event ul::after {
-    content: '';
-    clear: both;
-    display: block;
-}
-
-#menu li,
-#event li {
-    float: left;
-    width: 362px;
+.section li {
     margin-bottom: 16px;
 }
 
-#menu li:not(:nth-of-type(4n)),
-#event li:not(:nth-of-type(4n)) {
-    margin-right: 16px;
+/* 섹션2 */
+#menu h2 {
+    margin-bottom: 40px;
 }
-
-/* section2 */
-#menu img {
-    border: 1px solid rgb(36, 60, 132);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+#menu li {
+    position: relative;
+    background: #f2f2f2;
 }
-
-/* section3 */
-#event li h3 {
-    margin: 16px 0 8px;
-}
-
-#event li p {
-    margin: 8px 0;
-}
-
-#event li a {
-    display: block;
+#menu h3 {
+    position: absolute;
+    left: 0; top: 0;
     background: rgb(36, 60, 132);
-    text-align: center;
-    padding: 8px 0;
-    margin: 16px 0;
-    color: #fff;
+    padding: 4px 12px;
 }
 
-/* section4 */
-input {
-    width: 100%;
-    height: 36px;
+/* 섹션3 */
+#event > p {
+    margin-bottom: 40px;
+}
+#event h3 {
+    margin-top: 16px;
+}
+#event li p:first-of-type {
     margin: 8px 0;
 }
-
-button {
-    height: 36px;
-    width: 154px;
-    margin: 16px 0 36px;
-    background: #000;
-    color: #fff;
+#event a {
+    display: block;
+    text-align: center;
+    background: #ccc;
+    padding: 6px 0;
+    margin: 16px 0 24px;
+}
+/* 섹션4 */
+#VoC input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 15px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
 }
 
-form+img {
+#VoC button {
+    height: 38px;
+    background: #000;
+    margin: 20px 0 45px;
+    padding: 8px 16px;
+}
+.map {
+    height: 182px;
     margin-bottom: 8px;
 }
 
-.map {
-    height: 830px;
+/* 푸터 */
+footer span:nth-of-type(1),
+footer span:nth-of-type(3) {
+    display: none;
 }
-
-/* footer */
 footer {
     background: #000;
-    color: #fff;
+    padding: 30px 0;
     text-align: center;
-    padding: 32px 0;
+}
+/* 테블릿 768px */
+@media (min-width: 768px) {
+    /* 헤더 */
+    /* 로고 */
+    /* 네비게이션 */
+    nav {
+        display: block;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    header ul {
+        display: flex;
+    }
+    nav ul li:not(:first-of-type) {
+        margin-left: 36px;
+    }
+    /* 섹션1 */
+
+    /* 섹션2~4공통 */
+    .section {
+        width: 704px;
+        margin: 0 auto;
+        padding: 81px 0 0;
+    }
+    .section ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .section li {
+        width: 344px;
+    }
+
+
+    /* 섹션2 */
+
+    /* 섹션3 */
+
+    /* 섹션4 */
+
+    /* 푸터 */
+}
+
+/* 데스크탑 992이상 */
+@media (min-width: 992px) {
+    /* 헤더 */
+    /* 로고 */
+    /* 네비게이션 */
+    nav {
+        display: block;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    header ul {
+        display: flex;
+    }
+    nav ul li:not(:first-of-type) {
+        margin-left: 36px;
+    }
+
+    /* 섹션1*/
+    #main_img {
+        max-width: 1496px;
+        margin: 0 auto;
+    }
+    #main_img span {
+        display: inline-block;
+    }
+    /* 섹션2~4공통 */
+    .section {
+        width: 1496px;
+        margin: 0 auto;
+        padding: 81px 0 0;
+    }
+    .section ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .section li {
+        width: 362px;
+    }
+
+    /* 섹션2 */
+
+    /* 섹션3 */
+    #event li {
+        display: flex;
+        flex-direction: column;
+        justify-items: auto;
+    }
+    #event li div {
+        background: #fff;
+    } 
+    /* 섹션4 */
+    .map {
+        height: 844px;
+    }
+    /* 푸터 */
 }

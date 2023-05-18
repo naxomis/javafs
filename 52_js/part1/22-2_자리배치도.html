@@ -19,14 +19,26 @@
             }
         */
 
+        // 학생수(stu_num)와 한 줄에 앉는 인원수(count)를 입력받아, 총 몇 줄(total_line)이 필요한지 구하시오.
         // 입력
+            let stu_num = prompt('학생수를 입력하세요.');
+            let count = prompt('한 줄에 앉는 인원수를 입력하세요.');
+            let total_line
 
 
         // 처리
-
+        //학생수 / 한줄인원수
+        // 몫: parseInt(학생수/ 한줄 인원수)
+        // 나머지: 학생수 % 한줄인원수
+        if (stu_num % count === 0) {
+            total_line = parseInt(stu_num / count);
+        } else {
+            total_line = parseInt(stu_num / count) + 1;
+        }
 
         // 출력
-
+        // 학생수는 xx명, 한 줄에 앉는 인원은 xx명이므로 좌석은 총 xx줄이 필요합니다.
+        document.write('학생수는', stu_num, '명, 한 줄에 앉는 인원은 ',count, '명이므로 좌석은 총 ', total_line, '줄이 필요합니다.');
 
     </script>
 </body>

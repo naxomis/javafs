@@ -12,6 +12,13 @@
     <h1>if</h1>
     <script>
         /* 
+            제어문
+            1. 조건문: if
+            2. 선택문: swith
+            3. 반복문: for, do, while
+
+            // 조건식이 true이면 코드 실행, 
+            // 조건식이 false이면 코드 실행하지 않음.
             if (조건식) {
                 코드;
             }
@@ -19,13 +26,20 @@
 
         var num = 10;
 
+        if (num > 3) {
+            document.write('참이다.1');
+        }
 
-        // 조건식에 0, null, ''(빈 문자), undefined를 사용하면 false, 그 밖의 값은 true
+        // 조건식에 false, NaN, 0, null, ''(빈 문자), undefined를 사용하면 false, 그 밖의 값은 true
         var num2 = 3;
-
+        if (num2) {
+            document.write('참이다.2')
+        }
 
         var num3 = 0;
-
+        if (num3) {
+            document.write('참이다.3')
+        }
         
     </script>
 </body>

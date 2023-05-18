@@ -14,14 +14,25 @@
         /* 
             삼항 조건 연산자: ? :
 
-            조건식 ? 코드1 : 코드2;
+            var 변수 = 조건식 ? 코드1 : 코드2;
+            조건식이 true이면 코드 실행,
+            조건식이 false이면 코드2 실행
+
+            조건식은 true또는 false으 결과를 가지는 식
+            비교, 논리 연산의 결과는 true 또는 false 이다.
+            -> 비교, 논리 연산은 조건식에 사용된다.
         */
 
-        var a = 10;
-        var b = 3;
+        let a = 10;
+        let b = 3;
+        let result;
 
+        (a > b) ? '참이다.' : '거짓이다.'; 
+        // (a > b) ? alert('참이다.') : alert('거짓이다.'); 
         document.write(result);
-    </script>
+        result = (a > b) ? '참이다.' : '거짓이다.' ;
+        document.write(result);
+        </script>
 </body>
 
 </html>

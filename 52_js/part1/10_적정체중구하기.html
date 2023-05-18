@@ -15,6 +15,7 @@
             적정 체중 = (신장 - 100) * 0.9
 
             예)
+            이름: 이름
             신장: 180cm
             체중: 74kg
             적정 체중: (180 - 100) * 0.9 = 72
@@ -22,19 +23,36 @@
         */
 
         // 입력
-        var userName;
-        var userHeight;
-        var userWeight;
+        const user_n = prompt('당신의 이름을 입력하세요.');
+        const user_h = Number(prompt('당신의 키를 입력하세요.'));
+        const user_w = prompt('당신의 몸무게를 입력하세요.');
+        const normal_w = (user_h - 100) * 0.9;
+        const over_w = user_w - normal_w;
+        let result;
 
         // 처리
         // 적정 체중 = (신장 - 100) * 0.9
+        // normal_w = (user_h - 100) * 0.9;
+        
+        // 초과 몸무게? 사용자 몸무게 - 적정 체중
+        // over_w = user_w - normal_w;
 
         
         // 오차 범위 ±5
+        // normal_w - 5 <= user_w && user_w <= normal_w + 5
+        result = user_w >= normal_w - 5 && user_w <= normal_w +5;
+
+        // 적정체중이다. 적정체중이 아니다.
+        result = result ? '이다.' : '이 아니다.';
+        // 적정체중이다. 비만이다. 저체중이다.
 
 
         // 출력
-        document.write(userName + '님은 ' + result);
+        // OOO님의 신장은 XXXcm이고, 체중은 xxxkg이며, 적정체중은 xxxkg이고, 현재 적정 체중에서 xxxkg 초과 하였스므로 비만입니다. -> 변수처리
+        // 변수와 문자열 구분은 +로, 문자열은 ''또는 ""로 묶는다.
+        document.write(user_n, '님의 신장은', user_h, 'cm이고, 체중은', user_w, 'kg이며 ','적정 체중', result);
+
+
     </script>
 </body>
 
