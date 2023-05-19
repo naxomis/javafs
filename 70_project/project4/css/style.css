@@ -117,9 +117,7 @@ nav .sub {
     background-clip: content-box;
     margin-right: 20px;
 }
-.tabs input {
-    display: none;
-}
+
 .tabs input, .tabs #tab1, .tabs #tab2 {
     display: none;
 }

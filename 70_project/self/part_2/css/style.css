@@ -1,31 +1,7 @@
 @charset "utf-8";
+@import url(reset.css);
+@import url(typo.css);
 
-/* reset */
-* {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #fff;
-}
-li {
-    list-style: none;
-}
-img {
-    vertical-align: top;
-}
-/* font */
-html {
-    font-size: 10px;
-}
-body {
-    font-size: 1.5rem;
-}
 /* header */
 header {
     width: 100%;
@@ -73,8 +49,10 @@ header {
 }
 
 
-
 /* section1 */
+.main_img h1 {
+    display: none;
+}
 
 /* section common */
 .container {
@@ -86,16 +64,53 @@ header {
 
 
 /* section3 */
-.cos ul {
+.crl {
+    background: #000;
+}
+.crl ul {
     display: flex;
 }
-.cos li {
+.crl li {
     width: 272px;
     margin-right: 40px;
 }
-.cos span {
+.crl span {
     position: absolute;
 }
 /* section4 */
+.tabs {
+    background: #000;
+}
+.tabs input, .tabs #tab1, .tabs #tab2, .tabs #tab3, .tabs #tab4 {
+    display: none;
+}
+#btn1:checked ~ #tab1, #btn2:checked ~#tab2, #btn3:checked ~#tab3, #btn4:checked ~#tab4 {
+    display: block;
+}
+
+.tabs label {
+    display: inline-block;
+    background: #1b0000;
+    color: #fff;
+    cursor: pointer;
+    width: 376px;
+    height: 54px;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 54px;
+}
+
+#btn1:checked + label, #btn2:checked + label, #btn3:checked + label, #btn4:checked + label {
+    background: #004E27;
+    color: #fff;
+}
+#btn1:hover + label {
+    background: #fff;
+}
+
+.tabs img {
+    width: 376px;
+}
+    
 
 /* footer */

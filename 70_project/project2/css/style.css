@@ -132,7 +132,7 @@ footer {
 
     /* 섹션2~4공통 */
     .section {
-        width: 704px;
+        width: 728px;
         margin: 0 auto;
         padding: 81px 0 0;
     }
@@ -142,14 +142,16 @@ footer {
         justify-content: space-between;
     }
     .section li {
-        width: 344px;
+        width: 48%;
     }
 
 
     /* 섹션2 */
 
     /* 섹션3 */
-
+    #event div {
+        height: 150px;
+    }
     /* 섹션4 */
 
     /* 푸터 */
