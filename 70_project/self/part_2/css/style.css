@@ -182,24 +182,56 @@ h2 + p {
 /* section5 */
 
 /* section6 */
-/* #icon ul {
-    display: flex;
-    justify-content: space-between;
-} */
 #icons > div {
+    width: 1300px;
+    margin: 0 auto;
+}
+#icons ul {
+    display: flex;
+}
+#icons li {
+    width: 24%;
+    text-align: center;
+}
+#icons li:hover {
+    background: #ccc;
+}
+#icons a {
+    color: #000;
+}
+#icons img {
+    padding-top: 27px;
+}
+#icons span {
+    margin: 27px 0;
+    display: block;
+}
+
+/* section7 */
+#new1 {
+    margin-bottom: 83px;
+}
+#new1 li {
+    width: 600px;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid #ccc;
 }
-.icon {
-    width: 154px;
-    height: auto;
-    padding-top: 40px;
+/* 4개 다 사용해야 적용가능 */
+#new1 a {
+    width: 450px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* 말줄임 ...효과 */
+    overflow: hidden;
 }
-.icon span {
-    display: flex;
-    color: #000;
-    margin: 8px 0;
+
+#new1 a:hover {
+    color: #333;
 }
-    
+
+span {
+    color: #777;
+}
 
 /* footer */
