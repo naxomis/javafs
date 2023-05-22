@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS+JS</title>
     <style>
-        table, td {
+        table,
+        td {
             border: 1px solid #ccc;
             border-collapse: collapse;
         }
+
         td {
             padding: 5px;
             font-size: 0.9rem;
@@ -20,6 +22,38 @@
 
 <body>
     <h1>자리 배치도</h1>
+    <table>
+        <tr>
+            <td>좌석1</td>
+            <td>좌석2</td>
+            <td>좌석3</td>
+            <td>좌석4</td>
+        </tr>
+        <tr>
+            <td>좌석5</td>
+            <td>좌석6</td>
+            <td>좌석7</td>
+            <td>좌석8</td>
+        </tr>
+        <tr>
+            <td>좌석9</td>
+            <td>좌석10</td>
+            <td>좌석11</td>
+            <td>좌석12</td>
+        </tr>
+        <tr>
+            <td>좌석13</td>
+            <td>좌석14</td>
+            <td>좌석15</td>
+            <td>좌석16</td>
+        </tr>
+        <tr>
+            <td>좌석17</td>
+            <td>좌석18</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
     <script>
         // 입력
         let stuNum = prompt("학생은 몇 명인가요?");
@@ -32,10 +66,19 @@
             rowNum = parseInt(stuNum / colNum) + 1;
         }
 
-        document.write("<table>");
+        /* document.write("<table>");
+        for (let i = 0; i < 5; i++) {
+            document.write("<tr>");
+            for (let j = 1; j <= 4; j++) {
+                seatNo = i * 4 + j;
+                if (seatNo > 18) break;
+                document.write("<td> 좌석 " + seatNo + " </td>");
+            }
+            document.write("</tr>");
+        } */
         for (let i = 0; i < rowNum; i++) {
             document.write("<tr>");
-            for (let j = 0; j <= colNum; j++) {
+            for (let j = 1; j <= colNum; j++) {
                 seatNo = i * colNum + j;
                 if (seatNo > stuNum) break;
                 document.write("<td> 좌석 " + seatNo + " </td>");

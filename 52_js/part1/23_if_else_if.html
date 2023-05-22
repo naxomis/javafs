@@ -12,27 +12,43 @@
     <h1>if</h1>
     <script>
         /* 
-            if (조건식1) {
-                코드1;
-            } else if (조건식2) {
-                코드2;
-            } else if (조건식3) {
-                코드3;
+            if (조건식) {
+                코드;
+            } else if (조건식) {
+                코드;
+            } else if (조건식) {
+                코드;
             } else {
-                코드4;
+                코드;
+            }
+
+            if (조건식1) {
+                코드1; // 조건1: true
+            } else if (조건식2) {
+                코드2; // 조건1: false, 조건2: true
+            } else if (조건식3) {
+                코드3; // 조건1, 2: false, 조건3: true
+            } else {
+                코드4;// 조건1, 2, 3: false
             }
         */
 
-        var mon = prompt('현재는 몇 월입니까?', '0');
+        var mon = Number(prompt('현재는 몇 월입니까?', '0'));
 
+        // 9월 ~ 11월
         if (mon >= 9 && mon <= 11) {
             document.write('독서의 계절 가을이네요!');
+        // 6월 ~ 8월
         } else if (mon >= 6 && mon <= 8) {
-            document.write('여행가지 좋은 여름이네요!');
+            document.write('여행가기 좋은 여름이네요!');
+        // 3월 ~ 5월
         } else if (mon >= 3 && mon <= 5) {
             document.write('햇살 가득한 봄이네요!');
-        } else {
+        // 12월 ~ 2월
+        } else if (mon >= 1 && mon <=2 || mon === 12) {
             document.write('스키의 계절 겨울이네요!');
+        } else {
+            document.write('1 ~12 사이 숫자로 입력해주세요.');
         }
     </script>
 </body>

@@ -145,24 +145,66 @@ section h2 + p {
 }
 
 #portfolio ul {
-    display: flex;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
 }
 
-/* 
-    max-width: 960px 
-    column count:12
-    1 column width: 69px
-    gutter: 12px
- */
 #portfolio li {
     width: 231px;
     height: 162px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+#portfolio .moreBtn {
+    margin-top: 64px;
+    text-align: center;
+}
+#portfolio .moreBtn a {
+    padding: 12px 24px;
+    background: #f1f1f1;
 }
 /* section4 */
 #contact .parallax {
     background-image: url(../images/parallax3.jpg);
 }
-
+#contact .container {
+    display: flex;
+}
+#map {
+    flex: 0 0 330px;
+    height: 160px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 30px;
+}
+#contact address i {
+    margin-right: 20px;
+}
+#contact address + p {
+    margin: 16px 0;
+}
+#contact form {
+    text-align: end;
+}
+#contact [name] {
+    width: 292px;
+    height: 44px;
+    padding-left: 8px;
+}
+#contact [name="user_name"] {
+    margin-right: 12px;
+}
+#contact [name*="message"] {
+    width: 600px;
+    margin: 16px 0;
+}
+#contact button {
+    width: 160px;
+    height: 44px;
+    background: #000;
+    color: #eee;
+}
 
 /* footer */
 footer {

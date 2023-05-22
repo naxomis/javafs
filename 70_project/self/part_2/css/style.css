@@ -103,7 +103,7 @@ h2 + p {
     height: 78px;
     line-height: 78px;
 }
-.crl .box {
+#carousel1 .box {
     overflow: hidden;
     height: 390px;
 }
@@ -208,16 +208,22 @@ h2 + p {
 }
 
 /* section7 */
+#news > div {
+    justify-content: center;
+}
 #new1 {
     margin-bottom: 83px;
 }
 #new1 li {
-    width: 600px;
+    width: 610px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #ccc;
 }
 /* 4개 다 사용해야 적용가능 */
+#news > div {
+    display: flex;
+}
 #new1 a {
     width: 450px;
     white-space: nowrap;
@@ -226,12 +232,37 @@ h2 + p {
     overflow: hidden;
 }
 
-#new1 a:hover {
-    color: #333;
+#new2 {
+    margin-left: 100px;
 }
-
-span {
-    color: #777;
+#news h3 {
+    margin-bottom: 30px;
 }
-
+#new2 ul {
+    display: flex;
+}
+#new2 i {
+    margin: 16px 50px;
+    text-align: center;
+    line-height: 100px;
+}
+#new2 li:nth-of-type(1):hover i {
+    color: #1c9ce4;
+    transform: scale(3, 3);
+}
+#new2 li:nth-of-type(2):hover i {
+    color: #395498;
+    transform: scale(3, 3);
+}
+#new2 li:nth-of-type(3):hover i {
+    color: #ff0000;
+    transform: scale(3, 3);
+}
+#new2 li:nth-of-type(4):hover i {
+    background: linear-gradient(to top left, #f60065, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(3, 3);
+}
 /* footer */

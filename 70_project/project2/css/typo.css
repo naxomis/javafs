@@ -28,7 +28,7 @@ h3 {
 }
 
 a {
-    color: #555;
+    color: #243c84;
     text-decoration: none;
 }
 .main_tit {
@@ -90,7 +90,9 @@ button {
 ::placeholder {
     color: #ccc;
 }
-
+#event a {
+    color: #fff;
+}
 /* foooer */
 footer {
     color: #ccc;

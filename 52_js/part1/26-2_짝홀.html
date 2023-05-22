@@ -25,6 +25,16 @@
         */
 
         // 20부터 10까지의 숫자 중 짝수일 경우 파란색, 홀수일 경우 빨간색으로 출력
+           let i = 20;
+
+           while (i >= 10) {
+                if (i % 2 == 0){ 
+                    document.write('<p class="blue">' + i + '</p>', '<br>');
+                } else {
+                    document.write('<p class="red">' + i + '</p>', '<br>');
+                }
+                i--;
+           }
 
 
         document.write('==== The End ====');

@@ -48,7 +48,20 @@ h2 {
 /* section5 */
 /* section6 */
 /* section7 */
+#news h3 {
+    font-size: 2rem;
+}
 #news a{
     color: black;
     font-family: 'Courier New', Courier, monospace;
+}
+#new1 a{
+    color: #333;
+    line-height: 40px;
+}
+#new1 a:hover {
+    color: #eee;
+}
+span {
+    color: #777;
 }
