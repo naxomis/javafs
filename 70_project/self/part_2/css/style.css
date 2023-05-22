@@ -65,6 +65,7 @@ header {
 .container {
     width: 1520px;
     margin: 0 auto;
+    overflow: hidden;
 }
 h2 {
     margin: 27px 0 27px;
@@ -104,31 +105,7 @@ h2 + p {
     line-height: 78px;
 }
 #carousel1 .box {
-    overflow: hidden;
     height: 390px;
-}
-
-/* .crl .box ul {
-    display: flex;
-    animation: slide 5s infinite;
-}
-@keyframes slide {
-    0% {left:0;}
-    5% {left:-100%;}
-    33% {left:-100%;}
-    38% {left:-200%;}
-    66% {left:-200%;}
-    71% {left:-300%;}
-    99.99% {left:-300%;}
-    100% {left:0;}
-} */
-.box span {
-    top: 80%;
-    background: #000000a4;
-    width: 272px;
-    height: 78px;
-    line-height: 78px;
-    overflow: hidden;
 }
 .outbox a {
     position: absolute;
@@ -266,3 +243,17 @@ h2 + p {
     transform: scale(3, 3);
 }
 /* footer */
+footer {
+    padding: 0 250px;
+    height: 526px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .adr div {
+    display: flex;
+    margin: 27px 0;
+}
+#ft3{
+    display: flex;
+    border-top: 1px solid #fff;
+}
