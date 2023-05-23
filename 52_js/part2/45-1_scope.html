@@ -20,8 +20,21 @@
                 - 모든 영역에서 호출될 수 있는 함수
         */
 
+        function myFn1() {
+            console.log('전역함수1')
+        }
+        function myFn2() {
+            console.log('전역함수2')
 
-
+            function myFn3() {
+                console.log('지역함수')
+            }
+            myFn3();
+        }
+        myFn1();
+        myFn2();
+        // myFn3();
+        
     </script>
 </body>
 

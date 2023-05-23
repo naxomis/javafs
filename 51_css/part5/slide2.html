@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 초기화 */
+        li {
+            list-style: none;
+        }
+
+        /* 페이드 효과 */
+        li {
+            position: absolute;
+            width: 838px;
+            height: 300px;
+            animation: 9s infinite;
+        }
+
+        /* 이미지 대신 색으로 */
+        li:first-of-type {
+            background: lightblue;
+            animation-name:  fade1;
+        }
+
+        li:nth-of-type(2) {
+            background: lightcoral;
+            animation-name:  fasde2;
+        }
+
+        li:last-of-type {
+            background: lightgreen;
+            animation-name:  fade3;
+        }
+
+        /* 애니메이션 키프레임 */
+        /* 페이드 효과: 서서히 나타났다/ 서서히 사라진다 */
+        @keyframes fade1 {
+            0% {opacity: 0; z-index: 1;}
+            33% {opacity: 1; z-index: 1;}
+            66% {opacity: 1; z-index: 0;}
+            99% {opacity: 0; z-index: 0;}
+            100% {opacity: 0; z-index: 0;}
+        }
+        @keyframes fade2 {
+            0% {opacity: 0; z-index: 0;}
+            33% {opacity: 0; z-index: 1;}
+            66% {opacity: 1; z-index: 1;}
+            99% {opacity: 1; z-index: 0;}
+            100% {opacity: 0; z-index: 0;}
+        }
+        @keyframes fade3 {
+            0% {opacity: 0; z-index: 0;}
+            33% {opacity: 0; z-index: 0;}
+            66% {opacity: 0; z-index: 1;}
+            99% {opacity: 1; z-index: 1;}
+            100% {opacity: 1; z-index: 0;}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fade">
+        <ul>
+            <li><img src="../assets/slide1.jpg" alt="이미지1"></li>
+            <li><img src="../assets/slide2.jpg" alt="이미지2"></li>
+            <li><img src="../assets/slide3.jpg" alt="이미지3"></li>
+        </ul>
+    </div>
+</body>
+
+</html>

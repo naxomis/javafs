@@ -12,14 +12,24 @@
     <h1>즉시 실행 함수</h1>
     <script>
         /* 
-            즉시 실행 함수: 함수 선언과 동시에 함수 호출
 
-            (function(){
+            // 기본적인 함수형식
+            // 함수 정의
+            function 함수명() {
                 코드;
-            }());
+            }
+            // 함수 호출
+            함수명();
+
+            즉시 실행 함수: 함수 정의 + 호출
+            // 호출문이 필요없다
+            (function 함수명(){
+                코드;
+                }());
         */
 
         (function(){
+            // 코드
             var num = 100;
             function menu() {
                 num += 100;
@@ -33,6 +43,7 @@
             function menu() {
                 alert(num);
             }
+            menu();
         }());
 
     </script>

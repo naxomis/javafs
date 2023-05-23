@@ -62,22 +62,40 @@
         */
 
         
-        // num은 전역 변수
-        let num = 1;
-        function gallery(direct) {
-            if (direct) {
-                if (num === 8) return;
-                num++;
-            } else {
-                if (num === 1) return;
-                num--;
-            }
+        /* 
+            함수를 사용하여 이미지 갤러리 만들기
+            - 함수명: gallery(direct)
+            - 변수: num, imgTag
+            - 메서드: getElementById(), setAttribute()
+            - 제어문: if ~ else, if
+            - 이미지명: assets/pic_1.jpg ~ pic_10.jpg
+        */
 
-            // 아이디가 photo인 요소를 가져와라(가져와서 변수(imgTag)에 넣는다.)
+            // 변수 선언 및 할당
+            // 함수 외부에서도 작동가능
             const imgTag = document.getElementById('photo');
-            // 메서드에 메서드를 붙임()
-            imgTag.setAttribute('src', '../assets/pic_' + num + '.jpg');
-        }
+            let num = 1;
+            
+            // 함수 정의
+            function gallery(direct) {
+                if (direct) {
+                    // 다음 버튼
+                    if (num === 10) return;
+                    num++;
+                    console.log(num);
+                } else {
+                    // 이전 버튼
+                    if (num === 1) return;
+                    num--;
+                    console.log(num);
+                }
+
+                // 함수 내부에 넣어야 된다
+                imgTag.setAttribute('src', '../assets/pic_' + num + '.jpg');
+            }
+            
+            // document.write(num);
+
     </script>
 </body>
 

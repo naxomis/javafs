@@ -21,25 +21,27 @@
                 함수명(데이터1, 데이터2, ...);
         */
 
-        var rightId = 'korea';
-        var rightPw = '1234';
+        // 아이디와 비밀번호를 입력받아 확인하는 함수 만들기
+        const rightId = 'korea';
+        const rightPw = '1234';
 
-        function login(id, pw) {
-            if (id == rightId) {
-                if (pw == rightPw) {
+        function login(id,pw){
+            if (uesrId === id) {
+                if (uesrPw === pw) {
                     document.write(id + '님 방문을 환영합니다.');
                 } else {
-                    alert('잘못된 비밀번호입니다.');
+                    alert('잘못된 비밀번호 입니다.');
+                    location.reload();
                 }
             } else {
-                alert('존재하지 않는 아이디입니다.');
+                alert('잘못된 아이디입니다.');
+                location.reload();
             }
         }
+        let loginId = prompt('아이디를 입력하세요.');
+        let loginPw = prompt('비밀번호를 입력하세요.');
 
-        var userId = prompt('아이디를 입력하세요.', '');
-        var userPw = prompt('패스워드를 입력하세요.', '');
-
-        login(userId, userPw);
+        login(loginId, loginPw);
     </script>
 </body>
 

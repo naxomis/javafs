@@ -19,6 +19,25 @@
             전역 변수(Global Variables)
                 - 자바스크립트 모든 영역에서 사용할 수 있는 변수
         */
+       // 전역변수(페이지를 끄기전까지 메모리가 남아있어 느리다.)
+       let a = 10;
+       // let은 재선언은 불가능하다.
+       // let a = 10;
+       // let은 재할당은 가능하다.
+       a = 15;
+       
+       function myFn() {
+            // 지역변수는 내부에서만 사용된다.(메모리중첩X)
+            let a = 5;
+            document.write('지역변수a =', a, '<br>');
+        }
+        
+        myFn();
+        document.write('전역변수a =', a, '<br>');
+        myFn();
+        document.write('전역변수a =', a, '<br>');
+        myFn();
+        document.write('전역변수a =', a, '<br>');
 
 
 

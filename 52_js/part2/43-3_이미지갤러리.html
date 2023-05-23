@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>이미지 갤러리</h1>
+    <div id="galleryZone">
+        <p>
+            <!-- 인라인 스크립트 -->
+            <!-- 0, 1을 넣은 이유는 true와 false를 구분하기 위해 넣음 -->
+            <button onclick="gallery(1)">1</button>
+            <button onclick="gallery(2)">2</button>
+            <button onclick="gallery(3)">3</button>
+        </p>
+        <p><img src="../assets/pic_1.jpg" alt="" id="photo"></p>
+    </div>
+    <!-- 내부 스크립트 -->
+    <script>
+
+            // 변수 선언 및 할당
+            // 함수 외부에서도 작동가능
+            const imgTag = document.getElementById('photo');
+            let num = 1;
+            
+            // 함수 정의
+            function gallery(direct) {
+                imgTag.setAttribute('src', '../assets/pic_' + direct + '.jpg'); 
+            }
+            
+            // document.write(num);
+
+    </script>
+</body>
+
+</html>

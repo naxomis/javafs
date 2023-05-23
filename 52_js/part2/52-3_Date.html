@@ -46,23 +46,67 @@
         // 년(yyyy)
         document.write(d.getUTCFullYear(), '<br>');
         // 월(mm): 0(1월) ~ 11(12월)
-        document.write(d.getUTCMonth(), '<br>');
+        document.write(d.getUTCMonth() + 1, '<br>');
         // 일(dd)
         document.write(d.getUTCDate(), '<br>');
         // 요일(weed): 0(일) ~ 6(토)
-        document.write(d.getUTCDay(), '<br>');
-        // 시(hh)
-        document.write(d.getHours(), '<br>');
-        // 분(mm)
-        document.write(d.getMinutes(), '<br>');
-        // 초(ss)
-        document.write(d.getSeconds(), '<br>');
-        // 1970년 1월 1일부터 경과된 시간을 밀리초로 반환
-        document.write(d.getTime(), '<br>');
+        // if를 사용하여 요일을 일요일 ~ 토요일까지 문자열로 표시
 
-        var d2 = new Date(2020, 1, 20);
-        console.log(d2);    
-    
+        let week = d.getDay()
+
+        if (week === 0) {
+            week = '일요일';
+        } else if (week === 1) {
+            week = '월요일';
+        } else if (week === 2) {
+            week = '화요일';
+        } else if (week === 3) {
+            week = '수요일';
+        } else if (week === 4) {
+            week = '목요일';
+        } else if (week === 5) {
+            week = '금요일';
+        } else {
+            week = '토요일';
+        }
+         
+        document.write(week, '<br>');
+        // 시(hh)
+        // if 사용하여 오전과 오후를 구분하여 12시가제로 표시하기
+        // 예) 오후 5시
+        let time = d.getHours()
+        if (time <=12) {
+            time = '오전 ';
+        } else {
+            time = '오후 ';
+        }
+        document.write(time, d.getHours() -12, '시', '<br>');
+
+        let hh = d.getHours()
+        if (hh >= 13) {
+            hh = hh - 12;
+            document.write('오후 ' + hh + '시', '<br>');
+        } else {
+            document.write('오전 ' + hh + '시', '<br>');
+        }
+
+        // 분(mm)
+        let mm = d.getMinutes();
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+        document.write(mm, '분', '<br>');
+
+
+        // 초(ss)
+        // 01 ~ 09 ~ 10 ~ 60
+
+        let ss = d.getSeconds();
+        if (ss < 10) {
+            ss = '0' + ss;
+        }
+        document.write(ss, '초', '<br>');
+
     </script>
 </body>
 

@@ -17,11 +17,41 @@
             켜다, 끄다, 볼륨을 높이다, 볼륨을 낮추다 -> 메서드
             너비, 높이, 색상, 무게의 특징 -> 속성
 
+
+            TV를 켜다.
+
+            객체는 기능(메서드)과 속성을 가지고 있다.
+            객체.메서드()
+            객체.속성
+
+            객체 생성 방법1
+            - 객체 생성 시 new 키워드와 생성함수를 사용한다.
+            -생성된 객체를 인스턴스(복세본)라고 한다.
+
+            var 변수(인스턴스) = new 생성함수()
+            객체.속성 = 값;
+            객체.메서드 = function(){코드};
+
+            객체 생성 방법2
+            var 객케 = {
+                속성: 값,
+                속성: 값,
+                속성: 값;
+                ...
+            }
+
+
             자바스크립트는 객체(object) 기반 언어이다.
             객체는 기능(메서드)과 속성을 가지고 있다.
 
+            문장 형식:
+            TV.켜다();
+            documenet.write();
+            location.reload();
             객체.메서드() -> 객체의 메서드를 실행한다.
+            location.href;
             객체.속성 -> 객체의 속성값을 가져온다.
+            location.href = "https://naver.com";
             객체.속성 = 값 -> 객체의 속성값을 바꾼다.
 
             객체의 종류
@@ -30,15 +60,48 @@
                 - Date, Array, Math, String 등
             2. 브라우저 객체 모델(BOM, Browser Object Model)
                 - 브라우저에 계층 구조로 내장되어 있는 객체
-                - window, screen, location, history, navigator 등
+                - window, document, screen, location, history, navigator 등
             3. 문서 객체 모델(DOM, Document Object Model)
+                - 가장 많이 사용한다.
                 - HTML 문서 구조
         */
 
+        // 예약어: true, false, new, while, for, if, do, ... 
         // 내장 객체 생성
         // 객체 생성 시 new 키워드와 생성함수를 사용한다.
-        // 참조변수(인스턴스명) = new 생성함수()
+        // 생성함수: 첫 글자 대문자, 내장객체를 생성함수로
+        // (참조)변수(인스턴스명) = new 생성함수()
 
+        // 사용자가 만들어 쓰는 객체
+        // tv객체
+        // this는 객체 자기자신 (this = tv)
+        var tv = new Object();
+        // color와 price는 tv의 속성
+        tv.color = 'white';
+        tv.price = 30000;
+        // 값이 익명함수
+        // info는 tv의 메서드
+        tv.info = function() {
+            document.write('tv 색상: ' + this.color, '<br>');
+            document.write('tv 가격: ' + this.price, '<br>');
+        }
+        // 객체.메서드()
+        tv.info();
+        // 함수
+        // info();
+
+        // 객체의 메서드는 속성 값이 함수인 객체의 속성
+        // 메서드: 값이 함수인 속성, 객체에 내에 정의된 함수
+        var tv2 = {
+            color: 'blue',
+            price: '500000',
+            info: function() {
+                document.write('tv 색상2: ' + this.color, '<br>');
+                document.write('t 가격2: ' + this.price, '<br>');
+            }
+        };
+
+        tv2.info();
 
 
     </script>

@@ -14,6 +14,10 @@
         /* 
             재귀 함수 호출: 함수 정의문 내에서 작성한 코드로 함수를 다시 호출하는 것
 
+            while (1) {
+                코드;
+            }
+
             함수 정의
                 function 함수명() {
                     코드;
@@ -24,8 +28,44 @@
                 함수명();
         */
 
+        /* 
+            함수: ten()
+            변수: i
+            제어문: for(if)
+            메서드: write()
+        */
         // 1부터 10까지 출력
 
+        /* function ten() {
+            for (let i = 1; i <= 10; i++) {
+                document.write(i, '<br>');
+                // i = i + 1;
+                // i += 1;
+                // i++;
+                // ++i;
+            }
+
+        }
+        ten(); */
+
+        let i = 0;
+
+        function ten() {
+            i++;
+            if(i >= 11) return;
+            document.write(i, '<br>');
+            ten();
+        }
+
+        ten();
+        
+        
+        /* i = i + 1;
+        document.write(i, '<br>'); */
+            
+        
+
+        
 
     </script>
 </body>
