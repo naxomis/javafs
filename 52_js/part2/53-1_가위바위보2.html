@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML+JS</title>
+  </head>
+
+  <body>
+    <h1>수학 객체</h1>
+    <script>
+      /* 
+            Math.random(): 0(포함) ~ 1(제외) 사이의 난수 반환
+            Math.floor(숫자): 소수점 첫째 자리에서 내림한 정수 반환
+            Math.ceilf(숫자): 소수점 첫째 자리에서 올림한 정수 반환
+       */
+      
+      document.write('<h2>', '컴퓨터와 가위바위보', '<h2>')
+
+        let game = prompt('가위, 바위, 보 셋 중 하나만 입력하세요.', '');
+
+        switch (game) {
+            case '가위':game
+                gameNum= 1;
+                break;
+            case '바위':game
+                gameNum= 2;
+                break;
+            case '보':game
+                gameNum= 3;
+                break;
+            default:
+                alert('다시 입력하세요.');
+                location.reload();
+        }
+    // 1, 2, 3 중 하나
+    // Math.floor(Math.random() * (최댓값 - 최솟값 +1) + 최솟값);
+    let com = Math.floor(Math.random() * 3) + 1;
+    document.write('<img src="../assets/math_img_' + com +'.jpg" alt="r">,')
+    if (game === com) {
+        document.write('맞았습니다.'); 
+    } else {
+        document.write('틀렸습니다.'); 
+    }
+
+    </script>
+  </body>
+</html>

@@ -15,15 +15,29 @@
             splice(index, count, value1, value2, ...): index번호부터 count개수만큼 삭제 후 value 추가
             pop(): 마지막 인덱스에 저장된 데이터 삭제
             shift(): 첫 번째 인덱스에 저장된 데이터 삭제
+
             push(new data): 마지막 인덱스에 새 데이터 삽입
             unshift(new data): 첫 번째 인덱스에 새 데이터 삽입
        */
 
         var greenArr = ['교대', '방배', '강남'];
         var yellowArr = ['미금', '정자', '수서'];
+        // 기존 배열에 적용된다.
+        document.write(greenArr.splice(1, 2, '서초', '역삼'), '<br>');
+        document.write(greenArr, '<br>');
+        
+        let data1 = greenArr.pop();
+        document.write(data1, '<br>');
+        let data2 = greenArr.shift();
+        document.write(data2, '<br>');
 
-
-
+        document.write(yellowArr.push(data1), '<br>');
+        document.write(yellowArr, '<br>');
+        document.write(yellowArr.unshift(data2), '<br>');
+        document.write(yellowArr, '<br>');
+        
+        let numArr = [0070, 0003, 1000, 0500];
+        document.write(numArr.sort());
     </script>
 </body>
 

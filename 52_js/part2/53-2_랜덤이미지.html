@@ -11,13 +11,22 @@
 </head>
 <body>
     <h1>랜덤 이미지</h1>
-    <span></span><button>버튼</button><br>
+    <span></span><button onclick="rdImg()">랜덤 이미지 버튼</button>
     <div>
         <img src="../assets/pic_1.jpg" alt="랜덤 이미지">
     </div>
 
     <script>
+        const imgTag = document.querySelector('img');
+        const spanTag = document.querySelector('span');
+        function rdImg() {
+            // 1~10사이 정수
+            let num = Math.floor(Math.random() * 10) +1;
+            imgTag.setAttribute('src', '../assets/pic_' + num + '.jpg');
 
+            // num의 숫자를 span안에 넣는다
+            spanTag.innerText = num;
+        }
     </script>
 </body>
 </html>

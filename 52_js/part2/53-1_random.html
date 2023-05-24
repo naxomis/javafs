@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML+JS</title>
+  </head>
+
+  <body>
+    <h1>수학 객체</h1>
+    <script>
+      /* 
+            Math.random(): 0(포함) ~ 1(제외) 사이의 난수 반환
+            Math.floor(숫자): 소수점 첫째 자리에서 내림한 정수 반환
+            Math.ceilf(숫자): 소수점 첫째 자리에서 올림한 정수 반환
+       */
+
+      
+      // 0 ~ 10 사이 난수
+      document.write('0~1사이 난수: ', Math.random(), '<br>');
+      document.write('0~10사이 난수: ', Math.random() * 10, '<br>');
+
+      // 0 ~ 30 사이 임의 정수
+      document.write('0~30사이 정수: ', Math.floor(Math.random() * 31), '<br>');
+      Math.floor(Math.random() * 31);
+
+      // 120 ~ 150 사이 임의 정수
+      // Math.floor(Math.random() * (최댓값 - 최솟값 + 1)) + 최솟값;
+      document.write('120~150사이 정수: ', Math.floor(Math.random() * 31) + 120, '<br>');
+      Math.floor(Math.random() * 31) + 120;
+
+      // -10 ~ 10 정수
+      document.write('120~150사이 정수: ', Math.floor(Math.random() * 21) - 10, '<br>');
+      Math.floor(Math.random() * 21) - 10;
+
+
+    </script>
+  </body>
+</html>

@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML+JS</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>수학 객체</h1>
     <script>
-       /* 
+      /* 
+            반환(get) ~ 가져온다.
+            설정(set) ~ 지정한다.
+
             Math.abs(숫자): 절대값 반환
             Math.max(숫자1, 숫자2, 숫자3, ...): 가장 큰 값 반환
             Math.min(숫자1, 숫자2, 숫자3, ...): 가장 작은 값 반환
+
+            // 숫자 ** 제곱값 -> 2 ** 3 = 2의 3제곱
             Math.pow(숫자, 제곱값): 거듭제곱값 반환
+
+            // 랜덤으로 나온다
             Math.random(): 0(포함) ~ 1(제외) 사이의 난수 반환
+
             Math.round(숫자): 소수점 첫째 자리에서 반올림한 정수 반환
             Math.ceil(숫자): 소수점 첫째 자리에서 올림한 정수 반환
             Math.floor(숫자): 소수점 첫째 자리에서 내림한 정수 반환
-            Math.sqrt(숫자): 제곱근값 반환
+
+            Math.sqrt(숫자): 제곱근(루트)값 반환
             Math.PI: 원주율 상수 반환
        */
 
+      document.write("1. Math.abs(-3.14) -> " + Math.abs(-3.14), "<br>");
+      document.write(
+        "2. Math.max(10, 20, 30) -> " + Math.max(10, 20, 30),
+        "<br>"
+      );
+      document.write(
+        "3. Math.min(10, 20, 30) -> " + Math.min(10, 20, 30),
+        "<br>"
+      );
+      document.write("4. Math.pow(2, 3) -> " + Math.pow(2, 3), "<br>");
+      document.write("5. Math.random() -> " + Math.random(), "<br>", "<br>");
 
+      document.write("6. Math.round(3.54) -> " + Math.round(3.54), "<br>");
+      document.write("7. Math.ceil(3.54) -> " + Math.ceil(3.54), "<br>");
+      document.write(
+        "8. Math.floor(3.54) -> " + Math.floor(3.54),
+        "<br>",
+        "<br>"
+      );
+
+      document.write("9. Math.sqrt(8) -> " + Math.sqrt(8), "<br>");
+      // Math 객체의 상수(상수는 대문자)
+      document.write("10. Math.PI -> " + Math.PI, "<br>");
     </script>
-</body>
-
+  </body>
 </html>

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML+JS</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>함수</h1>
     <script>
-        /* 
+      /* 
 
             식별자의 이름 지정 규칙: 변수, 함수
             1. 첫 글자는 영문자, _, $
@@ -72,42 +71,39 @@
             일반 함수의 경우 함수 정의 전에 함수 호출문이 있어도 호이스팅(hoisting) 방식이 적용되어 실행되지만 익명 함수는 적용되지 않는다.
         */
 
-        // 1부터 10까지 더하여 결과를 출력하는 함수를 만들어 보세요.
-        // 객체.메서드(매개변수1, 매객변수, ...)
-        // 함수(매개변수1, 매개변수, ...){코드;}
+      // 1부터 10까지 더하여 결과를 출력하는 함수를 만들어 보세요.
+      // 객체.메서드(매개변수1, 매객변수, ...)
+      // 함수(매개변수1, 매개변수, ...){코드;}
 
-        sem = 1 + 2 ;
-        document.write(sem, '<br>')
+      sem = 1 + 2;
+      document.write(sem, "<br>");
 
-        hap()
-        hap2()
+      hap();
+      hap2();
 
-        function hap(){
-            let sum = 0;
-    
-            for (let i = 1; i <= 100; i++) {
-                //sum = sum + i;
-                sum += i;
-            }
-            document.write('hap = ' + sum, '<br>');
+      function hap() {
+        let sum = 0;
+
+        for (let i = 1; i <= 100; i++) {
+          //sum = sum + i;
+          sum += i;
         }
+        document.write("hap = " + sum, "<br>");
+      }
 
+      // 익명함수
+      let hap2 = function () {
+        let sum = 0;
 
-        // 익명함수
-        let hap2 = function (){
-            let sum = 0;
-    
-            for (let i = 1; i <= 100; i++) {
-                //sum = sum +
-                sum += i;
-            }
-            document.write('hap2 = ' + sum, '<br>');
+        for (let i = 1; i <= 100; i++) {
+          //sum = sum +
+          sum += i;
         }
+        document.write("hap2 = " + sum, "<br>");
+      };
 
-        // hap();
-        // hap2();
-
+      // hap();
+      // hap2();
     </script>
-</body>
-
+  </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>배열 객체</h1>
+    <script>
+        /* 
+            sort()
+
+            비교 기능
+            function(a, b) {
+                return a - b;
+            }
+            a - b 결과가 음수이면 a, b 순서로
+            a - b 결과가 양수이면 b, a 순서로
+            a - b 결과가 0이면 그대로
+        */
+        
+        const numArr = [70, 3, 1000, 500];
+
+        // 숫자도 문자열과 같은 방식으로 정렬된다.
+        document.write(numArr.sort(), '<br>');
+        
+        // 오름차순
+        numArr.sort(function(a, b) {
+            return a - b;
+        });
+
+        document.write(numArr, '<br>');
+
+        // 내림차순
+        numArr.sort(function(a, b) {
+            return b - a;
+        });
+
+        document.write(numArr, '<br>');
+    </script>
+</body>
+
+</html>

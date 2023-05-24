@@ -14,6 +14,7 @@
        /* 
             배열? 여러 개의 데이터를 하나의 저장소에 저장
 
+            // 선언후 값을 선언
             var 참조변수 = new Array();
                 참조변수[0] = 값1;
                 참조변수[1] = 값2;
@@ -21,14 +22,44 @@
                 ...
                 참조변수[n-1] = 값n;
 
+            // 선언과 동시에 값을 선언
             var 참조변수 = new Array(값1, 값2, 값3, ... 값n);
             var 참조변수 = [값1, 값2, 값3, ... 값n];
 
             배열 객체에 저장된 데이터 가져오기
                 참조변수[인덱스번호];
                 인덱스 번호는 0부터 시작
+
+            배열의 length속성
+            배열객체.length ~ 배열 값 개수
        */
 
+       let arr1 = new Array();
+       arr1[0] = 10;
+       arr1[1] = 20;
+       arr1[2] = 30;
+       document.write(arr1, '<br>')
+       
+       let arr2 = new Array('문', '자', '열');
+       document.write(arr2, '<br>')
+
+       let arr3 = [true, false];
+       document.write(arr3, '<br>')
+
+
+       // 배열 값을 가져오기3: for ~ in
+       for (let a in arr2) {
+           document.write(a, arr2 [a], '<br>');
+       }
+
+       // 배열 값을 가져오기2: for
+       for (let i = 0; i < arr2.length; i++) {
+           document.write(arr2 [i], '<br>');
+       }
+
+       // 배열 값을 가져오기1
+       document.write(arr3 [0], '<br>');
+       document.write(arr3 [1], '<br>');
         
     </script>
 </body>

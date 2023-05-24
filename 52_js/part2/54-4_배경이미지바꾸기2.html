@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>버튼 클릭 시 배경색 바꾸기</h1>
+    <button onclick="changeBgImg();">배경색 바꾸기</button>
+    <script>
+
+        const bg = ['url(../assets/pic_1.jpg)', 'url(../assets/pic_2.jpg)', 'url(../assets/pic_3.jpg)', 'url(../assets/pic_4.jpg)'];
+        let i = 0;
+
+        function changeBgImg() {
+            i++;
+            if (i >= bg.length) {
+                i = 0;
+            }
+
+            const bodyTag = document.querySelector('body');
+            bodyTag.style.background = 'no-repeat 0 0/cover';
+            bodyTag.style.backgroundBgImg = bg[i];
+        }
+    </script>
+</body>
+
+</html>

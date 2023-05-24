@@ -9,8 +9,9 @@
 </head>
 
 <body>
-    <h1>버튼 클릭 시 배경색 바꾸기</h1>
-    <button onclick="changeColor();">배경색 바꾸기</button>
+    <h1>버튼 클릭 시 이미지 바꾸기</h1>
+    <button onclick="changeImg();">이미지 바꾸기</button>
+    <div></div>
     <script>
         /* 
             함수 정의
@@ -25,7 +26,7 @@
             문서객체.style.스타일(CSS)속성 = 값; 문서 객체에 CSS 스타일 적용
         */
 
-        var color = ['white', 'yellow', 'aqua', 'purple'];
+        var img = ['src="../assets/pic_1"', 'src="../assets/pic_2"','src="../assets/pic_3"','src="../assets/pic_4"'];
         // color[0] = 'white'
         // color[1] = 'yellow'
         // color[2] = 'aqua'
@@ -33,14 +34,14 @@
         
         var i = 0;
 
-        function changeColor() {
+        function changeImg() {
             i++;
-            if (i >= color.length) {
+            if (i >= img.length) {
                 i = 0;
             }
 
             var bodyTag = document.querySelector('body');
-            bodyTag.style.backgroundColor = color[i];
+            divTag.innerHTML = '<img src=../assets/pic_1.jpg>';
         }
     </script>
 </body>

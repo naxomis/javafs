@@ -13,17 +13,38 @@
     <script>
        /* 
             join(연결문자): 연결문자 기준으로 1개의 문자열 데이터로 반환
-            concat(): 2개의 배열 객체를 하나로 결합하여 반환
+            A.concat(b): A에 b를 결합하여 반환
             sort(): 오름차순 정렬하여 반환
             reverse(): 데이터 순서를 거꾸로 바꾼 후 반환
             slice(index1, index2): 인덱스1에서 인덱스2 이전까지 반환
        */
 
-        var arr_1 = ['사당', '교대', '방배', '강남'];
-        var arr_2 = ['신사', '압구정', '옥수'];
+        var arr1 = ['사당', '교대', '방배', '강남'];
+        var arr2 = ['신사', '압구정', '옥수'];
+        document.write(arr1, '<br>');
+        document.write(arr2, '<br>');
 
+        document.write(arr1.join('-'), '<br>');
+        document.write(arr1, '<br>');
+        
+        
+        document.write(arr1.concat(arr2), '<br>');
+        document.write(arr2.concat(arr1), '<br>');
+        document.write(arr1, '<br>');
+        document.write(arr2, '<br>');
 
+        // 1번부터 3번이전까지
+        document.write(arr1.slice(1, 3), '<br>');
+        document.write(arr1, '<br>');
+        
+        // 기존 배열 값을 바꾼다.
+        document.write(arr1.sort(), '<br>');
+        document.write(arr1, '<br>');
 
+        // 기존 배열 값을 반대로
+        document.write(arr1. reverse(), '<br>');
+        document.write(arr1, '<br>');
+        
     </script>
 </body>
 
