@@ -11,22 +11,91 @@
 <body>
     <h1>일정 시간 간격으로 값 증감시키기</h1>
     <p>콘솔 패널을 열어 확인하세요.</p>
-    <button onclick="clearInterval(auto_1)">증가 정지</button>
-    <button onclick="clearInterval(auto_2)">감소 정지</button>
+    <button id="btn1">증가 실행</button>
+    <button id="btn2">증가 정지</button>
+    <button id="btn3">감소 실행</button>
+    <button id="btn4">감소 정지</button>
     <script>
         /* 
+            // 동작
             setInterval(): 일정한 시간 간격으로 코드를 반복 실행
+            // 정지
             clearInterval(): setInterval() 메서드 제거
+
+            let 변수 = setInterval(function(){
+                코드;
+            }, 시간);
+            // 시간은 ms(밀리초) 1초는 1000ms
 
             var 참조변수 = setInterval(function(){
                 코드;
-            }, 시간간격(ms));
+            }, 시간);
             
             clearInterval(참조변수);
         */
 
-        var addNum = 0;
-        var subNum = 1000;
+        /* 
+            // 요소 선택
+            document.getElementById('id명');
+            document.getElementsByClassName('class명');
+            document.getElementsByTagName('tag명');
+            document.querySelector('선택자'); -> 하나만 있을때
+            document.querySelectorAll('선택자'); -> 여러개 있을때
+        */
+        // 변수 선언
+        let increase = 0, 
+            decrease = 1000;
+        const btn1 = document.getElementById('btn1'),
+              btn2 = document.getElementById('btn2'),
+              btn3 = document.querySelectorAll('#btn3'), 
+              btn4 = document.querySelectorAll('#btn4'); 
+
+        /* 
+            // 이벤트 처리1
+            객체.on이벤트종류 = 함수;
+            rundtion 함수(){}
+
+            // 이벤트 처리2
+            객체.on이벤트종류 = function(){
+                코드;
+            };
+         */
+         let auto1, auto2;
+         btn1.onclick = function(){
+             auto1 = setInterval(add, 1000);
+         };
+         btn2.onclick = function(){
+             clearInterval(auto1);
+         };
+         btn3.onclick = play;
+         btn4.onclick = stop;
+
+         function play() {
+            auto2 = setInterval(sub, 1000);
+         }
+         function stop() {
+            auto2 = clearInterval(auto2);
+         }
+        
+        // add함수의 괄호()는 쓰지 않는다.
+        // 1초마다 add함수 호출
+        // const timer = setInterval(add, 1000);
+        // 증가
+        function add() {
+            increase++;
+            //출력
+            console.log(increase);
+        }
+        // 감소
+        function sub() {
+            decrease--;
+            //출력
+            console.log(decrease);
+        }
+
+        
+
+
 
 
     </script>
