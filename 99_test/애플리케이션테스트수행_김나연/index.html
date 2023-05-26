@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VelleyFestival_김나연</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            padding: 0;
+        }
+
+        /* font */
+        html {
+            font-size: 10px;
+        }
+        body {
+            font: 1.5rem/1.8 'twayfly', 'sans-serif', Courier;
+            color: #333;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        @font-face {
+            font-family: 'NeoDunggeunmoPro-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        h1 {
+            text-shadow: 5px 5px 5px #ff5757da, 3px 3px 3px #3445ffa1;
+            font-size: 5rem;
+            font-family: 'NeoDunggeunmoPro-Regular', 'sans-serif', Courier;
+        }
+        h2 {
+            color: #fff;
+            font-size: 5rem;
+            text-shadow: 3px 3px 3px #ff7fc3, 3px 3px 3px #fffd7f, 5px 5px 5px #000;
+            font-family: 'NeoDunggeunmoPro-Regular', 'sans-serif', Courier;
+        }
+        @font-face {
+            font-family: 'Tenada';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .main>li>a {
+            font-family: 'Tenada', 'sans-serif', Courier;
+        }
+        @font-face {
+            font-family: 'twayfly';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayfly.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .sub li>a {
+            font-family: 'twayfly', 'sans-serif', Courier;
+        }
+        footer p {
+            font-size: 2rem;
+        }
+
+        /* header */
+        header {
+            background: #000;
+        }
+        header .logo {
+            padding: 35px 0;
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+        }
+
+        /* header-animation */
+        .logo {
+            animation: move 3s forwards;
+            opacity: 0;
+        }
+        @keyframes move {
+            0% {
+                opacity: 0;
+                animation-timing-function: ease-out;
+            }
+
+            100% {
+                opacity: 1;
+                animation-timing-function: ease-out;
+            }
+        }
+
+        /* nav */
+        nav {
+            z-index: 1;
+            position: relative;
+            width: 100%;
+            height: 50px;
+            background: #024067;
+        }
+        .nav_bg {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 100%;
+            background: rgba(21, 34, 80, 0.7);
+        }
+
+        /* 1depth: main */
+        .main {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            top: 0px;
+            right: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .main>li {
+            position: relative;
+            width: 160px;
+            line-height: 50px;
+        }
+        .main>li>a {
+            display: block;
+            width: 100%;
+            color: #fff;
+        }
+        .main>li:hover .main>li {
+            background: #ccc;
+            color: #333;
+            border-radius: 50%;
+        }
+
+        /* 2depth: sub */
+        .sub {
+            display: none;
+            padding-top: 10px;
+        }
+        .sub a {
+            display: block;
+            width: 100%;
+            color: #ccc;
+            font-size: 14px;
+            height: 40px;
+            line-height: 40px;
+            font-weight: 400;
+        }
+        .sub li {
+            height: 40px;
+        }
+        .sub a:hover {
+            background: #42285b;
+        }
+
+        /* slide */
+        #slide {
+            position: relative;
+            height: 500px;
+            background: #ffffff;
+        }
+        #slide {
+            height: 500px;
+            overflow: hidden;
+        }
+        #slide h2 {
+            z-index: 100;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background: #000;
+            padding: 0 16px;
+            transform: translate(-50%, -50%);
+        }
+
+        /* slide-anmation */
+        #slide ul {
+            position: relative;
+            display: flex;
+            left: 0;
+            width: 400%;
+            animation: slide 9s infinite;
+        }
+        @keyframes slide {
+            0% {
+                left: 0;
+            }
+
+            5% {
+                left: -100%;
+            }
+
+            33% {
+                left: -100%;
+            }
+
+            38% {
+                left: -200%;
+            }
+
+            66% {
+                left: -200%;
+            }
+
+            71% {
+                left: -300%;
+            }
+
+            99.99% {
+                left: -300%;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        /* footer */
+        footer {
+            background: #000;
+        }
+        footer p {
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h1 class="logo">Valley Festival</h1>
+    </header>
+    <!-- nav -->
+    <nav id="wap">
+        <div class="nav_bg"></div>
+        <ul class="main">
+            <li class="main_li">
+                <a href="#">축제소개</a>
+                <ul class="sub">
+                    <li><a href="#">Festival 소개</a></li>
+                    <li><a href="#">행사장 안내</a></li>
+                    <li><a href="#">조직위원회</a></li>
+                </ul>
+            </li>
+            <li class="main_li">
+                <a href="#">예약안내</a>
+                <ul class="sub">
+                    <li><a href="#">예약하기</a></li>
+                    <li><a href="#">예약확인/취소</a></li>
+                    <li><a href="#">단체예약문의</a></li>
+                </ul>
+            </li>
+            <li class="main_li">
+                <a href="#">아티스트</a>
+                <ul class="sub">
+                    <li><a href="#">고릴라즈</a></li>
+                    <li><a href="#">메이저 레이저</a></li>
+                    <li><a href="#">아우스게인</a></li>
+                    <li><a href="#">타임로드</a></li>
+                </ul>
+            </li>
+            <li class="main_li">
+                <a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">사진갤러리</a></li>
+                    <li><a href="#">영상갤러리</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- slide -->
+    <div id="slide">
+        <h2>Valley Festival</h2>
+        <ul>
+            <li><img src="images/slide1.jpg" alt="슬라이드이미지1"></li>
+            <li><img src="images/slide2.jpg" alt="슬라이드이미지2"></li>
+            <li><img src="images/Slide3.jpg" alt="슬라이드이미지3"></li>
+            <li><img src="images/slide1.jpg" alt="슬라이드이미지1"></li>
+        </ul>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p>Copyright Vallery Festival.All rights reserved.</p>
+    </footer>
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $('.main > li').mouseenter(function () {
+            $('.sub').stop().slideDown();
+            $('.nav_bg').stop().animate({ height: 175 });
+        });
+        $('nav').mouseleave(function () {
+            $('.sub').stop().slideUp();
+            $('.nav_bg').stop().animate({ height: 0 });
+        });
+
+    </script>
+</body>
+
+</html>

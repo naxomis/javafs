@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        /* 초기화 */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font: 1.5rem/1.8 sans-serif;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 레이아웃 */
+        #wrap {
+            width: 1200px;
+        }
+
+        header {
+            background: #ffaeae;
+        }
+
+        nav {
+            height: 40px;
+            background: #000;
+        }
+
+        footer {
+            background: #000;
+        }
+
+        /* header */
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        /* navigation */
+        nav {
+            z-index: 1;
+            position: relative;
+            top: -8px;
+            width: 1200px;
+            height: 30px;
+        }
+
+        .nav_bg {
+            position: absolute;
+            left: 0;
+            top: 32px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        /* 1depth: main */
+        .main {
+            position: absolute;
+            top: 0px;
+            right: 0;
+            width: 640px;
+            height: 30px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            background: #333;
+        }
+
+        .main>li {
+            position: relative;
+            float: left;
+            width: 160px;
+        }
+
+        .main>li>a {
+            display: block;
+            width: 100%;
+            padding: 5px 0;
+            color: #fff;
+        }
+
+        .main>li:hover>a {
+            background: #ccc;
+            color: #333;
+        }
+
+        .main>li:hover>a:after {
+            position: absolute;
+            top: 30px;
+            left: calc(50% - 15px);
+            content: '';
+            height: 0;
+            border-bottom: 10px solid;
+            border-left: 15px solid rgba(0, 0, 0, 0);
+            border-right: 15px solid rgba(0, 0, 0, 0);
+            color: #ccc;
+            transform: rotate(-180deg);
+        }
+
+        /* 2depth: sub */
+        .sub {
+            display: none;
+            padding-top: 15px;
+        }
+
+        .sub a {
+            display: block;
+            width: 100%;
+            color: #ccc;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 3px 0px;
+        }
+
+        .sub a:hover {
+            background: rgba(255, 0, 0, 0.5);
+        }
+
+        /* slide */
+        #slide {
+            position: relative;
+            width: 1200px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        #slide h2 {
+            z-index: 100;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 5rem;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        #slide ul {
+            position: relative;
+            left: 0;
+            top: 0;
+            height: 400%;
+            animation: slide 9s infinite;
+        }
+
+        #slide li {
+            width: 1200px;
+            height: 300px;
+        }
+
+        /* 애니메이션 키프레임 */
+        @keyframes slide {
+            0% {
+                top: 0;
+            }
+
+            5% {
+                top: -100%;
+            }
+
+            33% {
+                top: -100%;
+            }
+
+            38% {
+                top: -100%;
+            }
+
+            66% {
+                top: -200%;
+            }
+
+            71% {
+                top: -200%;
+            }
+
+            99% {
+                top: -300%;
+            }
+
+            99.99% {
+                top: -300%;
+            }
+
+            100% {
+                top: 0;
+            }
+        }
+
+        /* footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo"><a href="#">이탈리아</a></h1>
+        </header>
+        <!-- nav -->
+        <nav>
+            <div class="nav_bg"></div>
+            <ul class="main">
+                <li><a href="#">해외여행</a>
+                    <ul class="sub">
+                        <li><a href="#">동남아/대만</a></li>
+                        <li><a href="#">중국/홍콩</a></li>
+                        <li><a href="#">유럽/두바이</a></li>
+                        <li><a href="#">미주/하와이</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">국내여행</a>
+                    <ul class="sub">
+                        <li><a href="#">서울/경기권</a></li>
+                        <li><a href="#">충청권</a></li>
+                        <li><a href="#">전라권</a></li>
+                        <li><a href="#">경상/강원권</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">제주도</a>
+                    <ul class="sub">
+                        <li><a href="#">버스여행</a></li>
+                        <li><a href="#">자유여행</a></li>
+                        <li><a href="#">호텔/펜션</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">렌트카</a>
+                    <ul class="sub">
+                        <li><a href="#">국내 렌트카</a></li>
+                        <li><a href="#">국외 렌트카</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="slide">
+            <h2>메인 타이틀</h2>
+            <ul>
+                <li><img src="../assets/slide1.jpg" alt="테스트"></li>
+                <li><img src="../assets/slide2.jpg" alt="테스트"></li>
+                <li><img src="../assets/slide3.jpg" alt="테스트"></li>
+                <li><img src="../assets/slide1.jpg" alt="테스트"></li>
+            </ul>
+        </div>
+        <footer>
+            <p>Copyright 2023 이탈리아. All rights reserved.</p>
+        </footer>
+    </div>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // 내비게이션바
+            $('.main > li').mouseenter(function () {
+                $('.sub').stop().slideDown();
+                $('.nav_bg').stop().animate({ height: 150 });
+            });
+            $('nav').mouseleave(function () {
+                $('.sub').stop().slideUp();
+                $('.nav_bg').stop().animate({ height: 0 });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
