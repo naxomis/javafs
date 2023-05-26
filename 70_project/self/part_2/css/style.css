@@ -43,13 +43,40 @@ header {
     height: 15px;
 }
 /* nav */
-#nav ul{
+#nav > ul{
     background: #add8e6;
     display: flex;
     justify-content: center;
 }
-#nav li {
+#nav > ul > li {
+    position: relative;
     padding: 24px 32px;
+}
+
+/* .sub */
+.sub {
+    display: flex;
+    justify-content: center;
+}
+.sub li {
+    display: none;
+}
+#nav > ul > li:hover .sub li{
+    z-index: 3;
+    display: block;
+    background: #fff;
+
+}
+.sub > li > a {
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000;
+}
+/* .ssub */
+.ssub a {
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000;
 }
 
 

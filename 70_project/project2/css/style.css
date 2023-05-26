@@ -14,6 +14,18 @@ header {
 nav {
     display: none;
 }
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: rgb(36, 60, 132);
+    transition: .3s;
+    transform: scaleX(0);
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
 
 /* 섹션1 */
 #main_img {
@@ -194,7 +206,7 @@ footer {
     }
     /* 섹션2~4공통 */
     .section {
-        max-width: 1496px;
+        max-width: 1556px;
         margin: 0 auto;
         padding: 81px 30px 0;
     }
