@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        .row {
+            width: 420px;
+            margin: 0 auto;
+        }
+
+        .row ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .row ul li {
+            display: inline-table;
+        }
+
+        #lightbox {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        #lightbox img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <ul>
+            <li><img src="../assets/tree-1-thumb.jpg" data-src="../assets/tree-1.jpg" class="pic"></li>
+            <li><img src="../assets/tree-2-thumb.jpg" data-src="../assets/tree-2.jpg" class="pic"></li>
+            <li><img src="../assets/tree-3-thumb.jpg" data-src="../assets/tree-3.jpg" class="pic"></li>
+            <li><img src="../assets/tree-4-thumb.jpg" data-src="../assets/tree-4.jpg" class="pic"></li>
+            <li><img src="../assets/tree-5-thumb.jpg" data-src="../assets/tree-5.jpg" class="pic"></li>
+            <li><img src="../assets/tree-6-thumb.jpg" data-src="../assets/tree-6.jpg" class="pic"></li>
+        </ul>
+    </div>
+
+    <div id="lightbox">
+        <img src="images/tree-1.jpg" alt="" id="lightboxImage">
+    </div>
+
+    <script>
+        /*
+            요소.setAttribute('속성명', '값');
+        */
+
+        var pics = document.getElementsByClassName("pic");
+        var lightbox = document.getElementById("lightbox");
+        var lightboxImage = document.getElementById("lightboxImage");
+
+        for (i = 0; i < pics.length; i++) {
+            pics[i].addEventListener("click", showLightbox);
+        }
+
+        function showLightbox() {
+            var bigLocation = this.getAttribute("data-src");
+            lightboxImage.setAttribute("src", bigLocation);
+            lightbox.style.display = "block";
+        }
+
+        lightbox.onclick = function () {
+            lightbox.style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>

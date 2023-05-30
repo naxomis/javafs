@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        div {
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+        }
+        .box1 {
+            background: blue;
+        }
+        .box2 {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <script>
+        /* 
+            객체.style.속성 = 값;
+        */
+
+        document.getElementsByClassName('box2')[0].style.width = '300px';
+        document.getElementsByClassName('box2')[0].style.height = '300px';
+
+    </script>
+</body>
+
+</html>

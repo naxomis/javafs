@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>브라우저와 운영체제 정보</h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
+    <script>
+        /* 
+            location.href = 'url'; -> 지정한 url로 위치 이동
+            location.reload(); -> 브라우저 새로 고침
+
+            navigator.userAgent;
+
+                요소.indexOF('문자열') ~ 색인번호 찾는 문자열이 없으면 -1
+
+                www.naver.com ~ 데스크탑
+                m.never.com ~ 모바일
+        */
+
+        const ua = navigator.userAgent.toLowerCase();
+
+        if (ua.indexOf('android') > 0 || ua.indexOf('iphone') > 0) {
+            location.href = 'https://www.naver.com';
+        } else {
+            location.href = 'https://m.naver.com';
+        }
+    </script> 
+</body>
+
+</html>

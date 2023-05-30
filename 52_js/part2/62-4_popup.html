@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>윈도우 팝업창 2개</h1>
+    <script>
+        function openCenter(doc, win, w, h) {
+            var left = (window.innerWidth - w) / 2;  // 팝업 창의 왼쪽 좌표
+            var top = (window.innerHeight - h) / 2;   // 팝업 창의 위쪽 좌표 
+            var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
+            window.open(doc, win, opt);
+        }
+
+        openCenter("62-3notice.html", "pop2", 600, 500); 
+        openCenter("62-3notice.html", "pop1", 500, 400); 
+    </script>
+
+</body>
+
+</html>

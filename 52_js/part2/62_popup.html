@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>윈도우 팝업창</h1>
+    <p>문서를 열면 팝업 창이 표시됩니다</p>
+    <script>
+        /* 
+            window.open('경로', '창 이름', '창 옵션'): 새 브라우저에 창 열기
+                - 경로: 팝업 창에 표시할 문서나 사이트 경로(URL)
+                - 창 이름: 팝업 창에 이름을 지정하면 항상 이 창에 팝업 내용이 나타나도록 할 수 있다. 이름을 지정하지 않으면 팝업 창이 계속 새로 나타난다.
+                - 창 옵션:
+                    1. width: 너비
+                    2. height: 높이
+                    3. left: x축 위치
+                    4. top: y축 위치
+                    5. scrollbars: 스크롤바 숨김(no)/표시(yes) 설정
+                    6. location: URL 주소 입력 영역 숨김/표시
+                    7. status: 상태 표시줄 영역 숨김/표시
+                    8. toolbars: 도구 상자 영역 숨김/표시
+        */
+
+        window.open("62-3notice.html","pop", "width=500, height=400, left=100, top=200");
+    </script>
+
+</body>
+
+</html>

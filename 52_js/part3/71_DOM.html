@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        li {
+            font-size: 20px;
+            color: #555;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li id="blue">목록1</li>
+        <li>목록2</li>
+        <li class="red">목록3</li>
+        <li class="red">목록4</li>
+    </ul>
+
+    <!-- 제이쿼리 라이브러리 파일: CDM -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- 구글 CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- 마이크로소프트 CDN -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
+    <!-- CDNJS.com -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- 현재 컴퓨터에 저장 -->
+    <script src="jquery-3.7.0.min.js"></script>
+    <script>
+        /* 
+            DOM(Document Object Model, 문서 객체 모델)
+                - 자바스크립트를 이용하여 웹 문서에 접근하고 제어할 수 있도록 객체를 사용해 웹 문서를 체계적으로 정리하는 방법
+
+            DOM Tree
+            - 전체 문서는 문서 노드입니다. -> doucment
+            - 모든 HTML 요소는 요소 노드입니다. -> html, head, body,a h1
+            - HTML 요소 내부의 텍스트는 텍스트 노드입니다. -> 'My link'
+            - 모든 주석은 주석 노드입니다.
+
+            DOM에 접근하기
+            - document.getElementById('아이디명')
+            - document.getElementsByClassName('클래스명')
+            - document.getElementsByTagName('태그명')
+
+            - document.querySeletor('선택자')
+            - document.querySeletorAll('선택자들')
+
+            제이쿼리
+            $('선택자')
+            $('선택자들')
+
+            객체.style.속성 = 값;
+
+
+        */
+
+        // 요소를 선택하여 글자색을 파랑, 빨강으로 지정하시오.
+        /* document.getElementById('blue');
+        document.querySelector('#blue');
+        document.getElementsByClassName('red');
+        document.getElementsByClassName('red')[0];
+        document.querySelectorAll('.red');
+        document.querySelectorAll('.red')[0];
+        document.getElementsByTagName('li');
+        document.getElementsByTagName('li')[0];
+        document.querySelectorAll('li')[0];
+    */
+        
+
+        /* 
+            객제.메서드();
+            $('#blue').css({속성: 값, 속성: 값;, ...});
+            $('.red').css({속성: 값, 속성: 값;, ...});
+            $('li').css({속성: 값, 속성: 값;, ...});
+
+            const 객체 = {
+                색상: white
+                가격: 300000
+                info: fundtion(){}
+            }
+
+            객체.style.CSS속성 = 값;
+            객체.css(속성, 값);
+            객제.css({속성: 값, 속성: 값;, ...});
+        */
+      
+        /* const blue = document.getElementById('blue');
+        const red = document.querySelectorAll('.red')[0];
+
+        blue.style.border = 'solid'; 
+        blue.style.color = 'blue'; 
+        blue.style.backgroundColor = 'yellow'; 
+        red.style.color = 'red'; */ 
+
+        $('#blue').css({color: '#0000ff'});
+        $('.red').css({color: 'red'});
+
+    </script>
+</body>
+
+</html>

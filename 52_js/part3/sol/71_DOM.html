@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        li {
+            font-size: 20px;
+            color: #555;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li class="red">목록3</li>
+        <li>목록4</li>
+    </ul>
+
+    <script>
+        /* 
+            DOM(Document Object Model, 문서 객체 모델)
+                - 자바스크립트를 이용하여 엡 문서에 접근하고 제어할 수 있도록 객체를 사용해 웹 문서를 체계적으로 정리하는 방법
+
+            DOM Tree
+            - 전체 문서는 문서 노드입니다.
+            - 모든 HTML 요소는 요소 노드입니다.
+            - HTML 요소 내부의 텍스트는 텍스트 노드입니다.
+            - 모든 주석은 주석 노드입니다.
+
+            DOM에 접근하기
+            - document.getElementById('아이디명')
+            - document.getElementsByClassName('클래스명')
+            - document.getElementsByTagName('태그명')
+            - document.querySeletor('선택자')
+            - document.querySeletorAll('선택자들')
+
+            객체.style.속성 = 값;
+        */
+
+        for (let i = 0; i < 4; i++) {
+            document.getElementsByTagName('li')[i].style.color = 'blue';
+        }
+        document.getElementsByClassName('red')[0].style.color = 'red';
+    </script>
+</body>
+
+</html>

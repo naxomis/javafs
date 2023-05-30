@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        div {
+            width: 200px;
+            height: 400px;
+            margin: 50px;
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+    <script>
+        /* 
+            요소.offsetWidth ~ 패딩, 테두리 및 스크롤 막대를 포함하여 요소의 볼 수 있는 너비(픽셀 단위)를 반환
+            요소.offsetHeight ~ 패딩, 테두리 및 스크롤 막대를 포함하여 요소의 볼 수 있는 높이(픽셀 단위)를 반환
+        */
+
+        const divTag = document.querySelector('div');
+        
+        divTag.onclick = function () {
+            let w = this.offsetWidth;
+            this.style.height = w + 'px';
+            console.log(w);
+        };
+    </script>
+</body>
+
+</html>

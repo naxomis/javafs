@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        #prod-pic {
+            margin: 20px 20px auto 10px;
+            padding: 0;
+        }
+
+        #cup {
+            box-shadow: 1px 1px 2px #eee;
+            outline: 1px dashed #ccc;
+            outline-offset: -7px;
+        }
+
+        #small-pic {
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        #small-pic>li {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .small {
+            width: 60px;
+            height: 60px;
+        }
+
+        #small-pic img:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>이미지 갤러리</h1>
+    <div id="prod-pic">
+        <img src="../assets/coffee-pink.jpg" alt="커피" id="cup" width="200" height="200">
+        <div id="small-pic">
+            <img src="../assets/coffee-pink.jpg" class="small">
+            <img src="../assets/coffee-blue.jpg" class="small">
+            <img src="../assets/coffee-gray.jpg" class="small">
+        </div>
+    </div>
+
+
+    <script>
+        /*
+            요소.setAttribute('속성명', '값') ~ HTML 속성 설정
+        */
+
+        var cup = document.querySelector("#cup");
+        var smallPics = document.querySelectorAll(".small");
+
+        for (let i = 0; i < smallPics.length; i++) {
+            smallPics[i].addEventListener("click", changePic);
+        }
+
+        function changePic() {
+            var newPic = this.src;
+            cup.setAttribute("src", newPic);
+        }
+
+    </script>
+</body>
+
+</html>

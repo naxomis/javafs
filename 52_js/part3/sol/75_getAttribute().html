@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        button {
+            margin: 10px;
+        }
+        .frame {
+            width: 600px;
+            border: 2px solid red;
+            margin: 10px;
+        }
+        .frame img {
+            width: 100%;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">이미지 속성 확인하기</button>
+    <p class="frame"><img src="../assets/pic_1.jpg" alt="이미지1"></p>
+
+    <script>
+        /* 
+            요소.getAttribute('속성명') ~ HTML 속성 반환
+        */
+
+        const imgTag = document.querySelector('img');
+        const btn = document.querySelector('.btn');
+
+        btn.onclick = function(){
+            alert('이미지 소스: ' + imgTag.getAttribute('src'));
+        };
+
+
+    </script>
+</body>
+
+</html>

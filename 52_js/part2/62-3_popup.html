@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>윈도우 팝업창</h1>
+    <p>문서를 열면 팝업 창이 표시됩니다</p>
+    <script>
+        /* 
+            BOM 객체 
+            - window, document, location, screen, hoistory
+
+            screen: 사용자의 모니터 정보 제공
+            
+            window.outerWidth ~ 브라우저 창 너빗값(도구모음, 스크롤 막대 포함)
+            window.outerHeight ~ 브라우저 창 높잇값(도구모음, 스크롤 막대 포함)
+            window.innerWidth ~ 뷰포트 너비
+            window.innerHeight ~ 뷰포트 높니
+            screen.width: 화면 너빗값(UI 영역(윈도우의 작업 표시줄) 포함)
+            screen.height: 화면 높잇값(UI 영역(윈도우의 작업 표시줄) 포함)
+            screen.availWidth: 화면 너빗값(UI 영역(윈도우의 작업 표시줄) 제외)
+            screen.availHeight: 화면 높잇값(UI 영역(윈도우의 작업 표시줄) 제외)
+        */
+       console.log('window.outerWidth' + window.outerWidth);
+       console.log('window.outerHeight' + window.outerHeight);
+       console.log('window.innerWidth' + window.innerWidth);
+       console.log('window.innerHeight' + window.innerHeight);
+       console.log('screen.width' + screen.width);
+       console.log('screen.height' + screen.height);
+       console.log('screen.availWidth' + screen.availWidth);
+       console.log('screen.availHeight' + screen.availHeight);
+
+        function openCenter(doc, win, w, h) {
+            var left = (window.innerWidth - w) / 2;  // 팝업 창의 왼쪽 좌표
+            var top = (window.innerHeight - h) / 2;   // 팝업 창의 위쪽 좌표 
+            var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
+            window.open(doc, win, opt);
+        }
+        openCenter("62-3notice.html", "pop", 500, 400) 
+    </script>
+
+</body>
+
+</html>

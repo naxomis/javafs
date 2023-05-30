@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>공지사항</title>
+  <style>
+    #content {
+      border: 2px double skyblue;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <h1>공지사항</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus architecto ullam ab adipisci vel excepturi perspiciatis illum! Sequi repudiandae, enim, dolor tempore harum facere maxime totam voluptas sapiente blanditiis alias maiores impedit neque consectetur nam, sunt at expedita necessitatibus quasi. Reprehenderit officiis, eum tempora accusamus beatae laudantium sunt officia similique?</p>
+    <button id="closeBtn" onclick="close();">닫기</button>
+  </div>
+
+  <script>
+    // document.querySelector('#closeBtn').onclick = closed;
+
+    function closed() {
+      window.close();
+    }
+  </script>
+</body>
+
+</html>

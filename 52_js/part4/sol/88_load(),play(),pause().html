@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        .box {
+            width: 800px;
+        }
+        .box video {
+            width: 100%;
+        }
+        .btnSet li {
+            float: left;
+            margin: 0 20px;
+            font: bold 18px/2 arial;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <video>
+            <source src="../assets/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <ul class="btnSet">
+        <li class="load">load</li>
+        <li class="play">play</li>
+        <li class="pause">pause</li>
+    </ul>
+
+    <script>
+        /* 
+            비디오요소.load() ~ 비디오 불러오기
+            비디오요소.play() ~ 비디오 재생하기
+            비디오요소.pause() ~ 비디오 불러오기
+        */
+
+        const loadBtn = document.querySelector('.load');
+        const playBtn = document.querySelector('.play');
+        const pauseBtn = document.querySelector('.pause');
+        const videoBox = document.querySelector('video');
+
+        loadBtn.onclick = function(){
+            videoBox.load();
+        };
+        playBtn.onclick = function(){
+            videoBox.play();
+        };
+        pauseBtn.onclick = function(){
+            videoBox.pause();
+        };
+    </script>
+</body>
+
+</html>

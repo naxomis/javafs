@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        li {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+
+        div {
+            width: 400px;
+            height: 400px;
+            margin: 50px;
+            background: #555;
+            font-size: 50px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML의 내용 바꾸기</h1>
+    <ul>
+        <li><b>red</b></li>
+        <li><i>blue</i></li>
+    </ul>
+
+    <div></div>
+
+    <script>
+        /* 
+            요소.innerText; ~ 문자열 반환(HTML 태그도 문자열 처리)
+            요소.innerHTML; ~ 문자열 반환(HTML 태그로 인식)
+
+            요소.innerText = '문자열'; ~ 문자열 설정(HTML 태그도 문자열 처리)
+            요소.innerHTML = '문자열'; ~ 문자열 설정(HTML 태그로 인식)
+        */
+
+        const li0Tag = document.querySelectorAll('li')[0];
+        const li1Tag = document.querySelectorAll('li')[1];
+        const divTag = document.querySelector('div');
+
+        // div 박스에 red 쓰고 줄바꿈 blue로 표시하시오. (단, red 기본글자, blue는 기울임 글자로)
+        const txt1 = li0Tag.innerHTML;
+        console.log(li0Tag.innerText);
+        const txt2 = li1Tag.innerText;
+        // divTag.innerText = txt1;
+        divTag.innerHTML = txt1 + '<br>' + txt2;
+    
+
+
+    </script>
+</body>
+
+</html>
