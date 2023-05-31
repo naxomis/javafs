@@ -26,6 +26,46 @@
         /* 
             this ~ 이벤트를 발생시킨 주체
         */
+       /* 
+            4개의 목록 중에 하나를 클릭하면 클릭한 목록의 글자색을 빨강으로 지정하시오. 
+            4개의 목록 중에 하나를 클릭하면 클릭한 목록의 글자색을 빨강으로 나머지는 파랑으로
+
+            제어문: for
+            키워드: this
+       */
+
+       // i = 0, 1, 2, 3
+       /* const liTag = document.querySelectorAll('li');
+       for(let i =0; i < liTag.length; i++){
+            liTag[i].onclick = function(){
+                this.style.color = 'red';
+            };
+        } */
+        const liTag = document.querySelectorAll('li');
+
+        for (let i = 0; i < liTag.length; i++) {
+            liTag[i].onclick = function () {
+                for(let j=0; j< liTag.length;j++){
+                    liTag[j].style.color = 'blue'
+                }
+                this.style.color = 'red';
+            };
+        }
+        
+        /* liTag[0].onclick = function(){
+                this.style.color = 'red';
+            };
+        liTag[1].onclick = function(){
+                this.style.color = 'red';
+            };
+        liTag[2].onclick = function(){
+                this.style.color = 'red';
+            };
+        liTag[3].onclick = function(){
+                this.style.color = 'red';
+            }; */
+
+
 
     </script>
 </body>

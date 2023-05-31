@@ -27,10 +27,15 @@
     <button class="btn2">이미지 속성 변경하기2</button>
     <p class="frame"><img src="../assets/pic_1.jpg" alt="이미지1"></p>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            요소.getAttribute('속성명') ~ HTML 속성 값 반환
-            요소.setAttribute('속성명', '값') ~ HTML 속성을 값으로 설정
+            요소.css('속성명') ~ CSS 속성 값 반환
+            요소.css('속성명', '값') ~ CSS 속성 값 반환
+            요소.css({'속성명': '값', '속성': '값', ...}) ~ CSS 속성 값 반환
+
+            요소.attr('속성명') ~ HTML 속성 값 반환
+            요소.attr({'속성명': '값', '속성명': '값', ...}) ~ HTML 속성을 값으로 설정
         */
 
         /* 
@@ -38,22 +43,23 @@
         */
 
         // 변수
-        const btn1 = document.querySelector('.btn1');
-        const btn2 = document.querySelector('.btn2');
-        const imgTag = document.querySelector('img');
+        const btn1 = $('.btn1');
+        const btn2 = $('.btn2');
+        const imgTag = $('img');
 
         // 이벤트 설정
-        btn1.onclick = pic1;
-        btn2.onclick = pic2;
+        btn1.click(pic1);
+        btn2.click(pic2);
 
         // 함수 정의
         function pic1() {
-            imgTag.setAttribute('src', '../assets/pic_1.jpg');
-            imgTag.setAttribute('alt', '이미지1');
+            imgTag.attr({'src': '../assets/pic_1.jpg', 'alt': '이미지1'});
+            imgTag.attr('alt', '이미지1');
         }
+        // 속성은 '',"" 생략가능
         function pic2() {
-            imgTag.setAttribute('src', '../assets/pic_2.jpg');
-            imgTag.setAttribute('alt', '이미지2');
+            imgTag.attr({src: '../assets/pic_2.jpg', alt: '이미지1'});
+            imgTag.attr('alt', '이미지2');
         }
 
 

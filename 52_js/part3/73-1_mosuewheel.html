@@ -24,8 +24,31 @@
     <div>
         <p></p>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+
+        /* 
+        // div 영역 위에서 마우스휠을 올렸다 내렸다 했을 때 div의 배경색을 빨강과 파랑으로 변하되게 지정하고, p요소에는 텍스트로 '마우스휠을 올렸다.' '마우스휠을 내렸다.' 라고 표시되도록 지정하시오.
+
+        // 이벤트명: wheel
+        // 키워드: this
+        */
+        
+        const box = document.querySelector('div');
+        const txt = box.children[0];
+
+        box.on('mousewheel' = function(e){
+            // 마우스휠을 내리면 e.deltaY가 양수, 아니면 음수
+            if (e.deltaY > 0) {
+                this.style.background = 'red';
+                txt.innerHTML = '마우스휠을 내려렸다.'
+            } else {
+                this.style.background = 'blue';
+                txt.innerHTML = '마우스휠을 올렸다.'
+            }
+        });
+
+
 
     </script>
 </body>

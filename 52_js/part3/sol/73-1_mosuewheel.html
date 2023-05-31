@@ -29,6 +29,7 @@
         const divTag = document.querySelector('div');
         const pTag = document.querySelector('p');
 
+        // this는 이벤트를 발생시킨 주체(divTag)
         divTag.onwheel = function(e){
             if (e.deltaY > 0) {
                 this.style.backgroundColor = 'red';

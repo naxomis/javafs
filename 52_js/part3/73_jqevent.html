@@ -34,48 +34,53 @@
     <div class="box2">박스2</div>
     <p></p>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
+
         /* 
-            Event(이벤트): 웹 문서 영역 안에서 웹 브라우저 또는 사용자가 행하는 동작
-
-            이벤트 종류
-            1. 마우스 이벤트: click, mouseenter, mouseleave, mousemove
-            2. 키보드 이벤트: keydown, keypress, keyup
-            3. 윈도우 이벤트: scroll, resize
-
-            이벤트 처리기(이벤트 핸들러): 이벤트가 발생할 때 그 이벤트에 반응하여 실행하는 함수
-
-            //방법1
-            <태그 on이벤트명="함수명()">
-
-            //방법2
-            요소.이벤트명 = 함수;
-            function 함수(){}
-            요소.이벤트명 = function(){};
-
-
-            //방법3: 객체.메서드();
-            요소.addEventListener('이벤트', function(){});
-
             // 제이쿼리
             요소.이벤트명 = function(){};
             $('선택자').이벤트명(function(){});
             $('선택자').on(이벤트명, function(){});
 
+            요소.innerText = 값;
+            $('선택자').text(값);
 
         */
 
         // .box1을 클릭하면 함수를 호출한다.
-        // var 변수 = 값;
-        // 객체.속성 = 값;
-        var box1 = document.querySelector('.box1');
-        const box2 = document.querySelector('.box2');
-        const pTag = document.querySelector('p');
-        box1.onclick = function () {
-            pTag.innerText = 'box1을 클릭함';
+        const box1 = $('.box1');
+        const box2 = $('.box2');
+        const pTag = $('p');
+
+        box1.click(function () {
+            pTag.text('box1을 클릭함');
+        });
+
+        box1.mouseenter(ev);
+        function ev() {
+            pTag.text('box1에 마우스를 올렸다');
         };
 
-        box2.onmouseenter = ev1;
+        box1.on('mouseleave', function () {
+            pTag.text('box1에서 마우스가 벗어남');
+        });
+        
+        box2.on('mousemove', function () {
+            console.log('mousemove')
+            pTag.text('box2에서 마우스가 움직임');
+        });
+
+        $(window).on('scroll', function(){
+            pTag.text('창이 스크롤');
+        });
+
+        $(window).on('resize', function(){
+            pTag.text('창의 크기조정');
+        });
+
+
+        /* box2.onmouseenter = ev1;
         function ev1(){
             pTag.innerText = 'box2위에 마우스를 올렸다';
         };
@@ -93,7 +98,7 @@
         }
         window.onresize = function(){
             pTag.innerText = '창의 크기 조정.';
-        }
+        } */
     </script>
 </body>
 

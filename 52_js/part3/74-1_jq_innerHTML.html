@@ -24,17 +24,9 @@
         <span>변경전 입니다.</span>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-
-            객체.속성; -> 반환(가져오기)
-            객체.속성 = 값; -> 설정(지정하기)
-
-            요소.innerText; ~ Text 구조를 문자열로 반환
-            요소.innerText = '값'; ~ HTML 구조를 문자열로 설정
-            요소.innerHTML; ~ HTML 구조 반환
-            요소.innerHTML = '값'; ~ HTML 구조 설정
-
             객체.메서드();
             요소.text();
             요소.text(값);
@@ -47,18 +39,17 @@
 
         */
 
-        const btn =document.querySelector('button');
-        const box =document.querySelector('div');
+        const btn = $('button');
+        const box = $('div');
 
-        btn.onclick = function(){
-            // box.innerText = '<h1>변경후 입니다.</h1>';
-            box.innerHTML = '<h1>변경후 입니다.</h1>';
-        };
+        btn.click(function(){
+            box.html('<h1>변경후 입니다.</h1>');
+        });
 
-        box.onclick = function(){
-            let txt = box.innerHTML;
+        box.click(function(){
+            let txt = box.html();
             alert(txt);
-        }
+        });
     </script>
 </body>
 

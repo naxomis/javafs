@@ -33,22 +33,31 @@
 
     <div></div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            var 변수 = 요소.innerText; ~ 문자열 반환
-            요소.innerText = '문자열'; ~ 문자열 설정
+            요소.text(); ~ 문자열 반환
+            요소.text('문자열'); ~ 문자열 설정
+
+            $(this) ~ 이벤트가 발생한 객체
         */
 
-        const liTags = document.querySelectorAll('li');
-        const divTag = document.querySelector('div');
+        /* 
+            목록의 텍스트(색상 이름)를 클릭하면 아래 회색박스에 해당 색상 이름과 이름에 해당하는 배경 색을 박스에 지정한다.
+        */
 
-        for (let i = 0; i < liTags.length; i++) {
-            liTags[i].onclick = function () {
-                let txt = this.innerText;
-                divTag.innerText = txt;
-                divTag.style.background = txt;
-            };
+        const liTag = $('li');
+        const divTag = $('div');
+
+        liTag.click(bgFn);
+        
+        function bgFn() {
+            let txt = $(this).html();
+            divTag.html(txt);
+            divTag.css({background: txt});
         }
+
+
     </script>
 </body>
 

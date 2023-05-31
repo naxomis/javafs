@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        li {
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+       <li>목록1</li>
+       <li>목록2</li>
+       <li>목록3</li>
+       <li>목록4</li>
+    </ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /* 
+            this ~ 이벤트를 발생시킨 주체
+        */
+       /* 
+            4개의 목록 중에 하나를 클릭하면 클릭한 목록의 글자색을 빨강으로 지정하시오. 
+            4개의 목록 중에 하나를 클릭하면 클릭한 목록의 글자색을 빨강으로 나머지는 파랑으로
+
+            탐색 메서드: 요소.not('선택자')
+            제어문: for
+            키워드: this
+       */
+
+       
+        const liTag = $('li');
+
+        /* liTag.click(function () {
+                $(this).css({color: 'red'});
+            }); */
+
+            /* 
+                // 모든 li
+                liTag.css({ color: 'blue'});
+                // 클릭한 li만
+                $(this).css({ color: 'red'})
+            */
+
+        liTag.click(function () {
+            liTag.not($(this)).css({ color: 'blue'});
+            $(this).css({ color: 'red'});
+        })
+            
+        /* for (let i =0; i < 4; i++) {
+            liTag.eq(i).click(function () {
+                $(this).css({color: 'red'});
+            });
+        } */
+        /* liTag.eq(0).click(function () {
+                $(this).css({color: 'red'});
+            });
+        liTag.eq(1).click(function () {
+                $(this).css({color: 'red'});
+            });
+        liTag.eq(2).click(function () {
+                $(this).css({color: 'red'});
+            });
+        liTag.eq(3).click(function () {
+                $(this).css({color: 'red'});
+            }); */
+
+
+    </script>
+</body>
+
+</html>

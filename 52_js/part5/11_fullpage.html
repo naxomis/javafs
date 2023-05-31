@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullpage</title>
+    <style>
+        body {margin: 0;}
+        #fullpage div {height: 100vh;}
+        #section1{background: lightblue;}
+        #section2{background: lightyellow;}
+        #section3{background: lightgreen;}
+        #section4{background: lightpink;}
+
+    </style>
+</head>
+<body>
+    <!-- <header>헤더</header> -->
+    <div id="fullpage">
+        <div id="section1" class="section">섹션1</div>
+        <div id="section2" class="section">섹션2</div>
+        <div id="section3" class="section">섹션3</div>
+        <div id="section4" class="section">섹션4</div>
+    </div>
+    <footer>푸터</footer>
+
+    <script>
+        const box = document.querySelector('div');
+        const txt = box.children[0];
+
+        box.onwheel = function(e){
+            // 마우스휠을 내리면 e.deltaY가 양수, 아니면 음수
+            if (e.deltaY > 0) {
+                this.style.background = 'red';
+                
+            } else {
+                this.style.background = 'blue';
+                
+            }
+        };
+    </script>
+</body>
+</html>

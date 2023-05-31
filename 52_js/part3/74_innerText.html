@@ -35,9 +35,26 @@
 
     <script>
         /* 
-            요소.textContent; ~ 문자열 반환
-            요소.textContent = '문자열'; ~ 문자열 설정
+            var 변수 = 요소.innerText; ~ 문자열 반환
+            요소.innerText = '문자열'; ~ 문자열 설정
         */
+
+        /* 
+            목록의 텍스트(색상 이름)를 클릭하면 아래 회색박스에 해당 색상 이름과 이름에 해당하는 배경 색을 박스에 지정한다.
+        */
+
+        const liTag = document.querySelectorAll('li');
+        const divTag = document.querySelector('div');
+
+        for (let i = 0; i < liTag.length; i++) {
+            liTag[i].onclick = bgFn;
+            let txt = liTag[i].innerHTML;
+        }
+
+        function bgFn() {
+            divTag.innerHTML = txt;
+            divTag.style.background = txt;
+        }
 
 
     </script>

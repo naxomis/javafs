@@ -63,30 +63,31 @@
             const box2 = document.querySelector('.box2');
             const pTag = document.querySelector('p');
 
+            // ev1 함수 호출명에서 ()는 쓰지 않는다.
             box1.onclick = ev1;
             
             function ev1(){
-                pTag.textContent = 'box1을 클릭했습니다.';
+                pTag.innerText = 'box1을 클릭했습니다.';
             }
 
-            box1.onmouseenter = function(){
-                pTag.textContent = 'box1에 마우스를 올렸습니다.';
+            box1.onmouseover = function(){
+                pTag.innerText = 'box1에 마우스를 올렸습니다.';
             };
 
-            box1.onmouseleave = function(){
-                pTag.textContent = 'box1에서 마우스가 벗어났습니다.';
+            box1.onmouseout = function(){
+                pTag.innerText = 'box1에서 마우스가 벗어났습니다.';
             };
 
             box2.addEventListener('mousemove', function(){
-                pTag.textContent = 'box2 위에서 마우스가 움직입니다.';
+                pTag.innerText = 'box2 위에서 마우스가 움직입니다.';
             });
 
             window.addEventListener('scroll', function(){
-                pTag.textContent = '화면을 스크롤합니다.';
+                pTag.innerText = '화면을 스크롤합니다.';
             });
 
             window.onresize = function(){
-                pTag.textContent = '화면을 리사이즈합니다.';
+                pTag.innerText = '화면을 리사이즈합니다.';
             };
 
     </script>
