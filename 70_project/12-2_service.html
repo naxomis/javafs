@@ -32,9 +32,14 @@
             color: red;
         }
 
+        #result {
+            padding-bottom: 40px;
+        }
         canvas {
-            width: 100%;
+            width: 300px;
+            margin: 0 auto;
             background: #eee;
+            padding: 40px 0;
         }
 
         button {
@@ -57,7 +62,8 @@
 
 <body>
     <div id="wrap">
-        <h1>묵찌빠</h1>
+        <h1>벽돌깨기</h1>
+        <div id="result">결과가 궁금하시죠?</div>
         <canvas id="myCanvas" width="480" height="320"></canvas>
         <button id="againBtn">다시하기</button>
         <button id="logoutBtn">게임종료</button>
@@ -132,8 +138,7 @@
                             b.status = 0;
                             score++;
                             if (score == brickRowCount * brickColumnCount) {
-                                alert("YOU WIN, CONGRATS!");
-                                document.location.reload();
+                                result.innerHTML = '<p>축하합니다.<br> 오늘은 행운이 가득합니다.</p>'
                                 clearInterval(interval); // Needed for Chrome to end game
                             }
                         }
@@ -198,9 +203,13 @@
                     dy = -dy;
                 }
                 else {
-                    alert("GAME OVER");
+                    /* alert("GAME OVER");
                     document.location.reload();
-                    clearInterval(interval); // Needed for Chrome to end game
+                    clearInterval(interval); // Needed for Chrome to end game */
+                    // location.reload();
+                    result.innerHTML = '<p>다시 도전하세요.</p>';
+                    return;
+                    
                 }
             }
 
@@ -217,6 +226,21 @@
 
         var interval = setInterval(draw, 10);
 
+        const againBtn = document.querySelector('#againBtn');
+        const logoutBtn = document.querySelector('#logoutBtn');
+        const result = document.querySelector('#result');
+
+        if (gameNum === com) {
+            result.innerHTML = '<p>축하합니다. 맞추었습니다.</p>';
+        } else {
+            result.innerHTML = '<p>틀렸습니다. 다음 기회에...</p>';
+        }
+        againBtn.onclick = function(){
+            location.reload();
+        };
+        logoutBtn.onclick = function(){
+            location.href = '12_login.html';
+        };
 
 
 
