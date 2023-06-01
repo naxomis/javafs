@@ -7,28 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS+JS</title>
     <style>
-        .row {
-            width: 420px;
-            margin: 0 auto;
-        }
 
-        .row ul {
-            list-style: none;
-            margin: 0;
+        .row {
+            width: 410px;
+            margin: 0 auto;
             padding: 0;
         }
-
-        .row ul li {
-            display: inline-table;
+        .row ul {
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
+
 
         #lightbox {
             position: fixed;
-            width: 100%;
-            height: 100%;
+            /* width: 100%;
+            height: 100%; */
             background-color: rgba(0, 0, 0, 0.7);
             top: 0;
             left: 0;
+            bottom: 0;
+            right: 0;
             display: none;
         }
 
@@ -43,19 +45,20 @@
 </head>
 
 <body>
+    <!-- data-사용자정의 속성 -->
     <div class="row">
         <ul>
-            <li><img src="../assets/tree-1-thumb.jpg" data-src="../assets/tree-1.jpg" class="pic"></li>
-            <li><img src="../assets/tree-2-thumb.jpg" data-src="../assets/tree-2.jpg" class="pic"></li>
-            <li><img src="../assets/tree-3-thumb.jpg" data-src="../assets/tree-3.jpg" class="pic"></li>
-            <li><img src="../assets/tree-4-thumb.jpg" data-src="../assets/tree-4.jpg" class="pic"></li>
-            <li><img src="../assets/tree-5-thumb.jpg" data-src="../assets/tree-5.jpg" class="pic"></li>
-            <li><img src="../assets/tree-6-thumb.jpg" data-src="../assets/tree-6.jpg" class="pic"></li>
+            <li><img src="../assets/thumb-pic_1.png" data-src="../assets/pic_1.jpg" class="pic"></li>
+            <li><img src="../assets/thumb-pic_2.png" data-src="../assets/pic_2.jpg" class="pic"></li>
+            <li><img src="../assets/thumb-pic_3.png" data-src="../assets/pic_3.jpg" class="pic"></li>
+            <li><img src="../assets/thumb-pic_4.png" data-src="../assets/pic_4.jpg" class="pic"></li>
+            <li><img src="../assets/thumb-pic_5.png" data-src="../assets/pic_5.jpg" class="pic"></li>
+            <li><img src="../assets/thumb-pic_6.png" data-src="../assets/pic_6.jpg" class="pic"></li>
         </ul>
     </div>
 
     <div id="lightbox">
-        <img src="images/tree-1.jpg" alt="" id="lightboxImage">
+        <img src="../assets/pic_1.jpg" alt="" id="lightboxImage">
     </div>
 
     <script>
@@ -64,23 +67,41 @@
             요소.setAttribute('속성명', '값') ~ HTML 속성 설정
         */
 
-        var pics = document.getElementsByClassName("pic");
-        var lightbox = document.getElementById("lightbox");
-        var lightboxImage = document.getElementById("lightboxImage");
+        /* let pics = document.getElementsByClassName('pic');
+        let lightbox = document.getElementById('lightbox');
+        let lightboxImage = document.getElementById('lightboxImge');
 
-        for (i = 0; i < pics.length; i++) {
-            pics[i].addEventListener("click", showLightbox);
+        for (i =0; i < pics.length; i++) {
+            pics[i].addEventListener('click', showLightbox)
         }
 
         function showLightbox() {
-            var bigLocation = this.getAttribute("data-src");
-            lightboxImage.setAttribute("src", bigLocation);
-            lightbox.style.display = "block";
+            let bigLocation = this.getAttribute('data-src');
+            lightboxImage.setAttribute('src', bigLocation);
+            lightbox.style.display = 'block';
+        }
+        lightbox.onclick = function() {
+            lightbox.style.display = 'none';
+        } */
+
+        const lightbox = document.querySelector('#lightbox');
+        const lightboxImg = document.querySelector('#lightboxImage');
+        const imgs = document.querySelectorAll('.pic');
+
+        for (let i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = showLightbox;
+        }
+        
+        function showLightbox() {
+            let dataSrc = this.getAttribute('data-src');
+            lightboxImg.setAttribute('src', dataSrc);
+            lightbox.style.display = 'block';
         }
 
-        lightbox.onclick = function () {
-            lightbox.style.display = "none";
+        lightbox.onclick = function() {
+            lightbox.style.display = 'none';
         }
+        
 
     </script>
 </body>

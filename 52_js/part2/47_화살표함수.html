@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+</head>
+
+<body>
+    <!-- ECMAScript 6 -->
+    <h1>화살표 함수</h1>
+    <p>화살표 함수는 익명 함수에만 사용할 수 있다.</p>
+    <script>
+        /* 
+            익명 함수
+            let 변수 = function (매개변수1, 매개변수2, ...) {실행코드;};
+            
+            화살표 함수
+            let 변수 = (매개변수1, 매개변수2, ...) => {실행코드;}
+
+            1) 매개변수가 없을 경우
+            let 변수 = () => {실행코드;}
+
+            2) 매개변수가 1개이면 ()괄호 생략
+            let 변수 = 매개변수 => {실행코드;}
+
+            3) 매개변수가 2개이상
+            let 변수 = (매개변수1, 매개변수2, ...) => {실행코드;}
+
+            4) 실행코드가 1문장이면 중괄호 생략
+            let 변수 = (매개변수1, 매개변수2, ...) => 실행코드;
+
+        */
+
+        let num = function(a, b) {
+            document.write('나는 ' + a + '번째 함수이다.<br>');
+            document.write('나는 ' + b + '번째 함수이다.<br>');
+        }
+        let num1 = (a, b) => {
+            document.write('나는 ' + a + '번째 함수이다.<br>');
+            document.write('나는 ' + b + '번째 함수이다.<br>');
+        }
+
+        let num2 = a => {
+            document.write('나는 ' + a + '번째 함수이다.<br>');
+            document.write('나는 함수이다.<br>');
+        }
+
+        let num3 = () => {
+            document.write('나는 함수이다.<br>');
+            document.write('나는 함수이다.<br>');
+        }
+
+        let num4 = a => document.write('나는 ' + a + '번째 함수이다.<br>');
+
+        num1(1, 2);
+        num2(3);
+        num3();
+        num4(4);
+    </script>
+</body>
+
+</html>

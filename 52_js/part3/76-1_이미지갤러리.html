@@ -12,7 +12,8 @@
             padding: 0;
         }
 
-        #cup {
+        #pic {
+            width: 200px;
             box-shadow: 1px 1px 2px #eee;
             outline: 1px dashed #ccc;
             outline-offset: -7px;
@@ -43,11 +44,11 @@
 <body>
     <h1>이미지 갤러리</h1>
     <div id="prod-pic">
-        <img src="../assets/coffee-pink.jpg" alt="커피" id="cup" width="200" height="200">
+        <img src="../assets/pic_1.jpg" alt="커피" id="pic">
         <div id="small-pic">
-            <img src="../assets/coffee-pink.jpg" class="small">
-            <img src="../assets/coffee-blue.jpg" class="small">
-            <img src="../assets/coffee-gray.jpg" class="small">
+            <img src="../assets/pic_1.jpg" class="small">
+            <img src="../assets/pic_2.jpg" class="small">
+            <img src="../assets/pic_3.jpg" class="small">
         </div>
     </div>
 
@@ -57,17 +58,42 @@
             요소.setAttribute('속성명', '값') ~ HTML 속성 설정
         */
 
-        var cup = document.querySelector("#cup");
-        var smallPics = document.querySelectorAll(".small");
+        /* var pic = document.querySelector("#pic");
+        var smallPics = document.querySelectorAll(".small"); */
 
-        for (let i = 0; i < smallPics.length; i++) {
+        /* for (let i = 0; i < smallPics.length; i++) {
             smallPics[i].addEventListener("click", changePic);
+            smallPics[i].onclick = changePic;
         }
 
         function changePic() {
             var newPic = this.src;
-            cup.setAttribute("src", newPic);
+            pic.setAttribute("src", newPic);
+        } */
+
+        /* // 썸네일 이미지를 크리하면 위에 큰 이미지가 클릭한 이미지와 같은 이미지로표시
+        섵낵자: #pic(크이미지), .small(작은 이미지)
+        함수: gallery
+        키워드: this
+         */
+
+
+        const bigImg = document.querySelector('#pic');
+        const thumImg = document.querySelectorAll('.small');
+
+        /* const gallery = function () {
+            let imgSrc = this.getAttribute('src');
+            bigImg.setAttribute('src', imgSrc);
+        } */
+        const gallery = e => {
+            let imgSrc = e.target.getAttribute('src');
+            bigImg.setAttribute('src', imgSrc);
         }
+        for (let i = 0; i < thumImg.length; i++) {
+            thumImg[i].onclick = gallery;
+        }
+
+
 
     </script>
 </body>

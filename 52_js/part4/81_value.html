@@ -35,7 +35,33 @@
     <script>
         /* 
             요소.value ~ input에 입력된 값 반환
+            요소.value = 값 ~ input에 입력된 값 반환
         */
+       /* 
+            사용자가 input 상자에 숫자로 나이를 입력한 후 성인인증 버튼을 클릭하면 결과 화면을 경고창으로 출력한다.
+            1. 숫자가 아닌 다른 문자를 입력하거나 아무것도 입력하지 않으면 '나이를 숫자로 입력해주세요.'
+            2. 19이상 입력시 '당신은 성인입니다.'
+            3. 19미만 입력시 '당신은 미성년입니다'
+       */
+
+       const age = document.querySelector('input');
+       const btn = document.querySelector('button');
+
+       btn.onclick = adult;
+       function adult() {
+            let txt;
+            if (age.value >= 19) {
+                txt = '당신은 성인입니다.'
+            } else if (age.value < 19 && age.value >= 0) {
+                txt = '당신은 미성년입니다.'
+            } else if (age.value == '' || age.value < 1) {
+                txt = '잘못 입력하였거나 0미만으로 입력했습니다. 다시 입력해주세요.'
+            } else {
+                txt = '문자로 입력하였습니다. 숫자로 입력하세요.'
+            }
+            alert(txt);
+       }
+    
 
     </script>
 </body>

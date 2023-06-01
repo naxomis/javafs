@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        p {
+            font-size: 14px;
+            color: red;
+            margin-left: 20px;
+        }
+
+        input {
+            width: 100px;
+            height: 50px;
+            font-size: 40px;
+            border: 1px solid #444;
+            margin: 20px;
+        }
+
+        button {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <button>성인인증</button>
+    <p>당신의 나이를 숫자로 입력한 후 성인인증 버튼을 클릭하세요.</p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /* 
+            $('선택자').val() ~ input에 입력된 값 반환
+            $('선택자').val() = 값 ~ input에 입력된 값 반환
+        */
+       /* 
+            사용자가 input 상자에 숫자로 나이를 입력한 후 성인인증 버튼을 클릭하면 결과 화면을 경고창으로 출력한다.
+            1. 숫자가 아닌 다른 문자를 입력하거나 아무것도 입력하지 않으면 '나이를 숫자로 입력해주세요.'
+            2. 19이상 입력시 '당신은 성인입니다.'
+            3. 19미만 입력시 '당신은 미성년입니다'
+       */
+
+       const age = $('input');
+       const btn = $('button');
+
+       btn.click(adult);
+       function adult() {
+            let txt;
+            if (age.val() >= 19) {
+                txt = '당신은 성인입니다.'
+            } else if (age.val() < 19 && age.val() >= 0) {
+                txt = '당신은 미성년입니다.'
+            } else if (age.val() == '' || age.val() < 1) {
+                txt = '잘못 입력하였거나 0미만으로 입력했습니다. 다시 입력해주세요.'
+            } else {
+                txt = '문자로 입력하였습니다. 숫자로 입력하세요.'
+            }
+            alert(txt);
+       }
+    
+
+    </script>
+</body>
+
+</html>

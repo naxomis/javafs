@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+
+        .row {
+            width: 410px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .row ul {
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+
+        #lightbox {
+            position: fixed;
+            /* width: 100%;
+            height: 100%; */
+            background-color: rgba(0, 0, 0, 0.7);
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: none;
+        }
+
+        #lightbox img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- data-사용자정의 속성 -->
+    <div class="row">
+        <ul>
+            <li><img src="../assets/thumb-pic_1.png" data-src="../assets/pic_1.jpg" class="pic"></li>
+            <li><img src="../assets/thumb-pic_2.png" data-src="../assets/pic_2.jpg" class="pic"></li>
+            <li><img src="../assets/thumb-pic_3.png" data-src="../assets/pic_3.jpg" class="pic"></li>
+            <li><img src="../assets/thumb-pic_4.png" data-src="../assets/pic_4.jpg" class="pic"></li>
+            <li><img src="../assets/thumb-pic_5.png" data-src="../assets/pic_5.jpg" class="pic"></li>
+            <li><img src="../assets/thumb-pic_6.png" data-src="../assets/pic_6.jpg" class="pic"></li>
+        </ul>
+    </div>
+
+    <div id="lightbox">
+        <img src="../assets/pic_1.jpg" alt="" id="lightboxImage">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /*
+            요소.getAttribute('속성명') ~ HTML 속성 반환
+            요소.setAttribute('속성명', '값') ~ HTML 속성 설정
+        */
+
+        /* let pics = document.getElementsByClassName('pic');
+        let lightbox = document.getElementById('lightbox');
+        let lightboxImage = document.getElementById('lightboxImge');
+
+        for (i =0; i < pics.length; i++) {
+            pics[i].addEventListener('click', showLightbox)
+        }
+
+        function showLightbox() {
+            let bigLocation = this.getAttribute('data-src');
+            lightboxImage.setAttribute('src', bigLocation);
+            lightbox.style.display = 'block';
+        }
+        lightbox.onclick = function() {
+            lightbox.style.display = 'none';
+        } */
+
+        const lightbox = $('#lightbox');
+        // 더 빨리 찾는다
+        const lightboxImg = lightbox.find('#lightboxImage');
+        const imgs = $('.pic');
+
+        imgs.click(showLightbox);
+
+        
+        function showLightbox() {
+            let dataSrc = $(this).attr('data-src');
+            lightboxImg.attr('src', dataSrc);
+            lightbox.css({display: 'block'});
+        }
+
+        lightbox.click(function() {
+            $(this).css({display: 'none'});
+        });
+        
+
+    </script>
+</body>
+
+</html>

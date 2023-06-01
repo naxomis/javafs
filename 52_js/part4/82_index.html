@@ -20,11 +20,27 @@
         <li>목록3</li>
         <li>목록4</li>
     </ul>
+    <p>여기에 색이번호가 생기게</p>
 
     <script>
         /* 
             index ~ 요소의 순서 값을 반환
+
+            for ~ in: 배열객체에 사용!
+            forEach(): for 제어문 대신 사용!
         */
+       /* 
+            목록1~4중에 하나를 클릭하면 목록의 순서값(색인 번호)를 표시하시오.
+            
+            메서드(): forEach() ~Nodelist, Array
+            속성: index
+
+       */
+      const liTag = document.querySelectorAll('li');
+      const pTag = document.querySelector('p');
+      
+        liTag.forEach((obj, idx) => obj.onclick = () => pTag.innerText = idx);
+
 
     </script>
 </body>
