@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button class="saveAndLoad" onclick="save()">저장하기</button>
+        <button class="saveAndLoad" onclick="load()">불러오기</button>
+    </div>
+    <div >
+        <p class="now" id="nowPlusScore">현재 추가 클릭수는 +0 입니다.</p>
+    </div>
+    <div class="position">
+        <input id="countNum" class="counting" disabled  type="text" value="0">
+        <div  class="count" >
+            <button style="font-size:2em;" onclick="add()">Click</button>
+            <button style="font-size:2em;" onclick="store()">Store</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 

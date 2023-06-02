@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게임하기_김나연</title>
+    <style>
+        /* 가로 해상도: 390px */
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* font */
+        html {
+            font-size: 10px;
+        }
+        /* 버튼태그폰트 */
+        @font-face {
+            font-family: 'Cafe24Ssurround';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* 제목태그폰트 */
+        @font-face {
+            font-family: 'MaplestoryOTFBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* reslut태그폰트 */
+        @font-face {
+            font-family: 'EF_jejudoldam';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 전체div */
+        #wrap {
+            margin: 100px 30px 0;
+            text-align: center;
+        }
+
+        /* 제목 */
+        h1 {
+            margin-bottom: 32px;
+            font-size: 3rem;
+            font-family: 'MaplestoryOTFBold', "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        /* 안내문 */
+        #result {
+            font-size: 1.8rem;
+            color: #777;
+            margin-bottom: 20px;
+            font-family: 'EF_jejudoldam', Courier, monospace;
+        }
+
+        /* 입력창 */
+        input {
+            width: 100%;
+            margin: 8px 0;
+            padding: 8px;
+            font-size: 15px;
+            border: 2px solid #ffe9e9;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+        }
+
+        /* 버튼 */
+        button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 8px;
+            font-size: 20px;
+            border-radius: 7px;
+            border: none;
+            font-family: 'Cafe24Ssurround', Courier, monospace;
+            background: #fdd1d1;
+            color: #fff;
+        }
+
+        /* 가입하기 */
+        #member {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: 100px;
+            font-size: 1.5rem;
+            color: #777;
+            padding-top: 10px;
+            border-top: 1px solid #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>무슨 동물이 나올까?</h1>
+        <p id="result">강아지, 고양이, 알파카<br> 중 하나만 입력하세요.줓</p>
+        <input type="text" placeholder="입력하세요." id="paa">
+        <button id="playBtn">결과보기</button>
+        <p id="member">계정이 없으신가요? <a href="member.html">가입하기</a></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        // 변수처리
+        const playBtn = document.querySelector('#playBtn');
+        let gameTxt = document.querySelector('#paa');
+        
+
+        // input입력데이터 전송
+        playBtn.onclick = function () {
+            location.href = 'service_1-1.html?' + gameTxt.value;
+        };
+        console.log();
+
+    </script>
+</body>
+
+</html>

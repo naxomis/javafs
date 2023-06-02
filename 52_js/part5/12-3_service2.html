@@ -38,6 +38,12 @@
             padding: 8px;
             font-size: 20px;
         }
+        input {
+            width: 100%;
+            margin: 8px 0;
+            padding: 8px;
+            font-size: 15px;
+        }
 
         #member {
             position: absolute;
@@ -53,23 +59,23 @@
 <body>
     <div id="wrap">
         <h1>무슨 동물이 나올까?</h1>
-        <div id="result">결과가 궁금하시죠?</div>
-        <button id="againBtn">다시하기</button>
-        <button id="logoutBtn">게임종료</button>
+        <div id="result">강아지, 고양이, 알파카 셋 중 하나만 입력하세요.</div>
+        <input type="text" placeholder="입력하세요." id="paa">
+        <button id="againBtn">결과보기</button>
         <p>아이디와 패스워드를 입력후 로그인하세요.</p>
         <!-- <div id="imgQ"><img src="../assets/am_1.jpg" alt="강아지"><br></div>  -->
-        <div id="imgQ"></div>
         <p id="member">계정이 없으신가요? <a href="12_login.html">가입하기</a></p>
     </div>
+   
 
     <script>
         const againBtn = document.querySelector('#againBtn');
         const logoutBtn = document.querySelector('#logoutBtn');
         const result = document.querySelector('#result');
         const show = document.querySelector('.show');
-        let game = prompt('강아지, 고양이, 알파카 셋 중 하나만 입력하세요.', '강아지');
-
-        switch (game) {
+        // let game = prompt('강아지, 고양이, 알파카 셋 중 하나만 입력하세요.', '강아지');
+        let game = document.querySelector('#paa');
+        /* switch (game) {
             case '강아지':
                 gameNum = 1;
                 break;
@@ -84,26 +90,23 @@
                 location.reload();
         }
 
-        // 1~3 사이 정수
-        // Math.floor(Math.random() * 3) + 1)
-        let iQ = document.querySelector('#iQ');
-        let com = Math.floor(Math.random() * 3) + 1;
-        document.write('<img src="../assets/am_' + com + '.jpg" alt="동물"><br>');
+        1~3 사이 정수
+        Math.floor(Math.random() * 3) + 1) */
+        /* let com = Math.floor(Math.random() * 3) + 1;
+        document.write('<img src="../assets/am_' + com + '.jpg" alt="동물"><br>'); */
 
 
 
-        if (gameNum === com) {
+        /* if (gameNum === com) {
             result.innerHTML = '<p>축하합니다. 맞추었습니다.</p>';
         } else {
             result.innerHTML = '<p>틀렸습니다. 다음 기회에...</p>';
-        }
+        } */
 
         againBtn.onclick = function(){
-            location.reload();
+            location.href = '12-4_service2.html';
         };
-        logoutBtn.onclick = function(){
-            location.href = '12_login.html';
-        };
+        
     </script>
 </body>
 

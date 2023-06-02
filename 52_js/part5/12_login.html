@@ -99,7 +99,6 @@
         // 데이터베이스(Database, DB)
         // location.href = '12_login.html?'userId/userPw;
         let temp = location.href.split('?');
-        console.log(temp[1]);
         let data = temp[1].split('/');
         const userId = data[0];
         const userPw = data[1];
@@ -113,6 +112,7 @@
         loginBtn.onclick = login;
 
         function login() {
+            // console.log(localStorage.getItem('id'))
             let newId = loginId.value;
             let newPw = loginPw.value;
 
