@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        /* 가로 해상도: 390px */
+        * {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        #wrap {
+            position: fixed;
+            top: 100px;
+            margin: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 32px;
+        }
+
+        p {
+            font-size: 14px;
+            color: red;
+        }
+
+        input {
+            width: 100%;
+            font-size: 20px;
+            border: 1px solid #444;
+            margin:8px 0;
+            padding: 16px;
+        }
+
+        button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 8px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>묵찌빠 회원가입</h1>
+        <input type="text" placeholder="아이디를 입력하세요." id="memberId">
+        <input type="text" placeholder="비밀번호를 입력하세요." id="memberPw">
+        <button>가입하기</button>
+        <p>아이디와 패스워드를 입력후 가입하기를 누르세요.</p>
+    </div>
+
+    <script>
+        const memberId = document.querySelector('#memberId');
+        const memberPw = document.querySelector('#memberPw');
+        const memberBtn = document.querySelector('button');
+        
+        // 로그인 시 입력한 아이디/패스워드
+        
+        memberBtn.onclick = member;
+        
+        function member() {
+            const userId = memberId.value;
+            const userPw = memberPw.value;
+            location.href = '93_login.html?' + userId + '/' + userPw;
+        }
+    </script>
+</body>
+
+</html>
