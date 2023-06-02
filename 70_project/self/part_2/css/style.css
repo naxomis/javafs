@@ -67,6 +67,9 @@ header {
     background: #fff;
 
 }
+.sub {
+    margin-top: 20px;
+}
 .sub > li > a {
     font-size: 1.5rem;
     font-family: 'Courier New', Courier, monospace;
@@ -80,6 +83,7 @@ header {
 }
 
 
+
 /* section1 */
 .main_img img {
     width: 100%;
@@ -87,6 +91,7 @@ header {
 .main_img h1 {
     display: none;
 }
+
 
 /* section common */
 .container {

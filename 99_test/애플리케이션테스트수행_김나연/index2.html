@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValleyFestival_견본</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans+KR:wght@100;400&display=swap');
+
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        body {
+            font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        /* 헤더 */
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        /* 로고 */
+        .logo {
+            z-index: 9999;
+            position: absolute;
+            left: 50%;
+            top: calc(50% - 420px);
+            transform: translateX(-50%) rotate(0deg);
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            animation: logo 5s 1;
+        }
+
+        @keyframes logo {
+            0% {
+                transform: translateX(-50%) rotate(0deg);
+                left: 50%;
+            }
+
+            25% {
+                transform: translateX(-50%) rotate(20deg);
+                left: 50%;
+            }
+
+            50% {
+                transform: translateX(-50%) rotate(0deg);
+                left: calc(50% + 500px);
+            }
+
+            55% {
+                transform: translateX(-50%) rotate(0deg);
+                left: calc(50% + 500px);
+            }
+
+            70% {
+                transform: translateX(-50%) rotate(0deg);
+                left: calc(50% + 500px);
+            }
+
+            100% {
+                transform: translateX(-50%) rotate(-360deg);
+                left: 50%;
+            }
+        }
+
+        /* GNB */
+        nav {
+            z-index: 9999;
+            position: absolute;
+            width: 100%;
+            top: -41px;
+            height: 40px;
+            background: #000;
+        }
+
+        /* 1depth */
+        .main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main>li {
+            width: 160px;
+            height: 40px;
+            background: #000;
+            text-align: center;
+        }
+
+        .main>li>a {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: bold;
+            line-height: 40px;
+            color: #fff;
+            transition: .3s;
+        }
+
+        .main>li>a:hover {
+            background: #5A8C1B;
+        }
+
+        /* 2depth */
+        .sub {
+            position: relative;
+            display: none;
+            padding: 10px 0 20px 0;
+            background: #991a1a;
+        }
+
+        .subBg {
+            position: absolute;
+            width: 100%;
+            top: 40px;
+            background: #991a1a;
+        }
+
+        .sub a {
+            padding: 4px 8px;
+            font-size: 1.4rem;
+            color: #f3a0a0;
+        }
+
+        .sub a:hover {
+            background: #f12626;
+            color: #fff;
+        }
+
+
+        /* 섹션 */
+        section {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 500px;
+            text-align: center;
+        }
+
+        /* 메인 타이틀 */
+        section h2 {
+            z-index: 100;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+            line-height: 1.2;
+            color: #fff;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        section h2 b {
+            display: block;
+            font-size: 5rem;
+        }
+
+        /* 슬라이드 */
+        .slide {
+            overflow: hidden;
+        }
+
+        .slide ul {
+            display: flex;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 400%;
+            animation: slide 9s infinite;
+        }
+
+        .slide li {
+            height: 500px;
+        }
+
+        /* 애니메이션 키프레임 */
+        @keyframes slide {
+            0% {
+                left: 0;
+            }
+
+            5% {
+                left: -100%;
+            }
+
+            33% {
+                left: -100%;
+            }
+
+            38% {
+                left: -200%;
+            }
+
+            66% {
+                left: -200%;
+            }
+
+            71% {
+                left: -300%;
+            }
+
+            99.99% {
+                left: -300%;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        /* 푸터 */
+        footer {
+            position: absolute;
+            top: calc(50% + 252px);
+            width: 100%;
+            text-align: center;
+            padding: 40px 0;
+            background: #838282;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo"><a href="#">Valley Festival</a></h1>
+        </header>
+        <section>
+            <nav id="gnb">
+                <div class="subBg"></div>
+                <ul class="main">
+                    <li>
+                        <a href="#">축제소개</a>
+                        <ul class="sub">
+                            <li><a href="#">Festival 소개</a></li>
+                            <li><a href="#">행사장 안내</a></li>
+                            <li><a href="#">조직위원회</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">예약안내</a>
+                        <ul class="sub">
+                            <li><a href="#">예약하기</a></li>
+                            <li><a href="#">예약확인/취소</a></li>
+                            <li><a href="#">단체예약문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">아티스트</a>
+                        <ul class="sub">
+                            <li><a href="#">고릴라즈</a></li>
+                            <li><a href="#">메이저 레이저</a></li>
+                            <li><a href="#">아우스게인</a></li>
+                            <li><a href="#">타임로드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">사진갤러리</a></li>
+                            <li><a href="#">영상갤러리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <h2>2017 Jisan Valley <b>Rock Music & Arts Festival</b></h2>
+            <div class="slide">
+                <ul>
+                    <li><img src="images/slide1.png" alt="Valley Festival1"></li>
+                    <li><img src="images/slide2.png" alt="Valley Festival2"></li>
+                    <li><img src="images/slide3.png" alt="Valley Festival3"></li>
+                    <li><img src="images/slide1.png" alt="Valley Festival1"></li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <p>Copyright 2023 Valley Festival. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('.main > li').mouseenter(function () {
+                $('.sub').stop().slideDown();
+                $('.subBg').stop().animate({ height: 150 });
+            });
+            $('.main > li').mouseleave(function () {
+                $('.sub').stop().slideUp();
+                $('.subBg').stop().animate({ height: 0 });
+            });
+        });
+    </script>
+</body>
+
+</html>
