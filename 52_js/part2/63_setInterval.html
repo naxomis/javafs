@@ -22,6 +22,8 @@
             // 정지
             clearInterval(): setInterval() 메서드 제거
 
+            setInterval
+
             const 변수 = setInterval(function(){
                 코드;
             }, 시간);
@@ -34,14 +36,6 @@
             clearInterval(참조변수);
         */
 
-        /* 
-            // 요소 선택
-            document.getElementById('id명');
-            document.getElementsByClassName('class명');
-            document.getElementsByTagName('tag명');
-            document.querySelector('선택자'); -> 하나만 있을때
-            document.querySelectorAll('선택자'); -> 여러개 있을때
-        */
         // 변수 선언
         let increase = 0, 
             decrease = 1000;
@@ -62,12 +56,15 @@
          */
          let auto1, auto2;
          btn1.onclick = function(){
+            // 1초마다 add 호출
              auto1 = setInterval(add, 1000);
          };
          btn2.onclick = function(){
+            // auto1 정지
              clearInterval(auto1);
          };
          btn3.onclick = play;
+
          btn4.onclick = stop;
 
          function play() {

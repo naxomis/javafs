@@ -13,12 +13,39 @@
     <div id="info"></div>
 
     <script>
-        /* 
+        /*
             요소.createElement(노드명) ~ 요소에 요소 노드 추가
             요소.createAttribute(속성명) ~ 요소에 속성 추가
             요소.setAttributeNode(노드명) ~ 요소에 속성 연결
             부모노드.appendChild(자식노드) ~ 부모 노드에 자식 노드 연결
+
+            속성: value
         */
+        /*
+            div 박스 안에 assets 폴더에 있는 pic_1.jpg 파일을 이미지로 삽입하십시오.
+
+            메서드: 
+            A.createElement(b) ~ A에  b 요소를 생성
+            A.appendChild(b) ~ A에 b를 추가
+
+            A.createAttribute(b) ~ A에 속성 b를 생성
+            A.setAttributeNode(b)~ A에 속성노드 b를 설정
+
+            속성: value
+        */
+
+        const divTag = document.querySelector('#info');
+        const imgTag = document.createElement('img');
+        const srcAlttr = document.createAttribute('src');
+        const altAlttr = document.createAttribute('alt');
+        imgTag.setAttributeNode(srcAlttr);
+        imgTag.setAttributeNode(altAlttr);
+        srcAlttr.value = '../assets/pic_1.jpg';
+        altAlttr.value = '이미지';
+        info.appendChild(imgTag);
+
+
+
 
     </script>
 </body>

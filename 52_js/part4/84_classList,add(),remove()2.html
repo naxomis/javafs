@@ -26,28 +26,34 @@
 </head>
 
 <body>
-    <ul>
-        <li>클래스 추가</li>
-        <li>클래스 제거</li>
-    </ul>
+    <button id="btn1">클래스 추가</button>
+    <button id="btn2">클래스 제거</button>
     <div></div>
 
     <script>
         /* 
-            요소.classList.add('클래스') ~ 요소의 클래스 추가
-            요소.classList.remove('클래스') ~ 요소의 클래스 제거 
+            요소.classList.add('클래스1', '클래스2'...) ~ 요소의 클래스 추가
+            요소.classList.remove('클래스', '클래스2'...) ~ 요소의 클래스 제거
+        */
+        /* 
+            클래스 추가 버튼을 클릭하면
+            아래 회색 박스에 .on 클래스를 추가하고,
+            클래스 제거 버튼을 크릭하면
+            아래 회색 박스에 .on 클래스를 제거한다
         */
 
-        const li0 = document.querySelectorAll('li')[0];
-        const li1 = document.querySelectorAll('li')[1];
+        const addBtn = document.querySelector('.btn1');
+        const removeBtn = document.querySelector('btn2');
         const box = document.querySelector('div');
 
-        li0.onclick = function(){
+        addBtn.onclick = function() {
             box.classList.add('on');
-        };
-        li1.onclick = function(){
+        }
+        removeBtn.onclick = function() {
             box.classList.remove('on');
-        };
+        }
+        
+
     </script>
 </body>
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            width: 200px;
+            height: 400px;
+            padding: 20px;
+            border: 5px solid rgb(1, 1, 61);
+            margin: 50px;
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /* 
+            $('선택자').width() ~ 콘텐츠 가로 크기
+            $('선택자').height() ~ 콘텐츠 세로 크기
+            $('선택자').innerwidth() ~ 패딩포함 가로 크기
+            $('선택자').innerheight() ~ 패딩포함 세로 크기
+            $('선택자').outerwidth() ~ 패딩, 보더 포함 가로 크기
+            $('선택자').outerheight() ~ 패딩, 보더 포함 세로 크기
+            $('선택자').outerwidth(true) ~ 마진, 패딩, 보더 포함 가로 크기
+            $('선택자').outerheight(true) ~ 마진, 패딩, 보더 포함 세로 크기
+        */
+        /* 
+            파란색 박스를 클릭하면
+            박스의 가로 크기만큼 높이를 줄여라
+
+            속성: offsettWidth, style.height
+        */
+
+        const box = $('div');
+
+        box.click(function() {
+            const h = box.innerWidth();
+            box.css({height: h});
+            console.log(h);
+        });
+
+    </script>
+</body>
+
+</html>

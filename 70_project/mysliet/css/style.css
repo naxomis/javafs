@@ -29,7 +29,7 @@ header i {
 #home {
     position: relative;
     height: 930px;
-    background: url(../images/section1.png) no-repeat 50% 50%/ cover fixed;
+    background: url(../images/section1\(1\)_1.jpg) no-repeat 50% 50%/ cover fixed;
 }
 
 /* 요소를 부모 안에 정가운데 배치 */

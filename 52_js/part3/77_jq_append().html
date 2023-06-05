@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>요소 추가하기</h1>
+    <div id="info">내용</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /* 
+            $('선택자a').createElement('선택자b') ~ 요소a에 요소 요소b 생성
+
+            #info::after
+            #info::before
+
+            before<div id="info">(::before)prepend내용append(::after)</div>after
+            A.append(b) ~ A에 b 추가
+            A.prepend(b) ~ A에 b 추가
+            b.appendTo(A) ~ A에 b 추가
+            b.prependTo(A) ~ A에 b 추가
+
+            A.after(b) ~ A에 b 추가
+            A.before(b) ~ A에 b 추가
+
+            before<div id="info">prepend내용DOM이란? Docoument Objet Model의 줄임말이다.</div>after
+        */
+
+        /* 
+            #info 박스에 p요소를 생성하고,
+            p요소의 내용으로 'DOM이란? Docoument Objet Model의 줄임말이다.'을 생성하여
+            #info 박스에 추가하시오.
+            #info 박스의 p요소 아래에 
+            img요소를 생성(src는 'pic_htmltree')하여 #info 박스의 p요소 아래에 추가하시오.
+
+            메서드: createElement(), creteTextNode(), append(), setAttribute()
+        */
+
+        const info = $('#info');
+        const para1 = '<p>append</p>';
+        const para2 = '<p>prepend</p>';
+        const para3 = '<p>before</p>';
+        const para4 = '<p>after</p>';
+        const imgTag = '<img src="../assets/pic_htmltree.png">';
+        // const para2 = document.createElement('p');
+        // const para3 = document.createElement('p');
+        // const para4 = document.createElement('p');
+
+        info.append(para1);
+        info.prepend(para2);
+        info.before(para3);
+        info.after(para4);
+        info.append(imgTag);
+
+    </script>
+</body>
+
+</html>
