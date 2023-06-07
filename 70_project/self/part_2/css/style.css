@@ -92,6 +92,72 @@ header {
     display: none;
 }
 
+/* slide */
+#slide {
+    overflow: hidden;
+}
+#slide ul {
+    position: relative;
+    display: flex;
+    left: 0;
+    width: 400%;
+    animation: slide 15s infinite;
+}
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+
+    2% {
+        left: -100%;
+    }
+
+    20% {
+        left: -100%;
+    }
+    22% {
+        left: -200%;
+    }
+
+    40% {
+        left: -200%;
+    }
+
+    42% {
+        left: -300%;
+    }
+
+    60% {
+        left: -300%;
+    }
+    62% {
+        left: -400%;
+    }
+
+    80% {
+        left: -400%;
+    }
+    82% {
+        left: -500%;
+    }
+
+    90% {
+        left: -500%;
+    }
+
+    92% {
+        left: -600%;
+    }
+
+    99.99% {
+        left: -600%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
 
 /* section common */
 .container {
