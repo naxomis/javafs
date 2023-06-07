@@ -7,40 +7,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS+JS</title>
     <style>
-        .box {
-            width: 800px;
+        .vid {
+            width: 400px;
+            margin-top: 30px;
         }
-        .box video {
+        .vid video {
             width: 100%;
-        }
-        .btnSet li {
-            float: left;
-            margin: 0 20px;
-            font: bold 18px/2 arial;
-            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
-    <div class="box">
+    <div class="btnSet">
+        <button class="load">처음으로</button>
+        <button class="play">재생</button>
+        <button class="pause">일시정지</button>
+    </div>
+    <div class="vid">
         <video>
-            <source src="../assets/mov_bbb.mp4" type="video/mp4">
+            <source src="../assets/video/uber_main_220126.mp4" type="video/mp4">
         </video>
     </div>
-
-    <ul class="btnSet">
-        <li class="load">load</li>
-        <li class="play">play</li>
-        <li class="pause">pause</li>
-    </ul>
 
     <script>
         /* 
             비디오요소.load() ~ 비디오 불러오기
             비디오요소.play() ~ 비디오 재생하기
-            비디오요소.pause() ~ 비디오 불러오기
+            비디오요소.pause() ~ 비디오 일시정지
         */
+        /* 
+            '처음으로' 버튼을 클릭하면
+            비디오 영상이 처음 위치로 돌아가게
+            '실행' 버튼을 클릭하면
+            비디오 영상이 실행되게
+            '일시정지' 버튼을 클릭하면
+            비디오 영상이 일시정지되게 하시오.
+
+            이벤트: click
+            메서드: loca(), play(), pause()
+        */
+
+        const loadBtn = document.querySelector('.load');
+        const playBtn = document.querySelector('.play');
+        const pauseBtn = document.querySelector('.pause');
+        const vid = document.querySelector('video');
+
+
+        loadBtn.onclick = videoStop;
+        playBtn.onclick = videoPlay;
+        pauseBtn.onclick = videoPauset;
+
+        // 비디오 처음으로
+        function videoStop() {
+            vid.load();
+        }
+        // 비디오 실행
+        function videoPlay() {
+            vid.play();
+        }
+        // 비디오 일시정지
+        function videoPauset() {
+            vid.pause();
+        }
+
+        /* loadBtn.onclick = function(){
+            vid.load();
+        };
+        playBtn.onclick = function(){
+            vid.play();
+        };
+        pauseBtn.onclick = function(){
+            vid.pause();
+        }; */
+
 
     </script>
 </body>

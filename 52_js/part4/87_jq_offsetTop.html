@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            top: 300px;
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <button>버튼</button>
+    <span>offsetTop</span>
+    <div></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /* 
+            요소.offsetTop ~ 창 끝에서 요소의 y축 위치 반환
+        */
+        /* 
+            버튼을 클릭하면
+            span요소에 div으 창으로 수직 위치를 span요소에 표시하십시오.
+
+            이벤트: click
+            메서드: offset(), text()
+            속성: top
+        */
+        const btn = $('button');
+        const val = $('span');
+        const box = $('div');
+
+        // btn을 클릭하면 함수 실행
+        btn.click(function(){
+            // 박스의 창으로부터 수직위치
+            let ot = box.offset().top;
+            // span 요소의 내용으로 ot 지정
+            val.text(ot);
+        });
+
+    </script>
+</body>
+
+</html>

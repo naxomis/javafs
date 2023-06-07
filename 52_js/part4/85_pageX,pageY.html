@@ -22,6 +22,29 @@
             e.pageX ~ 현재 문서 기준으로 이벤트가 발생한 가로 위치 반환
             e.pageY ~ 현재 문서 기준으로 이벤트가 발생한 세로 위치 반환
         */
+        /* 
+            마우스의 움직임에 따른 마우스 x위치와 y위치를
+            .posX와 .posY에 표시하세요.
+        */
+
+        /* window.onmousemove = function(e) {
+            let x = e.pageX
+            let y = e.pageY
+            document.querySelector('.posX').innerText = x;
+            document.querySelector('.posY').innerText = y;
+        } */
+
+        const posX = document.querySelector('.posX');
+        const posY = document.querySelector('.posY');
+        
+        window.onmousemove = function(e){
+            let x = e.pageX;
+            let y = e.pageY;
+            posX.innerText = x;
+            posY.innerText = y;
+
+        }
+
 
     </script>
 </body>

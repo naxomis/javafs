@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        div {
+            position: relative;
+            width:100px;
+            height:100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div>박스</div>
+
+    <script>
+        const box = document.querySelector('div');
+        let posX = 0;
+        let posY = 0;
+        
+        document.addEventListener('keydown', function(e){
+            let key = e.key;
+            console.log(key);
+            if (key === 'ArrowRight') {
+                posX += 10;
+                box.style.left = posX + 'px';
+            }
+            if (key === 'ArrowLeft') {
+                posX -= 10;
+                box.style.left = posX + 'px';
+            }
+            if (key === 'ArrowDown') {
+                posY += 10;
+                box.style.top = posY + 'px';
+            } 
+            if (key === 'ArrowUp') {
+                posY -= 10;
+                box.style.top = posY + 'px';
+            }
+        });
+    </script>
+</body>
+</html>

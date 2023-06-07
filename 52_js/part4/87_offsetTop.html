@@ -8,21 +8,43 @@
     <title>HTML+CSS+JS</title>
     <style>
         div {
+            position: absolute;
+            left: 0;
+            top: 300px;
             width: 200px;
             height: 200px;
             background: blue;
-            margin-top: 300px;
         }
     </style>
 </head>
 
 <body>
+    <button>버튼</button>
+    <span>offsetTop</span>
     <div></div>
 
     <script>
         /* 
             요소.offsetTop ~ 창 끝에서 요소의 y축 위치 반환
         */
+        /* 
+            버튼을 클릭하면
+            span요소에 div으 창으로 수직 위치를 span요소에 표시하십시오.
+
+            이벤트: click
+            속성: offsetTop, innerText
+        */
+        const btn = document.querySelector('button');
+        const val = document.querySelector('span');
+        const box = document.querySelector('div');
+
+        // btn을 클릭하면 함수 실행
+        btn.onclick = function(){
+            // 박스의 창으로부터 수직위치
+            let ot = box.offsetTop;
+            // span 요소의 내용으로 ot 지정
+            val.innerText = ot;
+        }
 
     </script>
 </body>

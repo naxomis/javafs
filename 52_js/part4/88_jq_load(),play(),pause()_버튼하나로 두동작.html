@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        .vid {
+            position: relative;
+            width: 400px;
+            margin-top: 30px;
+        }
+
+        .vid video {
+            width: 100%;
+        }
+
+        .btn {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            cursor: pointer;
+            text-indent: -999em;
+        }
+        .btn::after {
+            content: '';
+            position: absolute;
+            left: 58%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-left: 40px solid #fff;
+            border-bottom: 25px solid transparent;
+        }
+        .btn.on::after {
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="vid">
+        <video>
+            <source src="../assets/video/uber_main_220126.mp4" type="video/mp4">
+        </video>
+        <span class="btn">버튼</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /* 
+            비디오요소.load() ~ 비디오 불러오기
+            비디오요소.play() ~ 비디오 재생하기
+            비디오요소.pause() ~ 비디오 일시정지
+        */
+        /* 
+            버튼을 처음 클릭하면 비디오가 실행되고
+            두 번째 클릭하면 비디오가 일시정지되도록 하시오.
+            -> 토글 버튼을 만드시오.
+            토글(): 두 가지 상태를 번갈아 반복
+
+            이벤트: click
+            메서드: loca(), play(), pause(), get(), addClass(), removeClass()
+            제어문: if
+        */
+
+        const btn = $('.btn');
+        const box = $('span')
+        const vid = $('video').get(0);
+        btn.click(vidPlay);
+
+        let num = 0;
+        function vidPlay() {
+            if (num === 0) {
+                vid.play();
+                num = 1;
+                btn.addClass('on');
+            } else {
+                vid.pause();
+                num = 0;
+                btn.removeClass('on');
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
