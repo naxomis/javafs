@@ -48,6 +48,22 @@
         /* 
             children('선택자') ~ 자식만
         */
+       /* 
+            마우스휠 조정시 위아래로 한 칸씩 섹션이동시킨다.
+
+            이벤트: mousewheel
+            메서드: next(), prev() 
+            제어문: if
+
+            // 마우스 이벤트
+            $('선택자').mousewheel(function(e, delta){
+                if (delta > 0) {
+                    // 마우스휠을 위로
+                } else if (delta < 0) {
+                    // 마우스휠을 아래로
+                }
+            });
+       */
 
         const box = $(box);
         const txt = box.children('p');
@@ -61,7 +77,7 @@
                 $(this).style.background = 'blue';
                 txt.html('마우스휠을 올렸다.');
             }
-        };
+        });
     </script>
 </body>
 

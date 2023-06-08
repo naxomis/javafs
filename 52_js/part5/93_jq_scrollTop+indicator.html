@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullPage</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        #fullpage div {
+            height: 100vh;
+        }
+
+        .section {
+            text-align: center;
+            font-size: 3em;
+            line-height: 100vh;
+        }
+
+        #section1 {
+            background: #ffc4c4;
+        }
+
+        #section2 {
+            background: #a7dfff;
+        }
+
+        #section3 {
+            background: #84ffb5;
+        }
+
+        #section4 {
+            background: #ef76ff;
+        }
+
+        #indicator {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            width: 30px;
+            height: 120px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #indicator li {
+            position: relative;
+        }
+
+        #indicator li a {
+            display: block;
+            width: 5px;
+            height: 5px;
+            margin: 20px 0;
+            border-radius: 50%;
+            background: #fff;
+            transition: transform .5s;
+            text-align: center;
+            text-indent: -9999em;
+        }
+
+        #indicator li a:hover {
+            transform: scale(2.2);
+        }
+
+        #indicator li a:hover+span {
+            opacity: 1;
+        }
+
+        #indicator li a.on {
+            transform: scale(2.5);
+        }
+
+        #indicator li a.on+span {
+            opacity: 1;
+        }
+
+        #indicator span {
+            position: absolute;
+            right: 40px;
+            top: -8px;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div id="section1" class="section">section1</div>
+        <div id="section2" class="section">section2</div>
+        <div id="section3" class="section">section3</div>
+        <div id="section4" class="section">section4</div>
+    </div>
+
+    <ul id="indicator">
+        <li><a href="#section1" class="on">section1</a><span>section1</span></li>
+        <li><a href="#section2">section2</a><span>section2</span></li>
+        <li><a href="#section3">section3</a><span>section3</span></li>
+        <li><a href="#section4">section4</a><span>section4</span></li>
+    </ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script>
+
+
+        $('.section').mousewheel(function (e, delta) {
+
+            if (delta > 0) {
+                // 마우스휠을 위로 올림
+                // idx = 0, 1, 2, 3
+                try {
+                    let prev = $(this).prev().offset().top;
+                    console.log(prev);
+                    $('html').stop().animate({ scrollTop: prev });
+                } catch (err) {
+                    return false;
+                }
+            } else if (delta < 0) {
+                // 마우스휠을 아래로 내림
+                // idx = 0, 1, 2, 3
+                try {
+                    let next = $(this).next().offset().top;
+                    console.log(next);
+                    $('html').stop().animate({ scrollTop: next });
+                } catch (err) {
+                    return false;
+                }
+            }
+        });
+
+        $('html').stop().animate({ scrollTop: 0 });
+
+        $('#indicator a').click(function (e) {
+            // a 태그의 기본이벤트 제거
+            e.preventDefault();
+            let idx = $(this).parent().index();
+            console.log(idx);
+            let posY = $('.section').eq(idx).offset().top;
+            $('html, body').stop().animate({ scrollTop: posY });
+
+            $('#indicator a').removeClass('on');
+            $(this).addClass('on');
+        });
+        
+
+
+    </script>
+</body>
+
+</html>

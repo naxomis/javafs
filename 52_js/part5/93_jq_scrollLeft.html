@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullPage</title>
+    <style>
+        * {
+            margin:0;
+        }
+        body {
+            overflow-y: hidden;
+        }
+        #fullpage {
+            display: flex;
+        }
+
+        #fullpage div {
+            height: 100vh;
+            flex:  0 0 100%;
+        }
+
+        #section1 {
+            background: #ffc4c4;
+        }
+
+        #section2 {
+            background: #a7dfff;
+        }
+
+        #section3 {
+            background: #84ffb5;
+        }
+
+        #section4 {
+            background: #f1ff98;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div id="section1" class="section">섹션1</div>
+        <div id="section2" class="section">섹션2</div>
+        <div id="section3" class="section">섹션3</div>
+        <div id="section4" class="section">섹션4</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script>
+
+        /* 
+            마우스휠 조정시 위아래로 한 칸씩 섹션이동시킨다.
+            
+            이벤트: mousewheel
+            메서드: next(), prev(), offset().top, animate(), stop()
+            속성: scrollTop
+            제어문: if
+
+            // mousewheel 이벤트 형식
+            $('선택자').mousewheel(function(e, delta){
+                if (delta > 0) {
+                    // 마우스휠을 위로 올림
+                } else if (delta < 0) {
+                    // 마우스휠을 아래로 내림
+                }
+            });
+        */
+
+        $('.section').mousewheel(function(e, delta){
+
+                if (delta > 0) {
+                    // 마우스휠을 위로 올림
+                    let prev = $(this).prev().offset().left;
+                    console.log(prev);
+                    // css({속성: 값})
+                    // ainmate({속성: 값})
+                    $('html').stop().animate({scrollLeft: prev});
+                } else if (delta < 0) {
+                    // 마우스휠을 아래로 내림
+                    // idx = 0, 1, 2, 3
+                    let next = $(this).next().offset().left;
+                    console.log(next);
+                    $('html').stop().animate({scrollLeft: next});
+                }
+            });
+
+        
+
+    </script>
+</body>
+
+</html>

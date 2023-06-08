@@ -28,6 +28,8 @@
             border: 3px solid #fff;
             cursor: pointer;
             text-indent: -999em;
+            opacity: 0;
+            transition: .3s;
         }
         .btn::after {
             content: '';
@@ -40,7 +42,7 @@
             height: 0;
             border-top: 25px solid transparent;
             border-left: 40px solid #fff;
-            border-bottom: 25px solid transparent;
+            border-bottom: 25px solid transparent; 
         }
         .btn.on::after {
             left: 50%;
@@ -96,6 +98,12 @@
                 btn.removeClass('on');
             }
         }
+        $('.vid').mouseenter(function(){
+            btn.css({opacity: 1})
+        });
+        $('.vid').mouseleave(function(){
+            btn.css({opacity: 0})
+        });
 
 
     </script>

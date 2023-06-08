@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullPage</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        li {
+            list-style:none;
+        }
+
+        #fullpage div {
+            height: 100vh;
+        }
+
+        #section1 {
+            background: #FF5F45;
+        }
+
+        #section2 {
+            background: #0798EC;
+        }
+
+        #section3 {
+            background: #FC6C7C;
+        }
+
+        #section4 {
+            background: #FEC401;
+        }
+
+        #indicator {
+            position: fixed;
+            right:0;
+            top:50%;
+            transform: translateY(-50%);
+            color: #fff;
+            width:30px;
+            height:120px;
+        }
+        #indicator li {
+            position: relative;
+        }
+        #indicator li a {
+            display: block;
+            width:5px;
+            height:5px;
+            margin: 20px 0;
+            border-radius: 50%;
+            background: #fff;
+            transition: transform .5s;
+            text-align: center;
+            text-indent: -9999em;
+        }
+        #indicator li a:hover {
+            transform: scale(2.2);
+        }
+        #indicator li a:hover + span {
+            opacity: 1;
+        }
+        #indicator li a.on {
+            transform: scale(2.5);
+        }
+        #indicator li a.on + span {
+            opacity: 1;
+        }
+        #indicator span {
+            position: absolute;
+            right:40px;
+            top:-8px;
+            opacity:0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 섹션 -->
+    <div id="fullpage">
+        <div id="section1" class="section">섹션1</div>
+        <div id="section2" class="section">섹션2</div>
+        <div id="section3" class="section">섹션3</div>
+        <div id="section4" class="section">섹션4</div>
+    </div>
+
+    <!-- 오른쪽 내비게이션 -->
+    <ul id="indicator">
+        <li><a href="#section1" class="on">section1</a><span>section1</span></li>
+        <li><a href="#section2">section2</a><span>section2</span></li>
+        <li><a href="#section3">section3</a><span>section3</span></li>
+        <li><a href="#section4">section4</a><span>section4</span></li>
+    </ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+
+    <script>
+        $('html').stop().animate({scrollTop: 0});
+
+        $('#indicator a').click(indicator);
+
+        function indicator() {
+            let idx = $(this).parent().index();
+            console.log(idx);
+            let posY = $('.section').eq(idx).offset().top;
+            $('html,body').stop().animate({scrollTop: posY});
+            tooltip(idx);
+        }
+
+        function tooltip(index) {
+            $('#indicator a').removeClass('on');
+            $('#indicator a').eq(index).addClass('on');
+        }
+
+        $('.section').mousewheel(function (e, delta) {
+            if (delta > 0) {
+                // 마우스휠을 위로 올림
+                try {
+                    tooltip($(this).index() - 1);
+                    let prev = $(this).prev().offset().top;
+                    console.log(prev);
+                    $('html').stop().animate({ scrollTop: prev });
+                } catch (err) {
+                    return false;
+                }
+            } else if (delta < 0) {
+                // 마우스휠을 아래로 내림
+                try {
+                    tooltip($(this).index() + 1);
+                    let next = $(this).next().offset().top;
+                    console.log(next);
+                    $('html').stop().animate({ scrollTop: next });
+                } catch (err) {
+                    return false;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

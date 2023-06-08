@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullpage.js</title>
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css");
+
+        #section1 {
+            background: lightblue;
+        }
+
+        #section2 {
+            background: lightcyan;
+        }
+
+        #section3 {
+            background: lightcoral;
+        }
+
+        #section4 {
+            background: lightgreen;
+        }
+
+        #footer {
+            padding: 100px 0;
+            background: #111;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+            <div class="section" id="section1">섹션1</div>
+            <div class="section" id="section2">섹션2</div>
+            <div class="section" id="section3">섹션3</div>
+            <div class="section" id="section4">섹션4</div>
+            <div class="section fp-auto-height" id="footer">푸터</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <script>
+        $(function () {
+            $('#wrap').fullpage();
+        });
+    </script>
+</body>
+
+</html>
