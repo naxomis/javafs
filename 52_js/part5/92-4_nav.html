@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        /* reset */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 10px;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* GNB(Global Navigation Bar) */
+        nav {
+            z-index: 99999;
+            position: relative;
+            height: 31px;
+            background: red;
+        }
+
+        .nav_bg {
+            position: absolute;
+            left: 0;
+            top: 31px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        /* 크기, 색, 굵기 등으로 폰트의 위계를 지정한다. */
+        /* 1depth: main */
+        .main {
+            display: flex;
+            justify-content: center;
+        }
+        .main>li {
+            /* 삼각형 모양 기준 */
+            position: relative;
+            width: 160px;
+            /* 메인메뉴와 서브메뉴 모두 텍스트 가운데 */
+            text-align: center;
+        }
+        .main>li>a {
+            display: block;
+            padding: 5px 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .main>li>a:hover {
+            background: #ccc;
+            color: #333;
+        }
+
+        .main>li>a:hover:after {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            content: '';
+            height: 0;
+            border-top: 10px solid;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            color: #ccc;
+        }
+
+        /* 2depth: sub */
+        .sub {
+            display: none;
+            padding: 15px 0;
+        }
+
+        .sub a {
+            color: #ccc;
+            font-size: 1.4rem;
+            line-height: 2;
+            font-weight: 300;
+            padding: 3px 12px;
+        }
+
+        .sub a:hover {
+            background: rgba(255, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav#gnb>ul.main>li*4>a{메인메뉴$}+ul.sub>li*4>a{서브메뉴$} -->
+    <nav id="gnb">
+        <div class="nav_bg"></div>
+        <ul class="main">
+            <li><a href="#">메가스토리</a>
+                <ul class="sub">
+                    <li><a href="#">브랜드</a></li>
+                    <li><a href="#">BI</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메뉴소개</a>
+                <ul class="sub">
+                    <li><a href="#">음료</a></li>
+                    <li><a href="#">푸드</a></li>
+                    <li><a href="#">상품</a></li>
+                </ul>
+            </li>
+            <li><a href="#">창업안내</a>
+                <ul class="sub">
+                    <li><a href="#">개설비용</a></li>
+                    <li><a href="#">인테리어</a></li>
+                    <li><a href="#">창업문의</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메가소식</a>
+                <ul class="sub">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">고객의소리</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        // 내비게이션바
+        $('.main > li > a').mouseenter(function (e) {
+            // a태그 기본 이벤트 제거
+            e.preventDefault();
+            $('.sub').stop().slideDown(400);
+            $('.nav_bg').stop().animate({ height: 150 }, 400);
+        });
+        $('nav').mouseleave(function () {
+            $('.sub').stop().slideUp(400);
+            $('.nav_bg').stop().animate({ height: 0 }, 400);
+        });
+    </script>
+</body>
+
+</html>

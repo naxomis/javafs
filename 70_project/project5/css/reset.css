@@ -1,8 +1,8 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -18,16 +18,18 @@ img {
     width: 100%;
     vertical-align: top;
 }
-/* 목록의 마커 제거 */
+
 li {
     list-style: none;
 }
-
 button {
     background: transparent;
     border: none;
 }
-
+video {
+    width: 100%;
+    /* height: 100%; */
+}
 iframe {
     width: 100%;
     height: 100%;

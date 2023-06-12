@@ -32,8 +32,8 @@
                         <li><a href="#">이용요금</a></li>
                         <li><a href="#">운송약관</a></li>
                         <li><a href="#">층별안내</a></li>
-                        <li><a href="#">산책질&스카이워크 안내</a></li>
-                        <li><a href="#">식음 부대시설</a></li>
+                        <li><a href="#">산책길&스카이워크 안내</a></li>
+                        <li><a href="#">식음&부대시설</a></li>
                         <li><a href="#">주의사항</a></li>
                     </ul>
                 </li>
@@ -76,11 +76,11 @@
     </section>
     <section id="slide" class="section">
         <h2>사계절</h2>
-        <ul>
-            <li><a href="#"><img src="" alt=""></a></li>
-            <li><a href="#"><img src="" alt=""></a></li>
-            <li><a href="#"><img src="" alt=""></a></li>
-            <li><a href="#"><img src="" alt=""></a></li>
+        <ul class="slide">
+            <li><a href="#"><img src="images/gallery_01.png" alt="봄"></a></li>
+            <li><a href="#"><img src="images/gallery_02.png" alt="여름"></a></li>
+            <li><a href="#"><img src="images/gallery_03.png" alt="가을"></a></li>
+            <li><a href="#"><img src="images/gallery_04.png" alt="겨울"></a></li>
         </ul>
     </section>
     <section id="scroll" class="section">
@@ -95,7 +95,8 @@
     <script>
         $('.main > li').mouseenter(function () {
             $('.sub').stop().slideDown();
-            $('.nav_bg').stop().animate({ height: 175 });
+            $('.nav_bg').stop().animate({ height: 250
+             });
         });
         $('nav').mouseleave(function () {
             $('.sub').stop().slideUp();
