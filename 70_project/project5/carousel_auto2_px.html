@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carousel - auto</title>
+    <style>
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 슬라이드 */
+        #slideWrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 1400px;
+            background: #000;
+            overflow: hidden;
+        }
+
+
+        .slider {
+            display: flex;
+            /* 슬라이더의 left 값 지정하기 위해 */
+            position: relative;
+        }
+
+        .slider.on {
+            /* 슬라이더가 오른쪽에서 왼쪽으로 부드럽게 움직임 */
+            transition: .3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slideWrap">
+        <ul class="slider">
+            <li><img src="images/20220704081439_1656890079400_EeS9YeXQA1 1.png" alt="이미지1"></li>
+            <li><img src="images/20221115115722_1668481042253_hp4__WS6Mv 1.png" alt="이미지2"></li>
+            <li><img src="images/20230116143247_1673847167570_5FhyAUaevx (1) 1.png" alt="이미지3"></li>
+            <li><img src="images/20230531170638_1685520398277_AJaTBICnub 1.png" alt="이미지4"></li>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        const slider = $('.slider'),
+            sliderItem = $('.slider').find('li'),
+            // 이미지 하나의 가로 크기
+            sliderItemWidth = 100,
+            // 이미지 총 개수: 현재 이미지 4개 + 복제본 2개
+            sliderItemCount = sliderItem.length + 2;
+        let num = 1;
+
+        // 요소의 가로 크기
+        // 탬플릿 리터럴(Template Literal): 백틱
+        /* 
+        // 형식: `${변수}문자열` -> 문자열은 변수와 구분되어 그대로 표시된다.
+        // 형식: `${변수 * 변수}문자열` -> 중괄호 {} 안에서 연산도 가능하다. 
+        */
+
+        // slider.width(sliderItemWidth * sliderItemCount + '%');
+        // ul의 크기: li의 가로 크기 * li의 개수
+        slider.width(`${sliderItemWidth * sliderItemCount}%`);
+        sliderItem.width(`${sliderItemWidth}%`);
+        // 슬라이드의 처음 위치
+        slider.css({ left: `${-1 * sliderItemWidth}%` });
+
+        /* 
+            A.clone() ~ A를 복제
+
+            before<p>prepend나는 문단이다append</p>after
+            A는 p태그, b는 span이라고 하면
+            A.append(b) ~ 내용 귀
+            A.prepend(b) ~ 내용 앞
+            A.after(b) ~ A에 b를 태그 이후
+            A.before(b) ~ A에 b를 태그 이전
+
+            b.appendTo(A) ~ A에 b를 내용 뒤에 삽입
+            b.prependTo(A) ~ A에 b를 내용 앞에 삽입
+        */
+
+        // 처음과 마지막 이미지 복제
+        // clone()
+        const sliderFirstItem = slider.find('li:first-of-type');
+        const sliderLastItem = slider.find('li:last-of-type');
+        // slider에 마자막 li를 복제하여 slider의 앞에 붙인다.
+        sliderLastItem.clone().prependTo(slider);
+        // slider에 첫번째 li를 복제하여 slider의 뒤에 붙인다.
+        sliderFirstItem.clone().appendTo(slider);
+
+        function slide() {
+            num++;
+            slider.addClass('on');
+            if (num > sliderItem.length) {
+                num = 1;
+                // transition 효과 제거
+                slider.removeClass('on');
+                moveSlide(num - 1);
+            }
+            setTimeout(function () {
+                // transition 효과 지정
+                slider.addClass('on');
+                moveSlide(num);
+            }, 100);
+        }
+
+        function moveSlide(cnt) {
+            let posX = cnt * sliderItemWidth * -1;
+            slider.css({ left: posX + '%' });
+            return false;
+        }
+
+        // 자동 슬라이드
+        // 2초 마다 slide를 호출한다.
+        setInterval(slide, 2000);
+
+    </script>
+</body>
+
+</html>

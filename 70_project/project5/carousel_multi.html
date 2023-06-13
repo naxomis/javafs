@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Carousel</title>
+    <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        #slideWrap {
+            position: relative;
+            width: 1500px;
+            margin: 0 auto;
+        }
+        /* prev/next */
+        #slideWrap .btn {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            height: 50px;
+            z-index: 999;
+            transform: translateY(-50%);
+            width: 100%;
+        }
+
+        #slideWrap .btn a {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            line-height: 1;
+            font-size: 5rem;
+            color: #fff;
+            transition: color .3s;
+        }
+
+        #slideWrap .btn a:hover {
+            color: #000121;
+        }
+
+        #slideWrap #prev {
+            left: 10%;
+        }
+
+        #slideWrap #next {
+            right: 10%;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script>
+        $(function () {
+            const slider = $('.multiSlider').bxSlider({
+                pager: false,
+                controls: false,
+                // 하나의 이미지 가로크기
+                slideWidth: 360,
+                // 최소 슬라이드 수
+                minSlides: 1,
+                // 최대 슬라이드 수
+                maxSlides: 4,
+                // 움직이는 슬라이드 수
+                moveSlides: 1,
+                // 이미지 사이 여백
+                slideMargin: 20
+            });
+
+            // 이전 버튼
+            $('#slideWrap #prev').click(function (e) {
+                e.preventDefault();
+                // 이전 슬라이드로 이동
+                slider.goToPrevSlide();
+                autoPager();
+                return false;
+            });
+            // 이후 버튼
+            $('#slideWrap #next').click(function (e) {
+                e.preventDefault();
+                // 다음 슬라이드로 이동
+                slider.goToNextSlide();
+                autoPager();
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="slideWrap">
+
+        <!-- 슬라이드 배경 이미지 -->
+        <ul class="multiSlider">
+            <li><img src="images/20220704081439_1656890079400_EeS9YeXQA1 1.png" alt="슬라이드1"></li>
+            <li><img src="images/20221115115722_1668481042253_hp4__WS6Mv 1.png" alt="슬라이드2"></li>
+            <li><img src="images/20230116143247_1673847167570_5FhyAUaevx (1) 1.png" alt="슬라이드3"></li>
+            <li><img src="images/20230531170638_1685520398277_AJaTBICnub 1.png" alt="슬라이드4"></li>
+        </ul>
+
+        <!-- 이전/이후 버튼 -->
+        <!-- 폰트어썸 -->
+        <div class="btn">
+            <a href="#" id="prev"><i class="fa-regular fa-circle-left"></i></a>
+            <a href="#" id="next"><i class="fa-regular fa-circle-right"></i></a>
+        </div>
+    </div>
+</body>
+
+</html>

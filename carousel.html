@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+        /* 캐로셀 */
+        /* layout */
+        #slideWrap {
+            position: relative;
+            padding: 0 3%;
+        }
+
+        #slideWrap .slider li {
+            padding: 150px 0;
+            text-align: center;
+        }
+
+        #slideWrap .slider li span {
+            position: relative;
+            top: 100px;
+            opacity: 0;
+        }
+
+        #slideWrap .slider li img {
+            display: inline-block;
+        }
+
+        /* background */
+        #slideWrap .slider .bg1 {
+            background: #FDD000;
+        }
+
+        #slideWrap .slider .bg2 {
+            background: #e1c47b;
+        }
+
+        #slideWrap .slider .bg3 {
+            background: #FFEFCA;
+        }
+
+        #slideWrap .slider .bg4 {
+            background: #09ebd0;
+        }
+
+        /* prev/next */
+        #slideWrap .btn {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            height: 100px;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+
+        #slideWrap .btn a {
+            position: absolute;
+        }
+
+        #slideWrap .prev {
+            left: 8%;
+        }
+
+        #slideWrap .next {
+            right: 8%;
+        }
+
+        /* pager */
+        #slideWrap .pager {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #slideWrap .pager a {
+            float: left;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid #999;
+            margin: 0 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #slideWrap .pager a img {
+            opacity: 0;
+            transform: translate(-40%, -40%);
+            transition: 0.5s;
+        }
+
+        #slideWrap .pager a.active img {
+            opacity: 1;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script>
+        $(function () {
+            $('.slider').bxSlider({
+                // 자동 슬라이드
+                auto: true,
+                stopAutoOnClick: true,
+                // 실행/일시정지 버튼
+                // autoControls: true,
+                // 내비게이션(인디케이터, 페이저)
+                pager: false,
+                // 이전/이후 버튼
+                controls: false,
+                // 전환 시간
+                speed: 400,
+                pause: 3000
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="slideWrap">
+
+        <!-- 슬라이드 이미지 -->
+        <ul class="slider">
+            <li class="bg1"><img src="images/pic_1.png" alt="커피 이미지1"></li>
+            <li class="bg2"><img src="images/pic_2.png" alt="커피 이미지2"></li>
+            <li class="bg3"><img src="images/pic_3.png" alt="커피 이미지3"></li>
+            <li class="bg4"><img src="images/pic_4.png" alt="커피 이미지4"></li>
+        </ul>
+
+        <!-- 페이저 -->
+        <div class="pager">
+            <a class="active"><img src="images/d1.png" alt="페이저1"></a>
+            <a><img src="images/d2.png" alt="페이저2"></a>
+            <a><img src="images/d3.png" alt="페이저3"></a>
+            <a><img src="images/d4.png" alt="페이저4"></a>
+        </div>
+
+        <!-- 이전/이후 버튼 -->
+        <!-- 폰트어썸 -->
+        <div class="btn">
+            <a href="#" class="prev"><i class="fa-regular fa-circle-left"></i></a>
+            <a href="#" class="next"><i class="fa-regular fa-circle-right"></i></a>
+        </div>
+    </div>
+</body>
+
+</html>

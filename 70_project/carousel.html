@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /* 캐로셀 */
+        /* layout */
+        #slideWrap {
+            position: relative;
+            /* padding: 0 3%; */
+            height: 100vh;
+            background: red;
+        }
+
+        #slideWrap .slider li {
+            height: 100vh;
+            padding: 150px 0;
+            text-align: center;
+            background: no-repeat 50% 50%;
+        }
+
+        #slideWrap .slider li div {
+            position: relative;
+            top: 70px;
+            font-size: 2rem;
+            line-height: 1.8;
+            opacity: 0;
+        }
+
+        #slideWrap .slider li div span {
+            display: block;
+            font-size: 3.5rem;
+        }
+
+        #slideWrap .slider li img {
+            display: inline-block;
+        }
+
+        /* background */
+        #slideWrap .slider .bg1 {
+            background-color: #FDD000;
+            background-image: url(images/pic_1.png);
+        }
+
+        #slideWrap .slider .bg2 {
+            background-color: #e1c47b;
+            background-image: url(images/pic_2.png);
+        }
+
+        #slideWrap .slider .bg3 {
+            background-color: #FFEFCA;
+            background-image: url(images/pic_3.png);
+        }
+
+        #slideWrap .slider .bg4 {
+            background-color: #09ebd0;
+            background-image: url(images/pic_4.png);
+        }
+
+        /* 이전/이후 버튼 */
+        #slideWrap .btn {
+            z-index: 999;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 50px;
+        }
+
+        #slideWrap .btn a {
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 5rem;
+            color: #fff;
+            transition: color .3s;
+        }
+
+        #slideWrap .btn a:hover {
+            color: #333;
+        }
+
+        #slideWrap #prev {
+            left: 10%;
+        }
+
+        #slideWrap #next {
+            right: 10%;
+        }
+
+        /* 페이저 */
+        #slideWrap .pager {
+            display: flex;
+            z-index: 999;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #slideWrap .pager a {
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid #999;
+            margin: 0 15px;
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        #slideWrap .pager a img {
+            opacity: 0;
+            transform: translate(-40%, -40%);
+            transition: .5s;
+        }
+
+        #slideWrap .pager a.active img {
+            opacity: 1;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script>
+        $(function () {
+            const slider = $('.slider').bxSlider({
+                // mode: 'horizontal',
+                // mode: 'vertical',
+                mode: 'fade',
+                // 자동 슬라이드
+                auto: true,
+                // 컨트롤 버튼(좌우, 페이저)를 클릭하면 auto 일시 정지
+                stopAutoOnClick: true,
+                // 슬라이드 위에 hover하면 auto 일시 정지
+                autoHover: true,
+                // 실행/일시정지 버튼
+                // autoControls: true,
+                // 내비게이션(인디케이터, 페이저)
+                pager: false,
+                // 이전/이후 버튼
+                controls: false,
+                // 전환 시간
+                speed: 400,
+                // 지연 시간(슬라이드가 정지되어 있는 시간)
+                pause: 3000,
+
+                // 슬라이드 전환 직전에 autoPager() 함수를 호출하여 동작 시킴
+                onSlideBefore: function () {
+                    autoPager();
+                },
+                // 슬라이드 전환 직후 titMotion() 함수를 호출하여 동작 시킴
+                onSlideAfter: function () {
+                    titMotion();
+                }
+            });
+
+            function titMotion() {
+                // 슬라이드 전환 직후의 텍스트 모션
+                $('#slideWrap .slider li div').animate({ top: 0, opacity: 1 });
+            }
+
+            function autoPager() {
+                // 페이저의 이미지 변경
+                // 페이저 a태그의 active 클래스 모두 제거
+                $('#slideWrap .pager a').removeClass('active');
+                // 현재 슬라이드 번호를 가져와서 currentIdx에 저장
+                let currentIdx = slider.getCurrentSlide();
+                $('#slideWrap .pager a').eq(currentIdx).addClass('active');
+
+                // 슬라이드 전환 직전의 텍스트 모션
+                $('#slideWrap .slider li div').css({ top: 100, opacity: 0 });
+            }
+
+            // 페이저 버튼
+            $('#slideWrap .pager a').click(function (e) {
+                // a태그의 기본이벤트 제거
+                e.preventDefault();
+                let idx = $(this).index();
+                // idx 번호에 해당하는 위로 슬라이드가 이동
+                slider.goToSlide(idx);
+                return false;
+            });
+
+            // 이전 버튼
+            $('#slideWrap #prev').click(function (e) {
+                e.preventDefault();
+                // 이전 슬라이드로 이동
+                slider.goToPrevSlide();
+                autoPager();
+                return false;
+            });
+            // 이후 버튼
+            $('#slideWrap #next').click(function (e) {
+                e.preventDefault();
+                // 다음 슬라이드로 이동
+                slider.goToNextSlide();
+                autoPager();
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="slideWrap">
+
+        <!-- 슬라이드 배경 이미지 -->
+        <ul class="slider">
+            <li class="bg1">
+                <div class="tit">
+                    <span>Grand Open MGC DECAF Espresso</span>
+                    향과 풍미 그대로 카페인만을 낮춘 엠지씨 디카페인 메뉴 출시
+                </div>
+            </li>
+            <li class="bg2">
+                <div class="tit">
+                    <span>Travel Summer</span>
+                    여름의 시작을 알리는 시원한 웰컴-드링크
+                </div>
+            </li>
+            <li class="bg3">
+                <div class="tit">
+                    <span>Granola S'mores Cookie</span>
+                    건강한 통곡물이 꼭꼭 박힌 그래놀라 스모어 쿠키
+                </div>
+            </li>
+            <li class="bg4">
+                <div class="tit">
+                    <span>Peace of mind</span>
+                    MEGA MGC Teapleasure 카페인 걱정 없는 릴렉싱 블렌드 티
+                </div>
+            </li>
+        </ul>
+
+        <!-- 페이저 -->
+        <div class="pager">
+            <a class="active"><img src="images/d1.png" alt="페이저1"></a>
+            <a><img src="images/d2.png" alt="페이저2"></a>
+            <a><img src="images/d3.png" alt="페이저3"></a>
+            <a><img src="images/d4.png" alt="페이저4"></a>
+        </div>
+
+        <!-- 이전/이후 버튼 -->
+        <!-- 폰트어썸 -->
+        <div class="btn">
+            <a href="#" id="prev"><i class="fa-regular fa-circle-left"></i></a>
+            <a href="#" id="next"><i class="fa-regular fa-circle-right"></i></a>
+        </div>
+    </div>
+</body>
+
+</html>

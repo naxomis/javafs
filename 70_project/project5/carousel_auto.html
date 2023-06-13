@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 슬라이드 */
+        #slideWrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+        }
+
+        .frame {
+            height: 90vh;
+            overflow: hidden;
+        }
+
+        #slideList {
+            display: flex;
+            position: relative;
+        }
+
+        #slideList.on {
+            transition: .3s;
+        }
+
+        /* 좌우 버튼 */
+        .controls {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            background: red;
+        }
+
+        .controls a {
+            position: absolute;
+        }
+
+        #prevBtn {
+            left: calc(50% - 700px);
+        }
+
+        #nextBtn {
+            right: calc(50% - 700px);
+        }
+
+        /* 페이저 */
+        .pager {
+            display: flex;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 60px;
+        }
+
+        .pager li {
+            margin: 0 12px;
+        }
+
+        .pager li.active a {
+            color: red;
+        }
+
+        .pager li a {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slideWrap">
+        <div class="frame">
+            <ul id="slideList">
+                <li><img src="images/20220704081439_1656890079400_EeS9YeXQA1 1.png" alt="이미지1"></li>
+                <li><img src="images/20221115115722_1668481042253_hp4__WS6Mv 1.png" alt="이미지2"></li>
+                <li><img src="images/20230116143247_1673847167570_5FhyAUaevx (1) 1.png" alt="이미지3"></li>
+                <li><img src="images/20230531170638_1685520398277_AJaTBICnub 1.png" alt="이미지4"></li> 
+            </ul>
+        </div>
+        <div class="controls">
+            <a href="#" id="prevBtn">prev</a>
+            <a href="#" id="nextBtn">next</a>
+        </div>
+        <ul class="pager">
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        const slideList = $('#slideList');
+        const slideListItem = $('#slideList').find('li');
+        const prevBtn = $('#prevBtn');
+        const nextBtn = $('#nextBtn');
+        const pager = $('.pager');
+        const pagerList = $('.pager').find('li');
+        let num = 1;
+        const slideListItemWidth = 100;
+        const slideCount = slideListItem.length + 2;
+
+        // 요소의 가로 크기
+        // 탬플릿 리터럴(Template Literal): 백틱(`${변수}문자열`)
+        $('.frame').width(`${slideListItemWidth}%`);
+        slideList.width(`${slideListItemWidth * slideCount}%`);
+        slideListItem.width(`${slideListItemWidth}%`);
+        // 슬라이드의 처음 위치
+        slideList.css({ left: `${-1 * slideListItemWidth}%`});
+
+        // 처음과 마지막 이미지 복제
+        const firstSlideList = slideList.find('li:first-of-type');
+        const lastSlideList = slideList.find('li:last-of-type');
+        lastSlideList.clone().prependTo(slideList);
+        firstSlideList.clone().appendTo(slideList);
+
+        prevBtn.click(prevSlide);
+        nextBtn.click(nextSlide);
+
+        function prevSlide() {
+            clearInterval(timer);
+            slide('prevBtn');
+            pagination(num - 1);
+            timer = setInterval(autoSlide, 2000);
+        }
+        function nextSlide() {
+            clearInterval(timer);
+            slide('nextBtn');
+            pagination(num - 1);
+            timer = setInterval(autoSlide, 2000);
+        }
+        
+        pagerList.click(function () {
+            clearInterval(timer);
+            let idx = $(this).index();
+            pagination(idx);
+            slideList.addClass('on');
+            moveSlide(idx + 1);
+            timer = setInterval(autoSlide, 2000);
+        });
+        
+        function pagination(cnt) {
+            pagerList.removeClass('active');
+            pagerList.eq(cnt).addClass('active');
+        }
+
+        function slide(btn) {
+            if (btn === 'prevBtn') {
+                num--;
+                if (num < 1) {
+                    num = slideListItem.length;
+                    slideList.removeClass('on');
+                    moveSlide(num + 1);
+                }
+            } else {
+                num++;
+                slideList.addClass('on');
+                if (num > slideListItem.length) {
+                    num = 1;
+                    slideList.removeClass('on');
+                    moveSlide(num - 1);
+                }
+            }
+            setTimeout(function () {
+                slideList.addClass('on');
+                moveSlide(num);
+            }, 100);
+        }
+
+        function moveSlide(cnt) {
+            let posX = cnt * slideListItemWidth * -1;
+            slideList.css({ left: posX + '%' });
+            return false;
+
+        }
+
+        let timer = setInterval(autoSlide, 2000);
+
+        function autoSlide() {
+            slide('nextBtn');
+            pagination(num - 1);
+        }
+
+    </script>
+</body>
+
+</html>

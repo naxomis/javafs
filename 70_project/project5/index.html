@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메가커피</title>
+    <title>이디야커피</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
@@ -16,6 +16,7 @@
 
 <body>
     <div id="fullpage">
+        <!-- 섹션1 -->
         <div class="section" id="section1">
             <header id="header">
                 <h1 class="logo"><a href="#"><b>EDIYA COFFEE</b><span>이디야커피</span></a></h1>
@@ -60,25 +61,70 @@
                     <a href="#">회원가입</a>
                 </div>
             </header>
-
             <!-- 비디오는 자동플레이(무음)되면서 무한반복 -->
             <!-- <div class="vid">
                 <video autoplay muted loop>
                     <source src="video/main_video3.mp4" type="video/mp4">
                 </video>
             </div> -->
-            <ul class="bxslider">
-                <li><img src="images/IMG_1684299601480.jpg" alt="상품1"></li>
-                <li><img src="images/IMG_1683620577114.jpg" alt="상품1"></li>
-                <li><img src="images/IMG_1684830624887.jpg" alt="상품1"></li>
-                <li><img src="images/IMG_1685505882410.jpg" alt="상품1"></li>
-                <!-- <li><img src="images/20220704081439_1656890079400_EeS9YeXQA1 1.png" /></li>
-                <li><img src="images/20221115115722_1668481042253_hp4__WS6Mv 1.png" /></li>
-                <li><img src="images/20230116143247_1673847167570_5FhyAUaevx (1) 1.png" /></li>
-                <li><img src="images/20230531170638_1685520398277_AJaTBICnub 1.png" /></li> -->
-              </ul>
+            <div id="slideWrap">
+                <!-- 슬라이드 배경 이미지 -->
+                <ul class="slider">
+                    <li class="bg1">
+                        <div class="tit">
+                            <span>달빛이 머무는 파란 여름 바다</span>
+                            BLUEMOON
+                        </div>
+                    </li>
+                    <li class="bg2">
+                        <div class="tit">
+                            <span>EDIYA COFFEE X LOSTARK</span>
+                            모모코 굿즈 추첨 이벤트
+                        </div>
+                    </li>
+                    <li class="bg3">
+                        <div class="tit">
+                            <span>커피 애호가의 </span>
+                            품격을 완성하다
+                        </div>
+                    </li>
+                    <li class="bg4">
+                        <div class="tit">
+                            <span>COCO PAPADISE</span>
+                            탱글탱글! 달콤한 즐거움
+                        </div>
+                    </li>
+                </ul>
+                <!-- pager -->
+                <div class="pager">
+                    <a class="active"><img src="images/num1.png" alt="페이저1"></a>
+                    <a><img src="images/num2.png" alt="페이저2"></a>
+                    <a><img src="images/num3.png" alt="페이저3"></a>
+                    <a><img src="images/num4.png" alt="페이저4"></a>
+                </div>
+        
+                <!-- prev/next -->
+                <div class="btn">
+                    <a href="#" id="prev"><i class="fa-regular fa-circle-left"></i></a>
+                    <a href="#" id="next"><i class="fa-regular fa-circle-right"></i></a>
+                </div>
+            </div>
         </div>
-        <div class="section" id="section2">SECTION2</div>
+        <!-- 섹션2 -->
+        <div class="section" id="section2">
+                <div class="txt1 txt">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem recusandae temporibus quae ullam sit minima provident quas quia est pariatur excepturi, debitis eius dignissimos molestias quibusdam rerum voluptatibus laudantium corrupti!
+                </div>
+                <div class="txt2 txt">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quo libero amet odit quia dolorem deserunt, pariatur officiis necessitatibus nihil culpa labore tenetur officia molestias architecto temporibus. A tempora error incidunt ex reprehenderit tempore suscipit quia voluptatibus quam sit blanditiis iste, deleniti explicabo ea adipisci unde. Minus, dolor. Dicta, saepe?
+                </div>
+                <a href="#" class="btn">자세히보기</a>
+                <div id="product">
+                    <div class="prod1"></div>
+                    <div class="prod2"></div>
+                    <div class="prod3"></div>
+                </div>
+        </div>
         <div class="section" id="section3">SECTION3</div>
         <div class="section" id="section4">SECTION4</div>
         <div id="footer">footer</div>

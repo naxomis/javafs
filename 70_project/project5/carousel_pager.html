@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 슬라이드 */
+        #slideWrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            position: relative;
+        }
+
+        .slider.on {
+            transition: .3s;
+        }
+
+        /* 페이저 */
+        .pager {
+            display: flex;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 60px;
+        }
+
+        .pager li {
+            margin: 0 12px;
+        }
+
+        .pager li.active a {
+            background: red;
+            width: 30px;
+        }
+
+        .pager li a {
+            display: block;
+            background: #fff;
+            text-indent: -9999em;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            transition: .3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slideWrap">
+        <ul class="slider">
+            <li><img src="images/20220704081439_1656890079400_EeS9YeXQA1 1.png" alt="이미지1"></li>
+            <li><img src="images/20221115115722_1668481042253_hp4__WS6Mv 1.png" alt="이미지2"></li>
+            <li><img src="images/20230116143247_1673847167570_5FhyAUaevx (1) 1.png" alt="이미지3"></li>
+            <li><img src="images/20230531170638_1685520398277_AJaTBICnub 1.png" alt="이미지4"></li>
+        </ul>
+        <ul class="pager">
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        const slider = $('.slider'),
+            sliderItem = $('.slider').find('li'),
+            pager = $('.pager'),
+            pagerLst = $('.pager').find('li'),
+            sliderItemWidth = 100,
+            slideCount = sliderItem.length + 2;
+        let num = 1;
+
+        // 요소의 가로 크기
+        slider.width(`${sliderItemWidth * slideCount}%`);
+        sliderItem.width(`${sliderItemWidth}%`);
+        // 슬라이드의 처음 위치
+        slider.css({ left: `${-1 * sliderItemWidth}%` });
+
+        // 처음과 마지막 이미지 복제
+        const firstslider = slider.find('li:first-of-type');
+        const lastslider = slider.find('li:last-of-type');
+        lastslider.clone().prependTo(slider);
+        firstslider.clone().appendTo(slider);
+
+        // 페이저의 li를 클릭하면 함수 실행
+        pagerLst.click(function () {
+            // $(this)? 클릭한 li 
+            // 클릭한 li을 순번(인덱스: 0, 1, 2, 3)을 idx 변수에 저장
+            let idx = $(this).index();
+            pagination(idx);
+            slider.addClass('on');
+            moveSlide(idx + 1);
+        });
+
+        function pagination(cnt) {
+            // 모든 페이저 li의 active 클래스 제거
+            pagerLst.removeClass('active');
+            // cnt 번째 li의 active 클래스 추가
+            pagerLst.eq(cnt).addClass('active');
+        }
+
+        function slide(btn) {
+            if (btn === 'prevBtn') {
+                num--;
+                if (num < 1) {
+                    num = sliderItem.length;
+                    slider.removeClass('on');
+                    moveSlide(num + 1);
+                }
+            } else {
+                num++;
+                slider.addClass('on');
+                if (num > sliderItem.length) {
+                    num = 1;
+                    slider.removeClass('on');
+                    moveSlide(num - 1);
+                }
+            }
+            setTimeout(function () {
+                slider.addClass('on');
+                moveSlide(num);
+            }, 100);
+        }
+
+        function moveSlide(cnt) {
+            let posX = cnt * sliderItemWidth * -1;
+            slider.css({ left: posX + '%' });
+            return false;
+
+        }
+
+    </script>
+</body>
+
+</html>
