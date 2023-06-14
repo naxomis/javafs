@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭</title>
+    <style>
+        @font-face {
+            font-family: 'MaruBuri-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 10px;
+        }
+        body {
+            font:1.5rem/1.6 'MaruBuri-Regular';
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 탭 메뉴 */
+        /* 탭 버튼 */
+        #tabs .tabBtns {
+            display: flex;
+        }
+
+        #tabs .tabBtns li {
+            margin-bottom: 8px;
+            background: #EBDACA;
+            padding: 4px 16px;
+        }
+        #tabs .tabBtns li a {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #111;
+        }
+
+        #tabs .tabBtns li.on {
+            background: #672F2E;
+        }
+        #tabs .tabBtns li.on a {
+            color: #fff;
+        }
+
+        /* 탭 내용 */
+        #tabs > div {
+            display: none;
+            background: red;
+        }
+        /* tab1만 보인다 */
+        #tabs > #tab1 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tabs">
+        <!-- 제목/버튼 -->
+        <ul class="tabBtns">
+            <li class="on"><a href="#tab1">탭1</a></li>
+            <li><a href="#tab2">탭2</a></li>
+        </ul>
+
+        <!-- 탭1 내용 -->
+        <div id="tab1">
+            <h2>탭1: 마루부리</h2>
+            <p>마루부리, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus aspernatur tempora cumque,
+                exercitationem fugiat officiis repellendus obcaecati itaque aperiam amet explicabo facere autem ipsum
+                sit quisquam aliquam hic esse sed.</p>
+        </div>
+
+        <!-- 탭2 내용 -->
+        <div id="tab2">
+            <h2>탭2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, repellendus.</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /* 
+            탭1을 클릭하면
+            탭1 내용을 화면에 표시(display:block)
+            탭2 내용을 화면에서 숨김(display:none)
+            탭2을 클릭하면
+            탭2 내용을 화면에 표시
+
+            이벤트: click
+            메서드: index(), eq(), addClass(), removeClass()
+            키워드: this
+        */
+        const tabBtn = $('.tabBtns li');
+        const tabCont = $('#tabs > div');
+
+        // tabBtn을 클릭하면 함수 실행
+        tabBtn.click(function(){
+            let idx = $(this).index();
+            // 모든 버튼의 on클래스 제거
+            tabBtn.removeClass('on');
+            // 클릭한 버튼만 on클래스 추가
+            $(this).addClass('on');
+            console.log(idx);
+            // 모든 내용 숨김
+            tabCont.hide();
+            // idx번째에 해당하는 내용만 보임
+            tabCont.eq(idx).show();
+        });
+    </script>
+</body>
+
+</html>

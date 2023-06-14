@@ -1,0 +1,111 @@
+@charset "utf-8";
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron&family=Play&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css');
+@import url('typo.css');
+@import url('nav.css');
+@import url('layout.css');
+
+/* 헤더 */
+#header {
+    z-index: 9999;
+    position: fixed;
+    top:0;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    background: transparent;
+    /* background: #fdd000; */
+}
+
+/* 로고 */
+.logo {
+    text-align: center;
+    letter-spacing: .5rem;
+    line-height: 1.4;
+}
+
+.logo b {
+    display: block;
+    font-weight: normal;
+    font-size: 2.2rem;
+}
+
+.logo span {
+    font-size: 1.6rem;
+}
+
+/* 풀 페이지 비디오 */
+/* .vid {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+} */
+
+/* 섹션1 - 캐로셀 */
+/* 전체 영역 */
+.bx-wrapper {
+    position: relative;
+    margin-bottom: 60px;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+.bx-viewport {
+    height: 100vh !important;
+}
+/* 슬라이드 이미지 */
+.slider li {height: 100vh; background: no-repeat 50% 50%/cover;}
+.slider li:nth-of-type(1) {background-image: url(../images/s4.png);}
+.slider li:nth-of-type(2) {background-image: url(../images/s1.png);}
+.slider li:nth-of-type(3) {background-image: url(../images/s2.png);}
+.slider li:nth-of-type(4) {background-image: url(../images/s3.png);}
+.slider li:nth-of-type(5) {background-image: url(../images/s4.png);}
+.slider li:nth-of-type(6) {background-image: url(../images/s1.png);}
+/* 페이저 */
+.bx-wrapper .bx-pager {
+    bottom: 60px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: transparent;
+    border: 1px solid #555;
+    text-indent: -9999px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 0 12px;
+    outline: 0;
+    border-radius: 50%;
+}
+.bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: #000;
+    transform: scale(1.2);
+    transition: .3s;
+    border: none;
+}
+
+/* 좌우버튼 */
+.bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    width: 78px;
+    height: 78px;
+}
+.bx-wrapper .bx-prev {
+    left: 140px;
+    background: url(../images/btn_slide_prev.png) 0px 0px no-repeat;
+}
+.bx-wrapper .bx-next {
+    right: 140px;
+    background: url(../images/btn_slide_next.png) 0px 0px no-repeat;
+}
+.bx-wrapper .bx-next:focus, .bx-wrapper .bx-next:hover {
+    background-position: 0px 0;
+}

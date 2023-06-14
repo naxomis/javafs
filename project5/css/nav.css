@@ -1,0 +1,83 @@
+/* GNB(Global Navigation Bar) */
+#gnb {
+    z-index: 99999;
+    position: relative;
+    height: 94px;
+}
+
+.nav_bg {
+    position: absolute;
+    left: 0;
+    /* 메인메뉴 높이만큼 내려준다. */
+    top: 94px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* 크기, 색, 굵기 등으로 폰트의 위계를 지정한다. */
+/* 1depth: main */
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.main>li {
+    /* 삼각형 모양 기준 */
+    position: relative;
+    width: 160px;
+    /* 메인메뉴와 서브메뉴 모두 텍스트 가운데 */
+    text-align: center;
+}
+
+.main>li>a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 0;
+    line-height: 94px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #101010;
+}
+
+.main>li>a:hover {
+    color: #333;
+}
+
+.main>li>a::after {
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    transform: scaleX(0);
+    transition: .3s;
+    width: 100%;
+    border: 1px solid #705b00;
+    color: #ccc;
+}
+
+.main>li>a:hover:after {
+    transform: scaleX(1);
+}
+
+/* 2depth: sub */
+.sub {
+    display: none;
+    padding: 15px 0;
+}
+
+.sub a {
+    color: #ccc;
+    font-size: 1.6rem;
+    line-height: 2;
+    font-weight: 300;
+    padding: 3px 12px;
+}
+
+.sub a:hover {
+    color: #fdd000;
+}
+
+/* 로그인/회원가입 */
+.member a {
+    margin: 0 8px;
+}

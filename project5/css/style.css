@@ -87,35 +87,23 @@
 
 /* background */
 #slideWrap .slider .bg1 {
-    /* background-color: #243c84;
-    background-image: url(../images/pic_1.png); */
-     background: url(../images/pic_1.png), linear-gradient(#ab9aff, #243c84);
-    background-repeat: no-repeat, no-repeat;
-    background-position: center center;
+    background-color: #FDD000;
+    background-image: url(../images/pic_1.png);
 }
 
 #slideWrap .slider .bg2 {
-    /* background-color: #52305c;
-    background-image: url(../images/pic_2.png); */
-    background: url(../images/pic_2.png), linear-gradient(#b1ffd7, #243c84);
-    background-repeat: no-repeat, no-repeat;
-    background-position: center center;
+    background-color: #e1c47b;
+    background-image: url(../images/pic_2.png);
 }
 
 #slideWrap .slider .bg3 {
-    /* background-color: #5c5137;
-    background-image: url(../images/pic_3.png); */
-    background: url(../images/pic_3.png), linear-gradient(#a89f8b, #243c84);
-    background-repeat: no-repeat, no-repeat;
-    background-position: center center;
+    background-color: #FFEFCA;
+    background-image: url(../images/pic_3.png);
 }
 
 #slideWrap .slider .bg4 {
-    /* background-color: #365c58;
-    background-image: url(../images/pic_4.png); */
-    background: url(../images/pic_4.png), linear-gradient(#a796fc, #243c84);
-    background-repeat: no-repeat, no-repeat;
-    background-position: center center;
+    background-color: #09ebd0;
+    background-image: url(../images/pic_4.png);
 }
 
 /* 이전/이후 버튼 */
@@ -183,7 +171,6 @@
     opacity: 1;
 }
 
-
 /* 섹션2 - ??? */
 #section2 {
     position: relative;
@@ -205,20 +192,20 @@
     padding: 10px 18px;
 }
 
-#section2 .txt {
+.txt {
     position: absolute;
     width: 360px;
     transition: 2s;
     text-align: right;
 }
 
-#section2 .txt1 {
+.txt1 {
     left: -800px;
     top: 220px;
     height: 210px;
 }
 
-#section2 .txt2 {
+.txt2 {
     left: -400px;
     top: 448px;
     height: 160px;
@@ -243,7 +230,7 @@
     top: 90px;
     width: 255px;
     height: 350px;
-    background: rgb(255, 200, 200);
+    background: red;
     transform: rotate(-18deg);
 }
 
@@ -257,7 +244,7 @@
     top: 0;
     width: 250px;
     height: 350px;
-    background: rgb(198, 255, 198);
+    background: green;
 }
 
 #product .prod3 {
@@ -265,125 +252,6 @@
     top: 65px;
     width: 325px;
     height: 445px;
-    background: rgb(192, 192, 255);
+    background: blue;
     transform: rotate(18deg);
-}
-/* 섹션3 - 탭() */
-#section3 {
-    position: relative;
-}
-
-#section3 .innerWrap {
-    position: absolute;
-    width: 1460px;
-    height: 660px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* thumbnail image */
-#section3 .thumb {
-    position: absolute;
-    left: 0;
-    width: 360px;
-}
-
-#section3 .thumb li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    font-size: 1.8rem;
-    cursor: pointer;
-}
-
-#section3 .thumb li img {
-    width: 110px;
-}
-
-#section3 .thumb li.active {
-    border-bottom: 2px solid #243c84;
-    font-size: 2.2rem;
-    color: #243c84;
-}
-
-#section3 .thumb span {
-    margin-left: 20px;
-}
-
-/* 큰 이미지 갤러리 */
-#section3 .big {
-    position: absolute;
-    left: 400px;
-    top: 0;
-    width: 580px;
-    height: 660px;
-    /* overflow: hidden; */
-}
-
-#section3 .big li {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* display 속성은 tranition 효과가 적용되지 않는다. */
-    /* transition: .3s; */
-}
-#section3 .big li.active {
-    display: block;
-}
-
-/*         .big li:first-child {
-    left: 0;
-} */
-
-/* 텍스트 애니메이션 */
-#section3 .txt {
-    position: absolute;
-    left: 980px;
-    width: 410px;
-    margin-left: 70px;
-}
-
-#section3 .txt li {
-    position: absolute;
-    top: 30px;
-    opacity: 0;
-    transition: .3s;
-}
-
-#section3 .txt li.active {
-    top: 0;
-    opacity: 1;
-}
-
-#section3 .txt h2 {
-    margin-bottom: 50px;
-    color: #005295;
-    font-size: 2.9rem;
-}
-
-#section3 .txt h3 {
-    font-size: 7rem;
-    font-weight: 400;
-    margin-bottom: 40px;
-    letter-spacing: -3.5px;
-}
-
-#section3 .txt p {
-    margin: 0 0 30px 100px;
-    font-size: 1.8rem;
-    line-height: 30px;
-    font-weight: 200;
-    font-family: 'Arita-dotum-Regular', sans-serif;
-}
-
-#section3 .txt button {
-    margin-left: 100px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-    font-size: 1.8rem;
 }

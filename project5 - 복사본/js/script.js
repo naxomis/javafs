@@ -13,10 +13,10 @@ $(function () {
         $('.nav_bg').stop().animate({ height: 0 }, 400);
     });
 
-    // 비디오 자동플레이
+    // 섹션1 - 비디오 자동플레이
     // $('video').get(0).play();
 
-    // 섹션1 캐러셀
+    // 섹션1 - 캐로셀
     const slider = $('.slider').bxSlider({
         // mode: 'horizontal',
         // mode: 'vertical',
@@ -92,43 +92,26 @@ $(function () {
         return false;
     });
 
-
-    // 섹션2
+    // 섹션2 - ???
     const sec2 = $('#section2'),
         btn = sec2.find('.btn'),
         txt1 = sec2.find('.txt1'),
         txt2 = sec2.find('.txt2');
+
     $(window).scroll(function () {
         let st = $(this).scrollTop();
         let stVal = 600;
         console.log(st);
 
         if (st >= stVal) {
-            btn.css({ opacity: 1 });
-            txt1.css({ left: 360 + 'px' });
-            txt2.css({ left: 360 + 'px' });
+            btn.css({opacity: 1});
+            txt1.css({left: 360 + 'px'});
+            txt2.css({left: 360 + 'px'});
         } else {
-            btn.css({ opacity: 0 });
-            txt1.css({ left: -800 + 'px' });
-            txt2.css({ left: -400 + 'px' });
+            btn.css({opacity: 0});
+            txt1.css({left: -800 + 'px'});
+            txt2.css({left: -400 + 'px'});
         }
-    });
-
-    // 섹션3: 탭()
-    const tabBtn = $('#section3 .thumb li'),
-        bigImg = $('#section3 .big li'),
-        txt = $('#section3 .txt li');
-
-
-    tabBtn.click(function () {
-        let idx = $(this).index();
-        tabBtn.removeClass('active');
-        bigImg.removeClass('active');
-        txt.removeClass('active');
-        $(this).addClass('active');
-        bigImg.eq(idx).addClass('active');
-        txt.eq(idx).addClass('active');
-
     });
 
     // 풀페이지 레이아웃
@@ -173,4 +156,3 @@ $(function () {
         }
     });
 });
-

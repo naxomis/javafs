@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <style>
+        @font-face {
+            font-family: 'aaaa';
+            /* font-family: 'MaruBuri-Regular'; */
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 10px;
+        }
+        body {
+            font:1.5rem/1.6 'aaaa';
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #tabs {
+            width: 1120px;
+            margin: 0 auto;
+        }
+        /* 탭 메뉴 */   
+        /* 탭버튼 */
+        #tabs .tabBtns {
+            display: flex;
+        }
+        #tabs .tabBtns li {
+            margin-bottom: 8px;
+            padding: 4px 16px;
+        }
+        #tabs .tabBtns li a {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #111;
+        }
+
+        #tabs .tabBtns li.on a {
+            color: #208FB3;
+        }
+
+        /*  탭내용 */
+        #tabs > div {
+            display: none;
+            background: #fcd5d5;
+        }
+        #tabs div div {
+            background: #bba9a9;
+        }
+
+        #tabs div div img {
+            width: 225px;
+            height: 168px;
+        }
+        #tabs div .first img {
+            width: 576px;
+            height: 430px;
+        }
+        /* on클래스가 있는것만 보여준다 */
+        #tabs > div.on {
+            display: flex;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="tabs">
+        <!-- 제목/버튼 -->
+        <ul class="tabBtns">
+            <li class="on"><a href="#tab1">전체</a></li>
+            <li><a href="#tab2">2~30대</a></li>
+            <li><a href="#tab2">40대</a></li>
+            <li><a href="#tab2">50대</a></li>
+        </ul>
+
+        <!-- 탭1 내용 -->
+        <div id="tab1" class="on">
+            <div class="first">
+                <img src="images/img-1.jpg" alt="디 올 뉴 그랜저">
+                <span>1위. 디 올 뉴 그랜저 Hybrid</span>
+            </div>
+            <div>
+                <img src="images/img-2.jpg" alt="투싼">
+                <span>2위. 투싼 Hybrid</span>
+            </div>
+            <div>
+                <img src="images/img-3.jpg" alt="싼타페">
+                <span>1위. 싼타페 Hybrid</span>
+            </div>
+        </div>
+        
+        <!-- 탭2 내용 -->
+        <div id="tab2">
+            <div class="first">
+                <img src="images/img-1.jpg" alt="디 올 뉴 그랜저">
+                <span>1위. 디 올 뉴 그랜저 Hybrid</span>
+            </div>
+            <div>
+                <img src="images/img-2.jpg" alt="투싼">
+                <span>2위. 투싼 Hybrid</span>
+            </div>
+            <div>
+                <img src="images/img-3.jpg" alt="싼타페">
+                <span>3위. 싼타페 Hybrid</span>
+            </div>
+        </div>
+
+        <!-- 탭3 내용 -->
+        <div id="tab3">
+            <div class="first">
+                <img src="images/img-1.jpg" alt="디 올 뉴 그랜저">
+                    <span>1위. 디 올 뉴 그랜저 Hybrid</span>
+            </div>
+            <div>
+                <img src="images/img-3.jpg" alt="싼타페">
+                    <span>2위. 싼타페 Hybrid</span>
+            </div>
+            <div>
+                <img src="images/img-2.jpg" alt="투싼">
+                    <span>3위. 투싼 그랜저 Hybrid</span>
+            </div>
+        </div>
+        <!-- 탭4 내용 -->
+        <div id="tab4">
+            <div class="first">
+                <img src="images/img-1.jpg" alt="디 올 뉴 그랜저">
+                <span>1위. 디 올 뉴 그랜저 Hybrid</span>
+            </div>
+            <div>
+                <img src="images/img-2.jpg" alt="투싼">
+                <span>2위. 투싼 Hybrid</span>
+            </div>
+            <div>
+                <img src="images/img-3.jpg" alt="싼타페">
+                <span>3위. 싼타페 Hybrid</span>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /* 
+            탭1을 클릭하면
+            탭1 내용을 화면에 표시(display: block)
+            탭2 내용을 화면에 표시(display: none)
+            탭2을 클릭하면
+            탭1 내용을 화면에 표시(display: none)
+            탭2 내용을 화면에 표시(display: block)
+
+            이벤트: click
+            메서드: index(), eq(), addClass(), removeClass()
+            키워드: this
+        */
+        const tabBtn = $('.tabBtns li');
+        const tabCont = $('#tabs > div');
+
+        //tabBtn을 클릭하면 함수 실행
+        tabBtn.click(function(){
+            let idx = $(this).index();
+            // 클릭한 버튼만 on클래스 추가
+            $(this).addClass('on').siblings().removeClass('on');
+            // idx번째에 해당하는 내용만 보임
+            tabCont.eq(idx).addClass('on').siblings().removeClass('on');
+        });
+    </script>
+</body>
+
+</html>

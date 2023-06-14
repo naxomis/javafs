@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <style>
+        @font-face {
+            font-family: 'aaaa';
+            /* font-family: 'MaruBuri-Regular'; */
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 10px;
+        }
+        body {
+            font:1.5rem/1.6 'aaaa';
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #contents div {
+            width: 380px;
+            height: 200px;
+        }
+
+        /* 탭 메뉴 */   
+        /* 탭버튼 */
+        #tabs .tabBtns {
+            display: flex;
+        }
+
+        #tabs .tabBtns li {
+            margin-bottom: 8px;
+            background: rgb(255, 255, 205);
+            padding: 4px 16px;
+            
+        }
+        #tabs .tabBtns li a {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #111;
+        }
+
+        #tabs .tabBtns li.on {
+            background: #004E27;
+        }
+        #tabs .tabBtns li.on a {
+            color: #fff;
+        }
+
+        /*  탭내용 */
+        #tabs > div {
+            display: none;
+            background: #fcd5d5;
+        }
+        
+        #tabs > div.on {
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="tabs">
+        <!-- 제목/버튼 -->
+        <ul class="tabBtns">
+            <li class="on"><a href="#tab1">탭1</a></li>
+            <li><a href="#tab2">탭2</a></li>
+            <li><a href="#tab3">탭3</a></li>
+            <li><a href="#tab4">탭4</a></li>
+        </ul>
+
+        <!-- 탭1 내용 -->
+        <div id="tab1" class="on">
+            <h2>탭1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eos beatae magnam, aliquid a quos non
+                dolor aperiam adipisci totam nulla explicabo nisi quis laborum eveniet quisquam, at necessitatibus. Sed!
+            </p>
+        </div>
+
+        <!-- 탭2 내용 -->
+        <div id="tab2">
+            <h2>탭2</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, sit.</p>
+        </div>
+
+        <!-- 탭3 내용 -->
+        <div id="tab2">
+            <h2>탭3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, facilis exercitationem facere ipsam debitis quas reiciendis deleniti in consequatur quos voluptates. Dolore eius laborum esse non quam quisquam placeat assumenda rem corporis dolorum eligendi pariatur atque, tempore temporibus reprehenderit! Perferendis.</p>
+        </div>
+        
+        <!-- 탭4 내용 -->
+        <div id="tab2">
+            <h2>탭4</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+    <script>
+        /* 
+            탭1을 클릭하면
+            탭1 내용을 화면에 표시(display: block)
+            탭2 내용을 화면에 표시(display: none)
+            탭2을 클릭하면
+            탭1 내용을 화면에 표시(display: none)
+            탭2 내용을 화면에 표시(display: block)
+
+            이벤트: click
+            메서드: classList.add(), classList.remove()
+            키워드: this
+        */
+        const tabBtn = document.querySelectorAll('.tabBtns li');
+        const tabCont = document.querySelectorAll('#tabs > div');
+
+        //tabBtn을 클릭하면 함수 실행
+        for (let i = 0; i < tabBtn.length; i++) {
+        tabBtn[i].onclick = function(){
+            tabBtn.classList.remove('on');
+            this.classList.add('on');
+
+            tabCont.classList.remove('on');
+            tabCont.classList.add('on');
+        };
+    }
+            /* 
+                    cosnt 배열 = [1, 2, 3];
+
+                    for (let 변수 in 객체){ 코드 } -> 주로 배열
+                    for ( of ){ 코드 } -> NodeList
+
+
+                    for (let idx = 0; 배열.length; idx++){
+                        요소[idx].style.color = 'red';
+                    } -> 주로 배열
+                    for ( of ){} -> NodeList
+                    */
+            
+                /* for (let ele in tabBtn) {
+                    tabBtn[ele].classList.remove('on');
+                }
+                 */
+                /* for (let ele of tabBtn) {
+                    // ele -> rabBtn[0] ~ tabBtn[3]
+                    ele.classList.remove('on');
+                }
+                tabCont[i].classList.add('on'); */
+    </script>
+</body>
+
+</html>

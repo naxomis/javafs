@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현대차 탭메뉴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+
+        .wrap {
+            width: 1400px;
+            height: 800px;
+            margin: 0 auto;
+            padding-top: 100px;
+            border: 5px solid black;
+            display: flex;
+            position: relative;
+        }
+
+        .wrap>div {
+            width: 50%;
+            height: 800px;
+            padding: 16px;
+        }
+
+        .no1 {
+            width: 432px;
+            height: 576px;
+        }
+
+        .no1 img {
+            width: 100%;
+            height: auto;
+        }
+
+        .btn_wrap {
+            width: 100%;
+            display: flex;
+        }
+
+        button {
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+        }
+
+        .name1 {
+            padding-left: 50px;
+            font-size: 36px;
+            margin-top: 40px;
+            margin-bottom: 120px;
+        }
+
+        .img_wrap {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .img_wrap img {
+            width: 224px;
+        }
+
+        .name_wrap {
+            font-size: 32px;
+            margin-top: 16px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="no1">
+            <img src="images/img-1.jpg" alt="그렌저">
+        </div>
+        <div class="no2">
+            <div class="btn_wrap">
+                <button>전체</button>
+                <button>2~30대</button>
+                <button>40대</button>
+                <button>50대</button>
+            </div>
+            <div class="name1">1위. <span>디 올 뉴 그렌저 Hybrid</span></div>
+            <div class="img_wrap">
+                <img src="images/img-2.jpg" alt="투싼">
+                <img src="images/img-3.jpg" alt="싼타페">
+            </div>
+            <div class="name_wrap">
+                <span class="name2">2위. <span>투싼 Hybrid</span></span>
+                <span class="name3">3위. <span>싼타페 Hybrid</span></span>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        const btn = $(".btn_warp button"),
+            no1 = $(".name1 span"),
+            no2 = $(".name2 span"),
+            no3 = $(".name3 span");
+        console.log(btn);
+        topImg1 = $(".no1 img");
+        topImg2 = $(".img_wrap img:nth-of-type(1)");
+        topImg3 = $(".img_wrap img:nth-of-type(2)");
+
+        btn.click(function () {
+            let idx = $(this).index();
+            if (idx === 2) {
+                tab3()
+            } else {
+                tabs();
+            }
+        });
+        console.log(btn);
+        function tabs() {
+            topImg1.attr("src", "images/img-1.jpg");
+            topImg2.attr("src", "images/img-2.jpg");
+            topImg3.attr("src", "images/img-3.jpg");
+            no1.html("디 올 뉴 그렌저 Hybrid");
+            no2.html("투싼 Hybrid");
+            no3.html("싼타페 Hybrid");
+        }
+        function tabs3() {
+            topImg1.attr("src", "images/img-1.jpg");
+            topImg2.attr("src", "images/img-3.jpg");
+            topImg3.attr("src", "images/img-2.jpg");
+            no1.html("디 올 뉴 그렌저 Hybrid");
+            no2.html("싼타페 Hybrid");
+            no3.html("투싼 Hybrid");
+        }
+
+       
+
+        
+
+
+    </script>
+</body>
+
+
+</html>

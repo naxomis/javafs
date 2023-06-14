@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭-아모레퍼시픽</title>
+    <style>
+        @font-face {
+            font-family: 'MaruBuri-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff');
+        }
+
+        @font-face {
+            font-family: 'Arita-dotum-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Regular.woff');
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-size: 1.5rem;
+            font-family: 'MaruBuri-Regular', sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        #act {
+            position: absolute;
+            width: 1460px;
+            height: 660px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* thumbnail image */
+        .thumb {
+            position: absolute;
+            left: 0;
+            width: 360px;
+        }
+
+        .thumb li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            font-size: 1.8rem;
+        }
+
+        .thumb li img {
+            width: 110px;
+        }
+
+        .thumb li.active {
+            border-bottom: 2px solid #ffa500;
+            font-size: 2.2rem;
+            color: #ffa500;
+        }
+
+        .thumb span {
+            margin-left: 20px;
+        }
+
+        /* 큰 이미지 갤러리 */
+        .big {
+            position: absolute;
+            left: 400px;
+            top: 0;
+            width: 580px;
+            height: 660px;
+            /* overflow: hidden; */
+        }
+
+        .big li {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* display 속성은 tranition 효과가 적용되지 않는다. */
+            /* transition: .3s; */
+        }
+        .big li.active {
+            display: block;
+        }
+
+/*         .big li:first-child {
+            left: 0;
+        } */
+
+        /* 텍스트 애니메이션 */
+        .txt {
+            position: absolute;
+            left: 980px;
+            width: 410px;
+            margin-left: 70px;
+        }
+
+        .txt li {
+            position: absolute;
+            top: 30px;
+            opacity: 0;
+            transition: .3s;
+        }
+
+        .txt li.active {
+            top: 0;
+            opacity: 1;
+        }
+
+        .txt h2 {
+            margin-bottom: 50px;
+            color: #005295;
+            font-size: 2.9rem;
+        }
+
+        .txt h3 {
+            font-size: 7rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+            letter-spacing: -3.5px;
+        }
+
+        .txt p {
+            margin: 0 0 30px 100px;
+            font-size: 1.8rem;
+            line-height: 30px;
+            font-weight: 200;
+            font-family: 'Arita-dotum-Regular', sans-serif;
+        }
+
+        .txt button {
+            margin-left: 100px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            font-size: 1.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="act" class="section">
+        <!-- 썸네일 이미지와 텍스트 이미지 (110*110) -->
+        <ul class="thumb">
+            <li class="active">
+                <img src="images/thumb1.png" alt="BARISTA's COFFEE"><span>BARISTA's COFFEE</span>
+            </li>
+            <li>
+                <img src="images/thumb2.png" alt="베이커리"><span>베이커리</span>
+            </li>
+            <li>
+                <img src="images/thumb3.png" alt="희망가게"><span>음료</span>
+            </li>
+            <li>
+                <img src="images/thumb4.png" alt="설화수 Beauty from Your Culture"><span>모모코굿즈 추첨 이벤트</span>
+            </li>
+            <li>
+                <img src="images/thumb5.png" alt="이니스프리 PLAYGREEN"><span>이니스프리 PLAYGREEN</span>
+            </li>
+        </ul>
+        <!-- 가운데 큰 이미지 이미지 (110*110) -->
+        <ul class="big">
+            <li class="active"><img src="images/big1.png" alt="메이크업 유어 라이프"></li>
+            <li><img src="images/big2.png" alt="베이커리"></li>
+            <li><img src="images/big3.png" alt="음료"></li>
+            <li><img src="images/big4.png" alt="모모코굿즈 추첨 이벤트"></li>
+            <li><img src="images/big5.png" alt="이니스프리 PLAYGREEN"></li>
+        </ul>
+        <ul class="txt">
+            <li class="active">
+                <h2>ALWAYS BESIDE YOU, <br>EDIYA</h2>
+                <h3>BARISTA's<br>COFFEE</h3>
+                <p>암 치료 과정에서 갑작스러운 외모 변화로 힘들어하는 환자들을 위해 메이크업 및 피부관리 등 스스로를 아름답게 가꿀 수 있는 노하우를 전하는 캠페인입니다. 아모레 카운셀러 봉사단의
+                    뷰티 노하우로 일상으로 빠르게 복귀할 수 있도록 지원하고자 합니다.</p>
+                <button>더보기 &gt;</button>
+            </li>
+            <li>
+                <h2>ALWAYS BESIDE YOU, <br>EDIYA</h2>
+                <h3>핑크리본<br> 캠페인</h3>
+                <p>여성이 자신의 몸에 대한 관심을 가지고, 건강한 삶을 살 수 있도록 지원하는 캠페인 입니다. 특히 유방 건강 관리의 중요성을 알리기 위해 유방암 자가 검진 교육 '핑크투어', 유방암
+                    조기 발견의 중요성을 알리는 러닝 페스티벌 '핑크런'을 함께 진행하고 있습니다.</p>
+                <button>더보기 &gt;</button>
+            </li>
+            <li>
+                <h2>ALWAYS BESIDE YOU, <br>EDIYA</h2>
+                <h3>음료</h3>
+                <p>한부모 여성의 자립을 위한 창업대출지원 사업으로서 경제적, 사회적 자립을 지원하고 있습니다. 4천 만원까지 보증 없이 신용대출(마이크로크레딧)을 지원하고, 상환금은 ‘희망의 씨앗
+                    자금’으로 쌓여 창업을 준비하는 또 다른 한부모 여성에게 기회가 돌아갈 수 있게 합니다.</p>
+                <button>더보기 &gt;</button>
+            </li>
+            <li>
+                <h2>ALWAYS BESIDE YOU, <br>EDIYA</h2>
+                <h3>모모코굿즈 추첨 이벤트</h3>
+                <p>설화문화전을 전신으로 하여 2017년 탄생한 설화수의 글로벌 사회공헌 캠페인 Beauty from Your Culture는 한국을 넘어 아시아 지역의 전통문화 보전과 계승에
+                    기여하고, 설화문화전을 통해 지난 10여년간 이어온 문화메세나 활동을 해외로 확장시키기 위한 활동입니다.</p>
+                <button>더보기 &gt;</button>
+            </li>
+            <li>
+                <h2>ALWAYS BESIDE YOU, <br>EDIYA</h2>
+                <h3>이니스프리 PLAYGREEN</h3>
+                <p>그린라이프는 결코 어렵고 지루한 것이 아닌 놀이가 될 수 있다는 생각! 이니스프리의 플레이그린(PLAYGREEN) 입니다. 365일 일상에서 놀이처럼 즐기는 지구를 위한 모든 활동이
+                    플레이그린에 포함됩니다. 에코손수건과 공병 캠페인처럼 일상에서 놀이처럼 즐기는 활동으로 지구를 지키는데 동참하세요!</p>
+                <button>더보기 &gt;</button>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        const tabBtn = $('.thumb li'),
+            bigImg = $('.big li'),
+            txt = $('.txt li');
+
+
+        tabBtn.click(function(){
+            let idx = $(this).index();
+            tabBtn.removeClass('active');
+            bigImg.removeClass('active');
+            txt.removeClass('active');
+            $(this).addClass('active');
+            bigImg.eq(idx).addClass('active');
+            txt.eq(idx).addClass('active');
+
+        });
+
+    </script>
+
+</body>
+
+</html>

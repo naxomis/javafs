@@ -1,0 +1,59 @@
+@charset "utf-8";
+html {
+    font-size: 10px;
+}
+body {
+    font: 1.5rem/1.8 Verdana, sans-serif;
+    color: #333;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 4px;
+}
+h2, h3 {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 400;
+}
+h2 {
+    font-size: 2.4rem;
+}
+h3 {
+    font-size: 1.6rem;
+}
+a {
+    color: #555;
+    text-decoration: none;
+}
+button {
+    color: #fff;
+}
+::placeholder {
+    color: #ccc;
+}
+
+.main_tit {
+    font-size: 3.6rem;
+    letter-spacing: 4px;
+    color:rgba(255,255,255,.85);
+}
+
+/* 섹션2 */
+#menu h3 {
+    color: #fff;
+}
+
+/* 섹션3 */
+#event h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+#event li p:first-of-type {
+    color: #999;
+}
+
+/* 푸터 */
+footer {
+    color: #777;
+}

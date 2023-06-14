@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <style>
+        #contents {
+            /*  float: left; */
+            display: flex;
+            padding: 8px 0;
+            justify-content: space-between;
+        }
+
+        #contents div {
+            width: 380px;
+            height: 200px;
+        }
+
+        /* 탭 메뉴 */
+        .tabs {
+            padding: 24px 24px 24px 0;
+            background-clip: content-box;
+            margin-right: 20px;
+        }
+
+        .tabs input,
+        .tabs #tab1,
+        .tabs #tab2 {
+            display: none;
+        }
+
+        #btn1:checked~#tab1,
+        #btn2:checked~#tab2 {
+            display: block;
+        }
+
+        /*  탭 메뉴 - 제목/버튼 */
+        .tabs label {
+            display: inline-block;
+            background: #EBDACA;
+            color: #000;
+            padding: 4px 16px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
+        #btn1:checked+label,
+        #btn2:checked+label {
+            background: #004E27;
+            color: #fff;
+        }
+
+
+        /*  탭 메뉴 - 공지사항 */
+        #tab1 li {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+        }
+
+        /* 4개 다 사용해야 적용가능 */
+        #tab1 a {
+            width: 250px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            /* 말줄임 ...효과 */
+            overflow: hidden;
+        }
+
+        #tab1 a:hover {
+            color: #333;
+        }
+
+        span {
+            color: #777;
+        }
+
+        /*  탭 메뉴 - 갤러리 */
+        /* #tab2 ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 8px 0px;
+} */
+
+        #tab2 a {
+            display: inline-block;
+            width: 110px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tabs">
+        <!-- 제목/버튼 -->
+        <input type="radio" name="tabs" id="btn1" checked>
+        <label for="btn1">공지사항</label>
+        <input type="radio" name="tabs" id="btn2">
+        <label for="btn2">갤러리</label>
+
+        <!-- 공지사항 -->
+        <div id="tab1">
+            <ul>
+                <li><a href="#">메가MGC커피 원두 관련 공지</a><span>2023-05-15</span></li>
+                <li><a href="#">탄소중립실천포인트제 도입 안내</a><span>2023-04-06</span></li>
+                <li><a href="#">메가MGC커피 영양성분표</a><span>2023-03-17</span></li>
+                <li><a href="#">메가MGC커피에서 마진없이 아낌없이 드리는 마지막 찬스!</a><span>2023-01-05</span></li>
+            </ul>
+        </div>
+
+        <!-- 갤러리 -->
+        <div id="tab2">
+            <div>
+                <a href="#"><img src="images/i1.jpg" alt="모자"></a>
+                <a href="#"><img src="images/i2.jpg" alt="클러치백"></a>
+                <a href="#"><img src="images/i3.jpg" alt="장갑"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
