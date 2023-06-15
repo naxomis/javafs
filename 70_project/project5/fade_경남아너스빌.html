@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fade Effect</title>
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/trajan-pro');
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 10px;
+        }
+        body {
+            font-size: 1.5rem;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 섹션4: 소개 */
+        #section4 {
+            position: relative;
+            height: 100vh;
+            background: #e0d7d6;
+        }
+
+        .container {
+            position: relative;
+            height: 505px;
+        }
+
+        .container>div {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 900px;
+        }
+
+        .story {
+            left: 0px;
+        }
+
+        .identity {
+            right: 0px;
+        }
+
+        /* background text motion */
+        .bgTxt {
+            position: relative;
+            height: 180px;
+            font: 700 90px/1em 'Trajan Pro', sans-serif;
+            letter-spacing: -0.375px;
+            color: #cfc0bb;
+            overflow: hidden;
+            /* 줄바꿈 안함 */
+            white-space: nowrap;
+        }
+
+        .bgTxt span {
+            display: inline-block;
+            /* 인라인 요소 간 수직 중앙 맞춤 */
+            vertical-align: middle;
+        }
+
+        .bgTxt span::before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            width: 14px;
+            height: 14px;
+            /* margin-right: 15px; */
+            background: url('images/bg_dot.png') no-repeat center;
+            width: 75px;
+            height: 90px;
+        }
+
+        .bgTxt div {
+            position: absolute;
+            animation: 20s linear infinite;
+        }
+
+        .bgTxt .top {
+            top: 0;
+            left: -105.5%;
+            animation-name: topMotion;
+        }
+
+        .bgTxt .btm {
+            top: 90px;
+            left: 0%;
+            animation-name: btmMotion;
+        }
+
+        @keyframes topMotion {
+            0% {
+                left: -109%;
+            }
+
+            99.9999% {
+                left: 0;
+            }
+
+            100% {
+                left: -109%;
+            }
+        }
+
+        @keyframes btmMotion {
+            0% {
+                left: 0;
+            }
+
+            99.9999% {
+                left: -109%;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        /* fade image motion */
+        .fade {
+            position: absolute;
+            width: 100%;
+            height: 340px;
+            /* 마우스 호버시 영역 안에서 커딤 */
+            overflow: hidden;
+        }
+
+        .story .fade {
+            bottom: 0;
+        }
+
+        .identity .fade {
+            top: 0;
+        }
+
+        .fade li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        .fade img {
+            transition: 1s;
+        }
+
+        .fade:hover img {
+            transform: scale(1.2, 1.2);
+        }
+
+        /* link button */
+        .fade .btn {
+            position: absolute;
+            overflow: hidden;
+            width: 170px;
+            height: 45px;
+            background: #004c6b;
+            color: #fff;
+            line-height: 45px;
+            font-size: 1.35rem;
+        }
+
+        .fade .btn::before {
+            content: '';
+            position: absolute;
+            left: -170px;
+            top: 0;
+            transition: 1s;
+            width: 170px;
+            height: 45px;
+            background: #706142;
+        }
+
+        .fade:hover .btn::before {
+            left: 0px;
+        }
+
+        .fade .btn b {
+            position: absolute;
+            top: 0;
+            z-index: 1;
+        }
+
+        .fade .btn i {
+            position: absolute;
+            z-index: 1;
+        }
+
+        .story .btn {
+            left: 550px;
+            top: 60px;
+        }
+
+        .identity .btn {
+            left: 170px;
+            top: 260px;
+        }
+
+        .story .btn b {
+            left: 30px;
+        }
+
+        .identity .btn b {
+            left: 20px;
+        }
+
+        .story .btn i {
+            left: 140px;
+            top: 15px;
+        }
+
+        .identity .btn i {
+            left: 150px;
+            top: 17px;
+        }
+
+        /* title */
+        .container .title {
+            position: absolute;
+            width: 325px;
+            height: 300px;
+            background: url("images/bg-line.png") no-repeat;
+        }
+
+        .story .title {
+            left: 500px;
+            top: 0;
+            transform: rotate(180deg);
+        }
+
+        .identity .title {
+            left: 60px;
+            top: 220px;
+        }
+
+        .container .title h3 {
+            position: absolute;
+            left: 10px;
+            top: 0px;
+            font-size: 2.7rem;
+            margin: -30px 0 0 20px;
+            letter-spacing: -3px;
+        }
+
+        .story .title h3 {
+            right: 35px;
+            bottom: -15px;
+            transform: rotate(-180deg);
+        }
+
+        .identity .title h3 {
+            right: 37px;
+            top: 230px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="section4" class="section">
+        <div class="bgTxt">
+            <div class="top">
+                <span>CONSIDERATION</span><span>AFFINITY</span><span>PRESTIGE</span>
+            </div>
+            <div class="btm">
+                <span>CONSIDERATION</span><span>AFFINITY</span><span>PRESTIGE</span>
+            </div>
+        </div>
+        <div class="container">
+
+            <!-- 브랜드 소개 -->
+            <div class="story">
+                <div class="fade">
+                    <ul>
+                        <li><a href="#"><img src="images/fade1-1.png" alt="브랜드 스토리1"></a></li>
+                        <li><a href="#"><img src="images/fade1-2.png" alt="브랜드 스토리2"></a></li>
+                        <li><a href="#"><img src="images/fade1-3.png" alt="브랜드 스토리3"></a></li>
+                    </ul>
+                    <a class="btn"><b>브랜드 스토리</b><i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="title">
+                    <h3>커피의 품격을<br>완성하는<br>차별화된 커피의 품질</h3>
+                </div>
+            </div> 
+            <!-- 시즌메뉴 -->
+            <div class="identity">
+                <div class="fade">
+                    <ul>
+                        <li><a href="#"><img src="images/fade2-1.png" alt="시즌메뉴1"></a></li>
+                        <li><a href="#"><img src="images/fade2-2.png" alt="시즌메뉴2"></a></li>
+                        <li><a href="#"><img src="images/fade2-3.png" alt="시즌메뉴3"></a></li>
+                    </ul>
+                    <a class="btn"><b>이디야커피랩</b><i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="title">
+                    <h3>지속 가능한<br>브랜드로의 <br>도전</h3>
+                </div>
+            </div>
+        </div> <!-- // .container -->
+    </div> <!-- // section -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        // 상단 텍스트 모션을 위한 텍스트 복제
+        const txtTop = $('.top');
+        const txtTopSpan = txtTop.find('span');
+        const txtBtm = $('.btm');
+        const txtBtmSpan = txtBtm.find('span');
+
+        txtTopSpan.clone().appendTo(txtTop);
+        txtBtmSpan.clone().appendTo(txtBtm);
+
+        // 호버시 페이드 효과
+        const inner = $('.container > div');
+        const fade = inner.find('.fade');
+        let cnt =0, idx, timer;
+
+        // fade에 마우스를 올리면
+        fade.mouseenter(function(){
+            // 마우스를 올린 fade의 부모의 색인 번호를 idx에 저장
+            // 왼쪽은 0 오른쪽은 1
+            idx = $(this).parent().index();
+            // 2초마다 fadeFn 함수를 호출한다.
+            timer = setInterval(fadeFn, 2000);
+        });
+        // fade 위에서 마우스가 벗어나면 함수를 실행
+        fade.mouseleave(function(){
+            // setInterval 정지
+            clearInterval(timer);
+        });
+
+        function fadeFn() {
+            cnt++;
+            if (cnt > 2) {
+                cnt = 0;
+            }
+            // idx가 0이면 .story
+            // idx가 1이면 .identity
+            // cnt: 0, 1, 2
+            inner.eq(idx).find('li').eq(cnt).fadeIn(1000).siblings().fadeOut(1000);
+            // inner.eq(idx).find('li').fadeOut(1000);
+            // inner.eq(idx).find('li').eq(cnt).fadeIn(1000);
+        }
+        
+    </script>
+</body>
+
+</html>

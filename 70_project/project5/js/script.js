@@ -131,6 +131,48 @@ $(function () {
 
     });
 
+    // 섹션4 브랜드 소개
+    // 상단 텍스트 모션을 위한 텍스트 복제
+    const txtTop = $('.top');
+    const txtTopSpan = txtTop.find('span');
+    const txtBtm = $('.btm');
+    const txtBtmSpan = txtBtm.find('span');
+
+    txtTopSpan.clone().appendTo(txtTop);
+    txtBtmSpan.clone().appendTo(txtBtm);
+
+    // 호버시 페이드 효과
+    const inner = $('.container > div');
+    const fade = inner.find('.fade');
+    let cnt = 0, idx, timer;
+
+    // fade에 마우스를 올리면
+    fade.mouseenter(function () {
+        // 마우스를 올린 fade의 부모의 색인 번호를 idx에 저장
+        // 왼쪽은 0 오른쪽은 1
+        idx = $(this).parent().index();
+        // 2초마다 fadeFn 함수를 호출한다.
+        timer = setInterval(fadeFn, 2000);
+    });
+    // fade 위에서 마우스가 벗어나면 함수를 실행
+    fade.mouseleave(function () {
+        // setInterval 정지
+        clearInterval(timer);
+    });
+
+    function fadeFn() {
+        cnt++;
+        if (cnt > 2) {
+            cnt = 0;
+        }
+        // idx가 0이면 .story
+        // idx가 1이면 .identity
+        // cnt: 0, 1, 2
+        inner.eq(idx).find('li').eq(cnt).fadeIn(1000).siblings().fadeOut(1000);
+        // inner.eq(idx).find('li').fadeOut(1000);
+        // inner.eq(idx).find('li').eq(cnt).fadeIn(1000);
+    }
+
     // 풀페이지 레이아웃
     $('html').stop().animate({ scrollTop: 0 });
 

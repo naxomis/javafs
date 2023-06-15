@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김나연</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <script src="js/clock.js"></script>
 </head>
 
@@ -25,7 +29,7 @@
     </header>
 
     <!-- 섹션1 -->
-    <section id="home">
+    <section id="home" class="container-fluid">
         <!-- 로고 -->
         <div class="clock logo">
             <span class="yy"></span>
@@ -39,7 +43,7 @@
     </section>
 
     <!-- 섹션2 -->
-    <section id="about">
+    <section id="about" class="container bg-primary">
         <h2>ABOUT ME</h2>
         <p><em>I love coding</em></p>
         <div class="container">
@@ -70,13 +74,16 @@
             </div> <!-- //.progress -->
         </div> <!-- //. skill -->
         <!-- //.container -->
-        <ul class="counter">
-            <li><span>9+</span>Page Count</li>
-            <li><span>4+</span>Frontend Projects Done</li>
-            <li><span>3+</span>Backend Project Done</li>
-            <li><span>2+</span>National Technical Qualification</li>
-        </ul>   
     </section>
+    <div id="counter" class="container-fluid">
+        <!-- .row가 display:flex -->
+        <ul class="row">
+            <li class="col-sm-6 col-md"><span>9+</span>Page Count</li>
+            <li class="col-sm-6 col-md"><span>4+</span>Frontend Projects Done</li>
+            <li class="col-sm-6 col-md"><span>3+</span>Backend Project Done</li>
+            <li class="col-sm-6 col-md"><span>2+</span>National Technical Qualification</li>
+        </ul>
+    </div> 
 
     <!-- 섹션3 -->
     <section id="portfolio">
@@ -84,17 +91,19 @@
         <h2>MY WORK</h2>
         <p>Here are some of my latest lorem work ipsum tipsum.<br>Click on the images to make them bigger</p>
         <div class="container">
+            
             <ul>
-                <li><img src="images/pf2.jpg" alt="포트폴리오1"></li>
-                <li><img src="images/pf2.jpg" alt="포트폴리오2"></li>
-                <li><img src="images/pf3.jpg" alt="포트폴리오3"></li>
-                <li><img src="images/pf4.jpg" alt="포트폴리오4"></li>
+                <li><a href="images/big1.png" data-lightbox="roadtrip"><img src="images/pj1.png" alt="포트폴리오1-마이사이트"></a></li>
+                <li><a href="images/big2.png" data-lightbox="roadtrip"><img src="images/pj2.png" alt="포트폴리오2-반응형_이디야"></a></li>
+                <li><a href="images/big3.png" data-lightbox="roadtrip"><img src="images/pj3.png" alt="포트폴리오3-메가커피"></a></li>
+                <li><a href="images/big4.png" data-lightbox="roadtrip"><img src="images/pj4.png" alt="포트폴리오4-풀페이지_이디야"></a></li>
                 <li><img src="images/pf5.jpg" alt="포트폴리오5"></li>
                 <li><img src="images/pf6.jpg" alt="포트폴리오6"></li>
                 <li><img src="images/pf7.jpg" alt="포트폴리오7"></li>
                 <li><img src="images/pf8.jpg" alt="포트폴리오8"></li>
             </ul>
-            <div class="moreBtn"><a href="#">LOAD MORE</a></div>
+            
+            <div class="moreBtn"><button type="button" class="btn btn-outline-info">LOAD MORE</button></div>
         </div>
         <!-- //.container -->
     </section>

@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css");
 @import url('reset.css');
 @import url('typo.css');
 
@@ -125,16 +126,16 @@ section h2 + p {
 .progress .lst:nth-of-type(3) div span {
     width: 75%;
 }
-.counter {
+
+#counter ul {
     background: #616161;
-    display: flex;
-    justify-content: space-around;
     height: 132px;
+    text-align: center;
+    color: #fff;
     align-items: center;
 }
-.counter span {
+#counter span {
     display: block;
-    text-align: center;
 }
 
 
@@ -155,14 +156,15 @@ section h2 + p {
     height: 162px;
     margin-bottom: 12px;
     overflow: hidden;
+    border: 1px solid hsla(0, 0%, 0%, 0.1);
 }
 #portfolio .moreBtn {
     margin-top: 64px;
     text-align: center;
 }
-#portfolio .moreBtn a {
+#portfolio .moreBtn button {
     padding: 12px 24px;
-    background: #f1f1f1;
+    font-size: 1.5rem;
 }
 /* section4 */
 #contact .parallax {
