@@ -13,6 +13,9 @@ $(function () {
         $('.nav_bg').stop().animate({ height: 0 }, 400);
     });
 
+    // scrollTop
+
+
     // 비디오 자동플레이
     // $('video').get(0).play();
 
@@ -172,6 +175,34 @@ $(function () {
         // inner.eq(idx).find('li').fadeOut(1000);
         // inner.eq(idx).find('li').eq(cnt).fadeIn(1000);
     }
+
+    //푸터 패밀리사이트
+    $(function () {
+        const fs = $('.fs'),
+            fsLst = fs.find('.ul'),
+            fsIcon = fs.find('i'),
+            fsTxt = fs.find('span'),
+            fsBtn = fs.find('.fsBtn');
+        let state = 0;
+        // .fsBtn을 클릭하면 함수 실행
+        fsBtn.click(function (e) {
+            $('.fs ul').toggle();
+            // a의 기본 이벤트를 막아준다
+            e.preventDefault();
+            /* 삼각형 모양 바꾸기 */
+            if (state == 0) {
+                fsIcon.attr({ class: 'fa-solid fa-minus' });
+                fsTxt.html('관련 사이트 닫기');
+                fsLst.slideDown();
+                state = 1;
+            } else {
+                fsIcon.attr({ class: 'fa-solid fa-plus' });
+                fsTxt.html('관련 사이트 열기');
+                fsLst.slideUp();
+                state = 0;
+            }
+        });
+    });
 
     // 풀페이지 레이아웃
     $('html').stop().animate({ scrollTop: 0 });

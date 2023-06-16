@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .family_site {
+            width: fit-content;
+            background-color: #F5F5F7;
+            border: 2px solid #8b8b8b;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .family_site_btn {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .family_sites {
+            height: 0;
+            transition: all .8s;
+        }
+
+        .family_sites div {
+            padding: 8px 16px;
+            border-top: 1px solid rgba(204, 204, 204, 0.3);
+        }
+
+        .family_site {
+            font-size: 1.6rem;
+        }
+
+        .family_site_btn,
+        .family_sites a {
+            color: #1c1c1c;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="family_site">
+        <div class="family_site_btn">Family Site &nbsp; <i class="fa-solid fa-chevron-down"
+                style="color: #1c1c1c;"></i></div>
+        <div class="family_sites">
+            <div><a href="http://pk0426.dothome.co.kr/">My site</a></div>
+            <div><a href="http://pk0426.dothome.co.kr/project4/">은파 악기</a></div>
+            <div><a href="http://pk0426.dothome.co.kr/app/">빠칭코</a></div>
+        </div>
+    </div>
+
+    <script>
+        const family_site_btn = document.querySelector(".family_site_btn"),
+            family_site_btn_icon = document.querySelector(".family_site_btn i"),
+            family_sites = document.querySelector(".family_sites"),
+            family_sites_div = document.querySelectorAll(".family_sites div");
+        let family_site_btn_num = 1;
+
+        family_site_btn.onclick = function () {
+            if (family_site_btn_num == 1) {
+                family_sites.style.height = "200px";
+                family_site_btn_icon.setAttribute("class", "fa-solid fa-chevron-up")
+                family_site_btn_num = 0;
+            } else {
+                family_sites.style.height = 0;
+                family_site_btn_icon.setAttribute("class", "fa-solid fa-chevron-down")
+                family_site_btn_num = 1;
+            }
+        }
+    </script>
+</body>
+
+</html>

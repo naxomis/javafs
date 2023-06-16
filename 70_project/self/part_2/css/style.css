@@ -105,12 +105,15 @@ header {
 #slide {
     width: 100%;
     position: relative;
-    background: #000;
+}
+#slide h1 {
+    display: none;
 }
 
 /* 슬라이드 */
 #slide .frame {
     overflow: hidden;
+
 }
 
 #slideList {
@@ -118,8 +121,9 @@ header {
     display: flex;
 }
 
+
 #slideList.on {
-    transition: .3s;
+    transition: .7s;
 }
 
 /* 좌우 버튼 */
@@ -276,9 +280,6 @@ h2+p {
 
 
 /* section3 */
-/* .crl {
-    background: #000;
-} */
 #carousel1 .slideWrap img {
     vertical-align: top;
     width: 100%;
@@ -287,6 +288,14 @@ h2+p {
     position: relative;
     width: 1500px;
     margin: 0 auto;
+}
+#carousel1 .multiSlider span {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background: #0000007c;
+    width: 100%;
+    padding: 20px 0;
 }
 /* prev/next */
 #carousel1 .slideWrap .btn {
@@ -455,10 +464,12 @@ h2+p {
 #icons li {
     width: 24%;
     text-align: center;
+    transition: .5s;
 }
 
 #icons li:hover {
     background: #ccc;
+    border-radius: 30px;
 }
 
 #icons a {
@@ -516,6 +527,7 @@ h2+p {
 }
 
 #new2 i {
+    transition: .5s;
     margin: 16px 50px;
     text-align: center;
     line-height: 100px;

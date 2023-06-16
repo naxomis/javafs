@@ -11,7 +11,7 @@
     /* 메인메뉴 높이만큼 내려준다. */
     top: 94px;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: #fff;
 }
 
 /* 크기, 색, 굵기 등으로 폰트의 위계를 지정한다. */
@@ -40,7 +40,7 @@
 }
 
 .main>li>a:hover {
-    color: #333;
+    color: #243c84;
 }
 
 .main>li>a::after {
@@ -52,7 +52,6 @@
     transition: .3s;
     width: 100%;
     border: 1px solid #7284bb;
-    color: #ccc;
 }
 
 .main>li>a:hover:after {
@@ -74,7 +73,8 @@
 }
 
 .sub a:hover {
-    color: #ccc;
+    color: #243c84;
+    font-weight: 500;
 }
 
 /* 로그인/회원가입 */

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #b9b9b9;
+        }
+
+        /* #footer ul {
+            padding-inline-start: 0px;
+        } */
+
+        #footer .bnb a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 900;
+        }
+
+        #footer {
+            display: flex;
+            justify-content: space-between;
+            background: #000;
+            color: #777;
+            padding: 80px;
+            align-items: center;
+        }
+
+        #footer .footerLogo {
+            text-align: center;
+            padding-right: 40px;
+        }
+
+        .leftCont {
+            position: relative;
+            margin-right: 100px;
+        }
+
+
+        #footer .bnb ul {
+            display: flex;
+            justify-content: space-between;
+
+            padding-inline-start: 0px;
+        }
+
+        #footer .bnb ul li {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        #footer .bnb ul li:not(:nth-of-type(1))::before {
+            content: '|';
+            margin: 0 20px;
+            font-size: 2rem;
+        }
+
+        #footer .addr {
+            margin-bottom: 40px;
+        }
+
+        /* 패밀리사이트 */
+        .fs {
+            position: relative;
+            top: 80px;
+            width: 240px;
+            height: 50px;
+        }
+
+        .fs .fsBtn {
+            display: inline-block;
+            width: 240px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background: #494949;
+            border: 1px solid #676767;
+            color: #b9b9b9;
+            font-weight: 700;
+        }
+
+        .fs span {
+            margin-right: 40px;
+        }
+
+        .fs i {
+            margin-left: 40px;
+        }
+
+        .fs ul {
+            display: none;
+            position: absolute;
+            left: 0;
+            bottom: 50px;
+            width: 100%;
+            background: #494949;
+            border: 1px solid #676767;
+            border-bottom: none;
+            padding: 15px 40px;
+        }
+
+        .fs .fsBtn ul a {
+            color: #b9b9b9;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="footer">
+        <div class="footerLogo">
+            <img src="images/ftlogo.gif" alt="footerLogo">
+        </div>
+        <div class="leftCont">
+            <div class="bnb">
+                <ul>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">멤버스 이용약관</a></li>
+                    <li><a href="#">가맹안내</a></li>
+                    <li><a href="#">점주의 방</a></li>
+                </ul>
+            </div>
+            <div class="addr">
+                <p>서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17) </p>
+                <p>TEL:02-543-6467 | FAX:02-543-7191 | 사업자등록번호: 107-86-16302</p>
+            </div>
+            <div class="copy">2023 COPYRIGHT EDIYA COFFEE. ALL RIGHTS RESERVED.</div>
+        </div>
+        <!-- 패밀리사이트 -->
+        <div class="fs">
+            <a href="#" class="fsBtn"><span>관련 사이트 열기</span><i class="fa-solid fa-plus"></i></a>
+            <ul>
+                <li><a href="https://blog.naver.com/ekddusekddus">블로그</a></li>
+                <li><a href="https://www.facebook.com/mega.mgc.coffee.official">페이스북</a></li>
+                <li><a href="https://www.instagram.com/mega.mgc.coffee_official/">인스타그램</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            const fs = $('.fs'),
+                fsLst = fs.find('.ul'),
+                fsIcon = fs.find('i'),
+                fsTxt = fs.find('span'),
+                fsBtn = fs.find('.fsBtn');
+            let state = 0;
+            // .fsBtn을 클릭하면 함수 실행
+            fsBtn.click(function () {
+                $('.fs ul').toggle();
+
+                /* 삼각형 모양 바꾸기 */
+                if (state == 0) {
+                    fsIcon.attr({ class: 'fa-solid fa-minus' });
+                    fsTxt.html('관련 사이트 닫기');
+                    fsLst.slideDown();
+                    state = 1;
+                } else {
+                    fsIcon.attr({ class: 'fa-solid fa-plus' });
+                    fsTxt.html('관련 사이트 열기');
+                    fsLst.slideUp();
+                    state = 0;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

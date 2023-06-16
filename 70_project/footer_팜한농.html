@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>푸터</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 푸터 */
+        #footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 70px 80px 70px 330px;
+            background: #2c2d2f url(images/logo_b.png) no-repeat 80px 50%/10%;
+            color: rgba(255,255,255,0.3);
+        }
+
+        #footer .bnb ul {
+            display: flex;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+        #footer .bnb ul a {
+            color: #fff;
+        }
+
+        #footer .bnb li::after {
+            content: '|';
+            margin: 0 16px;
+            color:rgba(255,255,255,0.2);
+        }
+
+        #footer .copy {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="footer">
+        <div class="leftCont">
+            <div class="bnb">
+                <ul>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">1:1문의</a></li>
+                    <li><a href="#">정도경영 신문고</a></li>
+                </ul>
+            </div>
+            <div class="addr">
+                <p>서울특별시 강남구 강남대로 518 11층, 13층 (주)앤하우스</p>
+                <p>본사대표번호: 02-335-0656 | FAX: 02-325-5199 | 고객센터: 1588-8298</p>
+            </div>
+            <div class="copy">COPYRIGHT 2023 MEGA MGC COFFEE. ALL RIGHTS RESERVED.</div>
+        </div>
+        <div class="fs">관련 사이트 열기</div>
+    </div>
+</body>
+
+</html>
