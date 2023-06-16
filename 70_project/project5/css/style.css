@@ -18,6 +18,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 60px;
+    transition: .5s, .5s;
     /* background: #fdd000; */
 }
 
@@ -338,9 +339,6 @@
     display: block;
 }
 
-/*         .big li:first-child {
-    left: 0;
-} */
 
 /* 텍스트 애니메이션 */
 #section3 .txt {
@@ -697,10 +695,11 @@
     line-height: 50px;
     background: #494949;
     border: 1px solid #676767;
-    color: #b9b9b9;
     font-weight: 700;
 }
-
+#footer a {
+    color: #b9b9b9;
+}
 #footer .fs span {
     margin-right: 40px;
 }
@@ -721,7 +720,3 @@
     padding: 15px 40px;
 }
 
-#footer .fs .fsBtn ul a {
-    color: #ededed;
-    line-height: 2;
-}

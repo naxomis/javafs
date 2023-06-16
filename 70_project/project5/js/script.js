@@ -1,6 +1,8 @@
 // 문서가 준비되면 함수 실행
 $(function () {
 
+    // 헤더
+    const headerBg = $('#header');
     // 내비게이션바
     $('.main > li > a').mouseenter(function (e) {
         // a태그 기본 이벤트 제거
@@ -12,9 +14,6 @@ $(function () {
         $('.sub').stop().slideUp(400);
         $('.nav_bg').stop().animate({ height: 0 }, 400);
     });
-
-    // scrollTop
-
 
     // 비디오 자동플레이
     // $('video').get(0).play();
@@ -97,6 +96,7 @@ $(function () {
 
 
     // 섹션2
+    // scroll모션
     const sec2 = $('#section2'),
         btn = sec2.find('.btn'),
         txt1 = sec2.find('.txt1'),
@@ -110,10 +110,12 @@ $(function () {
             btn.css({ opacity: 1 });
             txt1.css({ left: 360 + 'px' });
             txt2.css({ left: 360 + 'px' });
+            headerBg.css({ background: '#243c84' });
         } else {
             btn.css({ opacity: 0 });
             txt1.css({ left: -800 + 'px' });
             txt2.css({ left: -400 + 'px' });
+            headerBg.css({ background: 'transparent' });
         }
     });
 

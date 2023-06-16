@@ -40,7 +40,7 @@
 }
 
 .main>li>a:hover {
-    color: #243c84;
+    color: #fff;
 }
 
 .main>li>a::after {
