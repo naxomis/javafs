@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progress bar</title>
+    <style>
+        .progress {
+            width: 100%;
+            background-color: #ddd;
+            margin-bottom: 16px;
+        }
+
+        .progress div {
+            width: 0%;
+            height: 30px;
+            background-color: #04AA6D;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Progress Bar</h1>
+    <div class="skill">
+        <div class="progress">
+            <div>0%</div>
+        </div>
+    </div>
+    <button>Click Me</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        // 변수 선언
+        $('button').click(function () {
+            move();
+        });
+
+        function move() {
+            const elem = $(".progress div");
+            const timer = setInterval(frame, 30);
+            let w = 0;
+
+            function bar() {
+                if (w >= 95) {
+                    clearInterval(timer);
+                } else {
+                    w++;
+                    elem.css({ width: w + "%" });
+                    elem.text(w + "%");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

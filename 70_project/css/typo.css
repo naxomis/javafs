@@ -31,10 +31,10 @@ a {
     color: #777;
 }
 /* 섹션2 - 카운터 */
-.counter {
+#counter {
     color: #fff;
 }
-.counter span {
+#counter span {
     font-size: 2.4rem;
 }
 /* 패럴렉스 */

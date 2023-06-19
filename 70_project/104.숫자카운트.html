@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        div {
+            height: 100vh;
+            text-align: center;
+        }
+
+        span {
+            font-size: 60px;
+            display: block;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            width: 200px;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>페이지를 내리면 숫자가 올라갑니다!</h1>
+    </div>
+
+    <div id="counter">
+        <ul>
+            <li><span>0+</span>웹 개발 언어</li>
+            <li><span>0+</span>프론트엔드 포트폴리오</li>
+            <li><span>0+</span>백엔드 포트폴리오</li>
+            <li><span>0+</span>자격증</li>
+        </ul>
+    </div>
+
+    <script>
+        const elem = document.querySelectorAll('#counter span');
+        // 추가된 점 = j
+        // move() 함수가 실행되면 j가 1이 됨. 중복 실행 막음.
+        // span이 화면을 벗어나면, j = 0; 초기화. 재실행 가능
+
+        let j = 0;
+        window.onscroll = function () {
+            let scr_e = document.documentElement.scrollTop;
+            if (scr_e >= 150) {
+                if (j === 0) {
+                    // 첫 번재 숫자는 카운트 번호, 두 번째 숫자는 배열의 순번, 세 번째는 시간.
+                    move(8, 0, 200);
+                    move(24, 1, 100);
+                    move(12, 2, 300);
+                    move(3, 3, 400);
+                    // 재실행 방지 j
+                    j = 1;
+                } else {
+                    return;
+                }
+            } else {
+                j = 0;
+            }
+        }
+
+        function move(coutnt, array_num, time) {
+            let i = 0;
+            setInterval(function () {
+                if (i > coutnt) {
+                    return;
+                }
+                elem[array_num].innerHTML = i + "+";
+                i++
+            }, time)
+        }
+    </script>
+</body>
+
+</html>

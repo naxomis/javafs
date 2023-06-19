@@ -1,13 +1,34 @@
 $(function () {
-    $(function () {
-        $('#nav > li').mouseenter(function () {
-            $('#sl1').stop().slideDown();
-        });
-        $('#nav > li').mouseleave(function () {
-            $('#sl1').stop().slideUp();
-        });
+     // 내비게이션바
+     $('.main > li > a').mouseenter(function (e) {
+        // a태그 기본 이벤트 제거
+        e.preventDefault();
+        $('.sub').stop().slideDown(400);
+        $('.nav_bg').stop().animate({ height: 180 }, 400);
+    });
+    $('nav').mouseleave(function () {
+        $('.sub').stop().slideUp(400);
+        $('.nav_bg').stop().animate({ height: 0 }, 400);
+    });
+    // scrollTop
+    // 헤더
+    const headerBg = $('#header');
+
+    // 윈도우에 스크롤 이벤트가 발생하면 함수 실행
+    $(window).scroll(function () {
+        // 스크롤바를 스크롤한 양을 st에 저장
+        let st = document.documentElement.scrollTop;
+        // let stVal = 600;
+
+        if (st < 0) {
+            headerBg.css({ background: '#243c84' })
+        } else {
+            headerBg.css({ background: 'transparent' })
+        }
     });
 
+
+    // slide 섹션1
     const slideList = $('#slideList');
     const slideListItem = $('#slideList').find('li');
     const prevBtn = $('#prevBtn');
@@ -98,8 +119,9 @@ $(function () {
         slide('nextBtn');
         pagination(num - 1);
     }
+    //섹션1 끝
 
-    // 멀티캐로셀
+    // 멀티캐로셀 섹션2
     $(function () {
         const slider = $('.multiSlider').bxSlider({
             pager: false,

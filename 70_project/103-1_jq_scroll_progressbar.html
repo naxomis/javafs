@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progress bar</title>
+    <style>
+        .progress {
+            width: 100%;
+            background-color: #ddd;
+            margin-bottom: 16px;
+        }
+
+        .progress div {
+            width: 0%;
+            height: 30px;
+            background-color: #04AA6D;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+        .section {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <h1>Progress Bar</h1>
+    </div>
+    <div class="skill section">
+        <div class="progress">
+            <div>0%</div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        let state = 0;
+        // 변수 선언
+        $(window).scroll(function () {
+            if ($(this).scrollTop() >= 150) {
+                if (state === 0) {
+                    move();
+                    state = 1;
+                }else {
+                    return;
+                }
+            } else {
+                state = 0;
+            }
+        });
+
+
+        function move() {
+            var elem = $(".progress div");
+            var w = 0;
+            var timer = setInterval(frame, 30);
+
+            function frame() {
+                if (w >= 95) {
+                    clearInterval(timer);
+                } else {
+                    w++;
+                    elem.css({ width: w + "%" });
+                    elem.text(w + "%");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

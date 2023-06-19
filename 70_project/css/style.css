@@ -44,8 +44,8 @@ header i {
 }
 /* section2~4 */
 .container {
-    width: 960px;
-    margin: 0 auto;
+    /* width: 960px;
+    margin: 0 auto; */
     padding-bottom: 81px;
 }
 section h2 {
@@ -69,29 +69,26 @@ section h2 + p {
 }
 
 /* section2 */
-.profile {
-    display: flex;
-    flex-wrap: wrap;
-}
+
 .profile p {
     text-align: justify;
     word-break: break-all;
 }
 
 .profile p:nth-of-type(1) {
-    flex: 100%;
+    /* flex: 100%; */
     margin-bottom: 54px;
 }
-.profile p:nth-of-type(2) {
-    flex: 50%;
-}
+/* .profile p:nth-of-type(2) {
+    flex: 0 0 48%;
+} */
 .profile div {
     flex: 50%;
     text-align: center;
 }
-.photo {
+/* .photo {
     width: 425px;
-}
+} */
 .photo img {
     margin-top: 54px;
 }
@@ -99,45 +96,32 @@ section h2 + p {
     margin-left: 8px;
 }
 /* skill */
-#about h3 {
-    display: block;
-    text-align: center;
-    margin: 54px 0;
-}
-.progress .lst > span {
-    display: inline-block;
-    margin: 16px;
-}
-.progress .lst div {
-    background: #eee;
-}
-.progress .lst div span {
-    display: block;
-    height: 34px;
-    text-align: center;
-    background: #555;
-}
-.progress .lst:nth-of-type(1) div span {
-    width: 90%;
-}
-.progress .lst:nth-of-type(2) div span {
-    width: 85%;
-}
-.progress .lst:nth-of-type(3) div span {
-    width: 75%;
+#skill .progress {
+    width: 100%;
+    height: 30px;
+    background-color: #ddd;
+    margin-bottom: 16px;
 }
 
+#skill .progress div {
+    width: 0%;
+    background-color: #04AA6D;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+#skill .section {
+    height: 100vh;
+}
+/* counter */
 #counter ul {
     background: #616161;
-    height: 132px;
+    /* height: 132px; */
     text-align: center;
     color: #fff;
     align-items: center;
+    padding: 36px 0;
 }
-#counter span {
-    display: block;
-}
-
 
 /* section3 */
 
@@ -145,17 +129,11 @@ section h2 + p {
     background-image: url(../images/section4\(3\)_1.jpg)
 }
 
-#portfolio ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;  
-}
-
 #portfolio li {
-    width: 231px;
-    height: 162px;
     margin-bottom: 12px;
     overflow: hidden;
+}
+#portfolio li img {
     border: 1px solid hsla(0, 0%, 0%, 0.1);
 }
 #portfolio .moreBtn {
@@ -166,31 +144,30 @@ section h2 + p {
     padding: 12px 24px;
     font-size: 1.5rem;
 }
+
 /* section4 */
 #contact .parallax {
     background-image: url(../images/parallax3.jpg);
 }
-#contact .container {
-    display: flex;
+form {
+    display: block;
+    
 }
+
 #map {
-    flex: 0 0 330px;
-    height: 160px;
+    /* height: 160px; */
     border-radius: 5px;
     overflow: hidden;
-    margin-right: 30px;
-}
-#contact address i {
-    margin-right: 20px;
+    /* margin-right: 30px; */
 }
 #contact address + p {
     margin: 16px 0;
 }
-#contact form {
+/* #contact form {
     text-align: end;
-}
+} */
 #contact [name] {
-    width: 292px;
+    /* width: 292px; */
     height: 44px;
     padding-left: 8px;
 }
@@ -198,7 +175,7 @@ section h2 + p {
     margin-right: 12px;
 }
 #contact [name*="message"] {
-    width: 600px;
+    /* width: 600px; */
     margin: 16px 0;
 }
 #contact button {

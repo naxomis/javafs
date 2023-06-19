@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        /* Collapsed Menu Icon */
+        button {
+            /* 버튼의 초기화 작업 */
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        .toggler {
+            position: relative;
+            width: 20px;
+            height: 16px;
+
+        }
+
+        .toggler span {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            border-top: 2px solid black;
+            transition: .3s;
+        }
+
+        .toggler span:first-of-type {
+            top: 0;
+        }
+
+        .toggler span:last-of-type {
+            top: 100%;
+        }
+
+        /* active */
+        .toggler.active span:first-of-type {
+            opacity: 0;
+        }
+
+        .toggler.active span:first-of-type,
+        .toggler.active span:last-of-type {
+            top: 50%;
+        }
+
+        .toggler.active span:nth-of-type(2) {
+            transform: rotate(45deg);
+            border-top: 2px solid #ff0000;
+        }
+
+        .toggler.active span:nth-of-type(3) {
+            transform: rotate(-45deg);
+            border-top: 2px solid #ff0000;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- nav -->
+        <button type="button" class="toggler">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            /* mobile toggler button */
+            let stateToggler = 0;
+            $(".toggler").click(function () {
+                if (stateToggler === 0) {
+                    $(this).addClass("active");
+                    stateToggler = 1;
+                } else {
+                    $(this).removeClass("active");
+                    stateToggler = 0;
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

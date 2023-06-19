@@ -12,13 +12,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <script src="js/clock.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
     <!-- 헤더 -->
     <header>
         <!-- 내비게이션 -->
-        <nav>
+        <nav id="gnb">
             <ul>
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#about"><i class="fa-solid fa-user-large"></i>ABOUT</a></li>
@@ -31,106 +32,109 @@
     <!-- 섹션1 -->
     <section id="home" class="container-fluid">
         <!-- 로고 -->
-        <div class="clock logo">
-            <span class="yy"></span>
-            <span class="mo"></span>
-            <span class="dd"></span>
-            <span class="we"></span>
-            <span class="hh"></span>
-            <span class="mm"></span>
-            <span class="ss"></span>
+        <div class="containr">
+            <div class="clock row">
+                <span class="yy"></span>
+                <span class="mo"></span>
+                <span class="dd"></span>
+                <span class="we"></span>
+                <span class="hh"></span>
+                <span class="mm"></span>
+                <span class="ss"></span>
+            </div>
         </div>
     </section>
 
     <!-- 섹션2 -->
-    <section id="about" class="container bg-primary">
+    <section id="about" class="container">
         <h2>ABOUT ME</h2>
         <p><em>I love coding</em></p>
         <div class="container">
-            <div class="profile">
-                <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="photo">
+            <div class="profile row">
+                <p class="col-12">We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="photo col-sm-6">
                     <i class="fa-solid fa-user-large"></i><b>김나연</b>
                     <img src="images/photo_1.jpg" alt="내사진">
                 </div>
-                <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="col-sm-6">Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
-            <div class="skill">
-                <h3>Im really good at:</h3>
-                <div class="progress">
-                    <div class="lst">
-                        <i class="fa-brands fa-figma"></i><span>planning with Figma</span>
-                        <div><span>90%</span></div>
+        </div> 
+        <div id="skill" class="container">
+            <h3>Im really good at:</h3>
+            <div class="progressbar">
+                    <i class="fa-brands fa-figma mr-3"></i><span>planning with Figma</span>
+                    <div class="progress">
+                        <div>0%</div>
                     </div>
-                    <div class="lst">
-                        <i class="fa-solid fa-laptop"></i><span>Frontend Development</span>
-                        <div><span>85%</span></div>
+                    <i class="fa-solid fa-laptop mr-3"></i><span>Frontend Development</span>
+                    <div class="progress">
+                        <div>0%</div>
                     </div>
-                    <div class="lst">
-                        <i class="fa-brands fa-java"></i><span>Backend Development</span>
-                        <div><span>75%</span></div>
+                    <i class="fa-brands fa-java mr-3"></i><span>Backend Development</span>
+                    <div class="progress">
+                        <div>0%</div>
                     </div>
-                </div>
-            </div> <!-- //.progress -->
+            </div><!-- //.progress -->
         </div> <!-- //. skill -->
-        <!-- //.container -->
+        <!-- //.aboutWarp -->
     </section>
-    <div id="counter" class="container-fluid">
+    <div id="counter" class="container-fluid px-0">
         <!-- .row가 display:flex -->
-        <ul class="row">
-            <li class="col-sm-6 col-md"><span>9+</span>Page Count</li>
-            <li class="col-sm-6 col-md"><span>4+</span>Frontend Projects Done</li>
-            <li class="col-sm-6 col-md"><span>3+</span>Backend Project Done</li>
-            <li class="col-sm-6 col-md"><span>2+</span>National Technical Qualification</li>
+        <!-- text-align:center = text-center -->
+        <ul class="row text-center m-0">
+            <li class="col-sm-6 col-md-3"><span>0+</span>Page Count</li>
+            <li class="col-sm-6 col-md-3"><span>0+</span>Frontend Projects Done</li>
+            <li class="col-sm-6 col-md-3"><span>0+</span>Backend Project Done</li>
+            <li class="col-sm-6 col-md-3"><span>0+</span>National Technical Qualification</li>
         </ul>
     </div> 
 
     <!-- 섹션3 -->
-    <section id="portfolio">
+    <section id="portfolio" class="container-fluid p-0 m-0">
         <div class="parallax"><b>portfolio</b></div>
         <h2>MY WORK</h2>
         <p>Here are some of my latest lorem work ipsum tipsum.<br>Click on the images to make them bigger</p>
         <div class="container">
-            
-            <ul>
-                <li><a href="images/big1.png" data-lightbox="roadtrip"><img src="images/pj1.png" alt="포트폴리오1-마이사이트"></a></li>
-                <li><a href="images/big2.png" data-lightbox="roadtrip"><img src="images/pj2.png" alt="포트폴리오2-반응형_이디야"></a></li>
-                <li><a href="images/big3.png" data-lightbox="roadtrip"><img src="images/pj3.png" alt="포트폴리오3-메가커피"></a></li>
-                <li><a href="images/big4.png" data-lightbox="roadtrip"><img src="images/pj4.png" alt="포트폴리오4-풀페이지_이디야"></a></li>
-                <li><img src="images/pf5.jpg" alt="포트폴리오5"></li>
-                <li><img src="images/pf6.jpg" alt="포트폴리오6"></li>
-                <li><img src="images/pf7.jpg" alt="포트폴리오7"></li>
-                <li><img src="images/pf8.jpg" alt="포트폴리오8"></li>
+            <ul class="row">
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><a href="images/big1.png" data-lightbox="roadtrip"><img src="images/pj1.png" alt="포트폴리오1-마이사이트"></a></li>
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><a href="images/big2.png" data-lightbox="roadtrip"><img src="images/pj2.png" alt="포트폴리오2-반응형_이디야"></a></li>
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><a href="images/big3.png" data-lightbox="roadtrip"><img src="images/pj3.png" alt="포트폴리오3-메가커피"></a></li>
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><a href="images/big4.png" data-lightbox="roadtrip"><img src="images/pj4.png" alt="포트폴리오4-풀페이지_이디야"></a></li>
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><img src="images/pf5.jpg" alt="포트폴리오5"></li>
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><img src="images/pf6.jpg" alt="포트폴리오6"></li>
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><img src="images/pf7.jpg" alt="포트폴리오7"></li>
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><img src="images/pf8.jpg" alt="포트폴리오8"></li>
             </ul>
-            
             <div class="moreBtn"><button type="button" class="btn btn-outline-info">LOAD MORE</button></div>
         </div>
         <!-- //.container -->
     </section>
     
     <!-- 섹션4 -->
-    <section id="contact">
+    <section id="contact" class="container-fluid px-0">
         <div class="parallax"><b>contact</b></div>
-        <h2>WHERE I WORK</h2>
-        <p>I'd love your feedback!</p>
-        <div class="container">
-            <!-- 구글맵 -->
-            <div id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25358.893580370353!2d126.90933146998712!3d37.39310286695101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b60d1eba1f981%3A0x7e2aebe0591be746!2z7JWI7JaR6rOg7Jqp67O17KeAK-yEvO2EsA!5e0!3m2!1sko!2skr!4v1682405734099!5m2!1sko!2skr"></iframe>
-            </div>
-            <div>
-                <address>
-                    <i class="fa-solid fa-location-dot"></i>경기도 안양시<br>
-                    <i class="fa-solid fa-phone"></i>phone: +82-1234-1234<br>
-                    <i class="fa-solid fa-envelope"></i>Email: email@google.com
-                </address>
-                <p>Swing by for a cup of<i class="fa-solid fa-mug-saucer"></i>, or leave me a note:</p>
-                <form action="message.php" method="post">
-                    <input type="text" name="user_name" placeholder="이름을 입력하세요.">
-                    <input type="email" name="user_email" placeholder="이메일을 입력하세요.">
-                    <input type="text" name="user_message" placeholder="메세지를 간단하게 기록하세요.">
-                    <button type="submit"><i class="fa-solid fa-paper-plane"></i>SEND MESSAGE</button>
-                </form>
+        <div  class="container">
+            <h2>WHERE I WORK</h2>
+            <p>I'd love your feedback!</p>
+            <div  class="row">
+                <!-- 구글맵 -->
+                <div id="map" class="col-sm-5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25358.893580370353!2d126.90933146998712!3d37.39310286695101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b60d1eba1f981%3A0x7e2aebe0591be746!2z7JWI7JaR6rOg7Jqp67O17KeAK-yEvO2EsA!5e0!3m2!1sko!2skr!4v1682405734099!5m2!1sko!2skr"></iframe>
+                </div>
+                <div class="col-sm-6">
+                    <address>
+                        <i class="fa-solid fa-location-dot"></i>경기도 안양시<br>
+                        <i class="fa-solid fa-phone"></i>phone: +82-1234-1234<br>
+                        <i class="fa-solid fa-envelope"></i>Email: email@google.com
+                    </address>
+                    <p>Swing by for a cup of<i class="fa-solid fa-mug-saucer"></i>, or leave me a note:</p>
+                    <form action="message.php" method="post">
+                        <input type="text" name="user_name" placeholder="이름을 입력하세요." class="mb-4">
+                        <input type="email" name="user_email" placeholder="이메일을 입력하세요.">
+                        <input type="text" name="user_message" placeholder="메세지를 간단하게 기록하세요.">
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i>SEND MESSAGE</button>
+                    </form>
+                </div>
             </div>
         </div>
         <!-- //.container -->

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* position: relative; */
+            height: 56px;
+            background: lightblue;
+            padding: 0 30px;
+            /* overflow: hidden; */
+        }
+
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        /* Collapsed Menu Icon */
+        .toggler {
+            position: absolute;
+            z-index: 9999;
+            right: 30px;
+            top: 17px;
+            width: 20px;
+            height: 16px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        .toggler span {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            border-top: 2px solid black;
+            transition: 0.3s;
+        }
+
+        .toggler span:first-of-type {
+            top: 0;
+        }
+
+        .toggler span:last-of-type {
+            top: 100%;
+        }
+
+        .toggler.active span:first-of-type {
+            opacity: 0;
+        }
+
+        .toggler.active span:first-of-type,
+        .toggler.active span:last-of-type {
+            top: 50%;
+        }
+
+        .toggler.active span:nth-of-type(2) {
+            transform: rotate(45deg);
+            border-top: 2px solid #fff;
+        }
+
+        .toggler.active span:nth-of-type(3) {
+            transform: rotate(-45deg);
+            border-top: 2px solid #fff;
+        }
+
+        /* mobile menu hide */
+        #gnb {
+            /* display: none; */
+            position: fixed;
+            width: 50%;
+            height: 100vh;
+            right: -50%;
+            top: 0px;
+            background: #333;
+            /* overflow:hidden; */
+        }
+
+        #gnb ul {
+            display: flex;
+            flex-direction: column;
+            height: 56px;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        #gnb li {
+            margin-bottom: 24px;
+            padding: 0 24px;
+        }
+
+        #gnb li a {
+            display: block;
+            padding: 8px 16px;
+            color: #fff;
+            transition: 0.1s;
+        }
+
+        #gnb li a:hover {
+            background: #555;
+            color: #fff;
+        }
+
+        @media (min-width: 576px) {
+            .toggler {
+                display: none;
+            }
+
+            #gnb {
+                position: relative;
+                display: block;
+                width: auto;
+                height: auto;
+                right: 0;
+                top: 0;
+                background: transparent;
+            }
+
+            #gnb ul {
+                flex-direction: row;
+                align-items: center;
+                padding-top: 0px;
+            }
+
+            #gnb li {
+                margin-left: 30px;
+                padding: 0;
+                margin-bottom: 0;
+            }
+
+            #gnb li a {
+                display: block;
+                padding: 0;
+                color: #fff;
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">LOGO</h1>
+        <!-- nav -->
+        <button type="button" class="toggler">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="gnb">
+            <ul>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Mobile Menu</h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            /* mobile toggler button */
+            let flag = 0;
+            $(".toggler").click(function () {
+                let ww = $(window).width();
+                if (ww < 576) {
+                    if (flag === 0) {
+                        $(this).addClass("active");
+                        $("#gnb").stop().animate({ right: 0 }, 200);
+                        flag = 1;
+                    } else {
+                        $(this).removeClass("active");
+                        $("#gnb")
+                            .stop()
+                            .animate({ right: -50 + "%" });
+                        flag = 0;
+                    }
+                }
+            });
+
+            $(window).resize(function () {
+                let ww = $(window).width();
+                if (ww > 576) {
+                    $("#gnb").css({ right: 0 });
+                    $(".toggler").addClass("active");
+                } else {
+                    $("#gnb").css({ right: -50 + "%" });
+                    $(".toggler").removeClass("active");
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
