@@ -1,15 +1,15 @@
 $(function () {
      // 내비게이션바
-     $('.main > li > a').mouseenter(function (e) {
+     $('.main > li > a').mouseenter(function () {
         // a태그 기본 이벤트 제거
-        e.preventDefault();
-        $('.sub').stop().slideDown(400);
-        $('.nav_bg').stop().animate({ height: 180 }, 400);
+        $('.sub').stop().slideDown();
+        $('.nav_bg').stop().animate({ height: 280 }, );
     });
     $('nav').mouseleave(function () {
-        $('.sub').stop().slideUp(400);
-        $('.nav_bg').stop().animate({ height: 0 }, 400);
+        $('.sub').stop().slideUp();
+        $('.nav_bg').stop().animate({ height: 0 }, );
     });
+
     // scrollTop
     // 헤더
     const headerBg = $('#header');

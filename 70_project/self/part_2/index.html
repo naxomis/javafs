@@ -19,7 +19,6 @@
 <body>
     <!-- header -->
     <header class="top_nav">
-        <div class="nav_bg"></div>
         <div class="top_align">
             <div class="top_warp">
                 <ul class="global_menu">
@@ -52,7 +51,6 @@
                 </div>
             </div>
         </div>
-        </div>
         <h1 class="top_logo">
             <span>
                 <img src="images/logo_header.png" alt="top_logo">
@@ -60,7 +58,8 @@
         </h1>
         <nav id="nav">
             <ul id="sl1" class="main">
-                <li>
+                <div class="nav_bg"></div>
+                <li class="main_li">
                     <a href="#">항공권예약</a>
                     <ul class="sub">
                         <li><a href="#">최저가 간편조회</a></li>
@@ -70,7 +69,7 @@
                         <li><a href="#">항공권예약</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="main_li">
                     <a href="#">예약</a>
                     <ul class="sub">
                         <li><a href="#">항공원 구매 내역</a></li>
@@ -80,7 +79,7 @@
                         <li><a href="#">캐빈승무원 일기</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="main_li">
                     <a href="#">여행준비</a>
                     <ul class="sub">
                         <li><a href="#">수화물</a></li>
@@ -90,7 +89,7 @@
                         <li><a href="#">출입국 규정 안내</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="main_li">
                     <a href="#">여행</a>
                     <ul class="sub">
                         <li><a href="#">공항 안내</a></li>
@@ -100,7 +99,7 @@
                         <li><a href="#">항공기 정보</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="main_li">
                     <a href="#">유료 부가서비스</a>
                     <ul class="sub">
                         <li><a href="#">기내 Wi-Fi</a></li>
@@ -110,7 +109,7 @@
                         <li><a href="#">업그레이드 스탠바이</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="main_li">
                     <a href="#">아시아나클럽</a>
                     <ul class="sub">
                         <li><a href="#">회원제도</a></li>
@@ -120,7 +119,7 @@
                         <li><a href="#">할인제휴사</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="main_li">
                     <a href="#">도움이 필요한 고객</a>
                     <ul class="sub">
                         <li><a href="#">장애인 고객</a></li>
@@ -131,7 +130,76 @@
                     </ul>
                 </li>
             </ul>
-            <!-- <ul>
+        </nav>
+    </header>
+    <!-- section1 -->
+    <!-- 슬라이드 -->
+    <section class="main_img" id="slide">
+        <h1>kk</h1>
+        <div id="slideWrap">
+            <div class="frame">
+                <ul id="slideList">
+                    <li>
+                        <img src="images/s1.jpg" alt="슬라이드이미지">
+                    </li>
+                    <li>
+                        <img src="images/s2.jpg" alt="슬라이드이미지">
+                    </li>
+                    <li>
+                        <img src="images/s3.jpg" alt="슬라이드이미지">
+                    </li>
+                    <li>
+                        <img src="images/s4.jpg" alt="슬라이드이미지">
+                    </li>
+                </ul>
+            </div>
+            <div class="controls">
+                <a href="#" id="prevBtn">prev</a>
+                <a href="#" id="nextBtn">next</a>
+            </div>
+            <ul class="pager">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </div>
+        <!-- <ul>
+            <li>
+                <img src="images/s1.jpg" alt="슬라이드이미지">
+            </li>
+            <li>
+                <img src="images/s2.jpg" alt="슬라이드이미지">
+            </li>
+            <li>
+                <img src="images/s3.jpg" alt="슬라이드이미지">
+            </li>
+            <li>
+                <img src="images/s4.jpg" alt="슬라이드이미지">
+            </li>
+            <li>
+                <img src="images/s5.jpg" alt="슬라이드이미지">
+            </li>
+            <li>
+                <img src="images/s6.jpg" alt="슬라이드이미지">
+            </li>
+            <li>
+                <img src="images/s7.jpg" alt="슬라이드이미지">
+            </li>
+            <li>
+                <img src="images/s8.jpg" alt="슬라이드이미지">
+            </li>
+            <li>
+                <img src="images/s9.jpg" alt="슬라이드이미지">
+            </li>
+            <li>
+                <img src="images/s10.jpg" alt="슬라이드이미지">
+            </li>
+            <li>
+                <img src="images/s1.jpg" alt="슬라이드이미지">
+            </li>
+        </ul> -->
+                    <!-- <ul>
                 <li>
                     <a href="#">예약</a>
                     <ul id="sl1" class="sub">
@@ -316,76 +384,6 @@
             </ul>
             </li>
             </ul> -->
-        </nav>
-        </div>
-    </header>
-    <!-- section1 -->
-    <!-- 슬라이드 -->
-    <section class="main_img" id="slide">
-        <h1>kk</h1>
-        <div id="slideWrap">
-            <div class="frame">
-                <ul id="slideList">
-                    <li>
-                        <img src="images/s1.jpg" alt="슬라이드이미지">
-                    </li>
-                    <li>
-                        <img src="images/s2.jpg" alt="슬라이드이미지">
-                    </li>
-                    <li>
-                        <img src="images/s3.jpg" alt="슬라이드이미지">
-                    </li>
-                    <li>
-                        <img src="images/s4.jpg" alt="슬라이드이미지">
-                    </li>
-                </ul>
-            </div>
-            <div class="controls">
-                <a href="#" id="prevBtn">prev</a>
-                <a href="#" id="nextBtn">next</a>
-            </div>
-            <ul class="pager">
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-            </ul>
-        </div>
-        <!-- <ul>
-            <li>
-                <img src="images/s1.jpg" alt="슬라이드이미지">
-            </li>
-            <li>
-                <img src="images/s2.jpg" alt="슬라이드이미지">
-            </li>
-            <li>
-                <img src="images/s3.jpg" alt="슬라이드이미지">
-            </li>
-            <li>
-                <img src="images/s4.jpg" alt="슬라이드이미지">
-            </li>
-            <li>
-                <img src="images/s5.jpg" alt="슬라이드이미지">
-            </li>
-            <li>
-                <img src="images/s6.jpg" alt="슬라이드이미지">
-            </li>
-            <li>
-                <img src="images/s7.jpg" alt="슬라이드이미지">
-            </li>
-            <li>
-                <img src="images/s8.jpg" alt="슬라이드이미지">
-            </li>
-            <li>
-                <img src="images/s9.jpg" alt="슬라이드이미지">
-            </li>
-            <li>
-                <img src="images/s10.jpg" alt="슬라이드이미지">
-            </li>
-            <li>
-                <img src="images/s1.jpg" alt="슬라이드이미지">
-            </li>
-        </ul> -->
     </section>
 
     <!-- section2-->
@@ -536,7 +534,6 @@
             </div>
         </div>
     </footer>
-
 
 </body>
 

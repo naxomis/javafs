@@ -122,6 +122,9 @@ section h2 + p {
     align-items: center;
     padding: 36px 0;
 }
+#counter li span {
+    display: block;
+}
 
 /* section3 */
 
