@@ -3,7 +3,7 @@ $(function () {
      $('.main > li > a').mouseenter(function () {
         // a태그 기본 이벤트 제거
         $('.sub').stop().slideDown();
-        $('.nav_bg').stop().animate({ height: 280 }, );
+        $('.nav_bg').stop().animate({ height: 230 }, );
     });
     $('nav').mouseleave(function () {
         $('.sub').stop().slideUp();
@@ -21,7 +21,7 @@ $(function () {
         // let stVal = 600;
 
         if (st < 0) {
-            headerBg.css({ background: '#243c84' })
+            headerBg.css({ background: '#dbf6ff' })
         } else {
             headerBg.css({ background: 'transparent' })
         }
