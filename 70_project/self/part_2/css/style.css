@@ -133,7 +133,7 @@ nav {
 
 /* section1 */
 #slide {
-    width: 100vw;
+    width: 100%;
     position: relative;
 }
 
@@ -144,17 +144,19 @@ nav {
 /* 슬라이드 */
 #slide .frame {
     overflow: hidden;
-
 }
 
 #slideList {
     position: relative;
     display: flex;
 }
+#slideList img {
+    width: 100%;
+}
 
 
 #slideList.on {
-    transition: .7s;
+    transition: .9s;
 }
 
 /* 좌우 버튼 */
