@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.1.js"></script>
+    <style>
+        *{margin: 0; padding: 0;}
+        h1{
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 999;
+        }
+        section{
+            width: 100%;
+            height: 900px;
+            position: relative;
+        }
+        .section1{
+            background-color: aquamarine;
+        }
+        .section2{
+            background-color: burlywood;
+        }
+        article{
+            position: absolute;
+            width: 250px;
+            height: 150px;
+            background-color: #fff;
+            box-sizing: border-box;
+        }
+
+        .article1{
+            top: 50px;
+            left: -300px;
+            transition: all 0.3s;
+        }
+        .article2{
+            bottom: 50px;
+            right: -300px;
+            transition: all 0.3s;
+        }
+
+        .article1.on{
+            top: 50px;
+            left: 500px;
+        }
+        .article2.on{
+            bottom: 50px;
+            right: 500px;
+        }
+
+        article h2{
+            font-size: 24px;
+            padding: 10px;
+            line-height: 35px;
+        }
+        article p{
+            font-size: 16px;
+            padding: 10px;
+            font-weight: bold;
+            line-height: 25px;
+        }
+        
+        .section3{
+            background-color: chartreuse;
+        
+        }
+        .section3 #spec{
+            border: 1px solid red;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 200px;
+            background-color: #fff;
+           
+        }
+
+        .section3 #spec .gage{
+            border: 1px solid blue;
+            position: absolute;            
+            width: 480px ;
+            height: 50px ;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+        }
+        h3{
+            position: absolute;
+            z-index: 10;
+        }
+
+        .bar{
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        background-color: #ccc;
+        }
+        .bar span{
+        display: block;
+        width: 0%;
+        height: 100%;
+        background-color: pink;
+        }
+
+
+        .section4{
+            background-color: coral;
+        }
+
+    </style>
+    <script>
+        $(function(){
+            
+            var s1 =$('.section1').offset().top;
+            var s2 =$('.section2').offset().top;
+            var s3 =$('.section3').offset().top;
+            var s4 =$('.section4').offset().top;
+            console.log(s1,s2,s3,s4);
+
+
+
+            $(window).scroll(function(){
+            // scroll 브라우져 스크롤 이벤트 동작
+            var sct = parseInt($(window).scrollTop()); //세로 스크롤의 위치를 알아내서 sct에 저장
+            //parseInt = 정수로 표현 방법
+             $("h1 span").text(sct);
+             if(sct>300){
+                $('.article1').addClass('on');
+             }
+             if(sct>700){
+                $('.article2').addClass('on');
+             }
+             if(sct<300 || sct>900){
+                $('.article1').removeClass('on');
+             }
+             if(sct<700 || sct>1200){
+                $('.article2').removeClass('on');
+             }
+            
+        });
+var f =1;
+        $(window).scroll(function(){
+            var sct = parseInt($(window).scrollTop());
+            console.log(sct);
+        
+            function ggg(){
+    if(f==1){
+        $({percent:0}).animate({percent:s},{
+            duration:3000,
+            progress:function(){
+                var now = this.percent;
+                $('#num').text(Math.ceil(now)); //소수점이하 올린다.
+                // $('#num').text(Math.리ㅐㅐㄱ(now)); 소수점 이하 버린다.
+                //Math.round(now);소수점 이하 반올림
+                // var k =Math.ceil((now/111)*100);
+                $('.bar span').css('width',now+"%");
+            }
+            });
+        }
+        f=2;
+            }
+         
+            if(sct>1500){
+                ggg();
+            }
+            
+        });
+
+        var s=$('#num') .text()
+        
+
+  
+        return false
+
+        });
+    </script>
+</head>
+<body>
+    <h1>스크롤의 위치: <span>0000</span></h1>
+    <section class="section1">
+        
+    </section>
+
+    <section class="section2">
+        <article class="article1">
+            <h2>오늘 회식장소는?</h2>
+            <p>아침산저녁바다</p>
+        </article>
+        <article class="article2">
+            <h2>위치는 어떻게 되져?</h2>
+            <p>미금역 3번출구 150m위치</p>
+        </article>
+    </section>
+
+    <section class="section3">
+        <div id="spec">
+            <div class="gage">
+                <h3 id="num">80</h3>
+                <p class="bar"><span></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section4">
+
+    </section>
+</body>
+</html>

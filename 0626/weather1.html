@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <script>
+        /* 
+        $.getJSON("demo_ajax_json.js", function (result) {
+            $.each(result, function (i, field) {
+                $("div").append(field + " ");
+            });
+        });
+         */
+        /*  
+        $.getJSON("파일(날씨)경로", function (data) {
+            data가 할일
+        });
+         */
+        $.getJSON("http://api.openweathermap.org/data/2.5/weather?id=1846898&appid=2f3a36dab1ba2524112ba3042eb20eb9&units=metric", function (data) {
+            var $cTemp = data.main.temp;
+            var $maxTemp = data.main.temp_max;
+            var $minTemp = data.main.temp_min;
+            var $wIcon = data.weather[0].icon
+
+            console.log($cTemp, $maxTemp, $minTemp);
+
+            $(".ctemp").append($cTemp);
+            $(".clowtemp").append($minTemp);
+            $(".chightemp").append($maxTemp);
+            // $(".cicon").append("<img src= 'https://openweathermap.org/img/wn/"+$wIcon+"@2x.png'>");
+            $(".cicon").append(`<img src="https://openweathermap.org/img/wn/${$wIcon}@2x.png">`);
+            // 백팁문법
+
+            var $now = new Date();
+            var $cDate = $now.getFullYear() + "/" + ($now.getMonth()+1) + "/" + $now.getDate() + " " + $now.getHours() + " : " + $now.getMinutes();
+            $('h2').prepend($cDate);
+        });
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>weather api</h1>
+    <h2>- 날씨정보</h2>
+    <div class="ctemp">현재 온도: </div>
+    <div class="clowtemp">최저 온도: </div>
+    <div class="chightemp">최고 온도: </div>
+    <div class="cicon">아이콘 :</div>
+</body>
+
+</html>

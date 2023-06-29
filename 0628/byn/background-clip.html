@@ -1,0 +1,34 @@
+!<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+      div {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 20px 0px;
+        padding: 20px;
+        border: 10px dotted #dadada;
+        background-color: #eeeeee;
+      }
+      .a {
+        background-clip: border-box;
+      }
+      .b {
+        background-clip: padding-box;
+      }
+      .c {
+        background-clip: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <p><code>background-clip: border-box;</code></p>
+    <div class="a">Lorem Ipsum Dolor</div>
+    <p><code>background-clip: padding-box;</code></p>
+    <div class="b">Lorem Ipsum Dolor</div>
+    <p><code>background-clip: content-box;</code></p>
+    <div class="c">Lorem Ipsum Dolor</div>
+  </body>
+</html>

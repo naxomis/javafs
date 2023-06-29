@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #box1{width: 100px;height: 100px;background-color: #f00; position: relative; left: 0;}
+    </style>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(function(){
+            $('#box1').animate({left:"500px"},2000);
+        })
+    </script>
+</head>
+<body>
+    <div id="box1">박스1</div>
+</body>
+</html>

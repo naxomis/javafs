@@ -48,7 +48,7 @@ $(function () {
         onSlideAfter: function () {
             titMotion();
         }
-    });
+    }); 
 
     function titMotion() {
         // 슬라이드 전환 직후의 텍스트 모션

@@ -1,0 +1,95 @@
+
+OpenWeather API keys
+2f3a36dab1ba2524112ba3042eb20eb9
+
+how to start
+
+Example on how to make an API call using your API key
+
+http://api.openweathermap.org/data/2.5/forecast?
+id=524901&appid={API key}
+http://api.openweathermap.org/data/2.5/forecast?
+id=1846898&appid=2f3a36dab1ba2524112ba3042eb20eb9
+
+서울 : 1835848
+
+추가하면 섭씨온도
+&untis=metric
+http://api.openweathermap.org/data/2.5/forecast?
+id=1846898&appid=2f3a36dab1ba2524112ba3042eb20eb9&units=metric
+
+forecast(예보) - 전체
+weather(현재날씨) - 현재날씨
+http://api.openweathermap.org/data/2.5/weather?
+id=1846898&appid=2f3a36dab1ba2524112ba3042eb20eb9&units=metric
+
+
+날씨 아이콘
+https://openweathermap.org/weather-conditions
+URL is https://openweathermap.org/img/wn/10d@2x.png
+===============================================================================
+
+
+날씨 api 사이트
+
+http://openweathermap.org/
+
+Sign in 또는 가입
+
+api key 탭을 눌러서 키값을 복사한다.
+079b8942e0b5aa9292436aca492ee8f0
+Guide 메뉴 하단에  how to start 클릭
+
+Example on how to make an API call using your API key
+
+
+http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}
+
+http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=079b8942e0b5aa9292436aca492ee8f0
+id 뒤에있는 숫자는 도시코드입니다. 
+도시코드를 얻어와야함 
+서울 - 또는 안양 anyang (영문으로 )
+
+메인화면 - 돋보기(검색창) - weather in your ciry     placeholder로 써진부분에
+anyang 검색 
+
+검색된 안양을 클릭하면 안양날씨를 볼수 있고
+상단주소줄에  https://openweathermap.org/city/1846898 -->1846898 이 도시코드
+성남  :  1897000
+서울  :  1835848
+
+http://api.openweathermap.org/data/2.5/forecast?id=1846898&appid=079b8942e0b5aa9292436aca492ee8f0
+
+https://tools.arantius.com/tabifier 
+html , css , json //사이트정리
+
+var array = [1,2,3,4];
+array[0] = 1;
+
+var array1 = [{temp:value,temp_min:value}, {temp:value,temp_min:value}]
+
+출력되 나온 온도는  kelvin 온도입니다.
+293.76
+메뉴 - api - Parameters of API reponse - json
+ - Units of measurement
+
+기본은 kelvin
+&units=metric 뒤에 붙인다.(섭씨) 
+
+&units=imperial(화씨)
+
+
+http://api.openweathermap.org/data/2.5/forecast?id=1846898&appid=079b8942e0b5aa9292436aca492ee8f0&&units=metric
+
+
+
+forecast(예보)
+weather(현재날씨) 
+http://api.openweathermap.org/data/2.5/weather?id=1846898&appid=079b8942e0b5aa9292436aca492ee8f0&units=metric
+
+날시 아이콘이 있는곳
+https://openweathermap.org/weather-conditions
+URL is http://openweathermap.org/img/wn/10d@2x.png
+
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://kit.fontawesome.com/fa9c464e26.js" crossorigin="anonymous"></script>
+
+    <script>
+        let weatherIcon = {
+            "01": "fas fa-sun",
+            "02": "fas fa-cloud-sun",
+            "03": "fas fa-cloud",
+            "04": "fas fa-cloud-meatball",
+            "09": "fas fa-cloud-sun-rain",
+            "10": "fas fa-cloud-showers-heavy",
+            "11": "fas fa-poo-storm",
+            "13": "fas fa-snowflake",
+            "50": "fas fa-smog",
+        }
+
+        var apiURI = "http://api.openweathermap.org/data/2.5/weather?id=1846898&appid=2f3a36dab1ba2524112ba3042eb20eb9&units=metric";
+
+        $.ajax({
+            url: apiURI,
+            type: 'GET', // 타입(GET, POET, PATCH, PUT 등등) 
+            success: function (data) { //결과 성공 콜백함수
+                var $Icon = data.weather[0].icon.substr(0,2); // 0 인덱스번호부터 두글자 04d -> 04
+                var $Temp = Math.floor(data.main.temp) + "℃";
+                var $city = data.name;
+                alert(weatherIcon[$Icon]);
+                $(".currIcon").append(' <i class=" ' + weatherIcon[$Icon] + ' " ></i>');
+                $(".currTemp").prepend($Temp);
+                $(".city").append($city);
+            }
+        });
+    </script>
+    <style>
+        .weather {
+            width: 300px;
+            height: 150px;
+            text-align: center;
+            background: cornflowerblue;
+            color: #fff;
+        }
+
+        .weather > div {
+            float: left;
+            height: 75px;
+            line-height: 75px;
+            width: 50%;
+        }
+
+        .weather > div.currIcon,
+        .weather > div.currTemp {
+            font-size: 50px;
+        }
+
+        .weather > div.city {
+            width: 100%;
+            font-size: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="weather">
+        <div class="currIcon"></div>
+        <div class="currTemp"></div>
+        <div class="city">도시 :</div>
+    </div>
+    <!-- <h1><i class="fas fa-sun"></i></h1> -->
+</body>
+
+</html>

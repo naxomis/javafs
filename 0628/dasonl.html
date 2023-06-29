@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .main {
+            overflow: hidden;
+        }
+
+        .slide {
+            position: relative;
+        }
+
+        .slide .sub2 {
+            position: relative;
+            opacity: 0;
+            transition: .6s;
+            animation: slide2 9s infinite;
+        }
+
+        .slide .sub1 {
+            position: absolute;
+            opacity: 0;
+            transition: .6s;
+            animation: slide1 9s infinite;
+        }
+
+        @keyframes slide1 {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes slide2 {
+            0% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .txt1 div {
+            animation: slideTxt1 9s infinite;
+            transition: .2s;
+        }
+
+        @keyframes slideTxt1 {
+            0% {
+                bottom: 600px;
+            }
+            100% {
+                top: 50%;
+            }
+        }
+        .txt1 strong {
+            animation: slideStrong 9s infinite;
+            transition: .2s;
+        }
+
+        @keyframes slideStrong {
+            0% {
+                top: 0px;
+            }
+            100% {
+                top: 50%;
+            }
+        }
+
+        .txt_box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .txt {
+            z-index: 10;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .txt strong {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="slide">
+            <div class="sub sub1">
+                <img src="images/main_visual1.jpg" alt="slide1" class="slide_img">
+                <img src="images/main_txt_box.png" alt="txt" class="txt_box">
+                <div class="txt">
+                    <div>언택트시대 필수과정</div>
+                    <strong>비대면 상담<br>비대면검사</strong>
+                    <div>이제 당신의 공간에서 전문상담사를 만나보세요</div>
+                </div>
+            </div>
+            <div class="sub sub2">
+                <img src="images/main_visual2.jpg" alt="slide2" class="slide_img">
+                <img src="images/main_txt_box.png" alt="txt" class="txt_box">
+                <div class="txt">
+                    <div>가격부담Down x 치료기대효과 Up</div>
+                    <strong>다소니관계테라피</strong>
+                    <div>검사와 상담이 모두필요한 여러분에게 딱!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        
+    const sec2 = $('#section2'),
+        txt1 = sec2.find('.sub1'),
+        txt2 = sec2.find('.sub2');
+    $(window).scroll(function () {
+        let st = $(this).scrollTop();
+        let stVal = 600;
+        console.log(st);
+
+        if (st >= stVal) {
+            btn.css({ opacity: 1 });
+            txt1.css({ left: 360 + 'px' });
+            txt2.css({ left: 360 + 'px' });
+            headerBg.css({ background: '#243c84' });
+        } else {
+            btn.css({ opacity: 0 });
+            txt1.css({ left: -800 + 'px' });
+            txt2.css({ left: -400 + 'px' });
+            headerBg.css({ background: 'transparent' });
+        }
+    });
+    </script> -->
+</body>
+
+</html>
