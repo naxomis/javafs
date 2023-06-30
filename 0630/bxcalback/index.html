@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul, li{list-style: none;}
+        #img_slider{
+            width: 640px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #btn p{
+            position: absolute;
+            top: 40%;
+        }
+        #btn p.left_btn{
+            left: 20px;
+        }
+        #btn p.right_btn{
+            right: 20px;
+        }
+        #btn p i{font-size: 30px; color: #333;}
+        #btn p i:hover{color: #bbb;}
+        #page{
+    width:640px;margin: 0 auto;
+}
+        #page ul{position: relative;}
+#page ul{  position: relative;}
+        #page ul li{
+            float: left;
+            width: 14%;
+            height: 30px;
+            line-height: 30px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        #page ul li a{text-decoration: none; color: #000; font-weight: bold;}
+        #page ul li .on{color: #bbb;}
+        #page ul #focus{
+            position: absolute;
+            width: 14%;
+            top: 0; left: 0;
+            border: 2px solid purple;
+            box-sizing: border-box;
+            height: 30px;
+            border-radius: 5px;
+        }
+        .slider li{
+            position: relative;
+        }
+        .slider li h1{
+            position: absolute;
+            left: 20px;
+            top: 60px;
+            opacity: 0;
+            transition: all 0.6s;
+            z-index: 9999;
+            transform: translateY(60px);
+        }
+        .slider li h1.on{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+    </style>
+    <script>
+        $(function(){
+            var slider = $(".slider").bxSlider({
+                auto:true,
+                controls:false,
+                // 슬라이드가 되자마자
+                onSlideBefore:function(){
+                    var n = slider.getCurrentSlide(); // 현재슬라이드의 인덱스번호
+                    var w = $('#page ul li').width(); // 현재 하단의 번호있는 li의 넓이
+                 },
+                // 슬라이드가 된 후
+                onSlideAfter:function(){},
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="img_slider">
+            <ul class="slider">
+                <li>
+                    <a href="#"><img src="images/01.JPG" alt=""></a>
+                    <h1 class="text0 on">fashion style1</h1>
+                </li>
+                <li>
+                    <a href="#"><img src="images/02.JPG" alt=""></a>
+                    <h1 class="text1">fashion style2</h1>
+                </li>
+                <li>
+                    <a href="#"><img src="images/03.JPG" alt=""></a>
+                    <h1 class="text2">fashion style3</h1>
+                </li>
+                <li>
+                    <a href="#"><img src="images/04.JPG" alt=""></a>
+                    <h1 class="text3">fashion style4</h1>
+                </li>
+                <li>
+                    <a href="#"><img src="images/05.JPG" alt=""></a>
+                    <h1 class="text4">fashion style5</h1>
+                </li>
+                <li>
+                    <a href="#"><img src="images/06.JPG" alt=""></a>
+                    <h1 class="text5">fashion style6</h1>
+                </li>
+                <li>
+                    <a href="#"><img src="images/07.JPG" alt=""></a>
+                    <h1 class="text6">fashion style7</h1>
+                </li>
+            </ul>
+            <div id="btn">
+            <p class="left_btn">
+                <i class="fa fa-arrow-left"></i>
+            </p>
+            <p class="right_btn">
+                <i class="fa fa-arrow-right"></i>
+            </p>
+        </div>
+        <div id="page">
+            <ul>
+                <li class="on"><a href="#">1번</a></li>
+                <li><a href="#">2번</a></li>
+                <li><a href="#">3번</a></li>
+                <li><a href="#">4번</a></li>
+                <li><a href="#">5번</a></li>
+                <li><a href="#">6번</a></li>
+                <li><a href="#">7번</a></li>
+                <div id="focus"></div>
+            </ul>
+        </div>
+        </div>
+        
+</body>
+</html>
