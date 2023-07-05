@@ -10,12 +10,70 @@
             margin: 0;
             padding: 0;
         }
+        html {
+            font-size: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
 
         ul {
             list-style: none;
         }
 
-        .main {
+        #haeder {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background: #fad5d5;
+            align-items: center;
+        }
+
+        #haeder .logo {
+            height: 150px;
+            line-height: 200px;
+        }
+
+        .nav_bg {
+            position: absolute;
+            left: 0;
+            top: 200px;
+            width: 100%;
+            z-index: 9998;
+            background: rgba(255, 255, 255, 0.435);
+        }
+
+        nav>ul {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav .main>li {
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            background: #e7e7e7;
+        }
+        nav .main> li > a{
+            font-size: 1.65rem;
+            font-weight: 600;
+            line-height: 50px;
+        }
+
+        nav .sub {
+            display: none;
+        }
+        nav .sub li a{
+            z-index: 9999;
+            font-size: 1.65rem;
+            color: #000000;
+        }
+
+
+        .mainslide {
             overflow: hidden;
         }
 
@@ -23,14 +81,14 @@
             position: relative;
         }
 
-        .slide .sub2 {
+        .slide .subSlide2 {
             position: relative;
             opacity: 0;
             transition: .6s;
             animation: slide2 9s infinite;
         }
 
-        .slide .sub1 {
+        .slide .subSlide1 {
             position: absolute;
             opacity: 0;
             transition: .6s;
@@ -82,10 +140,12 @@
             0% {
                 bottom: 600px;
             }
+
             100% {
                 top: 50%;
             }
         }
+
         .txt1 strong {
             animation: slideStrong 9s infinite;
             transition: .2s;
@@ -95,6 +155,7 @@
             0% {
                 top: 0px;
             }
+
             100% {
                 top: 50%;
             }
@@ -123,9 +184,63 @@
 </head>
 
 <body>
-    <div class="main">
+    <div id="haeder">
+        <div class="logo"><img src="images/dasoni_logo.png" alt="logo"></div>
+        <nav>
+            <ul class="main">
+                <div class="nav_bg"></div>
+                <li>
+                    <a href="#">ABOUT다소니</a>
+                    <ul class="sub">
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">오시는길</a></li>
+                        <li><a href="#">마음산책</a></li>
+                        <li><a href="#">후기</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">상담진 소개</a>
+                    <ul class="sub">
+                        <li><a href="#">대표/슈바이저</a></li>
+                        <li><a href="#">자소니 상담진</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">심리상담</a>
+                    <ul class="sub">
+                        <li><a href="#">성인심리상담</a></li>
+                        <li><a href="#">청소년/아동심리상담</a></li>
+                        <li><a href="#">부부상담</a></li>
+                        <li><a href="#">가족상담</a></li>
+                        <li><a href="#">심리상담 예약신청</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">심리검사</a>
+                    <ul class="sub">
+                        <li><a href="#">다소니전문심리검사</a></li>
+                        <li><a href="#">종합심리평가</a></li>
+                        <li><a href="#">신경심리평가</a></li>
+                        <li><a href="#">단일검사</a></li>
+                        <li><a href="#">심리검사 예약신청</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">관계테라피</a>
+                    <ul class="sub">
+                        <li><a href="#">부부관계테라피</a></li>
+                        <li><a href="#">가족관계테라피</a></li>
+                        <li><a href="#">커플관계테라피</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        </div>
+        
+    <div class="main_slide">
         <div class="slide">
-            <div class="sub sub1">
+            <div class="subSlide subSlide1">
                 <img src="images/main_visual1.jpg" alt="slide1" class="slide_img">
                 <img src="images/main_txt_box.png" alt="txt" class="txt_box">
                 <div class="txt">
@@ -134,7 +249,7 @@
                     <div>이제 당신의 공간에서 전문상담사를 만나보세요</div>
                 </div>
             </div>
-            <div class="sub sub2">
+            <div class="subSlide subSlide2">
                 <img src="images/main_visual2.jpg" alt="slide2" class="slide_img">
                 <img src="images/main_txt_box.png" alt="txt" class="txt_box">
                 <div class="txt">
@@ -146,30 +261,17 @@
         </div>
     </div>
 
-    <!-- <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
     <script>
-        
-    const sec2 = $('#section2'),
-        txt1 = sec2.find('.sub1'),
-        txt2 = sec2.find('.sub2');
-    $(window).scroll(function () {
-        let st = $(this).scrollTop();
-        let stVal = 600;
-        console.log(st);
-
-        if (st >= stVal) {
-            btn.css({ opacity: 1 });
-            txt1.css({ left: 360 + 'px' });
-            txt2.css({ left: 360 + 'px' });
-            headerBg.css({ background: '#243c84' });
-        } else {
-            btn.css({ opacity: 0 });
-            txt1.css({ left: -800 + 'px' });
-            txt2.css({ left: -400 + 'px' });
-            headerBg.css({ background: 'transparent' });
-        }
-    });
-    </script> -->
+        $('.main > li').mouseenter(function () {
+            $('.sub').stop().slideDown();
+            $('.nav_bg').stop().animate({ height: 175 });
+        });
+        $('nav').mouseleave(function () {
+            $('.sub').stop().slideUp();
+            $('.nav_bg').stop().animate({ height: 0 });
+        });
+    </script>
 </body>
 
 </html>

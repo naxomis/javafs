@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #haeder {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background: #fad5d5;
+            align-items: center;
+        }
+
+        #haeder .logo {
+            height: 150px;
+            line-height: 200px;
+        }
+
+        nav {
+            width: 100%;
+            background: #fff;
+        }
+
+        .nav_bg {
+            position: absolute;
+            left: 0;
+            top: 200px;
+            width: 100%;
+            z-index: 9998;
+            background: rgba(203, 203, 203, 0.435);
+        }
+
+        .main:hover .nav_bg {
+            border-top: 2px solid;
+            border-image: linear-gradient(to right, #7BD79C, #FBDE71, #AA8DD8, #ffa760);
+            border-image-slice: 1;
+        }
+
+        nav>ul {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-top: 2px solid;
+            border-image: linear-gradient(to right, #7BD79C, #FBDE71, #AA8DD8, #ffa760);
+            border-image-slice: 1;
+        }
+
+        nav .main>li {
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            /* background: #e7e7e7; */
+        }
+
+        nav .main>li>a {
+            font-size: 1.65rem;
+            font-weight: 600;
+            line-height: 50px;
+        }
+
+        nav .sub {
+            display: none;
+        }
+
+        nav .sub li a {
+            z-index: 9999;
+            font-size: 1.65rem;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="haeder">
+        <div class="logo"><img src="images/dasoni_logo.png" alt="logo"></div>
+    </div>
+    <nav>
+        <ul class="main">
+            <div class="nav_bg"></div>
+            <li>
+                <a href="#">ABOUT다소니</a>
+                <ul class="sub">
+                    <li><a href="#">인사말</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">오시는길</a></li>
+                    <li><a href="#">마음산책</a></li>
+                    <li><a href="#">후기</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">상담진 소개</a>
+                <ul class="sub">
+                    <li><a href="#">대표/슈바이저</a></li>
+                    <li><a href="#">자소니 상담진</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">심리상담</a>
+                <ul class="sub">
+                    <li><a href="#">성인심리상담</a></li>
+                    <li><a href="#">청소년/아동심리상담</a></li>
+                    <li><a href="#">부부상담</a></li>
+                    <li><a href="#">가족상담</a></li>
+                    <li><a href="#">심리상담 예약신청</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">심리검사</a>
+                <ul class="sub">
+                    <li><a href="#">다소니전문심리검사</a></li>
+                    <li><a href="#">종합심리평가</a></li>
+                    <li><a href="#">신경심리평가</a></li>
+                    <li><a href="#">단일검사</a></li>
+                    <li><a href="#">심리검사 예약신청</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">관계테라피</a>
+                <ul class="sub">
+                    <li><a href="#">부부관계테라피</a></li>
+                    <li><a href="#">가족관계테라피</a></li>
+                    <li><a href="#">커플관계테라피</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $('.main > li').mouseenter(function () {
+            $('.sub').stop().slideDown();
+            $('.nav_bg').stop().animate({ height: 175 });
+        });
+        $('nav').mouseleave(function () {
+            $('.sub').stop().slideUp();
+            $('.nav_bg').stop().animate({ height: 0 });
+        });
+    </script>
+</body>
+
+</html>
