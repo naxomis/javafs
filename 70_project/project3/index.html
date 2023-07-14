@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아시아나항공</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header class="top_nav">
+        <div class="top_align">
+            <div class="top_warp">
+                <ul class="global_menu">
+                    <li class="on"><a href="#">브랜드사이트</a></li>
+                    <li><a href="https://flyasiana.com/C/KR/KO/club/earn-mileage-mall?menuId=CM201802220000728447">마일리지
+                            적립몰</a></li>
+                    <li><a href="https://dutyfree.flyasiana.com/foMain.do?globalLang=ko">기내 면세점</a></li>
+                    <li><a href="https://flyasiana.com/I/KR/KO/ACTQuick.do">기업우대</a></li>
+                </ul>
+
+                <div class="top_util">
+                    <div>
+                        <ul class="top_members">
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">고객서비스</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="top_sns">
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                    <form action="action_page.php" method="get" autocomplete="off">
+                        <input type="text" name="search_key" id="search_key">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <h1 class="top_logo">
+            <span>
+                <img src="images/logo_header.png" alt="top_logo">
+            </span>
+        </h1>
+        <nav id="nav">
+            <ul id="sl1" class="main">
+                <div class="nav_bg"></div>
+                <li class="main_li">
+                    <a href="#">항공권예약</a>
+                    <ul class="sub">
+                        <li><a href="#">최저가 간편조회</a></li>
+                        <li><a href="#">신용카드혜택</a></li>
+                        <li><a href="#">예약안내</a></li>
+                        <li><a href="#">운임안내</a></li>
+                        <li><a href="#">항공권예약</a></li>
+                    </ul>
+                </li>
+                <li class="main_li">
+                    <a href="#">예약</a>
+                    <ul class="sub">
+                        <li><a href="#">항공원 구매 내역</a></li>
+                        <li><a href="#">스케줄 조회</a></li>
+                        <li><a href="#">운항 노선</a></li>
+                        <li><a href="#">여행 정보</a></li>
+                        <li><a href="#">캐빈승무원 일기</a></li>
+                    </ul>
+                </li>
+                <li class="main_li">
+                    <a href="#">여행준비</a>
+                    <ul class="sub">
+                        <li><a href="#">수화물</a></li>
+                        <li><a href="#">사전 체크인</a></li>
+                        <li><a href="#">수하물 계산기</a></li>
+                        <li><a href="#">도움이 필요한 고객</a></li>
+                        <li><a href="#">출입국 규정 안내</a></li>
+                    </ul>
+                </li>
+                <li class="main_li">
+                    <a href="#">여행</a>
+                    <ul class="sub">
+                        <li><a href="#">공항 안내</a></li>
+                        <li><a href="#">탑승수속 절차</a></li>
+                        <li><a href="#">라운지 이용</a></li>
+                        <li><a href="#">클래스별안내</a></li>
+                        <li><a href="#">항공기 정보</a></li>
+                    </ul>
+                </li>
+                <li class="main_li">
+                    <a href="#">유료 부가서비스</a>
+                    <ul class="sub">
+                        <li><a href="#">기내 Wi-Fi</a></li>
+                        <li><a href="#">수화물 사전 구매</a></li>
+                        <li><a href="#">도움이 필요한 고객</a></li>
+                        <li><a href="#">이코노미 스마티움</a></li>
+                        <li><a href="#">업그레이드 스탠바이</a></li>
+                    </ul>
+                </li>
+                <li class="main_li">
+                    <a href="#">아시아나클럽</a>
+                    <ul class="sub">
+                        <li><a href="#">회원제도</a></li>
+                        <li><a href="#">쇼핑</a></li>
+                        <li><a href="#">마일리지 적립몰</a></li>
+                        <li><a href="#">마일리지 사용몰</a></li>
+                        <li><a href="#">할인제휴사</a></li>
+                    </ul>
+                </li>
+                <li class="main_li">
+                    <a href="#">도움이 필요한 고객</a>
+                    <ul class="sub">
+                        <li><a href="#">장애인 고객</a></li>
+                        <li><a href="#">고령자 고객</a></li>
+                        <li><a href="#">임신부 고객</a></li>
+                        <li><a href="#">반려동물 동반</a></li>
+                        <li><a href="#">의료도움이 필요한 고객</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- section1 -->
+    <!-- 슬라이드 -->
+    <section class="main_img" id="slide">
+        <h1>kk</h1>
+        <div id="slideWrap">
+            <div class="frame">
+                <ul id="slideList">
+                    <li>
+                        <img src="images/s1.jpg" alt="슬라이드이미지">
+                    </li>
+                    <li>
+                        <img src="images/s2.jpg" alt="슬라이드이미지">
+                    </li>
+                    <li>
+                        <img src="images/s3.jpg" alt="슬라이드이미지">
+                    </li>
+                    <li>
+                        <img src="images/s4.jpg" alt="슬라이드이미지">
+                    </li>
+                    <li>
+                        <img src="images/s5.jpg" alt="슬라이드이미지">
+                    </li>
+                    <li>
+                        <img src="images/s6.jpg" alt="슬라이드이미지">
+                    </li>
+                    <li>
+                        <img src="images/s7.jpg" alt="슬라이드이미지">
+                    </li>
+                    <li>
+                        <img src="images/s8.jpg" alt="슬라이드이미지">
+                    </li>
+                    <li>
+                        <img src="images/s9.jpg" alt="슬라이드이미지">
+                    </li>
+                </ul>
+            </div>
+            <div class="controls">
+                <a href="#" id="prevBtn"><i class="fa-solid fa-angle-left"></i></a>
+                <a href="#" id="nextBtn"><i class="fa-solid fa-angle-right"></i></a>
+            </div>
+            <ul class="pager">
+                <li class="active"><a href="#"><i class="fa-solid fa-plane"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-plane"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-plane"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-plane"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-plane"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-plane"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-plane"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-plane"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-plane"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- section2-->
+    <!-- tab meun -->
+    <section class="container">
+        <h2>간편메뉴</h2>
+        <div id="tebsmenu">
+            
+        </div>
+    </section>
+
+    <!-- section3-->
+    <section id="carousel1" class="container">
+        <h2>최저가 간편 조회</h2>
+        <p>오늘부터 6개월 내 출발하는 항공편의 최저가와 출발일을 간편하게 조회하실 수 있습니다.</p>
+        <!-- 멀티 케로셀 -->
+        <div class="slideWrap">
+            <!-- 슬라이드 배경 이미지 -->
+            <ul class="multiSlider">
+                <li><a href="#"><span>서울 / 인천 - 방콕</span><img src="images/c1.jpg" alt="#"></a></li>
+                <li><a href="#"><span>서울 / 인천 - 프랑크푸르트</span><img src="images/c2.jpg" alt="#"></a></li>
+                <li><a href="#"><span>서울 / 인천 - 도쿄 / 하네다</span><img src="images/c3.jpg" alt="#"></a></li>
+                <li><a href="#"><span>서울 / 인천 - 클락 / 앙렐레스</span><img src="images/c5.jpg" alt="#"></a></li>
+                <li><a href="#"><span>서울 / 인천 - 로스엔젤레스</span><img src="images/c6.jpg" alt="#"></a></li>
+                <li><a href="#"><span>서울 / 인천 - 로마 / 다빈치</span><img src="images/c7.jpg" alt="#"></a></li>
+                <li><a href="#"><span>서울 / 인천 - 호놀룰루</span><img src="images/c9.jpg" alt="#"></a></li>
+                <li><a href="#"><span>서울 / 인천 - 베이징</span><img src="images/c11.jpg" alt="#"></a></li>
+            </ul>
+
+            <!-- 이전/이후 버튼 -->
+            <!-- 폰트어썸 -->
+            <div class="btn">
+                <a href="#" id="prev"><i class="fa-regular fa-circle-left"></i></a>
+                <a href="#" id="next"><i class="fa-regular fa-circle-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section4-->
+    <section class="container">
+        <h2>이벤트</h2>
+        <p>아시아나항공만의 특별한 혜택을 누리세요.</p>
+
+        <div class="tabs">
+            <input type="radio" name="tabs" id="btn1" checked>
+            <label for="btn1">고객참여</label>
+            <input type="radio" name="tabs" id="btn2">
+            <label for="btn2">항공권구매</label>
+            <input type="radio" name="tabs" id="btn3">
+            <label for="btn3">마일리지</label>
+            <input type="radio" name="tabs" id="btn4">
+            <label for="btn4">아시아나라이크</label>
+            <div id="tab1">
+                <a href="#"><img src="images/event_1-1.jpg" alt=""></a>
+                <a href="#"><img src="images/event_1-2.jpg" alt=""></a>
+                <a href="#"><img src="images/event_1-3.jpg" alt=""></a>
+                <a href="#"><img src="images/event_1-4.jpg" alt=""></a>
+            </div>
+            <div id="tab2">
+                <a href="#"><img src="images/event_2-1.jpg" alt=""></a>
+                <a href="#"><img src="images/event_2-2.jpg" alt=""></a>
+                <a href="#"><img src="images/event_2-3.jpg" alt=""></a>
+                <a href="#"><img src="images/event_2-4.jpg" alt=""></a>
+            </div>
+            <div id="tab3">
+                <a href="#"><img src="images/event_3-1.jpg" alt=""></a>
+                <a href="#"><img src="images/event_3-2.jpg" alt=""></a>
+                <a href="#"><img src="images/event_3-3.jpg" alt=""></a>
+                <a href="#"><img src="images/event_3-4.jpg" alt=""></a>
+            </div>
+            <div id="tab4">
+                <a href="#"><img src="images/event_4.jpg" alt=""></a>
+            </div>
+        </div>
+    </section>
+    <!-- section5-->
+    <section id="carousel2" class="container">
+        <h2>항공기</h2>
+        <ul id="carlMain">
+            <li>
+                <ul class="carSub">
+                    <li class="subli1">
+                        <img src="images/b747.png" alt="b747">
+                    </li>
+                    <li class="subli2">
+                        <img src="images/b767.png" alt="b767">
+                    </li>
+                    <li class="subli3">
+                        <img src="images/b777.png" alt="b777">
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="carSub">
+                    <li class="subli1">
+                        <img src="images/a380.png" alt="a380">
+                    </li>
+                    <li class="subli2">
+                        <img src="images/a350.png" alt="a380">
+                    </li>
+                    <li class="subli3">
+                        <img src="images/a330.png" alt="a380">
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="carSub">
+                    <li class="subli1">
+                        <img src="images/a321neo.png" alt="a321neo">
+                    </li>
+                    <li class="subli2">
+                        <img src="images/a321.png" alt="a321">
+                    </li>
+                    <li class="subli3">
+                        <img src="images/a320.png" alt="a320">
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        
+        <!-- section6 -->
+    </section>
+    <section id="icons" class="container">
+        <h2>제휴 서비스 안내</h2>
+        <div>
+            <ul>
+                <li><a href="#"><img src="images/sv1.png" alt=""><span>마일리지 적립</span></a></li>
+                <li><a href="#"><img src="images/sv2.png" alt=""><span>호텔</span></a></li>
+                <li><a href="#"><img src="images/sv3.png" alt=""><span>렌터카</span></a></li>
+                <li><a href="#"><img src="images/sv4.png" alt=""><span>여행자보험</span></a></li>
+                <li><a href="#"><img src="images/sv5.png" alt=""><span>투어&액티비티</span></a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- section7 -->
+    <section id="news" class="container">
+        <h2>공지사항 / SNS</h2>
+        <div>
+            <div id="new1">
+                <h3>공지사항</h3>
+                <ul>
+                    <li><a href="#">증편/재운항 노선 안내</a><span>2023-03-02</span></li>
+                    <li><a href="#">A321 NEO 항공기 무선 엔터네인먼트 사용안내</a><span>2023-03-01</span></li>
+                    <li><a href="#">아시아나 Rail & Air 서비스 안내</a><span>2023-05-17</span></li>
+                    <li><a href="#">하와이 비즈니스클래스 특가 안내</a><span>2023-05-16</span></li>
+                </ul>
+            </div>
+            <div id="new2">
+                <h3>SNS</h3>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div id="Address">
+            <div id="ft1" class="adr">
+                <div>회사소개</div>
+                <div>약관 및 규정</div>
+                <div>기타안내</div>
+            </div>
+            <div id="ft2" class="adr">
+                <div>Address</div>
+                <span>서울특별시 강서구 오정로 44-83</span>
+                <div>Customer Conter</div>
+                <span>예약 1588-8000 / 02-2669-8000 | 아시아나클럽 1588-8180 / 02-2669-8180</span>
+            </div>
+        </div>
+        <div id="ft3">
+            <div id="ftul">
+                <ul>
+                    <li>이용약관</li>
+                    <li class="yellow1">개인정보처리방침</li>
+                    <li>위치기반서비스 이용약관</li>
+                    <li>이메일 무단수집거부</li>
+                    <li>법적고지</li>
+                    <li>사업자정보확인</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>아시아나항공(주) 대표이사ㅇㅇㅇ | 사업자등록번호 104-81-17480 | 통신판매업 신고 제 16-2822</li>
+                    <li>개인정보보호책임자 온라인마케팅 상무 ㅇㅇㅇ | 서버 위치: 아시아나IDT(주) 전산센터</li>
+                    <li>Copyright ASIANA AIRLINES.ALL rights reserved. </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
