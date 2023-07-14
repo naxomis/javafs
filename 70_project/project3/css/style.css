@@ -231,12 +231,17 @@ h2+p {
 }
 
 /* section2 */
+#tebsmenu {
+    margin-top: 180px;
+}
 
 /* section3 */
+
 #carousel1 .slideWrap img {
     vertical-align: top;
     width: 100%;
 }
+
 
 #carousel1 .slideWrap {
     position: relative;
