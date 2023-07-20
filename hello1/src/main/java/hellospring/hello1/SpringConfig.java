@@ -2,8 +2,6 @@ package hellospring.hello1;
 
 import hellospring.hello1.repository.JdbcMemberRepository;
 import hellospring.hello1.repository.MemberRepository;
-import hellospring.hello1.repository.MemoryMemberRepository;
-import hellospring.hello1.service.MemberService;
 import hellospring.hello1.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
