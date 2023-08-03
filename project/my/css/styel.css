@@ -1,0 +1,333 @@
+@charset "utf-8";
+
+/* reset */
+a{
+    text-decoration: none;
+    color: #333;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+.ex{
+    height: 100px;
+}
+.nyMainLink a {
+    text-align: center;
+}
+.nyMainLink {
+    width: 992px;
+    margin: 0 auto;
+}
+.nyMainIcon {
+    margin: 20px;
+}
+
+.nyMainIcon img{
+    width: 75px;
+    height: 75px;
+}
+
+/* 호버시 선명하게 */
+.nyMainIcon1 {
+    opacity: 0.5;
+    transition: .5s;
+}
+.nyMainIcon1:hover {
+    opacity: 1;
+    transition: .5s;
+    transform:scale(1.5);
+}
+
+/* 색변경 */
+.nyMainIcon2 i{
+    color: #333;
+    font-size: 50px;
+    transition: .5s;
+}
+.nyMainIcon2 {
+    /* background: #f6b7b7; */
+    width: 75px;
+    height: 75px;
+} 
+.nyMainIcon2 i:hover{
+    color: #0065BA;
+    transition: .5s;
+
+}
+
+/* y 축 회전 */
+.nyMainIcon3 {
+    width: 110px;
+    height: 110px;
+    perspective: 800px;
+    
+}
+.nyMainIcon3 .inner {
+    position: relative;
+    height: 100%;
+    transition: .5s;
+    transform-style: preserve-3d;
+}
+.nyMainIcon3 .inner div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+.nyMainIcon3 .front {
+    z-index: 1;
+    background: #FFF3D1;
+    backface-visibility: hidden;
+}
+.nyMainIcon3 .back {
+    background: #4E240D;
+    transform: rotateY(180deg);
+    /* backface-visibility: hidden; */
+    text-align: center;
+    line-height: 110px;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nyMainIcon3:hover .inner {
+    transform: rotateY(180deg);
+}
+.nyMainIcon3 img{
+    transform:scale(1.5);
+}
+
+/* y 축 회전2 */
+.nyMainIcon4 {
+    width: 100px;
+    height: 100px;
+    perspective: 800px;
+    
+}
+.nyMainIcon4 .inner {
+    position: relative;
+    height: 100%;
+    transition: .5s;
+    transform-style: preserve-3d;
+}
+.nyMainIcon4 .inner div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+.nyMainIcon4 .front {
+    z-index: 1;
+    /* background: #FFF3D1; */
+    backface-visibility: hidden;
+}
+.nyMainIcon4 .back {
+    /* background: #4E240D; */
+    /* transform: rotateY(180deg); */
+    /* backface-visibility: hidden; */
+    text-align: center;
+    line-height: 110px;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+}
+.nyMainIcon4 img{
+    transform:scale(1.5);
+}
+
+.nyMainIcon4:hover .inner {
+    transform: rotateY(180deg);
+}
+.nyMainIcon4:hover {
+    font-size: 18px;
+    font-weight: 700;
+    transition: .5s;
+    
+}
+
+/* y 축 회전2-글자색변경 */
+.nyMainIcon5 {
+    width: 100px;
+    height: 100px;
+    perspective: 800px;
+    
+}
+.nyMainIcon5 .inner {
+    position: relative;
+    height: 100%;
+    transition: .5s;
+    transform-style: preserve-3d;
+}
+.nyMainIcon5 .inner div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+.nyMainIcon5 .front {
+    z-index: 1;
+    backface-visibility: hidden;
+}
+.nyMainIcon5 .back {
+    text-align: center;
+    line-height: 110px;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+}
+.nyMainIcon5 img{
+    transform:scale(1.5);
+}
+
+.nyMainIcon5:hover .inner {
+    transform: rotateY(180deg);
+}
+.nyMainIcon5:hover {
+    font-size: 18px;
+    font-weight: 700;
+    transition: .5s;
+    
+}
+.nyMainIcon5:hover p {
+    color: #FFC72C;
+}
+
+
+
+/* 큐브 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.scene {
+    /* width: 400px; */
+    height: 200px;
+    margin: 100px;
+    perspective: 1000px;
+    perspective-origin: 30% -50%;
+}
+
+.cube {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 150px;
+    transform-style: preserve-3d;
+    transition: 1s;
+    left: 100px;
+}
+
+.cube_face {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 200px;
+}
+.cube_face img {
+    width: 200px;
+}
+
+.cube_face {
+    background: #8ED3FF;
+}
+
+/* .cube_face_back {
+    background: #8ED3FF;
+}
+
+.cube_face_left {
+    background: #8ED3FF;
+}
+
+.cube_face_right {
+    background: #8ED3FF;
+}
+
+.cube_face_top {
+    background: #8ED3FF;
+}
+
+.cube_face_bottom {
+    background: #8ED3FF;
+} */
+
+.cube_face_front {
+    transform: rotateY(0deg) translateZ(100px);
+}
+
+.cube_face_back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.cube_face_left {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.cube_face_right {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.cube_face_top {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.cube_face_bottom {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+
+
+@keyframes rotateY {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+#auto:checked ~ .cube {
+    animation: rotateY 30s infinite linear;
+}
+#front:checked ~ .cube {
+    transform: translateZ(100px) rotateY(0deg);
+}
+#back:checked ~ .cube {
+    transform: translateZ(100px) rotateY(180deg);
+}
+#left:checked ~ .cube {
+    transform: translateZ(100px) rotateY(-90deg);
+}
+#right:checked ~ .cube {
+    transform: translateZ(100px) rotateY(90deg);
+}
+#top:checked ~ .cube {
+    transform: translateZ(100px) rotateX(90deg);
+}
+#bottom:checked ~ .cube {
+    transform: translateZ(100px) rotateX(-90deg);
+}
+
+label {
+    background: #000;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input {
+    display: none;
+}

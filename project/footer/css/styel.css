@@ -1,0 +1,90 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+ul{
+    list-style: none;
+}
+footer{
+   width: 100%;
+   height: 560px;
+}
+
+.nyFooterBox1 {
+    width: 1920px;
+    height: 560px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.nyFooterBox1>div {
+   position: absolute;
+}
+div{
+    left: 0; top:0px;
+}
+.wave1 {
+    animation: right 15s infinite;
+    position: relative;
+    top: 100px;
+}
+
+ @keyframes right {
+    0% {left:0; }
+    33% {left:-300px}
+    66% {left:0px; }
+    100% {left:-300px}
+ }
+
+ .wave2 {
+    animation: left 15s infinite;
+    position: relative;
+}
+
+ @keyframes left {
+    0% {left:0; }
+    33% {left:-600px}
+    66% {left:0px; }
+    100% {left:-600px}
+ }
+ .nyFooterBottom {
+    width: 1500px;
+    margin: 0 auto;
+ }
+ .nyFooterIcon1{
+   position: absolute;
+    left: 270px;
+    top: 80px;
+ }
+ .nySea{
+   /* left: -300px; */
+   top: -100px;
+   left: 100px;
+   position: absolute;
+}
+ .nyFooterIcon2 img{
+   right: -150px;
+   top: 60px;
+   position: absolute;
+ }
+
+ .nyFooterNav{
+    background: #fff;
+    position: relative;
+    left: 250px;
+    top: 320px;
+    height: 75px;
+    border-radius: 50px;
+ }
+ .nyFooterNav ul{
+    display: flex;
+    justify-content: space-evenly;
+    line-height: 75px;
+ }
+

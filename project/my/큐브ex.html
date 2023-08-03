@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 초기값 */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .scene {
+            /* width: 400px; */
+            height: 200px;
+            margin: 100px;
+            perspective: 1000px;
+            perspective-origin: 30% -50%;
+        }
+
+        .cube {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: 150px;
+            transform-style: preserve-3d;
+            transition: 1s;
+        }
+
+        .cube_face {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            font-size: 3rem;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+        }
+        .cube_face img {
+            width: 200px;
+        }
+
+        .cube_face_front {
+            background: #8ED3FF;
+        }
+
+        .cube_face_back {
+            background: #8ED3FF;
+        }
+
+        .cube_face_left {
+            background: #8ED3FF;
+        }
+
+        .cube_face_right {
+            background: #8ED3FF;
+        }
+
+        .cube_face_top {
+            background: #8ED3FF;
+        }
+
+        .cube_face_bottom {
+            background: #8ED3FF;
+        }
+
+        .cube_face_front {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+
+        .cube_face_back {
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        .cube_face_left {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .cube_face_right {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .cube_face_top {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        .cube_face_bottom {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+
+
+        @keyframes rotateY {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        #auto:checked ~ .cube {
+            animation: rotateY 30s infinite linear;
+        }
+        #front:checked ~ .cube {
+            transform: translateZ(100px) rotateY(0deg);
+        }
+        #back:checked ~ .cube {
+            transform: translateZ(100px) rotateY(180deg);
+        }
+        #left:checked ~ .cube {
+            transform: translateZ(100px) rotateY(-90deg);
+        }
+        #right:checked ~ .cube {
+            transform: translateZ(100px) rotateY(90deg);
+        }
+        #top:checked ~ .cube {
+            transform: translateZ(100px) rotateX(90deg);
+        }
+        #bottom:checked ~ .cube {
+            transform: translateZ(100px) rotateX(-90deg);
+        }
+
+        label {
+            background: #000;
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>3D Cube</h1>
+    <div class="scene">
+        <label for="auto">auto</label>
+        <label for="front">front</label>
+        <label for="back">back</label>
+        <label for="left">left</label>
+        <label for="right">right</label>
+        <label for="top">top</label>
+        <label for="bottom">bottom</label>
+
+        <input type="radio" name="cube" id="auto">
+        <input type="radio" name="cube" id="front">
+        <input type="radio" name="cube" id="back">
+        <input type="radio" name="cube" id="left">
+        <input type="radio" name="cube" id="right">
+        <input type="radio" name="cube" id="top">
+        <input type="radio" name="cube" id="bottom">
+        <div class="cube">
+            <div class="cube_face cube_face_front"><a href="#"><img src="images/ico_category_01.png" alt=""></a></div>
+            <div class="cube_face cube_face_back"><a href="#"><img src="images/ico_category_02.png" alt=""></a></div>
+            <div class="cube_face cube_face_left"><a href="#"><img src="images/ico_category_03.png" alt=""></a></div>
+            <div class="cube_face cube_face_right"><a href="#"><img src="images/ico_category_04.png" alt=""></a></div>
+            <div class="cube_face cube_face_top"><a href="#"><img src="images/ico_category_05.png" alt=""></a></div>
+            <div class="cube_face cube_face_bottom"><a href="#"><img src="images/ico_category_09.png" alt=""></a></div>
+        </div>
+    </div>
+</body>
+
+</html>
