@@ -30,28 +30,28 @@ div{
     left: 0; top:0px;
 }
 .wave1 {
-    animation: right 15s infinite;
+    animation: right 14s infinite;
     position: relative;
     top: 100px;
 }
 
  @keyframes right {
     0% {left:0; }
-    33% {left:-300px}
-    66% {left:0px; }
-    100% {left:-300px}
+    50%{left:-300px}
+    100% {left: 0px}
  }
 
  .wave2 {
-    animation: left 15s infinite;
+    animation: left 14s infinite;
     position: relative;
 }
 
  @keyframes left {
     0% {left:0; }
-    33% {left:-600px}
-    66% {left:0px; }
-    100% {left:-600px}
+    /* 33% {left:-600px}
+    66% {left:0px; } */
+   50%{left:-600px}
+    100% {left:0px}
  }
  .nyFooterBottom {
     width: 1500px;
