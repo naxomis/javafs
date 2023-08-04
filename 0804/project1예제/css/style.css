@@ -1,0 +1,217 @@
+/*main.css*/
+@import url(http://fonts.googleapis.com/css?family=Orbitron);
+ 
+/*초기화*/
+* { margin: 0; padding: 0; }
+ul { list-style: none; }
+a { text-decoration: none; color: #bbb; outline: 0; }
+img { border: 0; }
+ 
+ 
+/*기본 설정*/
+body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    color: #fff;
+}
+h3{
+    position: fixed;
+}
+
+/* 배경 이미지 */
+.bg{
+    background-image: url(../images/bgLine.png);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: 0.1;
+}
+/* 헤더영역 */
+/* 로고 */
+header h1{
+    position: absolute;
+    width: 400px;
+    /* 가로 가운데부터 시작 */
+    left: 50%;  
+    /* 가운데 맞춤 */
+    margin-left: -200px;
+    top: 5%;
+}
+header h1 img{
+    width: 100%;
+    height: auto;
+}
+
+/* sns */
+header ul{
+    position: absolute;
+    /* 아래로 이동 */
+    top: 60px;
+    /* 오른쪽 기준 왼쪽으로 이동 */
+    right: 30px;
+}
+header ul li{
+    float: left;
+    margin-right: 10px;
+    opacity: 0.8;
+    transition: all 0.4s;
+}
+header ul li:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+/* 웹폰트 아이콘 */
+header ul li .fa{
+    font-size: 24px;
+    color: #fff;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    /* 새로 가운데부터 시작 */
+    top: 50%;
+    /* 세로 가운데 맞추기 */
+    margin-top: -25px;
+    background-image: url(../images/tr.png);
+}
+
+/* 1차 메뉴 영역 */
+nav > ul {
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+}
+nav > ul > li {
+    position: relative;
+    /* 200px x 6개 = 1200px, 100% / 6 = 16.66% */
+    width: 200px;
+    height: 50px;
+    /* 가로로 배치 */
+    float: left;
+    box-sizing: border-box;
+}
+nav > ul > li > a{
+    /* li 크기에 맞추기 */
+    display: block;
+    width: 200px;
+    height: 50px;
+    /* font: 12px/4; 는 12/4의 라인하잍 */
+    font: 12px/4 orbitron;
+    color: #fff;
+    transition: all 0.4s;
+}
+/* a 투명하게 하고 올리기 */
+nav > ul > li:hover > a{
+    transform: translateY(-20px);
+    opacity: 0;
+}
+/* 2차 메뉴영역 */
+nav > ul > li > div{
+    position: absolute;
+    width: 200px;
+    background-image: url(../images/tr.png);
+    border: 1px solid #000;
+    box-sizing: border-box;
+    padding: 10px;
+    /* 2차 메뉴 위로 올리기 */
+    top: -50px;
+    transition: all 0.6s;
+} 
+nav > ul > li > div > p{
+    width: 100%;
+    height: 90px;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+nav > ul > li > div > h2{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    /* 폰트 글씨가 띄어져 있으면 무조건 ''붙이고 한글도 무조건 '' 붙이기 영단어 한단어면 안써도 되지만 써도 됨 */
+    font: bold 12px/3.5 'orbitron';
+    color: #fff;
+}
+nav > ul > li > div > ul{}
+nav > ul > li > div > ul > li > a {
+    display: block;
+    border-top: 1px solid #111;
+    color: #eee;
+    text-align: center;
+    font: 11px/2.8 orbitron;
+    transition: all 0.4s;
+}
+nav > ul > li > div > ul > li > a:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+/* 이미지 시퀀스 프레임영역 */
+section{
+    position: fixed;
+    width: 100%;
+    height: 500px;
+    top: 50%;
+    margin-top: -250px;
+    overflow: hidden;
+    opacity: 1;
+}
+section > img{
+    width: 100%;
+    height: auto;
+}
+
+/* 푸터 영역 */
+footer{
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height:30px;
+    background-color: #111;
+    border-top: :1px solid #222;
+  }
+  footer ul{
+    width:40%;
+    height:inherit;
+    float:left;
+    margin-left: 30px;
+  }
+  footer ul li {
+     float: left;
+     width: 16.66%;   /*100% / 6개 = 16.66666*/   
+  }
+  footer ul li a {
+     font: 11px/2 helvetica;
+     color: #666;
+  }
+  /*카피라이트*/
+  footer span {
+     float: right;
+     margin-right: 30px;   
+     font: 11px/2 orbitron;
+     color: #777;
+  }
+  /* 뒤에 있ㄴ느 내비게이션 앞으로 꺼내오기 */
+  nav{
+    z-index: 10;
+  }
+
+  /* 2차메뉴 영역 마무리 */
+  nav > ul > li > div{
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+  nav > ul > li:hover > div{
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  h3{
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    color: #fff;
+  }
