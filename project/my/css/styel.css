@@ -33,7 +33,7 @@ ul{
     opacity: 0.5;
     transition: .5s;
 }
-.nyMainIcon1:hover {
+.nyMainLink .nyMainIcon1:hover {
     opacity: 1;
     transition: .5s;
     transform:scale(1.5);
