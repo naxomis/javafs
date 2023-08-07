@@ -164,12 +164,29 @@ div{
 }
 .nyFooterIcon4 .waves2 img{
    top: 500px;
-   left: 240px;
    animation: wave2 3s infinite;
 }
 @keyframes wave2 {
    0% {left: 240px; opacity: 0;}
    100% {left:270px; opacity: 1;}
+}
+.nyFooterIcon4 .waves3 img{
+   top: 425px;
+   width: 120px;
+   animation: wave3 3s infinite;
+}
+@keyframes wave3 {
+   0% {left: 450px; opacity: 0;}
+   100% {left:320px; opacity: 1;}
+}
+.nyFooterIcon4 .waves4 img{
+   top: 425px;
+   width: 120px;
+   animation: wave4 3s infinite;
+}
+@keyframes wave4 {
+   0% {left: 1430px; opacity: 0;}
+   100% {left:1380px; opacity: 1;}
 }
 
 .nyFooterBox1 .nyTop{
