@@ -20,6 +20,7 @@ ul{
 
 
 footer{
+   position: relative;
    width: 100%;
    height: 560px;
 }
@@ -42,7 +43,7 @@ footer p{
 .nyFooterBox1>div {
    position: absolute;
 }
-div{
+footer div{
     left: 0; top:0px;
 }
 .nySend {
@@ -54,14 +55,14 @@ div{
    
 }
 .nyWave1 {
-    animation: right 14s infinite;
+    animation: nyRight 14s infinite;
     position: relative;
     top: 100px;
 }
 .nyWave1 img{
    width: 3000px;
 }
- @keyframes right {
+ @keyframes nyRight {
     0% {left:0; }
     33% {left:-150px}
     66% {left:-300px; }
@@ -70,7 +71,7 @@ div{
  }
 
  .nyWave2 {
-    animation: left 30s infinite;
+    animation: nyLeft 30s infinite;
     position: relative;
     left: 0px;
     top: 100px;
@@ -79,7 +80,7 @@ div{
    width: 3000px;
 }
 
- @keyframes left {
+ @keyframes nyLeft {
     0% {left: 0px; top: 50px; }
     33% {left: -1000px; top: 100px;}
     66% {left: 0px; top: 50px;}
@@ -211,7 +212,10 @@ div{
    0% {left: 1430px; opacity: 0;}
    100% {left:1380px; opacity: 1;}
 }
-
+.nyFooterBox1 .nyOutTop{
+   width: 100px;
+   height: 100px;
+}
 .nyFooterBox1 .nyTop{
    background: #003999;
    width: 65px;
@@ -227,7 +231,7 @@ div{
 .nyFooterBox1 .nyTop a{
    color: #fff;
 }
-.nyFooterBox1 .nyTop:hover{
+.nyFooterBox1 .nyOutTop:hover{
    background: #000;
    top: 300px;
    transition: 0.3s;

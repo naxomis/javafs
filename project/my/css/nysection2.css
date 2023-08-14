@@ -16,16 +16,16 @@ a{
 }
 ul{
     list-style: none;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+.section2{
+    position: relative;
+}
+.nyMainLink ul {
     display: flex;
 }
-
-
-
-
-.ex{
-    height: 100px;
-}
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
 .nyMainLink a {
     text-align: center;
     font-size: 1.6rem;
@@ -72,12 +72,12 @@ ul{
     height: 100%;
     border-radius: 10%;
 }
-.nyMainIcon4 .front {
+.nyMainIcon4 .nyFront {
     z-index: 1;
     /* background: #FFF3D1; */
     backface-visibility: hidden;
 }
-.nyMainIcon4 .back {
+.nyMainIcon4 .nyBack {
     /* background: #4E240D; */
     /* transform: rotateY(180deg); */
     /* backface-visibility: hidden; */
