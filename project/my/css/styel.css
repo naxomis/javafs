@@ -9,6 +9,8 @@ ul{
     list-style: none;
     display: flex;
 }
+
+
 .ex{
     height: 100px;
 }

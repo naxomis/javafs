@@ -6,6 +6,7 @@
 }
 html{
    height: 100vh;
+   font-size: 10px;
 }
 a{
     text-decoration: none;
@@ -14,9 +15,21 @@ a{
 ul{
     list-style: none;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
+
 footer{
    width: 100%;
    height: 560px;
+}
+footer a{
+   font-size: 1.6rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+footer p{
+   font-size: 1.6rem;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .nyFooterBox1 {
@@ -32,12 +45,20 @@ footer{
 div{
     left: 0; top:0px;
 }
-.wave1 {
+.nySend {
+   position: absolute;
+   top: -650px;
+}
+.nySend img{
+   width: 2000px;
+   
+}
+.nyWave1 {
     animation: right 14s infinite;
     position: relative;
     top: 100px;
 }
-.wave1 img{
+.nyWave1 img{
    width: 3000px;
 }
  @keyframes right {
@@ -48,20 +69,21 @@ div{
     100% {left: 0px}
  }
 
- .wave2 {
-    animation: left 80s infinite;
+ .nyWave2 {
+    animation: left 30s infinite;
     position: relative;
-    /* top: -100px; */
+    left: 0px;
+    top: 100px;
 }
-.wave2 img{
-   width: 4000px;
+.nyWave2 img{
+   width: 3000px;
 }
 
  @keyframes left {
-    0% {left:0; }
-    33% {left:-2000px; }
-    66% {left:0px; }
-    100% {left:-2000px}
+    0% {left: 0px; top: 50px; }
+    33% {left: -1000px; top: 100px;}
+    66% {left: 0px; top: 50px;}
+    100% {left: -1000px; top: 100px;}
  }
  .nyFooterBottom {
     width: 1500px;
@@ -157,17 +179,17 @@ div{
 .nyFooterIcon4 .waves1 img{
    top: 400px;
    left: 40px;
-   animation: wave1 3s infinite;
+   animation: nyWave1 3s infinite;
 }
-@keyframes wave1 {
+@keyframes nyWave1 {
    0% {left: 40px; opacity: 1;}
    100% {left:70px; opacity: 0;}
 }
 .nyFooterIcon4 .waves2 img{
    top: 500px;
-   animation: wave2 3s infinite;
+   animation: nyWave2 3s infinite;
 }
-@keyframes wave2 {
+@keyframes nyWave2 {
    0% {left: 240px; opacity: 0;}
    100% {left:270px; opacity: 1;}
 }
