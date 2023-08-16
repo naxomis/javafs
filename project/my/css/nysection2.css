@@ -22,6 +22,7 @@ ul{
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
 .section2{
     position: relative;
+    padding: 100px;
 }
 .nyMainLink ul {
     display: flex;
@@ -98,5 +99,4 @@ ul{
     font-size: 18px;
     font-weight: 700;
     transition: .5s;
-    
 }

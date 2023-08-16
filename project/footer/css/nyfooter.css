@@ -15,6 +15,9 @@ a{
 ul{
     list-style: none;
 }
+img{
+   width: 100%;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
 
@@ -23,68 +26,68 @@ footer{
    position: relative;
    width: 100%;
    height: 560px;
+   overflow: hidden;
 }
+
 footer a{
    font-size: 1.6rem;
     font-family: 'Noto Sans KR', sans-serif;
 }
+
 footer p{
    font-size: 1.6rem;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
 .nyFooterBox1 {
-    width: 1920px;
+    width: 100%;
     height: 560px;
-    margin: 0 auto;
     position: relative;
     overflow: hidden;
 }
+
 .nyFooterBox1>div {
    position: absolute;
 }
+
 footer div{
     left: 0; top:0px;
 }
+
 .nySend {
    position: absolute;
-   top: -650px;
+   width: 100%;
+   top: 140px;
 }
-.nySend img{
-   width: 2000px;
-   
-}
+
 .nyWave1 {
-    animation: nyRight 14s infinite;
+    animation: nyRight 25s infinite;
     position: relative;
-    top: 100px;
+    top: 120px;
+    width: 100%;
 }
-.nyWave1 img{
-   width: 3000px;
-}
+
  @keyframes nyRight {
-    0% {left:0; }
-    33% {left:-150px}
-    66% {left:-300px; }
-    /* 50%{left:-300px} */
-    100% {left: 0px}
+   0% {left:0; top: 80px;}
+    50% {left:-1000px; top: 120px;}
+    100% {left: 0px; top: 80px;}
  }
 
  .nyWave2 {
-    animation: nyLeft 30s infinite;
+    animation: nyLeft 20s infinite;
     position: relative;
     left: 0px;
     top: 100px;
+    width: 100%;
 }
 .nyWave2 img{
-   width: 3000px;
+   width: 100%;
 }
 
  @keyframes nyLeft {
-    0% {left: 0px; top: 50px; }
-    33% {left: -1000px; top: 100px;}
-    66% {left: 0px; top: 50px;}
-    100% {left: -1000px; top: 100px;}
+   0% {left:0; top: 50px;}
+    50% {left:-1000px; top: 100px;}
+    100% {left: 0px; top: 50px;}
  }
  .nyFooterBottom {
     width: 1500px;
@@ -111,11 +114,13 @@ footer div{
     background: #fff;
     position: relative;
     width: 1400px;
+    margin: 0 auto;
     left: 16%;
     top: 320px;
     height: 75px;
     border-radius: 50px;
  }
+ 
  .nyFooterNav ul{
     display: flex;
     justify-content: space-evenly;
@@ -135,6 +140,7 @@ footer div{
    content:'' ;
    display: block;
    height: 2px;
+   margin-top: 2px;
    background: #003999;
    transition: .3s;
    transform: scaleX(0);
@@ -177,7 +183,7 @@ footer div{
    width: 80px;
    position: absolute;
 }
-.nyFooterIcon4 .waves1 img{
+.nyFooterIcon4 .nywaves1 img{
    top: 400px;
    left: 40px;
    animation: nyWave1 3s infinite;
@@ -186,7 +192,7 @@ footer div{
    0% {left: 40px; opacity: 1;}
    100% {left:70px; opacity: 0;}
 }
-.nyFooterIcon4 .waves2 img{
+.nyFooterIcon4 .nyWaves2 img{
    top: 500px;
    animation: nyWave2 3s infinite;
 }
@@ -194,39 +200,42 @@ footer div{
    0% {left: 240px; opacity: 0;}
    100% {left:270px; opacity: 1;}
 }
-.nyFooterIcon4 .waves3 img{
+.nyFooterIcon4 .nyWaves3 img{
    top: 425px;
    width: 120px;
-   animation: wave3 3s infinite;
+   animation: nyWave3 3s infinite;
 }
-@keyframes wave3 {
+@keyframes nyWave3 {
    0% {left: 450px; opacity: 0;}
    100% {left:320px; opacity: 1;}
 }
-.nyFooterIcon4 .waves4 img{
+.nyFooterIcon4 .nyWaves4 img{
    top: 425px;
    width: 120px;
-   animation: wave4 3s infinite;
+   animation: nyWave4 3s infinite;
 }
-@keyframes wave4 {
+@keyframes nyWave4 {
    0% {left: 1430px; opacity: 0;}
    100% {left:1380px; opacity: 1;}
 }
 .nyFooterBox1 .nyOutTop{
-   width: 100px;
-   height: 100px;
+   width: 90px;
+   height: 90px;
 }
-.nyFooterBox1 .nyTop{
-   background: #003999;
-   width: 65px;
-   height: 65px;
-   border-radius: 20px;
+
+.nyFooterBox1 .nyOutTop {
    position: absolute;
    text-align: center;
    left: 87%;
    line-height: 30px;
    top: 325px;
    opacity: 0.7;
+}
+.nyFooterBox1 .nyOutTop .nyTop{
+   background: #003999;
+   width: 65px;
+   height: 65px;
+   border-radius: 20px;
 }
 .nyFooterBox1 .nyTop a{
    color: #fff;
@@ -247,4 +256,3 @@ footer div{
 .nyFooterBox1 .nyFooterTexts p{
    font-weight: 700;
 }
-
