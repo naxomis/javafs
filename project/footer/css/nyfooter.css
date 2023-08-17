@@ -21,11 +21,10 @@ img{
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
 
-
 footer{
    position: relative;
    width: 100%;
-   height: 560px;
+   height: 700px;
    overflow: hidden;
 }
 
@@ -39,20 +38,20 @@ footer p{
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-.nyFooterBox1 {
+.bg {
     width: 100%;
-    height: 560px;
-    position: relative;
+    height: 700px;
+    position: absolute;
     overflow: hidden;
 }
 
-.nyFooterBox1>div {
+.bg>div {
    position: absolute;
 }
 
-footer div{
+/* footer div{
     left: 0; top:0px;
-}
+} */
 
 .nySend {
    position: absolute;
@@ -63,13 +62,12 @@ footer div{
 .nyWave1 {
     animation: nyRight 25s infinite;
     position: relative;
-    top: 120px;
-    width: 100%;
+    width: 200%;
 }
 
  @keyframes nyRight {
    0% {left:0; top: 80px;}
-    50% {left:-1000px; top: 120px;}
+    50% {left:-1000px; top: 200px;}
     100% {left: 0px; top: 80px;}
  }
 
@@ -78,26 +76,20 @@ footer div{
     position: relative;
     left: 0px;
     top: 100px;
-    width: 100%;
+    width: 200%;
+    z-index: 9;
 }
-.nyWave2 img{
+/* .nyWave2 img{
    width: 100%;
-}
+} */
 
  @keyframes nyLeft {
-   0% {left:0; top: 50px;}
-    50% {left:-1000px; top: 100px;}
-    100% {left: 0px; top: 50px;}
+   0% {left:10; top: 100px;}
+    50% {left:-1000px; top: 200px;}
+    100% {left: 10px; top: 100px;}
  }
- .nyFooterBottom {
-    width: 1500px;
-    margin: 0 auto;
- }
- .nyFooterIcon1{
-   position: absolute;
-    left: 270px;
-    top: 130px;
- }
+
+
  .nySea{
    /* left: -300px; */
    top: -100px;
@@ -110,47 +102,8 @@ footer div{
    position: absolute;
  }
 
- .nyFooterNav{
-    background: #fff;
-    position: relative;
-    width: 1400px;
-    margin: 0 auto;
-    left: 16%;
-    top: 320px;
-    height: 75px;
-    border-radius: 50px;
- }
- 
- .nyFooterNav ul{
-    display: flex;
-    justify-content: space-evenly;
-    /* line-height: 75px; */
- }
- .nyFooterNavMain li:hover {
-   font-weight: 700;
- }
- .nyFooterNav ul{
-   padding: 25px 0;
- }
- .nyFooterNav ul li a{
-   font-size: 16px;
-   padding-bottom: 10px;
- }
- .nyFooterNav ul li a::after {
-   content:'' ;
-   display: block;
-   height: 2px;
-   margin-top: 2px;
-   background: #003999;
-   transition: .3s;
-   transform: scaleX(0);
-   /* transform-origin: 0 0; */
-}
 
-.nyFooterNav ul li a:hover::after{
-   transform: scaleX(1);
-}
-.nyFooterIcon3 .nyShip1 img{
+/* .nyFooterIcon3 .nyShip1 img{
    top: 450px;
    position: absolute;
    animation: ship1 15s infinite;
@@ -217,42 +170,101 @@ footer div{
 @keyframes nyWave4 {
    0% {left: 1430px; opacity: 0;}
    100% {left:1380px; opacity: 1;}
+} */
+.nyFooterIcons {
+   /* position: relative; */
+   background: #000;
+   width: 1000px;
+   margin: 0 auto;
 }
-.nyFooterBox1 .nyOutTop{
-   width: 90px;
-   height: 90px;
+ .nyFooterIcons .nyFooterIcon1{
+   position: absolute;
+   /* width: 400px; */
+    /* left: 270px; */
+    top: 200px;
+    /* z-index: 3; */
+ }
+
+.nyFooterNav{
+   background: #fff;
+   position: relative;
+   width: 1000px;
+   margin: 0 auto;
+   /* left: 16%; */
+   top: 450px;
+   height: 75px;
+   border-radius: 50px;
+   z-index: 10;
 }
 
-.nyFooterBox1 .nyOutTop {
-   position: absolute;
+.nyFooterNav ul{
+   display: flex;
+   position: relative;
+   justify-content: space-evenly;
+  padding: 25px 0;
+
+   /* line-height: 75px; */
+}
+
+.nyFooterNavMain li:hover {
+  font-weight: 700;
+}
+.nyFooterNav ul li a{
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+.nyFooterNav ul li a::after {
+  content:'' ;
+  display: block;
+  height: 2px;
+  margin-top: 2px;
+  background: #003999;
+  transition: .3s;
+  transform: scaleX(0);
+  /* transform-origin: 0 0; */
+}
+
+.nyFooterNav ul li a:hover::after{
+  transform: scaleX(1);
+}
+
+
+
+.nyFooterNav .nyOutTop{
+   width: 90px;
+   height: 90px;
+   z-index: 22;
+}
+
+.nyFooterNav .nyOutTop {
+   position: relative;
    text-align: center;
-   left: 87%;
    line-height: 30px;
-   top: 325px;
+   /* bottom: 130px; */
+   left: 1050px;
    opacity: 0.7;
 }
-.nyFooterBox1 .nyOutTop .nyTop{
+.nyFooterNav .nyOutTop .nyTop{
    background: #003999;
    width: 65px;
    height: 65px;
    border-radius: 20px;
 }
-.nyFooterBox1 .nyTop a{
+.nyFooterNav .nyTop a{
    color: #fff;
 }
-.nyFooterBox1 .nyOutTop:hover{
-   background: #000;
-   top: 300px;
+.nyFooterNav .nyOutTop:hover{
+   /* background: #000; */
+   /* bottom: 150px; */
    transition: 0.3s;
    opacity: 1;
 }
-.nyFooterBox1 .nyFooterTexts{
-   left: 33%;
-   top: 460px;
+.nyFooterNav .nyFooterTexts{
+   padding-top: 30px;
    text-align: center;
    color: #fff;
 
 }
-.nyFooterBox1 .nyFooterTexts p{
+.nyFooterNav .nyFooterTexts p{
    font-weight: 700;
 }
