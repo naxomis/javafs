@@ -89,7 +89,8 @@ ul{
     text-align: center;
     line-height: 110px;
     font-size: 2rem;
-    color: #fff;
+    /* color: #fff; */
+    color: #000;
     font-weight: bold;
 }
 

@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* reset */
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.nyMainLink ul {
+    display: flex;
+    list-style: none;
+}
+.nyMainLink a {
+    text-align: center;
+}
+.nyMainLink {
+    width: 992px;
+    margin: 0 auto;
+}
+.nyMainIcon {
+    margin: 20px;
+}
+
+.nyMainIcon img{
+    width: 75px;
+    height: 75px;
+}
+.nyMainIcon3 {
+    width: 150px;
+    height: 150px;
+    perspective: 800px;
+    
+}
+.nyMainIcon3 .inner {
+    position: relative;
+    height: 100%;
+    transition: .5s;
+    transform-style: preserve-3d;
+}
+.nyMainIcon3 .inner div {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.nyMainIcon3 .front {
+    z-index: 1;
+    backface-visibility: hidden;
+}
+.nyMainIcon3 .back {
+    transform: rotateY(180deg);
+    text-align: center;
+    line-height: 110px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.nyMainIcon3 .back div{
+    position: absolute;
+    top: 0;
+    line-height: 150px;
+    background: #0000004f;
+    color: #fff;
+}
+
+.nyMainIcon3:hover .inner {
+    transform: rotateY(180deg);
+}
+.nyMainIcon3 img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
