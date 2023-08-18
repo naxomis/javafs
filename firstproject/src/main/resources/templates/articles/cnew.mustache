@@ -1,0 +1,17 @@
+{{>layouts/header}}
+
+<form class="container" action="/articles/coffee/create" method="post">
+    <div class="mb-3">
+        <label class="form-label">이름</label>
+        <input type="text" class="form-control" name="name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">가격</label>
+        <textarea class="form-control" rows="3" name="price"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">등록</button>
+    <a href="/articles/coffee/cedit">Back</a>
+</form>
+
+
+{{>layouts/footer}}

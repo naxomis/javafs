@@ -1,0 +1,21 @@
+{{>layouts/header}}
+<table class="table">
+    <thead>
+    <tr>
+        <th class="col">ID</th>
+        <th class="col">Title</th>
+        <th class="col">content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#coffeeList}}
+        <tr>
+            <td>{{id}}</td>
+            <td><a href="/articles/coffee/{{id}}">{{name}}</a></td>
+            <td>{{price}}</td>
+        </tr>
+    {{/coffeeList}}
+    </tbody>
+</table>
+<a href="/articles/createcoffee">New Article</a>
+{{>layouts/footer}}

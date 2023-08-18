@@ -1,0 +1,25 @@
+{{>layouts/header}}
+<table class="table">
+    <thead>
+    <tr>
+        <th class="col">ID</th>
+        <th class="col">Name</th>
+        <th class="col">Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#coffee}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{price}}</td>
+        </tr>
+    {{/coffee}}
+    </tbody>
+</table>
+<!--수정 링크 추가-->
+<a href="/articles/coffee/{{coffee.id}}/cedit" class="btn btn-primary">Edit</a>
+<a href="/articles/coffee/{{coffee.id}}/cdelete" class="btn btn-danger">Delete</a>
+<a href="/articles/coffee">Go to coffee List</a>
+<!--상세페이지에서 목록으로-->
+{{>layouts/footer}}
